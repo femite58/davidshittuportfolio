@@ -1,0 +1,880 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --scrollBarW: 17px;
+  --view-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px;
+  font-family: "Cabinet Grotesk";
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url(assets/fonts/CabinetGrotesk-Regular.otf);
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url(assets/fonts/CabinetGrotesk-Medium.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url(assets/fonts/CabinetGrotesk-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url(assets/fonts/CabinetGrotesk-Extrabold.otf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url(assets/fonts/Satoshi-Regular.otf);
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url(assets/fonts/Satoshi-Medium.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url(assets/fonts/Satoshi-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url(assets/fonts/Satoshi-Black.otf);
+  font-weight: 800;
+}
+body {
+  font-family: "Satoshi";
+  font-size: 24px;
+  color: #cacaca;
+  background: #121212;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-family: "Cabinet Grotesk";
+  font-weight: 800;
+}
+
+.bodyCont {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.alignItemsCenter {
+  align-items: center !important;
+}
+
+.borderedBtn {
+  display: flex;
+  gap: 11px;
+  padding: 0px 24px;
+  align-items: center;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.3s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100px;
+  text-decoration: none;
+  height: 56px;
+}
+@media (max-width: 600px) {
+  .borderedBtn {
+    height: 48px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
+.borderedBtn span {
+  line-height: 1.4;
+}
+.borderedBtn:hover {
+  gap: 16px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500000;
+}
+header.scrolled {
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+header #menu {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--view-height);
+  background: #121212;
+  padding: 0 0 15px;
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 20;
+}
+header #menu .topHead {
+  height: 86px;
+  display: flex;
+  align-items: center;
+}
+header #menu .bodyCont > *:not(.eachClickable):not(.socialLinks):not(.contactCont) {
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  header #menu .bodyCont > *:not(.eachClickable):not(.socialLinks):not(.contactCont) {
+    margin-bottom: 15px;
+  }
+}
+header #menu .eachMenuItem {
+  display: flex;
+  font-size: 40px;
+  font-family: "Cabinet Grotesk";
+  font-weight: bold;
+  color: #cacaca;
+  text-decoration: none;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  overflow: hidden;
+  pointer-events: all;
+}
+header #menu .eachMenuItem span {
+  position: relative;
+}
+header #menu .eachMenuItem span::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  content: "";
+  border-bottom: 3px solid;
+  transition: 0.3s ease;
+}
+header #menu .eachMenuItem:hover span::after {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  header #menu .eachMenuItem {
+    font-size: 30px;
+  }
+}
+header #menu .socialLinks {
+  max-width: 880px;
+  gap: 18px;
+}
+@media (max-width: 600px) {
+  header #menu .socialLinks {
+    gap: 15px;
+  }
+}
+header #menu .socialLinks .gridItem {
+  overflow: hidden;
+}
+header #menu .socialLinks .eachClickable {
+  height: 140px;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  header #menu .socialLinks .eachClickable {
+    height: 130px;
+  }
+}
+header #menu .contact {
+  max-width: 700px;
+  height: 110px;
+  margin-bottom: 18px;
+}
+@media (max-width: 600px) {
+  header #menu .contact {
+    height: 100px;
+    margin-bottom: 15px;
+  }
+}
+header #menu.opened {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 86px;
+  position: relative;
+  z-index: 20;
+}
+nav .logo {
+  position: relative;
+  display: flex;
+}
+nav .rightNav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  visibility: hidden;
+}
+nav .rightNav.loaded {
+  visibility: visible;
+}
+nav .rightNav .borderedBtn {
+  height: 64px;
+}
+@media (max-width: 600px) {
+  nav .rightNav .borderedBtn {
+    display: none;
+  }
+}
+nav .rightNav #toggle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 30;
+}
+nav .rightNav #toggle .innerToggle {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 27px;
+  height: 16.82px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+nav .rightNav #toggle .innerToggle span {
+  height: 2.29px;
+  border-radius: 2px;
+  width: 100%;
+  background: #fff;
+  transition: 0.3s ease;
+}
+nav .rightNav #toggle .innerToggle span:not(:nth-child(2)) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+nav .rightNav #toggle .innerToggle span:not(:nth-child(2)):last-child {
+  top: 100%;
+  transform: translate(0, -100%);
+}
+@media (max-width: 600px) {
+  nav .rightNav #toggle {
+    width: 48px;
+    height: 48px;
+  }
+  nav .rightNav #toggle .innerToggle {
+    width: 23px;
+  }
+}
+nav .rightNav #toggle:hover {
+  transform: rotate(90deg);
+}
+nav .rightNav #toggle.opened .innerToggle span:first-child, nav .rightNav #toggle.opened .innerToggle span:last-child {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0, -50%) rotate(45deg);
+}
+nav .rightNav #toggle.opened .innerToggle span:last-child {
+  transform: translate(0, -50%) rotate(-45deg);
+}
+nav .rightNav #toggle.opened .innerToggle span:nth-child(2) {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+section:first-child {
+  padding-top: 122px;
+}
+
+#welcomeBanner {
+  padding-bottom: 82px;
+}
+#welcomeBanner p {
+  margin: 0 0 24px;
+}
+#welcomeBanner h1 {
+  font-size: 11vw;
+  margin: 0;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: url(assets/images/animbg.svg);
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: colorChange forwards 1.5s linear;
+  animation-delay: 3.9s;
+}
+@media (max-width: 600px) {
+  #welcomeBanner h1 {
+    font-size: 14vw;
+  }
+}
+#welcomeBanner .content {
+  width: 73%;
+  margin-left: auto;
+}
+@media (max-width: 600px) {
+  #welcomeBanner .content {
+    width: 90%;
+  }
+}
+#welcomeBanner .btnCont {
+  margin-top: 32px;
+  gap: 21px;
+}
+@media (max-width: 600px) {
+  #welcomeBanner .btnCont {
+    gap: 8px;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 50%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+#horizontalScroll {
+  padding: 162px 0;
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  #horizontalScroll {
+    padding: 32px 0;
+  }
+}
+#horizontalScroll #horizontalScrollNoPad {
+  position: relative;
+}
+#horizontalScroll #innerHorizontalScroll {
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  width: 100%;
+}
+@media (min-width: 751px) {
+  #horizontalScroll #innerHorizontalScroll {
+    position: absolute;
+    top: 0;
+  }
+  #horizontalScroll #innerHorizontalScroll.stick {
+    top: 100px;
+    position: fixed;
+  }
+}
+@media (min-width: 751px) and (min-height: 626px) {
+  #horizontalScroll #innerHorizontalScroll.stick {
+    top: 120px;
+  }
+}
+@media (min-width: 751px) {
+  #horizontalScroll #innerHorizontalScroll.scrollTogether {
+    top: unset;
+    bottom: 0;
+    position: absolute;
+  }
+}
+@media (max-width: 750px) {
+  #horizontalScroll #innerHorizontalScroll {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+#horizontalScroll .eachWork {
+  min-width: calc(100vw - var(--scrollBarW));
+}
+@media (max-width: 750px) {
+  #horizontalScroll .eachWork {
+    min-width: unset;
+  }
+}
+#horizontalScroll .eachWork .bodyCont {
+  height: 100%;
+}
+#horizontalScroll .eachWork .flexCont {
+  display: flex;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+#horizontalScroll .eachWork .flexCont > div {
+  flex: 1 50%;
+  width: 50%;
+}
+#horizontalScroll .eachWork .flexCont > div.txtCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 57px 5%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f9f9f9;
+}
+@media (max-width: 750px) {
+  #horizontalScroll .eachWork .flexCont > div.txtCont {
+    padding: 52px 42px;
+  }
+}
+#horizontalScroll .eachWork .flexCont > div.txtCont::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(assets/images/noise.png);
+}
+#horizontalScroll .eachWork .flexCont > div.txtCont > * {
+  position: relative;
+  z-index: 20;
+}
+#horizontalScroll .eachWork .flexCont > div.txtCont h2 {
+  margin-bottom: 7.2px;
+  line-height: 1.3;
+  font-weight: 800;
+  font-size: 46px;
+}
+@media (max-width: 900px) {
+  #horizontalScroll .eachWork .flexCont > div.txtCont h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  #horizontalScroll .eachWork .flexCont > div.txtCont h2 {
+    font-size: 27.7037px;
+  }
+}
+#horizontalScroll .eachWork .flexCont > div.txtCont p {
+  margin-bottom: 57.6px;
+}
+#horizontalScroll .eachWork .flexCont > div.imgCont {
+  background: rgba(249, 249, 249, 0.031372549);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media (max-width: 750px) {
+  #horizontalScroll .eachWork .flexCont > div.imgCont {
+    padding-top: 30px;
+  }
+}
+#horizontalScroll .eachWork .flexCont > div.imgCont img {
+  max-width: 100%;
+}
+@media (max-width: 750px) {
+  #horizontalScroll .eachWork .flexCont {
+    flex-direction: column-reverse;
+  }
+  #horizontalScroll .eachWork .flexCont > div {
+    width: 100%;
+  }
+}
+
+#goodDesign {
+  padding: 800px 0 122px;
+  position: relative;
+  z-index: 2000;
+}
+@media (max-width: 600px) {
+  #goodDesign {
+    padding: 190px 0 90px;
+  }
+}
+#goodDesign .bodyCont {
+  transition: 1s ease;
+  transform: translate(0, 100px);
+  opacity: 0;
+}
+#goodDesign .bodyCont.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+#goodDesign .dFlex {
+  flex-wrap: wrap;
+}
+#goodDesign .dFlex > div {
+  flex: 1 339px;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#goodDesign .dFlex > div.rightPart {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-top: 89px;
+}
+#goodDesign .dFlex > div.rightPart > div {
+  transition: 0.9s ease;
+  transform: translate(0, 300%);
+  opacity: 0;
+}
+#goodDesign .dFlex > div.rightPart > div.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+#goodDesign .dFlex > div.rightPart .iconCont {
+  margin-top: 6px;
+  padding-right: 40px;
+}
+#goodDesign .dFlex .leftTxt {
+  max-width: 339px;
+  transition: 0.9s ease;
+  transform: translate(0, 200%);
+  opacity: 0;
+}
+#goodDesign .dFlex .leftTxt.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+#goodDesign h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 96px;
+  margin: 0;
+  transform: scale(0.5) translate(0, -2000);
+  transition: 0s;
+}
+@media (max-width: 750px) {
+  #goodDesign h2 {
+    transform: scale(0.5) translate(0, -840);
+  }
+}
+@media (max-width: 600px) {
+  #goodDesign h2 {
+    font-size: 40px;
+  }
+}
+
+#callToAction {
+  padding: 122px 0;
+  background: rgba(255, 255, 255, 0.031372549);
+  text-align: center;
+  position: relative;
+  z-index: 300;
+}
+#callToAction h3 {
+  max-width: 647.46px;
+  margin: auto;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  #callToAction h3 {
+    font-size: 24px;
+  }
+}
+#callToAction .btnCont {
+  display: flex;
+  gap: 21px;
+  justify-content: center;
+  margin-top: 62px;
+}
+@media (max-width: 600px) {
+  #callToAction .btnCont {
+    gap: 8px;
+  }
+}
+
+.eachClickable {
+  background: rgba(249, 249, 249, 0.031372549);
+  display: flex;
+  border-radius: 24px;
+  padding: 0 24px;
+  font-weight: bold;
+  align-items: center;
+  color: #cacaca;
+  text-decoration: none;
+  transition: 0.2s ease;
+  height: 160px;
+}
+.eachClickable:not(.contact) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+.eachClickable.contact {
+  height: 128px;
+  margin-bottom: 20px;
+  gap: 21px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .eachClickable.contact {
+    height: 120px;
+    margin-bottom: 17px;
+  }
+}
+.eachClickable:hover {
+  background: rgba(249, 249, 249, 0.1019607843);
+}
+
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .socialLinks {
+    gap: 17px;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  }
+}
+
+footer {
+  padding: 24.64px 0 115.36px;
+  position: relative;
+  z-index: 300;
+}
+@media (max-width: 600px) {
+  footer {
+    padding: 16px 0 32px;
+  }
+}
+footer .logo {
+  margin-bottom: 44px;
+  display: flex;
+}
+footer .dFlex {
+  border-top: 0.5px solid #cacaca;
+  padding-top: 48px;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+footer .dFlex .smallPart {
+  flex: 1 304px;
+  display: flex;
+  flex-direction: column;
+}
+footer .dFlex .smallPart .expander {
+  flex: 1;
+}
+footer .dFlex .smallPart p {
+  font-family: "Cabinet Grotesk";
+  font-weight: bold;
+  font-size: 40px;
+  max-width: 304px;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  footer .dFlex .smallPart p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 851px) {
+  footer .dFlex .smallPart .copyright {
+    display: none;
+  }
+}
+footer .dFlex .largePart {
+  flex: 3 495px;
+}
+footer .dFlex .largePart .copyright {
+  display: none;
+}
+@media (max-width: 851px) {
+  footer .dFlex .largePart .copyright {
+    display: block;
+  }
+}
+footer .copyright {
+  margin-top: 32px;
+  font-weight: bold;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #cacaca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 16px rgba(255, 255, 255, 0.2509803922);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: -1;
+  visibility: hidden;
+}
+#scrollTop svg {
+  width: 23px;
+}
+#scrollTop.show {
+  opacity: 1;
+  z-index: 20000;
+  visibility: visible;
+}
+@media (max-width: 600px) {
+  #scrollTop {
+    width: 64px;
+    height: 64px;
+  }
+  #scrollTop svg {
+    width: 22px;
+    height: auto;
+  }
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--view-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #121212;
+  z-index: 30000;
+  transition: 0.3s ease;
+}
+#loader.done {
+  opacity: 0;
+  z-index: -1;
+}
+#loader .progress {
+  background: rgba(255, 255, 255, 0.0509803922);
+  max-width: 320px;
+  width: 100%;
+  height: 8px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+#loader .progress .indc {
+  width: 0;
+  background: #ffffff;
+  border-radius: 24px;
+  animation: prog 4s ease forwards;
+}
+@keyframes prog {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+  }
+}
+#loader .animating {
+  font-family: "Cabinet Grotesk";
+  font-size: 40px;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+#loader .animating span {
+  font-size: 40px;
+  opacity: 1;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+#loader .animating span:first-child {
+  animation-name: loadAnim1;
+  animation-duration: 4.9s;
+}
+@media (max-width: 600px) {
+  #loader .animating span:first-child {
+    animation-name: loadAnim4;
+  }
+}
+#loader .animating span:nth-child(2) {
+  animation-name: loadAnim2;
+  animation-delay: 1.3s;
+  animation-duration: 4.9s;
+}
+@media (max-width: 600px) {
+  #loader .animating span:nth-child(2) {
+    animation-name: loadAnim5;
+  }
+}
+#loader .animating span:nth-child(3) {
+  animation-name: loadAnim3;
+  animation-delay: 2.6s;
+  animation-duration: 4.9s;
+}
+@media (max-width: 600px) {
+  #loader .animating span:nth-child(3) {
+    animation-name: loadAnim6;
+  }
+}
+@media (max-width: 600px) {
+  #loader .animating {
+    font-size: 32px;
+  }
+}
+@media (max-width: 600px) {
+  #loader > div:not(:first-child) {
+    max-width: 218.52px;
+  }
+  #loader > div:not(:first-child).progress {
+    height: 5px;
+    margin: 16px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
