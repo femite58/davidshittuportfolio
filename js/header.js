@@ -41,7 +41,7 @@ document.write(`<!DOCTYPE html>
                                 <div class="topHead">
                                     <a href="/" class="logo">
                                         <img
-                                            src="assets/images/logo.svg"
+                                            src="${path}assets/images/logo.svg"
                                             alt="David Shittu"
                                         />
                                     </a>
