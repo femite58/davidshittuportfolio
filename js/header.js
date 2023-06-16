@@ -7,6 +7,7 @@ document.write(`<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>David Shittu</title>
         <link rel="stylesheet" href="${path}style.css" />
+        <link rel="icon" href="${path}assets/images/favicon.png"/>
     </head>
     <body>
         <div id="loader">
