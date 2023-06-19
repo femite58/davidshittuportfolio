@@ -101,6 +101,7 @@ let curTranslY = startPos;
 let timer;
 
 const fadeUp = document.querySelectorAll('.fadeUp');
+fadeTransition();
 
 document.documentElement.style.setProperty(
     '--view-height',
