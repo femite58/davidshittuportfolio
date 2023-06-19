@@ -334,6 +334,286 @@ section:first-child {
   padding-top: 122px;
 }
 
+.fadeUp > * {
+  transition: 0.8s ease;
+  transform: translate(0, 400px);
+  opacity: 0;
+}
+.fadeUp.delay0-1 > * {
+  transition-delay: 0.1s;
+}
+.fadeUp.delay0-2 > * {
+  transition-delay: 0.2s;
+}
+.fadeUp.delay0-3 > * {
+  transition-delay: 0.3s;
+}
+.fadeUp.delay0-4 > * {
+  transition-delay: 0.4s;
+}
+.fadeUp.delay0-5 > * {
+  transition-delay: 0.5s;
+}
+.fadeUp.delay0-6 > * {
+  transition-delay: 0.6s;
+}
+.fadeUp.delay0-7 > * {
+  transition-delay: 0.7s;
+}
+.fadeUp.delay0-8 > * {
+  transition-delay: 0.8s;
+}
+.fadeUp.delay0-9 > * {
+  transition-delay: 0.9s;
+}
+.fadeUp.delay1-1 > * {
+  transition-delay: 1.1s;
+}
+.fadeUp.delay1-2 > * {
+  transition-delay: 1.2s;
+}
+.fadeUp.delay1-3 > * {
+  transition-delay: 1.3s;
+}
+.fadeUp.delay1-4 > * {
+  transition-delay: 1.4s;
+}
+.fadeUp.delay1-5 > * {
+  transition-delay: 1.5s;
+}
+.fadeUp.delay1-6 > * {
+  transition-delay: 1.6s;
+}
+.fadeUp.delay1-7 > * {
+  transition-delay: 1.7s;
+}
+.fadeUp.delay1-8 > * {
+  transition-delay: 1.8s;
+}
+.fadeUp.delay1-9 > * {
+  transition-delay: 1.9s;
+}
+.fadeUp.delay2-1 > * {
+  transition-delay: 2.1s;
+}
+.fadeUp.delay2-2 > * {
+  transition-delay: 2.2s;
+}
+.fadeUp.delay2-3 > * {
+  transition-delay: 2.3s;
+}
+.fadeUp.delay2-4 > * {
+  transition-delay: 2.4s;
+}
+.fadeUp.delay2-5 > * {
+  transition-delay: 2.5s;
+}
+.fadeUp.delay2-6 > * {
+  transition-delay: 2.6s;
+}
+.fadeUp.delay2-7 > * {
+  transition-delay: 2.7s;
+}
+.fadeUp.delay2-8 > * {
+  transition-delay: 2.8s;
+}
+.fadeUp.delay2-9 > * {
+  transition-delay: 2.9s;
+}
+.fadeUp.delay3-1 > * {
+  transition-delay: 3.1s;
+}
+.fadeUp.delay3-2 > * {
+  transition-delay: 3.2s;
+}
+.fadeUp.delay3-3 > * {
+  transition-delay: 3.3s;
+}
+.fadeUp.delay3-4 > * {
+  transition-delay: 3.4s;
+}
+.fadeUp.delay3-5 > * {
+  transition-delay: 3.5s;
+}
+.fadeUp.delay3-6 > * {
+  transition-delay: 3.6s;
+}
+.fadeUp.delay3-7 > * {
+  transition-delay: 3.7s;
+}
+.fadeUp.delay3-8 > * {
+  transition-delay: 3.8s;
+}
+.fadeUp.delay3-9 > * {
+  transition-delay: 3.9s;
+}
+.fadeUp.delay4-1 > * {
+  transition-delay: 4.1s;
+}
+.fadeUp.delay4-2 > * {
+  transition-delay: 4.2s;
+}
+.fadeUp.delay4-3 > * {
+  transition-delay: 4.3s;
+}
+.fadeUp.delay4-4 > * {
+  transition-delay: 4.4s;
+}
+.fadeUp.delay4-5 > * {
+  transition-delay: 4.5s;
+}
+.fadeUp.delay4-6 > * {
+  transition-delay: 4.6s;
+}
+.fadeUp.delay4-7 > * {
+  transition-delay: 4.7s;
+}
+.fadeUp.delay4-8 > * {
+  transition-delay: 4.8s;
+}
+.fadeUp.delay4-9 > * {
+  transition-delay: 4.9s;
+}
+.fadeUp.delay5-1 > * {
+  transition-delay: 5.1s;
+}
+.fadeUp.delay5-2 > * {
+  transition-delay: 5.2s;
+}
+.fadeUp.delay5-3 > * {
+  transition-delay: 5.3s;
+}
+.fadeUp.delay5-4 > * {
+  transition-delay: 5.4s;
+}
+.fadeUp.delay5-5 > * {
+  transition-delay: 5.5s;
+}
+.fadeUp.delay5-6 > * {
+  transition-delay: 5.6s;
+}
+.fadeUp.delay5-7 > * {
+  transition-delay: 5.7s;
+}
+.fadeUp.delay5-8 > * {
+  transition-delay: 5.8s;
+}
+.fadeUp.delay5-9 > * {
+  transition-delay: 5.9s;
+}
+.fadeUp.delay6-1 > * {
+  transition-delay: 6.1s;
+}
+.fadeUp.delay6-2 > * {
+  transition-delay: 6.2s;
+}
+.fadeUp.delay6-3 > * {
+  transition-delay: 6.3s;
+}
+.fadeUp.delay6-4 > * {
+  transition-delay: 6.4s;
+}
+.fadeUp.delay6-5 > * {
+  transition-delay: 6.5s;
+}
+.fadeUp.delay6-6 > * {
+  transition-delay: 6.6s;
+}
+.fadeUp.delay6-7 > * {
+  transition-delay: 6.7s;
+}
+.fadeUp.delay6-8 > * {
+  transition-delay: 6.8s;
+}
+.fadeUp.delay6-9 > * {
+  transition-delay: 6.9s;
+}
+.fadeUp.delay7-1 > * {
+  transition-delay: 7.1s;
+}
+.fadeUp.delay7-2 > * {
+  transition-delay: 7.2s;
+}
+.fadeUp.delay7-3 > * {
+  transition-delay: 7.3s;
+}
+.fadeUp.delay7-4 > * {
+  transition-delay: 7.4s;
+}
+.fadeUp.delay7-5 > * {
+  transition-delay: 7.5s;
+}
+.fadeUp.delay7-6 > * {
+  transition-delay: 7.6s;
+}
+.fadeUp.delay7-7 > * {
+  transition-delay: 7.7s;
+}
+.fadeUp.delay7-8 > * {
+  transition-delay: 7.8s;
+}
+.fadeUp.delay7-9 > * {
+  transition-delay: 7.9s;
+}
+.fadeUp.delay8-1 > * {
+  transition-delay: 8.1s;
+}
+.fadeUp.delay8-2 > * {
+  transition-delay: 8.2s;
+}
+.fadeUp.delay8-3 > * {
+  transition-delay: 8.3s;
+}
+.fadeUp.delay8-4 > * {
+  transition-delay: 8.4s;
+}
+.fadeUp.delay8-5 > * {
+  transition-delay: 8.5s;
+}
+.fadeUp.delay8-6 > * {
+  transition-delay: 8.6s;
+}
+.fadeUp.delay8-7 > * {
+  transition-delay: 8.7s;
+}
+.fadeUp.delay8-8 > * {
+  transition-delay: 8.8s;
+}
+.fadeUp.delay8-9 > * {
+  transition-delay: 8.9s;
+}
+.fadeUp.delay9-1 > * {
+  transition-delay: 9.1s;
+}
+.fadeUp.delay9-2 > * {
+  transition-delay: 9.2s;
+}
+.fadeUp.delay9-3 > * {
+  transition-delay: 9.3s;
+}
+.fadeUp.delay9-4 > * {
+  transition-delay: 9.4s;
+}
+.fadeUp.delay9-5 > * {
+  transition-delay: 9.5s;
+}
+.fadeUp.delay9-6 > * {
+  transition-delay: 9.6s;
+}
+.fadeUp.delay9-7 > * {
+  transition-delay: 9.7s;
+}
+.fadeUp.delay9-8 > * {
+  transition-delay: 9.8s;
+}
+.fadeUp.delay9-9 > * {
+  transition-delay: 9.9s;
+}
+.fadeUp.show > * {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 #welcomeBanner {
   padding-bottom: 82px;
 }

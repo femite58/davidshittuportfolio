@@ -100,6 +100,8 @@ let curSc = startSc;
 let curTranslY = startPos;
 let timer;
 
+const fadeUp = document.querySelectorAll('.fadeUp');
+
 document.documentElement.style.setProperty(
     '--view-height',
     `${window.innerHeight}px`
@@ -166,11 +168,24 @@ scrlEl.addEventListener('scroll', (e) => {
     } else {
         header.classList.remove('scrolled');
     }
+    fadeTransition();
     if (page == 'home') {
         scrollCheck(e);
         scrollZoomEffect(e);
     }
 });
+
+function fadeTransition() {
+    for (let el of fadeUp) {
+        let eachBc = el.getBoundingClientRect();
+        console.log(eachBc.top);
+        if (eachBc.top <= 400) {
+            el.classList.add('show');
+        } else {
+            el.classList.remove('show');
+        }
+    }
+}
 
 function initiateHorzScrlEl() {
     startPos = window.innerWidth < 750 ? -840 : -2000;

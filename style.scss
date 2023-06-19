@@ -322,6 +322,28 @@ section:first-child {
     //     padding-top:
     // }
 }
+.fadeUp {
+    & > * {
+        transition: 0.8s ease;
+        transform: translate(0, 400px);
+        opacity: 0;
+    }
+    @for $i from 0 through 9 {
+        @for $j from 1 through 9 {
+            &.delay#{$i}-#{$j} {
+                & > * {
+                    transition-delay: #{(($i * 10) + $j) / 10}s;
+                }
+            }
+        }
+    }
+    &.show {
+        & > * {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+}
 #welcomeBanner {
     padding-bottom: 82px;
     p {
