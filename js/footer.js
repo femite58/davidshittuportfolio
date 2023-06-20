@@ -182,8 +182,6 @@ function fadeTransition() {
         console.log(eachBc.top);
         if (eachBc.top <= 400) {
             el.classList.add('show');
-        } else {
-            el.classList.remove('show');
         }
     }
 }
