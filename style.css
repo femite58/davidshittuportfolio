@@ -658,7 +658,7 @@ section:first-child {
 }
 @media (max-width: 600px) {
   #welcomeBanner .content {
-    width: 90%;
+    width: 100%;
   }
 }
 #welcomeBanner .btnCont {
