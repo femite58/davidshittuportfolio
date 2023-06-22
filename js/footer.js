@@ -98,7 +98,7 @@ window.onbeforeunload = () => {
 
 let horScstickTop = window.innerHeight <= 625 ? 100 : 120;
 
-let startPos = window.innerWidth < 750 ? -840 : window.innerHeight;
+let startPos = window.innerHeight;
 let startPosT = 0;
 let startPos2 = window.innerHeight / 2;
 let startPosT2 = -50;
@@ -224,12 +224,13 @@ function initiateHorzScrlEl() {
 function scrollZoomEffect(e) {
     let gdB = goodDesign.getBoundingClientRect();
     let gdH2B = goodDesignH2.getBoundingClientRect();
-    startPos = window.innerWidth < 750 ? -840 : window.innerHeight;
-    endPos = window.innerHeight - gdH2B.height - 122 + 100;
-    endScrl =
-        window.innerWidth < 750
-            ? 0
-            : (gdB.height - window.innerHeight - 100) * -1;
+    startPos = window.innerHeight;
+    endPos =
+        window.innerHeight -
+        gdH2B.height -
+        122 +
+        (window.innerWidth < 750 ? 0 : 100);
+    endScrl = (gdB.height - window.innerHeight - (window.innerWidth < 750 ? 0 : 100)) * -1;
     let topStart = window.innerWidth < 750 ? 200 : 450;
     let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
     let leftTxt = goodDesign.querySelector('.leftTxt');
@@ -237,7 +238,7 @@ function scrollZoomEffect(e) {
     // console.log(endScrl);
 
     let finalTop, finalTranslY;
-    let scrlSt = window.innerHeight ;
+    let scrlSt = window.innerHeight;
     console.log(gdB.top, gdH2B.width);
     let endScrlh2 = 162;
     if (gdB.top <= scrlSt) {
