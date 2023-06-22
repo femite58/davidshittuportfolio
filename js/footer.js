@@ -75,7 +75,6 @@ document.write(`
     </body>
 </html>
 `);
-console.log(page);
 const toggle = document.querySelector('#toggle');
 const header = document.querySelector('header');
 const scrollTop = document.querySelector('#scrollTop');
@@ -93,13 +92,12 @@ if (page == 'home') {
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
 
-history.scrollRestoration = 'manual';
+// history.scrollRestoration = 'manual';
 
 window.onbeforeunload = () => {
     window.scrollTo(0, 0);
 };
 window.onmousemove = (e) => {
-    console.log(e.x, e.y);
     customCursor.style.cssText = `top: ${e.y}px; left: ${e.x}px;`;
 };
 
@@ -198,7 +196,6 @@ scrlEl.addEventListener('scroll', (e) => {
 function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
-        console.log(eachBc.top, 'fade');
         if (eachBc.top <= 450) {
             el.classList.add('show');
         } else {
@@ -248,11 +245,9 @@ function scrollZoomEffect(e) {
     let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
     let leftTxt = goodDesign.querySelector('.leftTxt');
     let rightDivs = goodDesign.querySelectorAll('.rightPart > div');
-    // console.log(endScrl);
 
     let finalTop, finalTranslY;
     let scrlSt = window.innerHeight;
-    console.log(gdB.top, gdH2B.width);
     let endScrlh2 = 162;
     if (gdB.top <= scrlSt) {
         finalTop =
@@ -281,7 +276,6 @@ function scrollZoomEffect(e) {
                         (endScrlh2 - endScrl) +
                     0;
             }
-            console.log(finalSc, finalTranslY);
             goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${finalSc});`;
             curSc = finalSc;
             curTranslY = finalTranslY;
