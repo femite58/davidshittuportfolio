@@ -50,7 +50,7 @@ document.write(`<!DOCTYPE html>
                                 <a
                                     href="/"
                                     class="eachMenuItem"
-                                    data-color="#7CD434"
+                                    data-color="#18FF04"
                                     data-bg="#010321"
                                 >
                                     <span>Home</span>

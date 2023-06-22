@@ -1,11 +1,14 @@
 $txtColor: #cacaca;
 $bodyBg: #121212;
+$primary: #18ff04;
 * {
     box-sizing: border-box;
 }
 html,
 body {
     overflow-x: hidden;
+    // height: var(--view-height);
+    // overflow-y: auto;
 }
 :root {
     --scrollBarW: 17px;
@@ -111,6 +114,14 @@ h1 {
     }
     &:hover {
         gap: 16px;
+        color: $primary;
+        border-color: $primary;
+        path[fill] {
+            fill: $primary;
+        }
+        path[stroke] {
+            stroke: $primary;
+        }
     }
 }
 header {
@@ -152,6 +163,7 @@ header {
         }
         .eachMenuItem {
             display: flex;
+            width: fit-content;
             font-size: 40px;
             font-family: "Cabinet Grotesk";
             font-weight: bold;
@@ -292,6 +304,12 @@ nav {
             //   }
             &:hover {
                 transform: rotate(90deg);
+                border-color: $primary;
+                .innerToggle {
+                    span {
+                        background: $primary;
+                    }
+                }
             }
             &.opened {
                 .innerToggle {
@@ -324,8 +342,9 @@ section:first-child {
 }
 .fadeUp {
     & > * {
+        position: relative;
         transition: 0.8s ease;
-        transform: translate(0, 400px);
+        top: 400px;
         opacity: 0;
     }
     @for $i from 0 through 9 {
@@ -339,7 +358,7 @@ section:first-child {
     }
     &.show {
         & > * {
-            transform: translate(0, 0);
+            top: 0;
             opacity: 1;
         }
     }
@@ -471,7 +490,7 @@ section:first-child {
                         width: 100%;
                         height: 100%;
                         content: "";
-                        background-image: url(assets/images/noise.png);
+                        // background-image: url(assets/images/noise.png);
                     }
                     & > * {
                         position: relative;
@@ -516,21 +535,21 @@ section:first-child {
     }
 }
 #goodDesign {
-    padding: 800px 0 122px;
+    padding: 4000px 0 122px;
     position: relative;
     @media (max-width: 600px) {
         padding: 190px 0 90px;
     }
     z-index: 2000;
-    .bodyCont {
-        transition: 1s ease;
-        transform: translate(0, 100px);
-        opacity: 0;
-        &.show {
-            transform: translate(0, 0);
-            opacity: 1;
-        }
-    }
+    // .bodyCont {
+    //     transition: 1s ease;
+    //     transform: translate(0, 100px);
+    //     opacity: 0;
+    //     &.show {
+    //         transform: translate(0, 0);
+    //         opacity: 1;
+    //     }
+    // }
     .dFlex {
         flex-wrap: wrap;
         & > div {
@@ -543,7 +562,7 @@ section:first-child {
                 flex-direction: column;
                 padding-top: 89px;
                 & > div {
-                    transition: 0.9s ease;
+                    transition: 0.6s ease;
                     transform: translate(0, 300%);
                     opacity: 0;
                     &.show {
@@ -559,7 +578,7 @@ section:first-child {
         }
         .leftTxt {
             max-width: 339px;
-            transition: 0.9s ease;
+            transition: 0.6s ease;
             transform: translate(0, 200%);
             opacity: 0;
             &.show {
@@ -574,13 +593,22 @@ section:first-child {
         font-weight: bold;
         font-size: 96px;
         margin: 0;
-        transform: scale(0.5) translate(0, -2000);
+        // transform: scale(0.5) translate(0, -4500px);
         transition: 0s;
-        @media (max-width: 750px) {
-            transform: scale(0.5) translate(0, -840);
-        }
+        opacity: 0;
+        color: $primary;
+        // @media (max-width: 750px) {
+        //     transform: scale(0.5) translate(0, -840px);
+        // }
         @media (max-width: 600px) {
             font-size: 40px;
+        }
+        &.adjusted {
+            position: fixed;
+            top: 100%;
+            left: 50%;
+            transform: scale(0.5) translate(-50%, 0%);
+            opacity: 1;
         }
     }
 }
@@ -638,6 +666,13 @@ section:first-child {
     }
     &:hover {
         background: #f9f9f91a;
+        color: $primary;
+        path[fill*="#"] {
+            fill: $primary;
+        }
+        path[stroke^="#"] {
+            stroke: $primary;
+        }
     }
 }
 .socialLinks {
@@ -711,7 +746,7 @@ footer {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: #cacaca;
+    background: $primary;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -767,7 +802,7 @@ footer {
         margin: 24px 0;
         .indc {
             width: 0;
-            background: #ffffff;
+            background: $primary;
             border-radius: 24px;
             animation: prog 4s ease forwards;
         }

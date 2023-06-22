@@ -85,15 +85,26 @@ const menuItems = menu.querySelectorAll('.eachMenuItem');
 const horizontalScroll = document.querySelector('#horizontalScrollNoPad');
 let innerHScroll;
 const goodDesign = document.querySelector('#goodDesign');
-let goodDesignH2;
+let goodDesignH2, goodDesignH2Adj;
 if (page == 'home') {
     innerHScroll = horizontalScroll?.querySelector('#innerHorizontalScroll');
     goodDesignH2 = goodDesign?.querySelector('h2');
+    goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
+
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+};
 
 let horScstickTop = window.innerHeight <= 625 ? 100 : 120;
 
-let startPos = window.innerWidth < 750 ? -840 : -2000;
+let startPos = window.innerWidth < 750 ? -840 : window.innerHeight;
+let startPosT = 0;
+let startPos2 = window.innerHeight / 2;
+let startPosT2 = -50;
+let endScrl2 = 0;
+let endPos = 0;
+let endPosT = 0;
 let endScrl = window.innerWidth < 750 ? 0 : -500;
 let startSc = 0.5;
 let curSc = startSc;
@@ -159,6 +170,7 @@ const scrlEl = window;
 scrlEl.addEventListener('scroll', (e) => {
     scrollDiff = scrlEl.scrollY - initScrollTop;
     initScrollTop = scrlEl.scrollY;
+    // console.log('scrollTop');
     if (scrlEl.scrollY > 500) {
         scrollTop.classList.add('show');
     } else {
@@ -179,16 +191,14 @@ scrlEl.addEventListener('scroll', (e) => {
 function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
-        console.log(eachBc.top);
-        if (eachBc.top <= 400) {
+        console.log(eachBc.top, 'fade');
+        if (eachBc.top <= 450) {
             el.classList.add('show');
         }
     }
 }
 
 function initiateHorzScrlEl() {
-    startPos = window.innerWidth < 750 ? -840 : -2000;
-    endScrl = window.innerWidth < 750 ? 0 : -500;
     if (window.innerWidth >= 750) {
         const works = horizontalScroll.querySelectorAll('.eachWork');
         const added = horizontalScroll.querySelectorAll('.added');
@@ -212,38 +222,53 @@ function initiateHorzScrlEl() {
 }
 
 function scrollZoomEffect(e) {
-    startPos = window.innerWidth < 750 ? -840 : -2000;
-    endScrl = window.innerWidth < 750 ? 0 : -500;
     let gdB = goodDesign.getBoundingClientRect();
+    let gdH2B = goodDesignH2.getBoundingClientRect();
+    startPos = window.innerWidth < 750 ? -840 : window.innerHeight;
+    endPos = window.innerHeight - gdH2B.height - 122 + 100;
+    endScrl =
+        window.innerWidth < 750
+            ? 0
+            : (gdB.height - window.innerHeight - 100) * -1;
     let topStart = window.innerWidth < 750 ? 200 : 450;
-    let scrlExt = topStart - endScrl;
+    let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
     let leftTxt = goodDesign.querySelector('.leftTxt');
     let rightDivs = goodDesign.querySelectorAll('.rightPart > div');
-    const bodyCont = goodDesign.querySelector('.bodyCont');
-    let topCheck = window.innerWidth < 750 ? 300 : 600;
-    if (gdB.top <= topCheck) {
-        bodyCont.classList.add('show');
-    } else {
-        bodyCont.classList.remove('show');
-    }
-    if (timer) {
-        clearTimeout(timer);
+    // console.log(endScrl);
+
+    let finalTop, finalTranslY;
+    let scrlSt = window.innerHeight ;
+    console.log(gdB.top, gdH2B.width);
+    let endScrlh2 = 162;
+    if (gdB.top <= scrlSt) {
+        finalTop =
+            ((gdB.top - endScrlh2) * (startPos - startPos2)) /
+                (scrlSt - endScrlh2) +
+            startPos2;
+        finalTranslY =
+            ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
+                (scrlSt - endScrlh2) +
+            startPosT2;
+        goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
     }
     if (gdB.top <= topStart) {
         if (gdB.top >= endScrl) {
-            let scaleDiff = ((scrollDiff * (1 - startSc)) / scrlExt) * 1;
-            let transDiff = ((scrollDiff * startPos * -1) / scrlExt) * 1;
-            let finalSc = curSc + scaleDiff;
-            let finalTranslY = curTranslY + transDiff;
-            console.log(finalTranslY);
-            finalSc = finalSc > 1 ? 1 : finalSc < startSc ? startSc : finalSc;
-            finalTranslY =
-                finalTranslY < startPos
-                    ? startPos
-                    : finalTranslY > 0
-                    ? 0
-                    : finalTranslY;
-            goodDesignH2.style.transform = `scale(${finalSc}) translate(0, ${finalTranslY}px)`;
+            let finalSc =
+                ((startSc - 1) * (gdB.top - endScrl)) / (topStart - endScrl) +
+                1;
+
+            if (gdB.top <= endScrlh2) {
+                finalTop =
+                    ((gdB.top - endScrl) * (startPos2 - endPos)) /
+                        (endScrlh2 - endScrl) +
+                    endPos;
+                finalTranslY =
+                    ((gdB.top - endScrl) * (startPosT2 - 0)) /
+                        (endScrlh2 - endScrl) +
+                    0;
+            }
+            console.log(finalSc, finalTranslY);
+            goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${finalSc});`;
             curSc = finalSc;
             curTranslY = finalTranslY;
             leftTxt.classList.remove('show');
@@ -251,16 +276,28 @@ function scrollZoomEffect(e) {
                 div.classList.remove('show');
             });
         } else {
-            goodDesignH2.style.transform = `scale(1) translate(0, 0px)`;
+            goodDesignH2Adj.style.cssText = `position: absolute; bottom: 122px; width: ${gdH2B.width}px; top: unset; transform: translate(-50%, 0px) scale(1);`;
             leftTxt.classList.add('show');
-            timer = setTimeout(() => {
-                rightDivs.forEach((div) => {
-                    div.classList.add('show');
-                });
-            }, 100);
+
+            rightDivs.forEach((div) => {
+                div.classList.add('show');
+            });
+            // }, 100);
         }
     } else {
-        goodDesignH2.style.transform = `scale(${startSc}) translate(0, ${startPos}px)`;
+        if (gdB.top <= scrlSt) {
+            finalTop =
+                ((gdB.top - endScrlh2) * (startPos - startPos2)) /
+                    (scrlSt - endScrlh2) +
+                startPos2;
+            finalTranslY =
+                ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
+                    (scrlSt - endScrlh2) +
+                startPosT2;
+            goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
+        } else {
+            goodDesignH2Adj.style.cssText = '';
+        }
     }
 }
 

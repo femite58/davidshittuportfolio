@@ -125,6 +125,14 @@ h1 {
 }
 .borderedBtn:hover {
   gap: 16px;
+  color: #18ff04;
+  border-color: #18ff04;
+}
+.borderedBtn:hover path[fill] {
+  fill: #18ff04;
+}
+.borderedBtn:hover path[stroke] {
+  stroke: #18ff04;
 }
 
 header {
@@ -168,6 +176,8 @@ header #menu .bodyCont > *:not(.eachClickable):not(.socialLinks):not(.contactCon
 }
 header #menu .eachMenuItem {
   display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 40px;
   font-family: "Cabinet Grotesk";
   font-weight: bold;
@@ -315,6 +325,10 @@ nav .rightNav #toggle .innerToggle span:not(:nth-child(2)):last-child {
 }
 nav .rightNav #toggle:hover {
   transform: rotate(90deg);
+  border-color: #18ff04;
+}
+nav .rightNav #toggle:hover .innerToggle span {
+  background: #18ff04;
 }
 nav .rightNav #toggle.opened .innerToggle span:first-child, nav .rightNav #toggle.opened .innerToggle span:last-child {
   position: absolute;
@@ -335,8 +349,9 @@ section:first-child {
 }
 
 .fadeUp > * {
+  position: relative;
   transition: 0.8s ease;
-  transform: translate(0, 400px);
+  top: 400px;
   opacity: 0;
 }
 .fadeUp.delay0-1 > * {
@@ -610,7 +625,7 @@ section:first-child {
   transition-delay: 9.9s;
 }
 .fadeUp.show > * {
-  transform: translate(0, 0);
+  top: 0;
   opacity: 1;
 }
 
@@ -757,7 +772,6 @@ section:first-child {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url(assets/images/noise.png);
 }
 #horizontalScroll .eachWork .flexCont > div.txtCont > * {
   position: relative;
@@ -806,7 +820,7 @@ section:first-child {
 }
 
 #goodDesign {
-  padding: 800px 0 122px;
+  padding: 4000px 0 122px;
   position: relative;
   z-index: 2000;
 }
@@ -814,15 +828,6 @@ section:first-child {
   #goodDesign {
     padding: 190px 0 90px;
   }
-}
-#goodDesign .bodyCont {
-  transition: 1s ease;
-  transform: translate(0, 100px);
-  opacity: 0;
-}
-#goodDesign .bodyCont.show {
-  transform: translate(0, 0);
-  opacity: 1;
 }
 #goodDesign .dFlex {
   flex-wrap: wrap;
@@ -840,7 +845,7 @@ section:first-child {
   padding-top: 89px;
 }
 #goodDesign .dFlex > div.rightPart > div {
-  transition: 0.9s ease;
+  transition: 0.6s ease;
   transform: translate(0, 300%);
   opacity: 0;
 }
@@ -854,7 +859,7 @@ section:first-child {
 }
 #goodDesign .dFlex .leftTxt {
   max-width: 339px;
-  transition: 0.9s ease;
+  transition: 0.6s ease;
   transform: translate(0, 200%);
   opacity: 0;
 }
@@ -868,18 +873,21 @@ section:first-child {
   font-weight: bold;
   font-size: 96px;
   margin: 0;
-  transform: scale(0.5) translate(0, -2000);
   transition: 0s;
-}
-@media (max-width: 750px) {
-  #goodDesign h2 {
-    transform: scale(0.5) translate(0, -840);
-  }
+  opacity: 0;
+  color: #18ff04;
 }
 @media (max-width: 600px) {
   #goodDesign h2 {
     font-size: 40px;
   }
+}
+#goodDesign h2.adjusted {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: scale(0.5) translate(-50%, 0%);
+  opacity: 1;
 }
 
 #callToAction {
@@ -944,6 +952,13 @@ section:first-child {
 }
 .eachClickable:hover {
   background: rgba(249, 249, 249, 0.1019607843);
+  color: #18ff04;
+}
+.eachClickable:hover path[fill*="#"] {
+  fill: #18ff04;
+}
+.eachClickable:hover path[stroke^="#"] {
+  stroke: #18ff04;
 }
 
 .socialLinks {
@@ -1026,7 +1041,7 @@ footer .copyright {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #cacaca;
+  background: #18ff04;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1087,7 +1102,7 @@ footer .copyright {
 }
 #loader .progress .indc {
   width: 0;
-  background: #ffffff;
+  background: #18ff04;
   border-radius: 24px;
   animation: prog 4s ease forwards;
 }
