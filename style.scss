@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     // height: var(--view-height);
     // overflow-y: auto;
+    cursor: url(assets/images/Pointer.png);
 }
 :root {
     --scrollBarW: 17px;
@@ -646,6 +647,9 @@ section:first-child {
             align-items: flex-start;
             gap: 8px;
             background: #ffffff14;
+            img {
+                max-width: 100px;
+            }
             .name {
                 font-weight: 600;
             }

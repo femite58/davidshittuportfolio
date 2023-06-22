@@ -5,6 +5,7 @@
 html,
 body {
   overflow-x: hidden;
+  cursor: url(assets/images/Pointer.png);
 }
 
 :root {
@@ -927,6 +928,9 @@ section:first-child {
   align-items: flex-start;
   gap: 8px;
   background: rgba(255, 255, 255, 0.0784313725);
+}
+#testimonial .testiFlex .eachTesti img {
+  max-width: 100px;
 }
 #testimonial .testiFlex .eachTesti .name {
   font-weight: 600;
