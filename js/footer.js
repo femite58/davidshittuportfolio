@@ -231,11 +231,11 @@ function scrollZoomEffect(e) {
         window.innerHeight -
         gdH2B.height -
         122 +
-        (window.innerWidth < 750 ? 0 : 100);
+        (window.innerWidth < 750 ? 100 : 100);
     endScrl =
         (gdB.height -
             window.innerHeight -
-            (window.innerWidth < 750 ? 0 : 100)) *
+            (window.innerWidth < 750 ? 100 : 100)) *
         -1;
     let topStart = window.innerWidth < 750 ? 200 : 450;
     let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
