@@ -194,6 +194,8 @@ function fadeTransition() {
         console.log(eachBc.top, 'fade');
         if (eachBc.top <= 450) {
             el.classList.add('show');
+        } else {
+            el.classList.remove('show');
         }
     }
 }
@@ -230,7 +232,11 @@ function scrollZoomEffect(e) {
         gdH2B.height -
         122 +
         (window.innerWidth < 750 ? 0 : 100);
-    endScrl = (gdB.height - window.innerHeight - (window.innerWidth < 750 ? 0 : 100)) * -1;
+    endScrl =
+        (gdB.height -
+            window.innerHeight -
+            (window.innerWidth < 750 ? 0 : 100)) *
+        -1;
     let topStart = window.innerWidth < 750 ? 200 : 450;
     let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
     let leftTxt = goodDesign.querySelector('.leftTxt');
