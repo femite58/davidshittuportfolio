@@ -825,13 +825,13 @@ section:first-child {
 }
 
 #goodDesign {
-  padding: 3000px 0 122px;
+  padding: 2500px 0 122px;
   position: relative;
   z-index: 2000;
 }
 @media (max-width: 600px) {
   #goodDesign {
-    padding: 3000px 0 122px;
+    padding: 2500px 0 122px;
   }
 }
 #goodDesign .dFlex {
