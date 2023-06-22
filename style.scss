@@ -708,10 +708,10 @@ section:first-child {
     &:hover {
         background: #f9f9f91a;
         color: $primary;
-        path[fill*="#"] {
+        path[fill] {
             fill: $primary;
         }
-        path[stroke^="#"] {
+        path[stroke] {
             stroke: $primary;
         }
     }

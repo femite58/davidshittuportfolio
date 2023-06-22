@@ -996,10 +996,10 @@ section:first-child {
   background: rgba(249, 249, 249, 0.1019607843);
   color: #18ff04;
 }
-.eachClickable:hover path[fill*="#"] {
+.eachClickable:hover path[fill] {
   fill: #18ff04;
 }
-.eachClickable:hover path[stroke^="#"] {
+.eachClickable:hover path[stroke] {
   stroke: #18ff04;
 }
 
