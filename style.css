@@ -1,11 +1,21 @@
 * {
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 html,
 body {
   overflow-x: hidden;
-  cursor: url(assets/images/Pointer.png);
+  cursor: none;
+}
+
+#customCursor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: 0s;
+  z-index: 500000;
+  transform: translate(2px, 2px);
 }
 
 :root {

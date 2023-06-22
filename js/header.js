@@ -159,4 +159,5 @@ document.write(`<!DOCTYPE html>
                     </div>
                 </nav>
             </div>
-        </header>`);
+        </header>
+        <span id="customCursor" class="svgIcon-customCursor"></span>`);

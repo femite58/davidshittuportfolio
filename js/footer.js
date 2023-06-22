@@ -81,6 +81,7 @@ const header = document.querySelector('header');
 const scrollTop = document.querySelector('#scrollTop');
 const menu = header.querySelector('#menu');
 const menuItems = menu.querySelectorAll('.eachMenuItem');
+const customCursor = document.querySelector('#customCursor');
 
 const horizontalScroll = document.querySelector('#horizontalScrollNoPad');
 let innerHScroll;
@@ -96,6 +97,10 @@ history.scrollRestoration = 'manual';
 
 window.onbeforeunload = () => {
     window.scrollTo(0, 0);
+};
+window.onmousemove = (e) => {
+    console.log(e.x, e.y);
+    customCursor.style.cssText = `top: ${e.y}px; left: ${e.x}px;`;
 };
 
 let horScstickTop = window.innerHeight <= 625 ? 100 : 120;
