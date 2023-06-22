@@ -92,6 +92,8 @@ if (page == 'home') {
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
 
+history.scrollRestoration = 'manual';
+
 window.onbeforeunload = () => {
     window.scrollTo(0, 0);
 };

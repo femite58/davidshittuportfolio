@@ -648,19 +648,21 @@ section:first-child {
             background: #ffffff14;
             .name {
                 font-weight: 600;
-                @media (max-width: 600px) {
-                    font-size: 20px;
-                }
             }
             .job {
                 font-size: 20px;
                 color: #797878;
-                @media (max-width: 600px) {
-                    font-size: 16px;
-                }
             }
             .content {
                 font-size: 20px;
+            }
+            @media (max-width: 600px) {
+                .name {
+                    font-size: 20px;
+                }
+                .job,.content {
+                    font-size: 16px;
+                }
             }
         }
     }

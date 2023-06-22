@@ -931,22 +931,20 @@ section:first-child {
 #testimonial .testiFlex .eachTesti .name {
   font-weight: 600;
 }
-@media (max-width: 600px) {
-  #testimonial .testiFlex .eachTesti .name {
-    font-size: 20px;
-  }
-}
 #testimonial .testiFlex .eachTesti .job {
   font-size: 20px;
   color: #797878;
 }
-@media (max-width: 600px) {
-  #testimonial .testiFlex .eachTesti .job {
-    font-size: 16px;
-  }
-}
 #testimonial .testiFlex .eachTesti .content {
   font-size: 20px;
+}
+@media (max-width: 600px) {
+  #testimonial .testiFlex .eachTesti .name {
+    font-size: 20px;
+  }
+  #testimonial .testiFlex .eachTesti .job, #testimonial .testiFlex .eachTesti .content {
+    font-size: 16px;
+  }
 }
 
 #callToAction {
