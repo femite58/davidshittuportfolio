@@ -905,6 +905,7 @@ section:first-child {
   max-width: 562px;
   text-align: center;
   margin: 0 auto 64px;
+  font-family: "Cabinet Grotesk";
 }
 #testimonial .testiFlex {
   display: grid;
@@ -914,8 +915,8 @@ section:first-child {
 #testimonial .testiFlex .eachTesti {
   border-radius: 24px;
   display: flex;
-  height: 410px;
   padding: 32px;
+  height: 100%;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
