@@ -456,7 +456,7 @@ section:first-child {
 
         @media (max-width: 750px) {
             flex-direction: column;
-            gap: 30px;
+            gap: 60px;
         }
     }
     .eachWork {
@@ -627,6 +627,10 @@ section:first-child {
         text-align: center;
         margin: 0 auto 64px;
         font-family: 'Cabinet Grotesk';
+        @media (max-width: 600px) {
+            font-size: 20px;
+            margin: 0 auto 32px;
+        }
     }
     .testiFlex {
         display: grid;
@@ -644,10 +648,16 @@ section:first-child {
             background: #ffffff14;
             .name {
                 font-weight: 600;
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                }
             }
             .job {
                 font-size: 20px;
                 color: #797878;
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
             }
             .content {
                 font-size: 20px;

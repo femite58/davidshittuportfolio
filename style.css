@@ -731,7 +731,7 @@ section:first-child {
 @media (max-width: 750px) {
   #horizontalScroll #innerHorizontalScroll {
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
   }
 }
 #horizontalScroll .eachWork {
@@ -907,6 +907,12 @@ section:first-child {
   margin: 0 auto 64px;
   font-family: "Cabinet Grotesk";
 }
+@media (max-width: 600px) {
+  #testimonial p {
+    font-size: 20px;
+    margin: 0 auto 32px;
+  }
+}
 #testimonial .testiFlex {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -925,9 +931,19 @@ section:first-child {
 #testimonial .testiFlex .eachTesti .name {
   font-weight: 600;
 }
+@media (max-width: 600px) {
+  #testimonial .testiFlex .eachTesti .name {
+    font-size: 20px;
+  }
+}
 #testimonial .testiFlex .eachTesti .job {
   font-size: 20px;
   color: #797878;
+}
+@media (max-width: 600px) {
+  #testimonial .testiFlex .eachTesti .job {
+    font-size: 16px;
+  }
 }
 #testimonial .testiFlex .eachTesti .content {
   font-size: 20px;
