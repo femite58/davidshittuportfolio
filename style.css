@@ -1280,4 +1280,41 @@ footer .copyright {
 }
 #boltPage #bannerSect .txtContent .content {
   max-width: 424px;
+}
+#boltPage .eachSect {
+  margin-bottom: 100px;
+}
+#boltPage .eachSect h2,
+#boltPage .eachSect h3,
+#boltPage .eachSect h4,
+#boltPage .eachSect h5 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+#boltPage .eachSect .content {
+  font-size: 20px;
+}
+#boltPage .eachSect .content ol {
+  margin: 0;
+  padding-left: 23px;
+}
+#boltPage .eachSect img {
+  display: block;
+  max-width: 100%;
+}
+#boltPage .eachSect .gridCont {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 18px 15%;
+}
+#boltPage .eachSect .gridCont .eachCol {
+  display: flex;
+  gap: 5px;
+}
+#boltPage .eachSect .gridCont .eachCol .num {
+  width: 20px;
+}
+#boltPage .eachSect .gridCont .eachCol .txt {
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */
