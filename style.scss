@@ -13,6 +13,11 @@ body {
     // overflow-y: auto;
     cursor: none;
 }
+@for $i from 5 through 8 {
+    .fw#{$i * 100} {
+        font-weight: #{$i * 100};
+    }
+}
 #customCursor {
     position: fixed;
     top: 150%;
@@ -1037,6 +1042,9 @@ footer {
         }
     }
 }
+.noMarg {
+    margin: 0 !important;
+}
 #boltPage {
     #bannerSect {
         background-image: url(assets/images/bolt/bolt-banner.png);
@@ -1045,6 +1053,13 @@ footer {
         padding: 74px 0;
         background-repeat: no-repeat;
         position: relative;
+        background-position-x: center;
+        margin-bottom: 80px;
+        @media (max-width: 600px) {
+            margin-bottom: 32px;
+            height: calc(var(--view-height) * 0.7);
+            padding: 30px 0;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -1058,23 +1073,56 @@ footer {
                 #00000000 100%
             );
         }
-        .txtContent {
-            position: relative;
-            z-index: 20;
+        & > .bodyCont {
             height: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+        }
+        .bannerFlex {
+            display: flex;
+            width: 100%;
+            align-items: flex-end;
+            gap: 32px 0;
+            margin-top: auto;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 20;
+            img {
+                display: block;
+                width: 79px;
+                @media (max-width: 600px) {
+                    width: 47px;
+                }
+            }
+        }
+        .txtContent {
+            flex: 1 490px;
             h1 {
                 font-size: 64px;
                 font-weight: 800;
                 margin-bottom: 24px;
                 max-width: 528px;
                 color: #fff;
+                @media (max-width: 600px) {
+                    font-size: 32px;
+                    margin-bottom: 8px;
+                    max-width: 317px;
+                }
             }
             .content {
                 max-width: 424px;
+                @media (max-width: 600px) {
+                    max-width: 249px;
+                }
             }
+        }
+    }
+    #roleDuration {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 0;
+        .eachCol {
+            flex: 1 300px;
         }
     }
     .eachSect {
@@ -1082,21 +1130,50 @@ footer {
         h2,
         h3,
         h4,
-        h5 {
+        h5,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
             font-size: 24px;
             margin-bottom: 16px;
             color: #fff;
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
         }
         .content {
             font-size: 20px;
+            @media (max-width: 600px) {
+                font-size: 16px;
+            }
             ol {
                 margin: 0;
                 padding-left: 23px;
             }
+            .cusBul {
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                padding-left: 5px;
+                & > div:not(.bulTxt) {
+                    transform: translate(0, -5px);
+                }
+            }
+        }
+        blockquote {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+            max-width: 892px;
         }
         img {
             display: block;
             max-width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 48px;
+            }
         }
         .gridCont {
             display: grid;
@@ -1111,6 +1188,31 @@ footer {
                 .txt {
                     flex: 1;
                 }
+            }
+        }
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        gap: 24px 10%;
+        flex-wrap: wrap;
+        justify-content: center;
+        &.left {
+            flex-direction: row-reverse;
+        }
+        & > div:first-child {
+            width: 300px;
+        }
+        & > div:last-child {
+            flex: 1 400px;
+        }
+        .imgCont {
+            position: relative;
+            .arrowCont {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
             }
         }
     }

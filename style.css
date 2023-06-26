@@ -9,6 +9,22 @@ body {
   cursor: none;
 }
 
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw800 {
+  font-weight: 800;
+}
+
 #customCursor {
   position: fixed;
   top: 150%;
@@ -1246,6 +1262,10 @@ footer .copyright {
   }
 }
 
+.noMarg {
+  margin: 0 !important;
+}
+
 #boltPage #bannerSect {
   background-image: url(assets/images/bolt/bolt-banner.png);
   height: calc(var(--view-height) - 50px);
@@ -1253,6 +1273,15 @@ footer .copyright {
   padding: 74px 0;
   background-repeat: no-repeat;
   position: relative;
+  background-position-x: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 600px) {
+  #boltPage #bannerSect {
+    margin-bottom: 32px;
+    height: calc(var(--view-height) * 0.7);
+    padding: 30px 0;
+  }
 }
 #boltPage #bannerSect::before {
   content: "";
@@ -1263,13 +1292,32 @@ footer .copyright {
   height: 100%;
   background-image: linear-gradient(1deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
 }
-#boltPage #bannerSect .txtContent {
-  position: relative;
-  z-index: 20;
+#boltPage #bannerSect > .bodyCont {
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+}
+#boltPage #bannerSect .bannerFlex {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  gap: 32px 0;
+  margin-top: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 20;
+}
+#boltPage #bannerSect .bannerFlex img {
+  display: block;
+  width: 79px;
+}
+@media (max-width: 600px) {
+  #boltPage #bannerSect .bannerFlex img {
+    width: 47px;
+  }
+}
+#boltPage #bannerSect .txtContent {
+  flex: 1 490px;
 }
 #boltPage #bannerSect .txtContent h1 {
   font-size: 64px;
@@ -1278,8 +1326,28 @@ footer .copyright {
   max-width: 528px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  #boltPage #bannerSect .txtContent h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    max-width: 317px;
+  }
+}
 #boltPage #bannerSect .txtContent .content {
   max-width: 424px;
+}
+@media (max-width: 600px) {
+  #boltPage #bannerSect .txtContent .content {
+    max-width: 249px;
+  }
+}
+#boltPage #roleDuration {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 0;
+}
+#boltPage #roleDuration .eachCol {
+  flex: 1 300px;
 }
 #boltPage .eachSect {
   margin-bottom: 100px;
@@ -1287,21 +1355,61 @@ footer .copyright {
 #boltPage .eachSect h2,
 #boltPage .eachSect h3,
 #boltPage .eachSect h4,
-#boltPage .eachSect h5 {
+#boltPage .eachSect h5,
+#boltPage .eachSect .h2,
+#boltPage .eachSect .h3,
+#boltPage .eachSect .h4,
+#boltPage .eachSect .h5 {
   font-size: 24px;
   margin-bottom: 16px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  #boltPage .eachSect h2,
+  #boltPage .eachSect h3,
+  #boltPage .eachSect h4,
+  #boltPage .eachSect h5,
+  #boltPage .eachSect .h2,
+  #boltPage .eachSect .h3,
+  #boltPage .eachSect .h4,
+  #boltPage .eachSect .h5 {
+    font-size: 20px;
+  }
+}
 #boltPage .eachSect .content {
   font-size: 20px;
+}
+@media (max-width: 600px) {
+  #boltPage .eachSect .content {
+    font-size: 16px;
+  }
 }
 #boltPage .eachSect .content ol {
   margin: 0;
   padding-left: 23px;
 }
+#boltPage .eachSect .content .cusBul {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding-left: 5px;
+}
+#boltPage .eachSect .content .cusBul > div:not(.bulTxt) {
+  transform: translate(0, -5px);
+}
+#boltPage .eachSect blockquote {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 892px;
+}
 #boltPage .eachSect img {
   display: block;
   max-width: 100%;
+}
+#boltPage .eachSect img:not(:last-child) {
+  margin-bottom: 48px;
 }
 #boltPage .eachSect .gridCont {
   display: grid;
@@ -1317,4 +1425,29 @@ footer .copyright {
 }
 #boltPage .eachSect .gridCont .eachCol .txt {
   flex: 1;
+}
+#boltPage .flex {
+  display: flex;
+  align-items: center;
+  gap: 24px 10%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#boltPage .flex.left {
+  flex-direction: row-reverse;
+}
+#boltPage .flex > div:first-child {
+  width: 300px;
+}
+#boltPage .flex > div:last-child {
+  flex: 1 400px;
+}
+#boltPage .flex .imgCont {
+  position: relative;
+}
+#boltPage .flex .imgCont .arrowCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
