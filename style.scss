@@ -361,7 +361,7 @@ section:first-child {
     //     padding-top:
     // }
 }
-.fadeUp {
+.fadeAnim {
     & > * {
         position: relative;
         transition: 0.8s ease;
@@ -377,9 +377,22 @@ section:first-child {
             }
         }
     }
+    &.left {
+        & > * {
+            left: -400px;
+            top: 0;
+        }
+    }
+    &.right {
+        & > * {
+            left: 400px;
+            top: 0;
+        }
+    }
     &.show {
         & > * {
             top: 0;
+            left: 0;
             opacity: 1;
         }
     }
@@ -1127,6 +1140,9 @@ footer {
     }
     .eachSect {
         margin-bottom: 100px;
+        @media (max-width: 600px) {
+            margin-bottom: 50px;
+        }
         h2,
         h3,
         h4,
@@ -1167,6 +1183,9 @@ footer {
             font-weight: 600;
             margin: 0;
             max-width: 892px;
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
         }
         img {
             display: block;
@@ -1202,6 +1221,9 @@ footer {
         }
         & > div:first-child {
             width: 300px;
+            @media (max-width: 600px) {
+                width: 155px;
+            }
         }
         & > div:last-child {
             flex: 1 400px;
@@ -1214,6 +1236,50 @@ footer {
                 left: 0;
                 width: 100%;
             }
+        }
+    }
+}
+#endGif {
+    text-align: center;
+    margin-bottom: 50px;
+    img {
+        max-width: 100%;
+    }
+}
+#pageCtrl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 197px;
+    gap: 15px;
+    @media (max-width: 600px) {
+        margin-bottom: 59px;
+    }
+    .eachCtrl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 131px;
+        gap: 16px;
+        text-decoration: none;
+        color: $txtColor;
+        width: 427px;
+        font-weight: 600;
+        border-radius: 24px;
+        background: #f9f9f908;
+        &:hover {
+            background: rgba(249, 249, 249, 0.1);
+            color: $primary;
+            path[stroke] {
+                stroke: $primary;
+            }
+            path[fill] {
+                fill: $primary;
+            }
+        }
+        @media (max-width: 600px) {
+            height: 77px;
+            border-radius: 8px;
         }
     }
 }

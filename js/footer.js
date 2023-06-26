@@ -116,7 +116,7 @@ let curSc = startSc;
 let curTranslY = startPos;
 let timer;
 
-const fadeUp = document.querySelectorAll('.fadeUp');
+const fadeUp = document.querySelectorAll('.fadeAnim');
 fadeTransition();
 
 document.documentElement.style.setProperty(
@@ -139,7 +139,9 @@ window.onresize = () => {
         '--scrollBarW',
         `${window.innerWidth - document.body.clientWidth}px`
     );
-    initiateHorzScrlEl();
+    if (page == 'home') {
+        initiateHorzScrlEl();
+    }
 };
 menuItems.forEach((item) => {
     item.onmouseover = () => {
