@@ -25,6 +25,9 @@ body {
     transition: 0s;
     z-index: 500000;
     transform: translate(2px, 2px);
+    @media (max-width: 600px) {
+        visibility: hidden;
+    }
 }
 :root {
     --scrollBarW: 17px;
