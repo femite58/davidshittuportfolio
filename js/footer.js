@@ -81,7 +81,7 @@ const scrollTop = document.querySelector('#scrollTop');
 const menu = header.querySelector('#menu');
 const menuItems = menu.querySelectorAll('.eachMenuItem');
 const customCursor = document.querySelector('#customCursor');
-const horizontalScPar = document.querySelector('#horizontalScroll');
+
 const horizontalScroll = document.querySelector('#horizontalScrollNoPad');
 let innerHScroll;
 const goodDesign = document.querySelector('#goodDesign');
