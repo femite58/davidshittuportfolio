@@ -64,7 +64,7 @@ document.write(`<!DOCTYPE html>
                                     <span>About me</span>
                                 </a>
                                 <a
-                                    href="javascript:void(0)"
+                                    href="${path}index.html#horizontalScroll"
                                     class="eachMenuItem"
                                     data-color="#FFE604"
                                     data-bg="#1B16AD"

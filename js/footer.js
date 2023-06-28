@@ -81,7 +81,7 @@ const scrollTop = document.querySelector('#scrollTop');
 const menu = header.querySelector('#menu');
 const menuItems = menu.querySelectorAll('.eachMenuItem');
 const customCursor = document.querySelector('#customCursor');
-
+const horizontalScPar = document.querySelector('#horizontalScroll');
 const horizontalScroll = document.querySelector('#horizontalScrollNoPad');
 let innerHScroll;
 const goodDesign = document.querySelector('#goodDesign');
@@ -91,6 +91,11 @@ if (page == 'home') {
     goodDesignH2 = goodDesign?.querySelector('h2');
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
+
+menuItems[2].onclick = () => {
+    menu.classList.remove('opened');
+    toggle.classList.remove('opened');
+};
 
 // history.scrollRestoration = 'manual';
 
