@@ -432,7 +432,7 @@ section:first-child {
         background-repeat: no-repeat;
         background-size: 100%;
         animation: colorChange forwards 1.5s linear;
-        animation-delay: 3.9s;
+        animation-delay: 3.3s;
         @media (max-width: 600px) {
             font-size: 14vw;
         }
@@ -1412,6 +1412,12 @@ footer {
                 }
                 .smallImg {
                     width: 90%;
+                    .imgCont {
+                        height: unset;
+                        img {
+                            min-height: unset;
+                        }
+                    }
                 }
             }
         }
