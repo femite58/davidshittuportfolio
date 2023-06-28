@@ -163,13 +163,13 @@ menuItems.forEach((item) => {
 scrollTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-window.onload = () => {
-    setTimeout(() => {
-        const loader = document.querySelector('#loader');
-        loader.classList.add('done');
-        header.querySelector('.rightNav').classList.add('loaded');
-    }, 3000);
-};
+setTimeout(() => {
+    const loader = document.querySelector('#loader');
+    loader.classList.add('done');
+    header.querySelector('.rightNav').classList.add('loaded');
+}, 3000);
+// window.onload = () => {
+// };
 
 let initScrollTop = window.scrollY;
 let scrollDiff = 0;
