@@ -198,7 +198,8 @@ scrlEl.addEventListener('scroll', (e) => {
 function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
-        if (eachBc.top <= 450) {
+        let topAnim = el.getAttribute('data-topAnim') || 450;
+        if (eachBc.top <= topAnim) {
             el.classList.add('show');
         } else {
             el.classList.remove('show');

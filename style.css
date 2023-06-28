@@ -25,6 +25,14 @@ body {
   font-weight: 800;
 }
 
+a {
+  text-decoration: none;
+}
+
+.primCol {
+  color: #18ff04;
+}
+
 #customCursor {
   position: fixed;
   top: 150%;
@@ -673,6 +681,16 @@ section:first-child {
   top: 0;
   left: 0;
   opacity: 1;
+}
+@media (max-width: 600px) {
+  .fadeAnim.mobileDelay0 > * {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+  .fadeAnim.mobileDelay0 > * {
+    transition-delay: 0s;
+  }
 }
 
 #welcomeBanner {
@@ -1528,5 +1546,121 @@ footer .copyright {
   #pageCtrl .eachCtrl {
     height: 77px;
     border-radius: 8px;
+  }
+}
+
+#about .imgCont {
+  padding: 24px 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.031372549);
+}
+#about .imgCont img {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  #about .imgCont {
+    padding: 11px 15px;
+  }
+}
+#about #intro {
+  margin-bottom: 48px;
+}
+@media (max-width: 600px) {
+  #about #intro {
+    margin-bottom: 24px;
+  }
+}
+#about #intro .dFlex {
+  gap: 27px 49px;
+  flex-wrap: wrap;
+}
+#about #intro .dFlex > div:first-child {
+  flex: 3 300px;
+}
+#about #intro .dFlex > div:nth-child(2) {
+  flex: 3 400px;
+}
+#about #intro .dFlex .txtCont {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+#about #intro .dFlex .txtCont > *:not(img) {
+  position: relative;
+  z-index: 20;
+}
+#about #intro .dFlex .txtCont > img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 600px) {
+  #about #intro .dFlex .txtCont > img {
+    display: none;
+  }
+}
+#about #intro .dFlex .txtCont h1 {
+  font-size: 64px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 24px;
+}
+#about #intro .dFlex .txtCont h1 img {
+  width: 41px;
+}
+@media (max-width: 600px) {
+  #about #intro .dFlex .txtCont h1 {
+    font-size: 36px;
+  }
+}
+#about #otherInfo {
+  margin-bottom: 58px;
+}
+@media (max-width: 600px) {
+  #about #otherInfo {
+    margin-bottom: 21px;
+  }
+}
+#about #otherInfo img[alt=Nigeria] {
+  width: 24px;
+}
+#about #otherInfo img[alt*=Nerd] {
+  width: 90px;
+  transform: scale(2.5);
+}
+@media (max-width: 600px) {
+  #about #otherInfo img[alt*=Nerd] {
+    width: 45px;
+    transform: scale(2);
+  }
+}
+#about #otherInfo .imgFlex {
+  display: flex;
+  row-gap: 24px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#about #otherInfo .imgFlex .bigImg {
+  width: 57.1225068852%;
+}
+#about #otherInfo .imgFlex .smallImg {
+  width: 34.2459577732%;
+}
+#about #otherInfo .imgFlex .smallImg .imgCont {
+  height: 100%;
+}
+#about #otherInfo .imgFlex .smallImg .imgCont img {
+  min-height: 100%;
+}
+@media (max-width: 750px) {
+  #about #otherInfo .imgFlex .bigImg {
+    width: 100%;
+  }
+  #about #otherInfo .imgFlex .smallImg {
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */

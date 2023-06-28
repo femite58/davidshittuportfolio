@@ -18,6 +18,12 @@ body {
         font-weight: #{$i * 100};
     }
 }
+a {
+    text-decoration: none;
+}
+.primCol {
+    color: $primary;
+}
 #customCursor {
     position: fixed;
     top: 150%;
@@ -397,6 +403,18 @@ section:first-child {
             top: 0;
             left: 0;
             opacity: 1;
+        }
+    }
+    @media (max-width: 600px) {
+        &.mobileDelay0 {
+            &> * {
+                opacity: 1;
+                top: 0;
+                left: 0;
+            }
+            & > * {
+                transition-delay: 0s;
+            }
         }
     }
 }
@@ -1283,6 +1301,119 @@ footer {
         @media (max-width: 600px) {
             height: 77px;
             border-radius: 8px;
+        }
+    }
+}
+#about {
+    .imgCont {
+        padding: 24px 32px;
+        border-radius: 24px;
+        background: #ffffff08;
+        img {
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            padding: 11px 15px;
+        }
+    }
+    #intro {
+        margin-bottom: 48px;
+        @media (max-width: 600px) {
+            margin-bottom: 24px;
+        }
+        .dFlex {
+            gap: 27px 49px;
+            flex-wrap: wrap;
+            & > div:first-child {
+                flex: 3 300px;
+            }
+            & > div:nth-child(2) {
+                flex: 3 400px;
+            }
+            .txtCont {
+                position: relative;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                & > *:not(img) {
+                    position: relative;
+                    z-index: 20;
+                }
+                & > img {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    right: 0;
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+                }
+                h1 {
+                    font-size: 64px;
+                    font-weight: 800;
+                    color: #fff;
+                    margin-bottom: 24px;
+                    img {
+                        width: 41px;
+                    }
+                    @media (max-width: 600px) {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+    #otherInfo {
+        margin-bottom: 58px;
+        @media (max-width: 600px) {
+            margin-bottom: 21px;
+        }
+        img[alt="Nigeria"] {
+            width: 24px;
+        }
+        img[alt*="Nerd"] {
+            width: 90px;
+            transform: scale(2.5);
+            @media (max-width: 600px) {
+                width: 45px;
+                transform: scale(2);
+            }
+        }
+        .imgFlex {
+            display: flex;
+            row-gap: 24px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            // gap: 8.6311454780445%;
+            .bigImg {
+                width: 57.1225068851733%;
+            }
+            .smallImg {
+                width: 34.2459577732474%;
+                .imgCont {
+                    height: 100%;
+                    img {
+                        min-height: 100%;
+                    }
+                    // width: fit-content;
+                    // display: flex;
+                    // flex-direction: column;
+                    // img {
+                    //     height: 100%;
+                    //     width: auto;
+                    // }
+                }
+            }
+            @media (max-width: 750px) {
+                .bigImg {
+                    width: 100%;
+                }
+                .smallImg {
+                    width: 90%;
+                }
+            }
         }
     }
 }
