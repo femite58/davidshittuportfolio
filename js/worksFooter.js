@@ -3,7 +3,7 @@ document.write(`
 <img src="../assets/images/giphy.webp" alt="The End" />
 </div>
 <div id="pageCtrl">
-<a href="${prev}" class="eachCtrl ${prev ? '' : 'hidden'}">
+<a href="${prev}" ${prev.match(/https/) ? 'target="_blank"' : ''} class="eachCtrl ${prev ? '' : 'hidden'}">
     <span class="svgIcon-smallArrowLeft"></span>
     <span>Previous</span>
 </a>

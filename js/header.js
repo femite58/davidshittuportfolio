@@ -26,7 +26,7 @@ document.write(`<!DOCTYPE html>
                         <img src="${path}assets/images/logo.svg" alt="David Shittu" />
                     </a>
                     <div class="rightNav">
-                        <a href="#" class="borderedBtn">
+                        <a href="mailto:davidshittu02@gmail.comHey%F0%9F%91%8B%2C%20David!%0D%0A%0D%0A" target="_blank" class="borderedBtn">
                             <span>Contact me</span>
                             <span class="svgIcon-boxDiagonalArrow"></span>
                         </a>
@@ -75,7 +75,7 @@ document.write(`<!DOCTYPE html>
                                     <span>Don't be shy, say hello :)</span>
                                 </div>
                                 <div class="contactCont">
-                                    <a href="#" class="eachClickable contact">
+                                    <a href="mailto:davidshittu02@gmail.comHey%F0%9F%91%8B%2C%20David!%0D%0A%0D%0A" target="_blank" class="eachClickable contact">
                                         <span>Contact me</span>
                                         <span
                                             class="svgIcon-boxDiagonalArrow"
@@ -85,7 +85,7 @@ document.write(`<!DOCTYPE html>
                                 <div class="socialLinks">
                                     <div class="gridItem">
                                         <a
-                                            href="https://www.linkedin.com/in/davidshittu"
+                                            href="https://www.linkedin.com/in/davidshittu/"
                                             target="_blank"
                                             class="eachClickable"
                                         >
@@ -141,7 +141,7 @@ document.write(`<!DOCTYPE html>
                                     </div>
                                     <div class="gridItem">
                                         <a
-                                            href="https://www.linkedin.com/in/davidshittu"
+                                            href="https://twitter.com/shittu_david"
                                             target="_blank"
                                             class="eachClickable"
                                         >

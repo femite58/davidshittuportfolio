@@ -17,47 +17,77 @@ document.write(`
                         <div class="copyright">Soli Deo gloria</div>
                     </div>
                     <div class="largePart">
-                        <a href="#" class="eachClickable contact">
+                        <a href="mailto:davidshittu02@gmail.comHey%F0%9F%91%8B%2C%20David!%0D%0A%0D%0A" target="_blank" class="eachClickable contact">
                             <span>Contact me</span>
                             <span class="svgIcon-boxDiagonalArrow"></span>
                         </a>
                         <div class="socialLinks">
                             <div class="gridItem">
-                                <a href="#" class="eachClickable">
+                                <a
+                                    href="https://www.linkedin.com/in/davidshittu/"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
                                     <div class="iconCont">
-                                        <span class="svgIcon-linkedIn"></span>
+                                        <span
+                                            class="svgIcon-linkedIn"
+                                        ></span>
                                     </div>
                                     <div class="txt">LinkedIn</div>
                                 </a>
                             </div>
                             <div class="gridItem">
-                                <a href="#" class="eachClickable">
+                                <a
+                                    href="https://www.behance.net/sodiqshittu"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
                                     <div class="iconCont">
-                                        <span class="svgIcon-behance"></span>
+                                        <span
+                                            class="svgIcon-behance"
+                                        ></span>
                                     </div>
                                     <div class="txt">Behance</div>
                                 </a>
                             </div>
                             <div class="gridItem">
-                                <a href="#" class="eachClickable">
+                                <a
+                                    href="https://dribbble.com/SDavid"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
                                     <div class="iconCont">
-                                        <span class="svgIcon-dribble"></span>
+                                        <span
+                                            class="svgIcon-dribble"
+                                        ></span>
                                     </div>
                                     <div class="txt">Dribbble</div>
                                 </a>
                             </div>
                             <div class="gridItem">
-                                <a href="#" class="eachClickable">
+                                <a
+                                    href="https://davidshittu.medium.com/"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
                                     <div class="iconCont">
-                                        <span class="svgIcon-medium"></span>
+                                        <span
+                                            class="svgIcon-medium"
+                                        ></span>
                                     </div>
                                     <div class="txt">Medium</div>
                                 </a>
                             </div>
                             <div class="gridItem">
-                                <a href="#" class="eachClickable">
+                                <a
+                                    href="https://twitter.com/shittu_david"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
                                     <div class="iconCont">
-                                        <span class="svgIcon-twitter"></span>
+                                        <span
+                                            class="svgIcon-twitter"
+                                        ></span>
                                     </div>
                                     <div class="txt">Twitter</div>
                                 </a>
@@ -91,11 +121,12 @@ if (page == 'home') {
     goodDesignH2 = goodDesign?.querySelector('h2');
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
-
-menuItems[2].onclick = () => {
-    menu.classList.remove('opened');
-    toggle.classList.remove('opened');
-};
+menuItems.forEach((m) => {
+    m.onclick = () => {
+        menu.classList.remove('opened');
+        toggle.classList.remove('opened');
+    };
+});
 
 // history.scrollRestoration = 'manual';
 
