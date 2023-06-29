@@ -1,9 +1,407 @@
 <script>
     let page = "increst";
     let pPath;
+    let prev = './bolt.html';
+    let next = '';
 </script>
 <script src="../js/header.js"></script>
-<main>
+<main id="increst" class="works">
+    <section
+        id="bannerSect"
+        style="
+            background-image: url(../assets/images/increst/increst-banner.png);
+        "
+    >
+        <div class="bodyCont">
+            <div class="bannerFlex">
+                <div class="txtContent">
+                    <h1>Increst: Stock market investing for beginners</h1>
+                    <div class="content">
+                        Increst is designed to help beginners invest in high
+                        performing stocks through interactive learning options.
+                    </div>
+                </div>
+                <img
+                    src="../assets/images/increst/increst_logo.svg"
+                    alt="Increst"
+                />
+            </div>
+        </div>
+    </section>
+    <div id="otherBody" class="bodyCont">
+        <div class="eachSect dFlex flexGrow1">
+            <div id="roleDuration">
+                <div class="eachCol">
+                    <h2>Role</h2>
+                    <div class="content">
+                        Lead Designer (4 members) <br />
+                        UX Designer <br />
+                        UX Researcher
+                    </div>
+                </div>
+                <div class="eachCol">
+                    <h2>Duration</h2>
+                    <div class="content">8 Weeks</div>
+                </div>
+            </div>
+            <a href="#" class="borderedBtn">
+                <span>View Prototype</span>
+                <span class="svgIcon-boxDiagonalArrow"></span>
+            </a>
+        </div>
+        <div class="eachSect" id="overview">
+            <h2>Overview</h2>
+            <div class="content">
+                Increst is an online investment platform that enables users to
+                invest in the stock market from anywhere.  It is specifically
+                designed to cater to beginners and newbies, providing
+                interactive learning options to guide them in investing in
+                high-performing stocks. <br /><br />
 
+                A stock is a financial instrument that represents ownership of a
+                portion of the issuing corporation. Shares are units of stock
+                that entitle the owner to a proportion of the corporation's
+                profits and assets equal to the amount of stock they own. Stocks
+                can be an important component of your investment portfolio.
+                Investing in various companies can help you build your savings,
+                protect your money from inflation and taxes, and maximize your
+                return on investment.
+            </div>
+        </div>
+        <div class="eachSect imgCont">
+            <img
+                src="../assets/images/increst/design-process.svg"
+                alt="Design Process"
+            />
+        </div>
+        <div id="process">
+            <div class="eachSect" id="researchProcess">
+                <h2>Research Process</h2>
+                <div class="content">
+                    <ol>
+                        <li>Survey</li>
+                        <li>Competitive analysis</li>
+                        <li>Secondary Research</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="survey">
+                <div class="eachSect">
+                    <h3>1. Survey</h3>
+                    <div class="content">
+                        We conducted a comprehensive survey involving a total of
+                        30 participants. The survey group consisted of 20 male
+                        participants, 9 female participants, and 1 participant
+                        who preferred not to disclose their gender. This diverse
+                        sample allowed us to gather a wide range of perspectives
+                        and insights.
+                    </div>
+                </div>
+                <div class="eachSect">
+                    <div class="content">
+                        <p>Nine in ten (90%) people have heard about stocks.</p>
+                        <img
+                            src="../assets/images/increst/survey_90_perc.svg"
+                            alt="90% Survey"
+                        />
+                    </div>
+                </div>
+                <div class="eachSect">
+                    <div class="content">
+                        <p>
+                            Only One in ten (10%) people understand how the
+                            stock market works and how to invest
+                        </p>
+                        <img
+                            src="../assets/images/increst/survey_10_perc.svg"
+                            alt="10% Survey"
+                        />
+                    </div>
+                </div>
+                <div class="eachSect">
+                    <div class="content">
+                        <p>
+                            Seven in ten (70%) people said they would invest
+                            using online brokers to invest
+                        </p>
+                        <img
+                            src="../assets/images/increst/survey_70_perc.svg"
+                            alt="70% Survey"
+                        />
+                    </div>
+                </div>
+                <div class="eachSect">
+                    <div class="content">
+                        The survey results indicate that there exists a
+                        significant knowledge deficit among individuals when it
+                        comes to stock investing and overall understanding of
+                        the subject. Despite a notable level of awareness about
+                        stocks, as reported by nine in ten participants, the
+                        majority of respondents lack the necessary knowledge and
+                        understanding required to confidently navigate the stock
+                        market and make informed investment decisions.
+                        <br /><br />
+
+                        This knowledge deficit suggests that there is a gap
+                        between the interest or willingness to invest in stocks
+                        and the actual knowledge required to do so effectively.
+                        Many individuals may have a desire to explore stock
+                        investing as a means of wealth creation or financial
+                        growth, but they may be deterred by the complexities and
+                        uncertainties associated with the stock market.
+                    </div>
+                </div>
+            </div>
+            <div class="eachSect" id="competitiveAnalysis">
+                <h3>2. Competitive Analysis</h3>
+                <div class="content">
+                    <img
+                        src="../assets/images/increst/competitive_analysis.svg"
+                        alt="Competitive Analysis"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="eachSect" id="solution">
+            <h2>Solution</h2>
+            <div class="content">
+                We developed a mobile app that aims to address the knowledge
+                deficit in stock market investing by offering an innovative and
+                interactive learning experience. Our app combines interactive
+                games, and short courses to provide users with a comprehensive
+                understanding of stock market investing while ensuring a
+                seamless user experience.
+            </div>
+        </div>
+        <div class="eachSect" id="userPersona">
+            <h2>User Persona</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/user_persona.png"
+                    alt="User Persona"
+                />
+                <img
+                    src="../assets/images/increst/user_persona2.png"
+                    alt="User Persona"
+                />
+            </div>
+        </div>
+        <div class="eachSect" id="moodboard">
+            <h2>Moodboard</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/moodboard.png"
+                    alt="Moodboard"
+                />
+            </div>
+        </div>
+        <div class="eachSect" id="userFlow">
+            <h2>User Flow</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/user_flow.png"
+                    alt="User Flow"
+                />
+            </div>
+        </div>
+        <div class="eachSect" id="lowFidelity">
+            <h2>Low Fidelity</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/onboarding.png"
+                    alt="Onboarding"
+                />
+            </div>
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/home_and_themes.png"
+                alt="Home and Themes"
+            />
+        </div>
+        <div class="eachSect">
+            <img src="../assets/images/increst/portfolio.png" alt="Portfolio" />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/stock_details_and_purchase.png"
+                alt="Stock Details and Purchase"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/stock_details_and_purchase2.png"
+                alt="Stock Details and Purchase"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/stock_details_and_purchase3.png"
+                alt="Stock Details and Purchase"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/stock_details_and_purchase4.png"
+                alt="Stock Details and Purchase"
+            />
+        </div>
+        <div id="financialIndustry">
+            <div class="eachSect">
+                <h2>The financial industry has too much jargon, right?</h2>
+                <div class="content">
+                    90% of the participants in our user survey indicated that
+                    they have heard about stocks. However, only 57% rated their
+                    knowledge in investing stocks and other financial
+                    instruments at a 4 out of 10 on the scale. Furthermore, only
+                    10% of the participants rated their knowledge above 9,
+                    suggesting a significant knowledge gap among users when it
+                    comes to buying stocks and investment. <br />
+                    To address this problem, we implemented two solutions:
+                    <br /><br />
+
+                    1. Academy <br />
+                    2. Games
+                </div>
+            </div>
+            <div class="eachSect">
+                <h3>1. Academy</h3>
+                <div class="content">
+                    During the 2019 Covid-19 pandemic, online learning
+                    experienced a significant surge as people were required to
+                    stay locked down. According to Bay Atlantic University -
+                    Washington (2019), 60% of online students reported that
+                    their online education helped them improve soft skills, with
+                    problem solving skills being cited most frequently (85%).
+                    The impact of online courses on skill development is
+                    undeniable, as I myself can attest to. Despite being a
+                    microbiology graduate, I have been able to transition into a
+                    career as a product designer through online learning
+                    opportunities. <br /><br />
+
+                    Building upon this understanding, we have developed simple
+                    and concise short courses that allow users to grasp the
+                    basics of the stock market and effectively navigate through
+                    our app. These courses aim to equip users with the necessary
+                    knowledge and skills to confidently engage in stock market
+                    investing, regardless of their educational background.
+                    <br /><br />
+
+                    By leveraging the power of online learning, we strive to
+                    empower individuals with the tools they need to participate
+                    in the stock market and make informed investment decisions.
+                </div>
+            </div>
+            <div class="eachSect">
+                <h3>1. Games</h3>
+                <div class="content">
+                    To address the challenge of completing courses, we have
+                    introduced educational games alongside our short courses.
+                    These games are designed to teach users about stocks in a
+                    fun and interactive way. This approach is inspired by
+                    successful platforms like Duolingo, which use games to
+                    facilitate language learning. <br /><br />
+
+                    Our games provide an enjoyable and immersive experience
+                    where users can learn about key stock market concepts and
+                    make informed decisions while purchasing stocks. By
+                    incorporating gamification into our educational strategy, we
+                    aim to make the learning process more engaging and
+                    accessible for users. <br /><br />
+
+                    With this combination of short courses and interactive
+                    games, we are dedicated to equipping users with the
+                    knowledge and skills needed to navigate the stock market
+                    confidently. <br /><br />
+                </div>
+            </div>
+            <div class="eachSect">
+                <img src="../assets/images/increst/games1.png" alt="Games" />
+            </div>
+            <div class="eachSect">
+                <img src="../assets/images/increst/games2.png" alt="Games" />
+            </div>
+        </div>
+        <div class="eachSect" id="highFidelity">
+            <h2>High Fidelity</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/high_fidelity1.png"
+                    alt="High Fidelity"
+                />
+            </div>
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/high_fidelity2.png"
+                alt="High Fidelity"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/high_fidelity3.png"
+                alt="High Fidelity"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/high_fidelity4.png"
+                alt="High Fidelity"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/high_fidelity5.png"
+                alt="High Fidelity"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/app_guide_and_news1.png"
+                alt="App Guide and News"
+            />
+        </div>
+        <div class="eachSect">
+            <img
+                src="../assets/images/increst/app_guide_and_news2.png"
+                alt="App Guide and News"
+            />
+        </div>
+        <div class="eachSect" id="textStyle">
+            <h2>Text Style and Color</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/text_style_and_color.png"
+                    alt="Text Style and Color"
+                />
+            </div>
+        </div>
+        <div class="eachSect" id="components">
+            <h2>Components</h2>
+            <div class="content">
+                <img
+                    src="../assets/images/increst/components.png"
+                    alt="Components"
+                />
+            </div>
+        </div>
+        <div class="eachSect" id="prototype">
+            <h2>Prototype</h2>
+            <div class="content">
+                <div class="vidCont">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/14quVq5aJn0"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+        <script src="../js/worksFooter.js"></script>
+    </div>
 </main>
 <script src="../js/footer.js"></script>
