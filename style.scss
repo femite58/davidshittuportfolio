@@ -429,6 +429,12 @@ section:first-child {
         margin: 0 0 24px;
     }
     h1 {
+        @media (min-width: 1800px) {
+            font-size: 7vw;
+        }
+        @media (min-width: 3000px) {
+            font-size: 5vw;
+        }
         font-size: 11vw;
         margin: 0;
         background-clip: text;
@@ -1232,7 +1238,7 @@ footer {
         .h5 {
             font-size: 24px;
             margin-bottom: 16px;
-            font-family: 'Jost';
+            font-family: "Jost";
             font-weight: 600;
             color: #fff;
             @media (max-width: 600px) {

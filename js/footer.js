@@ -234,7 +234,7 @@ scrlEl.addEventListener('scroll', (e) => {
 function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
-        let topAnim = el.getAttribute('data-topAnim') || 450;
+        let topAnim = el.getAttribute('data-topAnim') || window.innerHeight * .8; //450;
         if (eachBc.top <= topAnim) {
             el.classList.add('show');
         } else {
