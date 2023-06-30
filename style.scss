@@ -598,7 +598,7 @@ section:first-child {
     padding: 2500px 0 122px;
     position: relative;
     @media (max-width: 600px) {
-        padding: 2500px 0 122px;
+        padding: 840px 0 122px;
     }
     z-index: 2000;
     // .bodyCont {
@@ -1178,7 +1178,35 @@ footer {
                 }
             }
         }
-
+    }
+    &#nachonachoPage {
+        #bannerSect {
+            img {
+                width: unset;
+                @media (max-width: 600px) {
+                    width: 106px;
+                }
+            }
+            .txtContent {
+                h1 {
+                    max-width: 716px;
+                    @media (max-width: 600px) {
+                        max-width: 374px;
+                    }
+                }
+                .content {
+                    max-width: 619px;
+                    // @media (max-width: 600px) {
+                    //     max-width: 296px;
+                    // }
+                }
+            }
+        }
+    }
+    #note {
+        li:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
     #roleDuration {
         display: flex;

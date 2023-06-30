@@ -896,7 +896,7 @@ section:first-child {
 }
 @media (max-width: 600px) {
   #goodDesign {
-    padding: 2500px 0 122px;
+    padding: 840px 0 122px;
   }
 }
 #goodDesign .dFlex {
@@ -1401,6 +1401,28 @@ footer .copyright {
   .works#increst #bannerSect .txtContent .content {
     max-width: 296px;
   }
+}
+.works#nachonachoPage #bannerSect img {
+  width: unset;
+}
+@media (max-width: 600px) {
+  .works#nachonachoPage #bannerSect img {
+    width: 106px;
+  }
+}
+.works#nachonachoPage #bannerSect .txtContent h1 {
+  max-width: 716px;
+}
+@media (max-width: 600px) {
+  .works#nachonachoPage #bannerSect .txtContent h1 {
+    max-width: 374px;
+  }
+}
+.works#nachonachoPage #bannerSect .txtContent .content {
+  max-width: 619px;
+}
+.works #note li:not(:last-child) {
+  margin-bottom: 10px;
 }
 .works #roleDuration {
   display: flex;
