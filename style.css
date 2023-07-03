@@ -712,6 +712,15 @@ section:first-child {
   width: 48vw;
   max-width: 663px;
   transform: translate(-12%, -19%);
+  animation: updown 15s linear infinite;
+}
+@keyframes updown {
+  0% {
+    z-index: -1;
+  }
+  50%, 100% {
+    z-index: 27;
+  }
 }
 @media (max-width: 1000px) {
   #welcomeBanner img {
@@ -741,6 +750,8 @@ section:first-child {
 #welcomeBanner h1 {
   font-size: 11vw;
   margin: 0;
+  position: relative;
+  z-index: 25;
   -webkit-background-clip: text;
           background-clip: text;
   background-image: url(assets/images/animbg.svg);
