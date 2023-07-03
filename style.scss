@@ -432,8 +432,23 @@ section:first-child {
         position: absolute;
         left: 0;
         top: 0;
+        width: 48vw;
+        max-width: 663px;
         transform: translate(-12%, -19%);
-
+        @media (max-width: 1000px) {
+            transform: translate(-12%, -11%);
+        }
+        @media (max-width: 750px) {
+            transform: translate(-12%, -2%);
+        }
+        @media (max-width: 600px) {
+            transform: translate(-12%, -13%);
+            width: 61vw;
+        }
+        @media (max-width: 500px) {
+            transform: translate(-12%, -6%);
+            width: 61vw;
+        }
     }
     p {
         margin: 0 0 24px;

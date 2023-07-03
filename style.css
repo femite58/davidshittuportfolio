@@ -709,7 +709,31 @@ section:first-child {
   position: absolute;
   left: 0;
   top: 0;
+  width: 48vw;
+  max-width: 663px;
   transform: translate(-12%, -19%);
+}
+@media (max-width: 1000px) {
+  #welcomeBanner img {
+    transform: translate(-12%, -11%);
+  }
+}
+@media (max-width: 750px) {
+  #welcomeBanner img {
+    transform: translate(-12%, -2%);
+  }
+}
+@media (max-width: 600px) {
+  #welcomeBanner img {
+    transform: translate(-12%, -13%);
+    width: 61vw;
+  }
+}
+@media (max-width: 500px) {
+  #welcomeBanner img {
+    transform: translate(-12%, -6%);
+    width: 61vw;
+  }
 }
 #welcomeBanner p {
   margin: 0 0 24px;
