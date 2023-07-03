@@ -428,8 +428,12 @@ section:first-child {
     .bodyCont {
         position: relative;
     }
-    img {
+    #movingEarth {
         position: absolute;
+        svg {
+            width: 100%;
+            height: auto;
+        }
         left: 0;
         top: 0;
         width: 48vw;
@@ -438,10 +442,13 @@ section:first-child {
         animation: updown 15s linear infinite;
         @keyframes updown {
             0% {
-                z-index: -1;
-            }
-            50%, 100% {
                 z-index: 27;
+            }
+            50%, 60% {
+                z-index: 27;
+            }
+            75% {
+                z-index: -1;
             }
         }
         @media (max-width: 1000px) {
@@ -455,8 +462,8 @@ section:first-child {
             width: 61vw;
         }
         @media (max-width: 500px) {
-            transform: translate(-12%, -6%);
-            width: 61vw;
+            transform: translate(-22%, -11%);
+            width: 75vw;
         }
     }
     p {
@@ -717,6 +724,9 @@ section:first-child {
 #testimonial {
     padding: 160px 0;
     background-color: #000;
+    @media (max-width: 600px) {
+        padding: 64px 0;
+    }
     p {
         font-size: 32px;
         font-weight: bold;

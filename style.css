@@ -705,7 +705,7 @@ section:first-child {
 #welcomeBanner .bodyCont {
   position: relative;
 }
-#welcomeBanner img {
+#welcomeBanner #movingEarth {
   position: absolute;
   left: 0;
   top: 0;
@@ -714,34 +714,41 @@ section:first-child {
   transform: translate(-12%, -19%);
   animation: updown 15s linear infinite;
 }
+#welcomeBanner #movingEarth svg {
+  width: 100%;
+  height: auto;
+}
 @keyframes updown {
   0% {
-    z-index: -1;
-  }
-  50%, 100% {
     z-index: 27;
+  }
+  50%, 60% {
+    z-index: 27;
+  }
+  75% {
+    z-index: -1;
   }
 }
 @media (max-width: 1000px) {
-  #welcomeBanner img {
+  #welcomeBanner #movingEarth {
     transform: translate(-12%, -11%);
   }
 }
 @media (max-width: 750px) {
-  #welcomeBanner img {
+  #welcomeBanner #movingEarth {
     transform: translate(-12%, -2%);
   }
 }
 @media (max-width: 600px) {
-  #welcomeBanner img {
+  #welcomeBanner #movingEarth {
     transform: translate(-12%, -13%);
     width: 61vw;
   }
 }
 @media (max-width: 500px) {
-  #welcomeBanner img {
-    transform: translate(-12%, -6%);
-    width: 61vw;
+  #welcomeBanner #movingEarth {
+    transform: translate(-22%, -11%);
+    width: 75vw;
   }
 }
 #welcomeBanner p {
@@ -1017,6 +1024,11 @@ section:first-child {
 #testimonial {
   padding: 160px 0;
   background-color: #000;
+}
+@media (max-width: 600px) {
+  #testimonial {
+    padding: 64px 0;
+  }
 }
 #testimonial p {
   font-size: 32px;
