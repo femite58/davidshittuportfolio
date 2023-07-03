@@ -425,6 +425,16 @@ section:first-child {
 }
 #welcomeBanner {
     padding-bottom: 82px;
+    .bodyCont {
+        position: relative;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-12%, -19%);
+
+    }
     p {
         margin: 0 0 24px;
     }
@@ -679,7 +689,7 @@ section:first-child {
     }
 }
 #testimonial {
-    padding: 96px 0;
+    padding: 160px 0;
     background-color: #000;
     p {
         font-size: 32px;
