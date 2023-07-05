@@ -425,14 +425,27 @@ section:first-child {
 }
 #welcomeBanner {
     padding-bottom: 82px;
+    @media (max-width: 500px) {
+        padding-top: 150px;
+    }
     .bodyCont {
         position: relative;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 3%;
+        max-width: 976.816px;
+        width: 100%;
     }
     #movingEarth {
         position: absolute;
         svg {
             width: 100%;
             height: auto;
+            // path {
+            //     stroke: red;
+            // }
         }
         left: 0;
         top: 0;
@@ -441,13 +454,21 @@ section:first-child {
         transform: translate(-12%, -19%);
         animation: updown 15s linear infinite;
         @keyframes updown {
-            0% {
-                z-index: 27;
-            }
-            50%, 60% {
+            0%,
+            60% {
                 z-index: 27;
             }
             75% {
+                z-index: -1;
+            }
+        }
+        @keyframes updown2 {
+            0%,
+            52% {
+                z-index: 27;
+            }
+            53%,
+            100% {
                 z-index: -1;
             }
         }
@@ -462,8 +483,9 @@ section:first-child {
             width: 61vw;
         }
         @media (max-width: 500px) {
-            transform: translate(-22%, -11%);
-            width: 75vw;
+            transform: translate(-5%, -42%);
+            width: 80vw;
+            animation-name: updown2;
         }
     }
     p {
