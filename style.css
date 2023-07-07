@@ -773,6 +773,11 @@ section:first-child {
 #welcomeBanner p {
   margin: 0 0 24px;
 }
+@media (max-width: 500px) {
+  #welcomeBanner p {
+    margin: 0 0 14px;
+  }
+}
 #welcomeBanner h1 {
   font-size: 11vw;
   margin: 0;
@@ -800,6 +805,7 @@ section:first-child {
 @media (max-width: 600px) {
   #welcomeBanner h1 {
     font-size: 14vw;
+    margin-bottom: 10px;
   }
 }
 #welcomeBanner .content {

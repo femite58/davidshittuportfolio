@@ -494,6 +494,9 @@ section:first-child {
     }
     p {
         margin: 0 0 24px;
+        @media (max-width: 500px) {
+            margin: 0 0 14px;
+        }
     }
     h1 {
         @media (min-width: 1800px) {
@@ -515,6 +518,7 @@ section:first-child {
         animation-delay: 3.2s;
         @media (max-width: 600px) {
             font-size: 14vw;
+            margin-bottom: 10px;
         }
         // &:hover {
         //     animation-play-state: paused;
