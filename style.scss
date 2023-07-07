@@ -425,9 +425,9 @@ section:first-child {
 }
 #welcomeBanner {
     padding-bottom: 82px;
-    @media (max-width: 500px) {
-        padding-top: 150px;
-    }
+    // @media (max-width: 500px) {
+    //     padding-top: 150px;
+    // }
     .bodyCont {
         position: relative;
     }
