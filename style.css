@@ -724,7 +724,7 @@ section:first-child {
   width: 48vw;
   max-width: 663px;
   transform: translate(-12%, -19%);
-  animation: updown 15s linear infinite;
+  animation: updown 20s linear infinite;
 }
 #welcomeBanner #movingEarth svg {
   width: 100%;
