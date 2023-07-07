@@ -18,5 +18,4 @@ movingEarth.innerHTML = `
 </svg>
 `;
 const animateMotion = document.querySelector('#movingEarth animateMotion');
-console.log(animateMotion);
 animateMotion.setAttribute('begin', '0s');

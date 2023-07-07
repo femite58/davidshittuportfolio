@@ -717,6 +717,11 @@ section:first-child {
   max-width: 976.816px;
   width: 100%;
 }
+@media (max-width: 500px) {
+  #welcomeBanner img {
+    display: none;
+  }
+}
 #welcomeBanner #movingEarth {
   position: absolute;
   left: 0;
@@ -767,6 +772,7 @@ section:first-child {
     transform: translate(-5%, -42%);
     width: 80vw;
     animation-name: updown2;
+    display: none;
   }
 }
 #welcomeBanner p {
