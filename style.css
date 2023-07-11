@@ -1672,6 +1672,11 @@ footer .copyright {
   width: 100%;
   max-width: 400px;
 }
+@media (max-width: 500px) {
+  #endGif img {
+    max-width: 280px;
+  }
+}
 
 #pageCtrl {
   display: flex;
