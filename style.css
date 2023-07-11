@@ -1669,7 +1669,8 @@ footer .copyright {
   margin-bottom: 50px;
 }
 #endGif img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
 }
 
 #pageCtrl {
