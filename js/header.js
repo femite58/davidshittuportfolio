@@ -26,7 +26,7 @@ document.write(`<!DOCTYPE html>
                         <img src="${path}assets/images/logo.svg" alt="David Shittu" />
                     </a>
                     <div class="rightNav">
-                        <a href="mailto:davidshittu02@gmail.comHey%F0%9F%91%8B%2C%20David!%0D%0A%0D%0A" target="_blank" class="borderedBtn">
+                        <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="borderedBtn">
                             <span>Contact me</span>
                             <span class="svgIcon-boxDiagonalArrow"></span>
                         </a>
@@ -75,7 +75,7 @@ document.write(`<!DOCTYPE html>
                                     <span>Don't be shy, say hello :)</span>
                                 </div>
                                 <div class="contactCont">
-                                    <a href="mailto:davidshittu02@gmail.comHey%F0%9F%91%8B%2C%20David!%0D%0A%0D%0A" target="_blank" class="eachClickable contact">
+                                    <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="eachClickable contact">
                                         <span>Contact me</span>
                                         <span
                                             class="svgIcon-boxDiagonalArrow"

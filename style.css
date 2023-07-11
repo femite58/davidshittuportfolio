@@ -184,6 +184,10 @@ h1 {
   stroke: #18ff04;
 }
 
+.txtCenter {
+  text-align: center;
+}
+
 header {
   position: fixed;
   top: 0;
