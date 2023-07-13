@@ -1,37 +1,345 @@
-<script>
-    let title = "David Shittu, Product Designer";
-    let desc =
-        "An overview of my career as a UI/UX or product designer showing relevant case studies with recommendations from notable people.";
-    let page = "home";
-    let pPath = "./";
-</script>
-<script src="js/header.js"></script>
-<main>
-    <section id="welcomeBanner">
-        <div class="bodyCont">
-            <img src="assets/images/stars.svg" alt="Stars" />
-            <div id="movingEarth"></div>
-            <script src="js/movingEarth.js"></script>
-            <p>Welcome to my world,<br />I am</p>
-            <h1>David Shittu.</h1>
-            <div class="fadeAnim delay3-3" data-topAnim="3000">
-                <div class="content">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>David Shittu, Product Designer</title>
+        <meta
+            name="description"
+            content="An overview of my career as a UI/UX or product designer showing relevant case studies with recommendations from notable people."
+        />
+        <script>
+            let page = "home";
+            let pPath = "./";
+        </script>
+        <script src="js/header.js"></script>
+        <main>
+            <section id="welcomeBanner">
+                <div class="bodyCont">
+                    <img src="assets/images/stars.svg" alt="Stars" />
+                    <div id="movingEarth"></div>
+                    <script src="js/movingEarth.js"></script>
+                    <p>Welcome to my world,<br />I am</p>
+                    <h1>David Shittu.</h1>
+                    <div class="fadeAnim delay3-3" data-topAnim="3000">
+                        <div class="content">
+                            <p>
+                                Have you ever been to a restaurant where the
+                                food looked great on the menu, but when it
+                                arrived at your table, it was either overcooked,
+                                under-seasoned, or just not what you were
+                                expecting? It's a frustrating experience that
+                                can leave a bad taste in your mouth and prevent
+                                you from coming back.
+                            </p>
+                            <p>
+                                The same thing can happen with digital products.
+                            </p>
+                            <p>
+                                Think of me as a master chef - I take a bunch of
+                                raw ingredients and turn them into a delicious,
+                                user-friendly dish that satisfies both the
+                                appetite of the user and the goals of the
+                                business - YOU.
+                            </p>
+                            <div class="btnCont dFlex">
+                                <a
+                                    href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David"
+                                    target="_blank"
+                                    class="borderedBtn"
+                                >
+                                    <span>Contact me</span>
+                                    <span
+                                        class="svgIcon-boxDiagonalArrow"
+                                    ></span>
+                                </a>
+                                <a
+                                    href="https://drive.google.com/file/d/1t1SvbkPumg9tYamr5i7Mzph5D4bOBYdH/view?usp=sharing"
+                                    target="_blank"
+                                    class="borderedBtn"
+                                >
+                                    <span>Resume</span>
+                                    <span
+                                        class="svgIcon-boxDiagonalArrow"
+                                    ></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="horizontalScroll">
+                <div class="fadeAnim">
+                    <div id="horizontalScrollNoPad">
+                        <div id="innerHorizontalScroll">
+                            <div class="eachWork">
+                                <div class="bodyCont">
+                                    <div class="flexCont">
+                                        <div
+                                            class="txtCont"
+                                            style="
+                                                background-image: url(assets/images/workbg1.png);
+                                            "
+                                        >
+                                            <h2>
+                                                NachoNacho: B2B SaaS Marketplace
+                                            </h2>
+                                            <p>
+                                                Simplify and consolidates
+                                                subscription management for
+                                                businesses, providing virtual
+                                                credit cards and discounted
+                                                prices on new subscriptions.
+                                            </p>
+                                            <a
+                                                href="./works/nachonacho.html"
+                                                class="borderedBtn"
+                                            >
+                                                <span>View Case Study</span>
+                                                <span
+                                                    class="svgIcon-arrowRight"
+                                                ></span>
+                                            </a>
+                                        </div>
+                                        <div class="imgCont alignItemsCenter">
+                                            <img
+                                                src="assets/images/laptop.png"
+                                                alt="NachoNacho"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachWork">
+                                <div class="bodyCont">
+                                    <div class="flexCont">
+                                        <div
+                                            class="txtCont"
+                                            style="
+                                                background-image: url(assets/images/workbg2.png);
+                                            "
+                                        >
+                                            <h2>
+                                                Improving Bolt’s <br />pricing
+                                                strategy
+                                            </h2>
+                                            <p>
+                                                Get accurate pricing information
+                                                and enjoy a seamless and
+                                                satisfying driving experience.
+                                            </p>
+                                            <a
+                                                href="./works/bolt.html"
+                                                class="borderedBtn"
+                                            >
+                                                <span>View Case Study</span>
+                                                <span
+                                                    class="svgIcon-arrowRight"
+                                                ></span>
+                                            </a>
+                                        </div>
+                                        <div class="imgCont">
+                                            <img
+                                                src="assets/images/bolt-app.png"
+                                                alt="Improving Bolt’s pricing strategy"
+                                                style="max-width: 80%"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachWork">
+                                <div class="bodyCont">
+                                    <div class="flexCont">
+                                        <div
+                                            class="txtCont"
+                                            style="
+                                                background-image: url(assets/images/workbg3.png);
+                                            "
+                                        >
+                                            <h2>
+                                                Increst: Stock market investing
+                                                for beginners
+                                            </h2>
+                                            <p>
+                                                Increst is designed to help
+                                                beginners invest in high
+                                                performing stocks through
+                                                interactive learning options.
+                                            </p>
+                                            <a
+                                                href="./works/increst.html"
+                                                class="borderedBtn"
+                                            >
+                                                <span>View Case Study</span>
+                                                <span
+                                                    class="svgIcon-arrowRight"
+                                                ></span>
+                                            </a>
+                                        </div>
+                                        <div class="imgCont">
+                                            <img
+                                                src="assets/images/increase-stock.png"
+                                                alt="Increst: Stock market investing for beginners"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachWork">
+                                <div class="bodyCont">
+                                    <div class="flexCont">
+                                        <div
+                                            class="txtCont"
+                                            style="
+                                                background-image: url(assets/images/workbg4.png);
+                                            "
+                                        >
+                                            <h2>Gmails settings redesign</h2>
+                                            <p>
+                                                There is a difference between
+                                                retro and bad design, frankly,
+                                                Google choose the latter.
+                                            </p>
+                                            <a
+                                                href="https://www.behance.net/gallery/172152301/Gmail-Settings-Redesign"
+                                                target="_blank"
+                                                class="borderedBtn"
+                                            >
+                                                <span>View on Behance</span>
+                                                <span
+                                                    class="svgIcon-boxDiagonalArrow"
+                                                ></span>
+                                            </a>
+                                        </div>
+                                        <div class="imgCont">
+                                            <img
+                                                src="assets/images/gmail-mockup.png"
+                                                alt="Gmails settings redesign"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="eachWork"></div> -->
+                            <!-- <div class="eachWork"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="fadeAnim" id="forGoodDesign"> -->
+            <section id="goodDesign">
+                <div class="bodyCont">
+                    <div class="dFlex">
+                        <div class="leftPart">
+                            <div class="leftTxt">
+                                <p>
+                                    Nature is pleased with simplicity, and
+                                    nature is no dummy<br /><br />-Isaac Newton
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rightPart">
+                            <div class="rightTxt">
+                                Hey
+                                <img
+                                    src="assets/images/face-with-hand.png"
+                                    alt="face with hand"
+                                /><br />
+                                that's my design philosophy
+                            </div>
+                            <div class="iconCont">
+                                <span class="svgIcon-arrowSpring"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Good design is simple</h2>
+                    <h2 class="adjusted">Good design is simple</h2>
+                </div>
+            </section>
+            <!-- </div> -->
+            <section id="testimonial">
+                <div class="bodyCont">
                     <p>
-                        Have you ever been to a restaurant where the food looked
-                        great on the menu, but when it arrived at your table, it
-                        was either overcooked, under-seasoned, or just not what
-                        you were expecting? It's a frustrating experience that
-                        can leave a bad taste in your mouth and prevent you from
-                        coming back.
+                        You don't have to take my word for it, hear what people
+                        say
                     </p>
-                    <p>The same thing can happen with digital products.</p>
-                    <p>
-                        Think of me as a master chef - I take a bunch of raw
-                        ingredients and turn them into a delicious,
-                        user-friendly dish that satisfies both the appetite of
-                        the user and the goals of the business - YOU.
-                    </p>
-                    <div class="btnCont dFlex">
+                    <div class="testiFlex">
+                        <div class="fadeAnim">
+                            <div class="eachTesti">
+                                <div class="imgCont">
+                                    <img
+                                        src="assets/images/Tom_Garcy.png"
+                                        alt="Tom Garcy"
+                                    />
+                                </div>
+                                <div class="name">Tom Garcy</div>
+                                <div class="job">
+                                    Founder, This is Garcy & Kyugo
+                                </div>
+                                <div class="content">
+                                    David simply stands out in the world of UX
+                                    designers. His attention to detail is
+                                    excellent. He's very independent and one of
+                                    the few being able to transform your brief
+                                    completely into something even better and
+                                    outstanding.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadeAnim delay0-2">
+                            <div class="eachTesti">
+                                <div class="imgCont">
+                                    <img
+                                        src="assets/images/Andy.png"
+                                        alt="Andy Karuza"
+                                    />
+                                </div>
+                                <div class="name">Andy Karuza</div>
+                                <div class="job">
+                                    Marketing lead, NachoNacho
+                                </div>
+                                <div class="content">
+                                    David is an excellent designer to work with.
+                                    He is very intuitive, one of those designers
+                                    you give an idea to, and he comes back with
+                                    something better than you could have
+                                    imagined.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadeAnim delay0-4">
+                            <div class="eachTesti">
+                                <div class="imgCont">
+                                    <img
+                                        src="assets/images/Godswill.png"
+                                        alt="Godswill Ikpe"
+                                    />
+                                </div>
+                                <div class="name">Godswill Ikpe</div>
+                                <div class="job">
+                                    Technical Product Director, Shypfort
+                                </div>
+                                <div class="content">
+                                    David is a fantastic team player and has
+                                    excellent communication skills. His
+                                    exceptional design skills were not limited
+                                    to his work; he also brought infectious
+                                    positive energy to the team.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="callToAction">
+                <div class="bodyCont">
+                    <h3>
+                        You’ve made it this far, don’t be <br />shy to say hello
+                        :)
+                    </h3>
+                    <div class="btnCont">
                         <a
                             href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David"
                             target="_blank"
@@ -50,274 +358,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="horizontalScroll">
-        <div class="fadeAnim">
-            <div id="horizontalScrollNoPad">
-                <div id="innerHorizontalScroll">
-                    <div class="eachWork">
-                        <div class="bodyCont">
-                            <div class="flexCont">
-                                <div
-                                    class="txtCont"
-                                    style="
-                                        background-image: url(assets/images/workbg1.png);
-                                    "
-                                >
-                                    <h2>NachoNacho: B2B SaaS Marketplace</h2>
-                                    <p>
-                                        Simplify and consolidates subscription
-                                        management for businesses, providing
-                                        virtual credit cards and discounted
-                                        prices on new subscriptions.
-                                    </p>
-                                    <a
-                                        href="./works/nachonacho.html"
-                                        class="borderedBtn"
-                                    >
-                                        <span>View Case Study</span>
-                                        <span class="svgIcon-arrowRight"></span>
-                                    </a>
-                                </div>
-                                <div class="imgCont alignItemsCenter">
-                                    <img
-                                        src="assets/images/laptop.png"
-                                        alt="NachoNacho"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="eachWork">
-                        <div class="bodyCont">
-                            <div class="flexCont">
-                                <div
-                                    class="txtCont"
-                                    style="
-                                        background-image: url(assets/images/workbg2.png);
-                                    "
-                                >
-                                    <h2>
-                                        Improving Bolt’s <br />pricing strategy
-                                    </h2>
-                                    <p>
-                                        Get accurate pricing information and
-                                        enjoy a seamless and satisfying driving
-                                        experience.
-                                    </p>
-                                    <a
-                                        href="./works/bolt.html"
-                                        class="borderedBtn"
-                                    >
-                                        <span>View Case Study</span>
-                                        <span class="svgIcon-arrowRight"></span>
-                                    </a>
-                                </div>
-                                <div class="imgCont">
-                                    <img
-                                        src="assets/images/bolt-app.png"
-                                        alt="Improving Bolt’s pricing strategy"
-                                        style="max-width: 80%"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="eachWork">
-                        <div class="bodyCont">
-                            <div class="flexCont">
-                                <div
-                                    class="txtCont"
-                                    style="
-                                        background-image: url(assets/images/workbg3.png);
-                                    "
-                                >
-                                    <h2>
-                                        Increst: Stock market investing for
-                                        beginners
-                                    </h2>
-                                    <p>
-                                        Increst is designed to help beginners
-                                        invest in high performing stocks through
-                                        interactive learning options.
-                                    </p>
-                                    <a
-                                        href="./works/increst.html"
-                                        class="borderedBtn"
-                                    >
-                                        <span>View Case Study</span>
-                                        <span class="svgIcon-arrowRight"></span>
-                                    </a>
-                                </div>
-                                <div class="imgCont">
-                                    <img
-                                        src="assets/images/increase-stock.png"
-                                        alt="Increst: Stock market investing for beginners"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="eachWork">
-                        <div class="bodyCont">
-                            <div class="flexCont">
-                                <div
-                                    class="txtCont"
-                                    style="
-                                        background-image: url(assets/images/workbg4.png);
-                                    "
-                                >
-                                    <h2>Gmails settings redesign</h2>
-                                    <p>
-                                        There is a difference between retro and
-                                        bad design, frankly, Google choose the
-                                        latter.
-                                    </p>
-                                    <a
-                                        href="https://www.behance.net/gallery/172152301/Gmail-Settings-Redesign"
-                                        target="_blank"
-                                        class="borderedBtn"
-                                    >
-                                        <span>View on Behance</span>
-                                        <span
-                                            class="svgIcon-boxDiagonalArrow"
-                                        ></span>
-                                    </a>
-                                </div>
-                                <div class="imgCont">
-                                    <img
-                                        src="assets/images/gmail-mockup.png"
-                                        alt="Gmails settings redesign"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="eachWork"></div> -->
-                    <!-- <div class="eachWork"></div> -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <div class="fadeAnim" id="forGoodDesign"> -->
-    <section id="goodDesign">
-        <div class="bodyCont">
-            <div class="dFlex">
-                <div class="leftPart">
-                    <div class="leftTxt">
-                        <p>
-                            Nature is pleased with simplicity, and nature is no
-                            dummy<br /><br />-Isaac Newton
-                        </p>
-                    </div>
-                </div>
-                <div class="rightPart">
-                    <div class="rightTxt">
-                        Hey
-                        <img
-                            src="assets/images/face-with-hand.png"
-                            alt="face with hand"
-                        /><br />
-                        that's my design philosophy
-                    </div>
-                    <div class="iconCont">
-                        <span class="svgIcon-arrowSpring"></span>
-                    </div>
-                </div>
-            </div>
-            <h2>Good design is simple</h2>
-            <h2 class="adjusted">Good design is simple</h2>
-        </div>
-    </section>
-    <!-- </div> -->
-    <section id="testimonial">
-        <div class="bodyCont">
-            <p>You don't have to take my word for it, hear what people say</p>
-            <div class="testiFlex">
-                <div class="fadeAnim">
-                    <div class="eachTesti">
-                        <div class="imgCont">
-                            <img
-                                src="assets/images/Tom_Garcy.png"
-                                alt="Tom Garcy"
-                            />
-                        </div>
-                        <div class="name">Tom Garcy</div>
-                        <div class="job">Founder, This is Garcy & Kyugo</div>
-                        <div class="content">
-                            David simply stands out in the world of UX
-                            designers. His attention to detail is excellent.
-                            He's very independent and one of the few being able
-                            to transform your brief completely into something
-                            even better and outstanding.
-                        </div>
-                    </div>
-                </div>
-                <div class="fadeAnim delay0-2">
-                    <div class="eachTesti">
-                        <div class="imgCont">
-                            <img
-                                src="assets/images/Andy.png"
-                                alt="Andy Karuza"
-                            />
-                        </div>
-                        <div class="name">Andy Karuza</div>
-                        <div class="job">Marketing lead, NachoNacho</div>
-                        <div class="content">
-                            David is an excellent designer to work with. He is
-                            very intuitive, one of those designers you give an
-                            idea to, and he comes back with something better
-                            than you could have imagined.
-                        </div>
-                    </div>
-                </div>
-                <div class="fadeAnim delay0-4">
-                    <div class="eachTesti">
-                        <div class="imgCont">
-                            <img
-                                src="assets/images/Godswill.png"
-                                alt="Godswill Ikpe"
-                            />
-                        </div>
-                        <div class="name">Godswill Ikpe</div>
-                        <div class="job">
-                            Technical Product Director, Shypfort
-                        </div>
-                        <div class="content">
-                            David is a fantastic team player and has excellent
-                            communication skills. His exceptional design skills
-                            were not limited to his work; he also brought
-                            infectious positive energy to the team.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="callToAction">
-        <div class="bodyCont">
-            <h3>You’ve made it this far, don’t be <br />shy to say hello :)</h3>
-            <div class="btnCont">
-                <a
-                    href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David"
-                    target="_blank"
-                    class="borderedBtn"
-                >
-                    <span>Contact me</span>
-                    <span class="svgIcon-boxDiagonalArrow"></span>
-                </a>
-                <a
-                    href="https://drive.google.com/file/d/1t1SvbkPumg9tYamr5i7Mzph5D4bOBYdH/view?usp=sharing"
-                    target="_blank"
-                    class="borderedBtn"
-                >
-                    <span>Resume</span>
-                    <span class="svgIcon-boxDiagonalArrow"></span>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-<script src="js/footer.js"></script>
+            </section>
+        </main>
+        <script src="js/footer.js"></script>
+  
