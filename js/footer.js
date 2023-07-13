@@ -3,7 +3,7 @@ document.write(`
             <div class="bodyCont">
                 <div class="dFlex">
                     <div class="smallPart">
-                        <a href="#" class="logo">
+                        <a href="/" class="logo">
                             <img
                                 src="${path}assets/images/logo.svg"
                                 alt="David Shittu"
