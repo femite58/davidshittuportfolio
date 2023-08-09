@@ -9,7 +9,10 @@
             name="description"
             content="A look into the life of David Shittu which pictures showing him teach design and a link to some of his recommendations for you."
         />
-        <meta property="og:image" content="https://davidshittu.com/assets/images/david_shittu.jpg" />
+        <meta
+            property="og:image"
+            content="https://davidshittu.com/assets/images/david_shittu.jpg"
+        />
         <script>
             let page = "about";
             let pPath = "./";
@@ -17,9 +20,13 @@
         <script src="js/header.js"></script>
         <main id="about">
             <section id="intro">
+                <img
+                    src="assets/images/about/david_3d_logo.svg"
+                    alt="David 3d Logo"
+                />
                 <div class="bodyCont">
                     <div class="dFlex">
-                        <div class="fadeAnim left delay3-3" data-topAnim="1000">
+                        <div class="fadeAnim top delay0-2" data-topAnim="1000">
                             <div class="imgCont">
                                 <img
                                     src="assets/images/about/david_shittu.svg"
@@ -27,29 +34,29 @@
                                 />
                             </div>
                         </div>
-                        <div
-                            class="fadeAnim right delay3-3"
-                            data-topAnim="1000"
-                        >
+                        <div>
                             <div class="txtCont">
-                                <h1>
-                                    Àbá kìí dòótọ́, ojo ni kìí jẹ́ ká dáa - Yorùbá
-                                    Proverb
-                                    <img
-                                        src="assets/images/about/ng.png"
-                                        alt="Nigeria"
-                                    />
-                                </h1>
-                                <div class="content">
-                                    The proverb loosely means that success comes
-                                    from taking action, and it is fear or lack
-                                    of courage that prevents one from making an
-                                    attempt.
+                                <div class="fadeAnim top" data-topAnim="1000">
+                                    <h1>
+                                        Àbá kìí dòótọ́, ojo ni kìí jẹ́ ká dáa -
+                                        Yorùbá Proverb
+                                        <img
+                                            src="assets/images/about/ng.png"
+                                            alt="Nigeria"
+                                        />
+                                    </h1>
                                 </div>
-                                <img
-                                    src="assets/images/about/david_3d_logo.svg"
-                                    alt="David 3d Logo"
-                                />
+                                <div
+                                    class="fadeAnim top delay0-1"
+                                    data-topAnim="1000"
+                                >
+                                    <div class="content">
+                                        The proverb loosely means that success
+                                        comes from taking action, and it is fear
+                                        or lack of courage that prevents one
+                                        from making an attempt.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -142,4 +149,5 @@
             </section>
         </main>
         <script src="js/footer.js"></script>
-    
+    </head>
+</html>
