@@ -10,8 +10,8 @@ document.write(`
                             />
                         </a>
                         <p>
-                            Let’s create unforgettable beautiful experiences
-                            together
+                        Let’s create memorable experiences
+                        together
                         </p>
                         <div class="expander"></div>
                         <div class="copyright">Soli Deo gloria</div>
@@ -34,20 +34,6 @@ document.write(`
                                         ></span>
                                     </div>
                                     <div class="txt">LinkedIn</div>
-                                </a>
-                            </div>
-                            <div class="gridItem">
-                                <a
-                                    href="https://www.behance.net/sodiqshittu"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-behance"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">Behance</div>
                                 </a>
                             </div>
                             <div class="gridItem">
@@ -76,6 +62,20 @@ document.write(`
                                         ></span>
                                     </div>
                                     <div class="txt">Medium</div>
+                                </a>
+                            </div>
+                            <div class="gridItem">
+                                <a
+                                    href="https://www.behance.net/sodiqshittu"
+                                    target="_blank"
+                                    class="eachClickable"
+                                >
+                                    <div class="iconCont">
+                                        <span
+                                            class="svgIcon-behance"
+                                        ></span>
+                                    </div>
+                                    <div class="txt">Behance</div>
                                 </a>
                             </div>
                             <div class="gridItem">
@@ -194,11 +194,13 @@ menuItems.forEach((item) => {
 scrollTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-setTimeout(() => {
-    const loader = document.querySelector('#loader');
-    loader.classList.add('done');
-    header.querySelector('.rightNav').classList.add('loaded');
-}, 3000);
+if (page == 'home') {
+    setTimeout(() => {
+        const loader = document.querySelector('#loader');
+        loader.classList.add('done');
+        header.querySelector('.rightNav').classList.add('loaded');
+    }, 3000);
+}
 // window.onload = () => {
 // };
 
@@ -234,7 +236,8 @@ scrlEl.addEventListener('scroll', (e) => {
 function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
-        let topAnim = el.getAttribute('data-topAnim') || window.innerHeight * .8; //450;
+        let topAnim =
+            el.getAttribute('data-topAnim') || window.innerHeight * 0.8; //450;
         if (eachBc.top <= topAnim) {
             el.classList.add('show');
         } else {

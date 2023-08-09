@@ -13,7 +13,8 @@ document.write(`
         <link rel="icon" href="${path}assets/images/favicon.png"/>
     </head>
     <body>
-        <div id="loader">
+    
+        <div id="loader" class="${page != 'home' ? 'done' : ''}">
             <div class="animating">
                 LOADING<span>.</span><span>.</span><span>.</span>
             </div>
@@ -28,7 +29,7 @@ document.write(`
                     <a href="/" class="logo">
                         <img src="${path}assets/images/logo.svg" alt="David Shittu" />
                     </a>
-                    <div class="rightNav">
+                    <div class="rightNav${page == 'home' ? '' : ' loaded'}">
                         <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="borderedBtn">
                             <span>Contact me</span>
                             <span class="svgIcon-boxDiagonalArrow"></span>
@@ -62,7 +63,7 @@ document.write(`
                                     href="${path}about.html"
                                     class="eachMenuItem"
                                     data-color="#E97246"
-                                    data-bg="#3D1555"
+                                    data-bg="#1E032A"
                                 >
                                     <span>About me</span>
                                 </a>
@@ -70,7 +71,7 @@ document.write(`
                                     href="${path}index.html#horizontalScroll"
                                     class="eachMenuItem"
                                     data-color="#FFE604"
-                                    data-bg="#1B16AD"
+                                    data-bg="#0A0A84"
                                 >
                                     <span>Works</span>
                                 </a>
@@ -102,20 +103,6 @@ document.write(`
                                     </div>
                                     <div class="gridItem">
                                         <a
-                                            href="https://www.behance.net/sodiqshittu"
-                                            target="_blank"
-                                            class="eachClickable"
-                                        >
-                                            <div class="iconCont">
-                                                <span
-                                                    class="svgIcon-behance"
-                                                ></span>
-                                            </div>
-                                            <div class="txt">Behance</div>
-                                        </a>
-                                    </div>
-                                    <div class="gridItem">
-                                        <a
                                             href="https://dribbble.com/SDavid"
                                             target="_blank"
                                             class="eachClickable"
@@ -140,6 +127,20 @@ document.write(`
                                                 ></span>
                                             </div>
                                             <div class="txt">Medium</div>
+                                        </a>
+                                    </div>
+                                    <div class="gridItem">
+                                        <a
+                                            href="https://www.behance.net/sodiqshittu"
+                                            target="_blank"
+                                            class="eachClickable"
+                                        >
+                                            <div class="iconCont">
+                                                <span
+                                                    class="svgIcon-behance"
+                                                ></span>
+                                            </div>
+                                            <div class="txt">Behance</div>
                                         </a>
                                     </div>
                                     <div class="gridItem">

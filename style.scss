@@ -1,6 +1,7 @@
 $txtColor: #cacaca;
 $bodyBg: #121212;
 $primary: #18ff04;
+$darkTxt: #121212;
 * {
     box-sizing: border-box;
     cursor: none !important;
@@ -20,6 +21,10 @@ body {
 }
 a {
     text-decoration: none;
+}
+*[class^="svgIcon"] {
+    display: flex;
+    width: fit-content;
 }
 .primCol {
     color: $primary;
@@ -96,7 +101,7 @@ p {
 }
 body {
     font-family: "Jost";
-    font-size: 24px;
+    font-size: 20px;
     color: $txtColor;
     background: $bodyBg;
     margin: 0;
@@ -130,7 +135,7 @@ h1 {
     border: 1px solid #fff;
     outline: none;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     transition: 0.3s ease;
     width: fit-content;
@@ -590,7 +595,6 @@ section:first-child {
         // width: fit-content;
         // top: 60px;
         // position: sticky;
-
         @media (max-width: 750px) {
             flex-direction: column;
             gap: 60px;
@@ -610,7 +614,7 @@ section:first-child {
             border-radius: 24px;
             overflow: hidden;
 
-            & > div {
+            & > * {
                 flex: 1 50%;
                 width: 50%;
                 &.txtCont {
@@ -651,7 +655,7 @@ section:first-child {
                         }
                     }
                     p {
-                        margin-bottom: 57.6px;
+                        margin-bottom: 48px;
                     }
                 }
                 &.imgCont {
@@ -812,11 +816,27 @@ section:first-child {
     }
 }
 #callToAction {
-    padding: 122px 0;
-    background: #ffffff08;
+    padding: 240px 0;
+    background: $primary;
     text-align: center;
     position: relative;
     z-index: 300;
+    color: $darkTxt;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(assets/images/call_to_action_noise.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
     h3 {
         max-width: 647.46px;
         margin: auto;
@@ -831,6 +851,13 @@ section:first-child {
         gap: 21px;
         justify-content: center;
         margin-top: 62px;
+        .borderedBtn {
+            color: $darkTxt;
+            border-color: $darkTxt;
+            path[fill] {
+                fill: $darkTxt;
+            }
+        }
         @media (max-width: 600px) {
             gap: 8px;
         }
@@ -1171,17 +1198,18 @@ footer {
 }
 .works {
     #bannerSect {
-        height: calc(var(--view-height) - 50px);
+        // height: calc(var(--view-height) - 50px);
         background-size: cover;
-        padding: 74px 0;
+        padding: 139px 0 0;
         background-repeat: no-repeat;
         position: relative;
         background-position-x: center;
         margin-bottom: 80px;
+        text-align: center;
         @media (max-width: 600px) {
             margin-bottom: 32px;
-            height: calc(var(--view-height) * 0.7);
-            padding: 30px 0;
+            // height: calc(var(--view-height) * 0.7);
+            padding: 95px 0 0;
         }
         &::before {
             content: "";
@@ -1203,23 +1231,32 @@ footer {
         .bannerFlex {
             display: flex;
             width: 100%;
-            align-items: flex-end;
-            gap: 32px 0;
+            align-items: center;
+            flex-direction: column;
             margin-top: auto;
             justify-content: space-between;
             flex-wrap: wrap;
             position: relative;
             z-index: 20;
+            .imgCont {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+            }
             img {
                 display: block;
-                width: 79px;
-                @media (max-width: 600px) {
-                    width: 47px;
-                }
+                max-width: 100%;
+                // @media (max-width: 600px) {
+                //     width: 47px;
+                // }
             }
         }
         .txtContent {
-            flex: 1 490px;
+            // flex: 1 490px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             h1 {
                 font-size: 64px;
                 font-weight: 800;
@@ -1233,9 +1270,29 @@ footer {
                 }
             }
             .content {
-                max-width: 424px;
+                max-width: 535px;
                 @media (max-width: 600px) {
                     max-width: 249px;
+                }
+            }
+        }
+    }
+    &#boltPage {
+        #bannerSect {
+            .bannerFlex {
+                gap: 38px 0;
+            }
+            .txtContent {
+                .content {
+                    max-width: 533px;
+                    @media (max-width: 600px) {
+                        max-width: 268px;
+                    }
+                }
+            }
+            img {
+                @media (max-width: 600px) {
+                    max-width: 260px;
                 }
             }
         }
@@ -1245,20 +1302,24 @@ footer {
             img {
                 width: unset;
                 @media (max-width: 600px) {
-                    width: 106px;
+                    width: 451px;
+                    max-width: unset;
                 }
+            }
+            .bannerFlex {
+                gap: 17px 0;
             }
             .txtContent {
                 h1 {
-                    max-width: 716px;
+                    max-width: 664px;
                     @media (max-width: 600px) {
                         max-width: 374px;
                     }
                 }
                 .content {
-                    max-width: 513px;
+                    max-width: 483px;
                     @media (max-width: 600px) {
-                        max-width: 296px;
+                        max-width: 267px;
                     }
                 }
             }
@@ -1269,7 +1330,8 @@ footer {
             img {
                 width: unset;
                 @media (max-width: 600px) {
-                    width: 106px;
+                    width: 438px;
+                    max-width: unset;
                 }
             }
             .txtContent {
@@ -1280,7 +1342,7 @@ footer {
                     }
                 }
                 .content {
-                    max-width: 619px;
+                    max-width: 535px;
                     // @media (max-width: 600px) {
                     //     max-width: 296px;
                     // }
