@@ -115,7 +115,9 @@ const customCursor = document.querySelector('#customCursor');
 const horizontalScroll = document.querySelector('#horizontalScrollNoPad');
 let innerHScroll;
 const goodDesign = document.querySelector('#goodDesign');
-let goodDesignH2, goodDesignH2Adj;
+let goodDesignH2,
+    goodDesignH2Adj,
+    greenBgs = document.querySelectorAll('.greenBg');
 if (page == 'home') {
     innerHScroll = horizontalScroll?.querySelector('#innerHorizontalScroll');
     goodDesignH2 = goodDesign?.querySelector('h2');
@@ -135,7 +137,30 @@ window.onbeforeunload = () => {
 };
 window.onmousemove = (e) => {
     customCursor.style.cssText = `top: ${e.y}px; left: ${e.x}px;`;
+    contrastCursor();
 };
+
+function contrastCursor() {
+    let cursBc = customCursor.getBoundingClientRect();
+    greenBgs.forEach((g) => {
+        let bc = g.getBoundingClientRect();
+        let h = +getComputedStyle(
+            g,
+            g.classList.contains('before') ? ':before' : null
+        ).height.replace('px', '');
+        if (
+            bc.top <= cursBc.top &&
+            bc.top + h > cursBc.bottom - cursBc.height * 0.5
+        ) {
+            customCursor.classList.add('dark');
+        } else {
+            customCursor.classList.remove('dark');
+        }
+        if (menu.classList.contains('opened')) {
+            customCursor.classList.remove('dark');
+        }
+    });
+}
 
 let horScstickTop = window.innerHeight <= 625 ? 100 : 120;
 
@@ -212,6 +237,7 @@ toggle.onclick = () => {
 };
 
 const scrlEl = window;
+contrastCheck();
 scrlEl.addEventListener('scroll', (e) => {
     scrollDiff = scrlEl.scrollY - initScrollTop;
     initScrollTop = scrlEl.scrollY;
@@ -226,12 +252,50 @@ scrlEl.addEventListener('scroll', (e) => {
     } else {
         header.classList.remove('scrolled');
     }
+    contrastCheck();
     fadeTransition();
     if (page == 'home') {
         scrollCheck(e);
         scrollZoomEffect(e);
     }
 });
+
+function contrastCheck() {
+    greenBgs.forEach((g) => {
+        let h = +getComputedStyle(
+            g,
+            g.classList.contains('before') ? ':before' : null
+        ).height.replace('px', '');
+        let bc = g.getBoundingClientRect();
+        let hBc = header.getBoundingClientRect();
+        let scBc = scrollTop.getBoundingClientRect();
+        let cursBc = customCursor.getBoundingClientRect();
+        if (bc.top <= scBc.top && bc.top + h > scBc.bottom - scBc.height) {
+            scrollTop.classList.add('dark');
+        } else {
+            scrollTop.classList.remove('dark');
+        }
+        if (
+            bc.top <= hBc.top + hBc.height * 0.5 &&
+            bc.top + h > hBc.bottom - hBc.height * 0.5
+        ) {
+            header.classList.add('dark');
+        } else {
+            header.classList.remove('dark');
+        }
+        if (
+            bc.top <= cursBc.top &&
+            bc.top + h > cursBc.bottom - cursBc.height * 0.5
+        ) {
+            customCursor.classList.add('dark');
+        } else {
+            customCursor.classList.remove('dark');
+        }
+        if (menu.classList.contains('opened')) {
+            customCursor.classList.remove('dark');
+        }
+    });
+}
 
 function fadeTransition() {
     for (let el of fadeUp) {

@@ -1,7 +1,7 @@
 document.write(`
-<div id="endGif">
-<img src="../assets/images/giphy.webp" alt="The End" />
-</div>
+<a id="endGif" href="../assets/images/giphy.gif" target="_blank">
+<img src="../assets/images/giphy.gif" alt="The End" />
+</a>
 <div id="pageCtrl">
 <a href="${prev}" ${prev.match(/https/) ? 'target="_blank"' : ''} class="eachCtrl ${prev ? '' : 'hidden'}">
     <span class="svgIcon-smallArrowLeft"></span>

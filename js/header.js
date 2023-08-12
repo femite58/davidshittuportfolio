@@ -28,6 +28,7 @@ document.write(`
                 <nav>
                     <a href="/" class="logo">
                         <img src="${path}assets/images/logo.svg" alt="David Shittu" />
+                        <img src="${path}assets/images/logo_black.svg" alt="David Shittu" />
                     </a>
                     <div class="rightNav${page == 'home' ? '' : ' loaded'}">
                         <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="borderedBtn">

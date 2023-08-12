@@ -47,6 +47,12 @@ a {
   z-index: 500000;
   transform: translate(2px, 2px);
 }
+#customCursor.dark svg *[stroke]:not([stroke=none]) {
+  stroke: #121212;
+}
+#customCursor.dark svg *[fill]:not([fill=none]) {
+  fill: #121212;
+}
 @media (max-width: 600px) {
   #customCursor {
     visibility: hidden;
@@ -140,7 +146,7 @@ h1 {
 }
 
 .dFlex {
-  display: flex;
+  display: flex !important;
 }
 
 .flexGrow1 {
@@ -149,6 +155,10 @@ h1 {
 
 .alignItemsCenter {
   align-items: center !important;
+}
+
+.dBlock {
+  display: block;
 }
 
 .borderedBtn {
@@ -205,6 +215,9 @@ header.scrolled {
   background: rgba(255, 255, 255, 0.03);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+}
+header nav > .logo img:nth-child(2) {
+  display: none;
 }
 header #menu {
   position: fixed;
@@ -303,6 +316,28 @@ header #menu.opened {
   transform: translateX(0);
   opacity: 1;
 }
+header.dark nav > .logo img:first-child {
+  display: none;
+}
+header.dark nav > .logo img:nth-child(2) {
+  display: block;
+}
+header.dark nav .rightNav #toggle {
+  border-color: #121212;
+}
+header.dark nav .rightNav #toggle .innerToggle span {
+  background: #121212;
+}
+header.dark nav .rightNav .borderedBtn {
+  border-color: #121212;
+  color: #121212;
+}
+header.dark nav .rightNav .borderedBtn svg *[stroke]:not([stroke=none]) {
+  stroke: #121212;
+}
+header.dark nav .rightNav .borderedBtn svg *[fill]:not([fill=none]) {
+  fill: #121212;
+}
 
 nav {
   display: flex;
@@ -390,6 +425,12 @@ nav .rightNav #toggle .innerToggle span:not(:nth-child(2)):last-child {
   nav .rightNav #toggle:hover .innerToggle span {
     background: #18ff04;
   }
+}
+nav .rightNav #toggle.opened {
+  border-color: #fff !important;
+}
+nav .rightNav #toggle.opened .innerToggle span {
+  background-color: #fff !important;
 }
 nav .rightNav #toggle.opened .innerToggle span:first-child, nav .rightNav #toggle.opened .innerToggle span:last-child {
   position: absolute;
@@ -1312,6 +1353,16 @@ footer .copyright {
 #scrollTop svg {
   width: 23px;
 }
+#scrollTop.dark {
+  background: #121212;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2509803922);
+}
+#scrollTop.dark svg *[stroke]:not([stroke=none]) {
+  stroke: #18ff04;
+}
+#scrollTop.dark svg *[fill]:not([fill=none]) {
+  fill: #18ff04;
+}
 #scrollTop.show {
   opacity: 1;
   z-index: 20000;
@@ -1575,6 +1626,45 @@ footer .copyright {
 .works#nachonachoPage #bannerSect .txtContent .content {
   max-width: 535px;
 }
+.works#nachonachoPage #outcome .dFlex {
+  gap: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .works#nachonachoPage #outcome .dFlex {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+}
+.works#nachonachoPage #outcome .dFlex > div {
+  background: #18ff04;
+  color: #121212;
+  padding: 48px 24px;
+  flex: 1 300px;
+  width: 300px;
+  font-size: 24px;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+}
+.works#nachonachoPage #outcome .dFlex > div svg {
+  width: 15px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .works#nachonachoPage #outcome .dFlex > div {
+    font-size: 17px;
+    padding: 28px 24px;
+  }
+  .works#nachonachoPage #outcome .dFlex > div svg {
+    width: 11px;
+  }
+}
 .works #note li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -1589,6 +1679,7 @@ footer .copyright {
 }
 .works .eachSect {
   margin-bottom: 100px;
+  display: block;
 }
 @media (max-width: 600px) {
   .works .eachSect {
@@ -1654,6 +1745,21 @@ footer .copyright {
     font-size: 20px;
   }
 }
+.works .eachSect a.imgCont {
+  display: block;
+}
+.works .eachSect .dBlock {
+  display: block;
+  max-width: 100%;
+}
+.works .eachSect .dBlock:not(:last-child) {
+  margin-bottom: 48px;
+}
+@media (max-width: 600px) {
+  .works .eachSect .dBlock:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 .works .eachSect img {
   display: block;
   max-width: 100%;
@@ -1704,6 +1810,7 @@ footer .copyright {
 }
 .works .flex .imgCont {
   position: relative;
+  display: block;
 }
 .works .flex .imgCont .arrowCont {
   position: absolute;
@@ -1726,6 +1833,7 @@ footer .copyright {
 #endGif {
   text-align: center;
   margin-bottom: 50px;
+  display: block;
 }
 #endGif img {
   width: 100%;
@@ -1777,7 +1885,7 @@ footer .copyright {
 }
 @media (max-width: 600px) {
   #pageCtrl .eachCtrl {
-    height: 77px;
+    height: 67px;
     border-radius: 8px;
   }
 }
@@ -1899,13 +2007,13 @@ footer .copyright {
   width: 24px;
 }
 #about #otherInfo img[alt*=Nerd] {
-  width: 90px;
-  transform: scale(2.5);
+  width: 80px;
+  transform: translate(0, 20px) scale(2.3);
 }
 @media (max-width: 600px) {
   #about #otherInfo img[alt*=Nerd] {
     width: 45px;
-    transform: scale(2);
+    transform: translate(12px, 14px) scale(2);
   }
 }
 #about #otherInfo .imgFlex {

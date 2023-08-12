@@ -172,7 +172,8 @@ const svgIcons = {
      </svg>
      `,
 };
-const svgIconEls = document.querySelectorAll('[class^="svgIcon"]');
+const svgIconEls = document.querySelectorAll('[class*="svgIcon-"]');
 for (let svgEl of svgIconEls) {
-    svgEl.innerHTML = svgIcons[svgEl.className.split('-')[1]];
+    svgEl.innerHTML =
+        svgIcons[svgEl.className.match(/svgIcon-[a-z\d]+/i)[0].split('-')[1]];
 }
