@@ -752,6 +752,12 @@ section:first-child {
 
 #welcomeBanner {
   padding-bottom: 82px;
+  font-size: 24px;
+}
+@media (max-width: 500px) {
+  #welcomeBanner {
+    font-size: 16px;
+  }
 }
 #welcomeBanner .bodyCont {
   position: relative;
@@ -1190,8 +1196,6 @@ section:first-child {
   max-width: 647.46px;
   margin: auto;
   font-size: 40px;
-  font-weight: bold;
-  font-family: "Jost";
 }
 @media (max-width: 600px) {
   #callToAction h3 {
@@ -1494,6 +1498,7 @@ footer .copyright {
   background-position-x: center;
   margin-bottom: 80px;
   text-align: center;
+  background-image: url(assets/images/noise.png);
 }
 @media (max-width: 600px) {
   .works #bannerSect {
@@ -1859,16 +1864,83 @@ footer .copyright {
 }
 #pageCtrl .eachCtrl {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 131px;
-  gap: 16px;
   text-decoration: none;
   color: #cacaca;
   width: 427px;
   font-weight: 600;
   border-radius: 24px;
+  flex-direction: column;
   background: rgba(249, 249, 249, 0.031372549);
+  padding: 48px 24px;
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl {
+    padding: 18px 9px;
+    width: 160px;
+    border-radius: 8px;
+  }
+}
+#pageCtrl .eachCtrl .imgCont {
+  background: rgba(249, 249, 249, 0.031372549);
+  border-radius: 13px 13px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 248px;
+}
+#pageCtrl .eachCtrl .imgCont img {
+  max-width: 100%;
+  max-height: 90%;
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl .imgCont {
+    height: 93px;
+  }
+}
+#pageCtrl .eachCtrl .txtPart {
+  padding: 43px 45px;
+  text-align: center;
+  color: #121212;
+  border-radius: 0 0 14px 14px;
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl .txtPart {
+    padding: 18px 15px;
+    gap: 6px;
+  }
+}
+#pageCtrl .eachCtrl .txtPart svg *[fill] {
+  fill: #121212;
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl .txtPart svg {
+    width: 10px;
+    height: auto;
+  }
+}
+#pageCtrl .eachCtrl .txtPart .action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl .txtPart .action {
+    font-size: 9px;
+    margin-bottom: 3px;
+  }
+}
+#pageCtrl .eachCtrl .txtPart .pageTitle {
+  font-size: 27px;
+  font-weight: 800;
+  font-family: "Cabinet Grotesk";
+}
+@media (max-width: 600px) {
+  #pageCtrl .eachCtrl .txtPart .pageTitle {
+    font-size: 9px;
+  }
 }
 #pageCtrl .eachCtrl.hidden {
   visibility: hidden;
@@ -1876,18 +1948,6 @@ footer .copyright {
 #pageCtrl .eachCtrl:hover {
   background: rgba(249, 249, 249, 0.1);
   color: #18ff04;
-}
-#pageCtrl .eachCtrl:hover path[stroke] {
-  stroke: #18ff04;
-}
-#pageCtrl .eachCtrl:hover path[fill] {
-  fill: #18ff04;
-}
-@media (max-width: 600px) {
-  #pageCtrl .eachCtrl {
-    height: 67px;
-    border-radius: 8px;
-  }
 }
 
 #about .imgCont {

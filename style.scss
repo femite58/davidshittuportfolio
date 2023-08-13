@@ -491,9 +491,10 @@ section:first-child {
 }
 #welcomeBanner {
     padding-bottom: 82px;
-    // @media (max-width: 500px) {
-    //     padding-top: 150px;
-    // }
+    font-size: 24px;
+    @media (max-width: 500px) {
+        font-size: 16px;
+    }
     .bodyCont {
         position: relative;
     }
@@ -620,6 +621,7 @@ section:first-child {
     padding: 162px 0;
     position: relative;
     width: 100%;
+    // color: $darkTxt;
     @media (max-width: 600px) {
         padding: 32px 0;
     }
@@ -699,7 +701,19 @@ section:first-child {
                     & > * {
                         position: relative;
                         z-index: 20;
+                        // color: $darkTxt;
                     }
+                    // .borderedBtn {
+                    //     border-color: $darkTxt;
+                    //     svg {
+                    //         *[stroke]:not([stroke="none"]) {
+                    //             stroke: $darkTxt;
+                    //         }
+                    //         *[fill]:not([fill="none"]) {
+                    //             fill: $darkTxt;
+                    //         }
+                    //     }
+                    // }
                     h2 {
                         margin-bottom: 7.2px;
                         line-height: 1.3;
@@ -902,8 +916,8 @@ section:first-child {
         max-width: 647.46px;
         margin: auto;
         font-size: 40px;
-        font-weight: bold;
-        font-family: "Jost";
+        // font-weight: 600;
+        // font-family: "Jost";
         @media (max-width: 600px) {
             font-size: 24px;
             max-width: 256px;
@@ -1281,6 +1295,7 @@ footer {
         background-position-x: center;
         margin-bottom: 80px;
         text-align: center;
+        background-image: url(assets/images/noise.png);
         @media (max-width: 600px) {
             margin-bottom: 32px;
             // height: calc(var(--view-height) * 0.7);
@@ -1631,32 +1646,88 @@ footer {
     }
     .eachCtrl {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 131px;
-        gap: 16px;
+        // justify-content: center;
+        // align-items: center;
+        // height: 131px;
         text-decoration: none;
         color: $txtColor;
         width: 427px;
         font-weight: 600;
         border-radius: 24px;
+        flex-direction: column;
         background: #f9f9f908;
+        padding: 48px 24px;
+        @media (max-width: 600px) {
+            padding: 18px 9px;
+            width: 160px;
+            border-radius: 8px;
+        }
+        .imgCont {
+            background: #f9f9f908;
+            border-radius: 13px 13px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 248px;
+            img {
+                max-width: 100%;
+                max-height: 90%;
+            }
+            @media (max-width: 600px) {
+                height: 93px;
+            }
+        }
+        .txtPart {
+            padding: 43px 45px;
+            text-align: center;
+            color: $darkTxt;
+            border-radius: 0 0 14px 14px;
+            @media (max-width: 600px) {
+                padding: 18px 15px;
+                gap: 6px;
+            }
+            svg {
+                *[fill] {
+                    fill: $darkTxt;
+                }
+                @media (max-width: 600px) {
+                    width: 10px;
+                    height: auto;
+                }
+            }
+            .action {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+                margin-bottom: 10px;
+                font-size: 24px;
+                @media (max-width: 600px) {
+                    font-size: 9px;
+                    margin-bottom: 3px;
+                }
+            }
+            .pageTitle {
+                font-size: 27px;
+                font-weight: 800;
+                font-family: "Cabinet Grotesk";
+                @media (max-width: 600px) {
+                    font-size: 9px;
+                }
+            }
+        }
         &.hidden {
             visibility: hidden;
         }
         &:hover {
             background: rgba(249, 249, 249, 0.1);
             color: $primary;
-            path[stroke] {
-                stroke: $primary;
-            }
-            path[fill] {
-                fill: $primary;
-            }
-        }
-        @media (max-width: 600px) {
-            height: 67px;
-            border-radius: 8px;
+            // path[stroke] {
+            //     stroke: $primary;
+            // }
+            // path[fill] {
+            //     fill: $primary;
+            // }
         }
     }
 }
