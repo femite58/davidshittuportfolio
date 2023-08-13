@@ -1295,7 +1295,16 @@ footer {
         background-position-x: center;
         margin-bottom: 80px;
         text-align: center;
-        background-image: url(assets/images/noise.png);
+        &::after {
+            background-image: url(assets/images/works_noise.png);
+            opacity: 0.2;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         @media (max-width: 600px) {
             margin-bottom: 32px;
             // height: calc(var(--view-height) * 0.7);
@@ -1361,6 +1370,7 @@ footer {
             }
             .content {
                 max-width: 535px;
+                color: #fff;
                 @media (max-width: 600px) {
                     max-width: 249px;
                 }
@@ -1650,7 +1660,7 @@ footer {
         // align-items: center;
         // height: 131px;
         text-decoration: none;
-        color: $txtColor;
+        color: #fff;
         width: 427px;
         font-weight: 600;
         border-radius: 24px;
@@ -1680,7 +1690,7 @@ footer {
         .txtPart {
             padding: 43px 45px;
             text-align: center;
-            color: $darkTxt;
+            color: #fff;
             border-radius: 0 0 14px 14px;
             @media (max-width: 600px) {
                 padding: 18px 15px;
@@ -1688,7 +1698,7 @@ footer {
             }
             svg {
                 *[fill] {
-                    fill: $darkTxt;
+                    fill: #fff;
                 }
                 @media (max-width: 600px) {
                     width: 10px;
