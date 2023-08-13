@@ -82,9 +82,6 @@ document.write(`
                                 <div class="contactCont">
                                     <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="eachClickable contact">
                                         <span>Contact me</span>
-                                        <span
-                                            class="svgIcon-boxDiagonalArrow"
-                                        ></span>
                                     </a>
                                 </div>
                                 <div class="socialLinks">
