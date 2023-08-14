@@ -100,7 +100,7 @@ document.write(`
         <div id="scrollTop">
             <span class="svgIcon-arrowUp"></span>
         </div>
-        <script src="${path}js/svgIcons.js"></script>
+        <script src="${path}js/svgIcons.js" defer async></script>
     </body>
 </html>
 `);
