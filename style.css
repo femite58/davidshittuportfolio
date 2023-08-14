@@ -1200,7 +1200,7 @@ section:first-child {
 @media (max-width: 600px) {
   #callToAction h3 {
     font-size: 24px;
-    max-width: 256px;
+    max-width: 237px;
   }
 }
 #callToAction .btnCont {
