@@ -904,7 +904,7 @@ section:first-child {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(assets/images/call_to_action_noise.png);
+        background-image: url(assets/images/noise_img.svg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1296,8 +1296,8 @@ footer {
         margin-bottom: 80px;
         text-align: center;
         &::after {
-            background-image: url(assets/images/works_noise.png);
-            opacity: 0.2;
+            background-image: url(assets/images/noise_img.svg);
+            // opacity: 0.2;
             content: "";
             position: absolute;
             top: 0;
@@ -1402,7 +1402,7 @@ footer {
             img {
                 width: unset;
                 @media (max-width: 600px) {
-                    width: 451px;
+                    width: 451px !important;
                     max-width: unset;
                 }
             }
@@ -1769,7 +1769,7 @@ footer {
             left: 0;
             height: 80%;
             background-color: $primary;
-            background-image: url(assets/images/about/about_noise.png);
+            background-image: url(assets/images/noise_img.svg);
         }
         & > img {
             position: absolute;
