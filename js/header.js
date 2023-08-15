@@ -10,7 +10,7 @@ document.write(`
   // gtag('config', 'G-TBNYGRHMNN');
 </script>
         <link rel="preload" as="font" href="${path}assets/fonts/CabinetGrotesk-Bold.otf" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/CabinetGrotesk-ExtraBold.otf" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/CabinetGrotesk-Extrabold.otf" crossorigin />
         <link rel="preload" as="font" href="${path}assets/fonts/Jost-Regular.ttf" crossorigin />
         <link rel="preload" as="font" href="${path}assets/fonts/Jost-SemiBold.ttf" crossorigin />
         <link rel="preload" as="font" href="${path}assets/fonts/Jost-Bold.ttf" crossorigin />
