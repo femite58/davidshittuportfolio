@@ -353,7 +353,7 @@ function scrollZoomEffect(e) {
 
     let finalTop, finalTranslY;
     let scrlSt = window.innerHeight;
-    let endScrlh2 = 162;
+    let endScrlh2 = 92;
     if (gdB.top <= scrlSt) {
         finalTop =
             ((gdB.top - endScrlh2) * (startPos - startPos2)) /

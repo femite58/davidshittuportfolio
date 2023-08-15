@@ -1634,7 +1634,7 @@ footer .copyright {
 }
 @media (max-width: 600px) {
   .works#nachonachoPage #bannerSect img {
-    width: 438px;
+    width: 438px !important;
     max-width: unset;
   }
 }

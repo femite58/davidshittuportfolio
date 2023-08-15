@@ -1439,7 +1439,7 @@ footer {
             img {
                 width: unset;
                 @media (max-width: 600px) {
-                    width: 438px;
+                    width: 438px !important;
                     max-width: unset;
                 }
             }
