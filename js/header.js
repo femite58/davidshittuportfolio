@@ -9,7 +9,12 @@ document.write(`
 
   // gtag('config', 'G-TBNYGRHMNN');
 </script>
-        <link rel="stylesheet" href="${path}style.css" />
+        <link rel="preload" as="font" href="${path}assets/fonts/CabibinetGrotesk-Bold.otf" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/CabibinetGrotesk-ExtraBold.otf" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/Jost-Regular.ttf" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/Jost-SemiBold.ttf" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/Jost-Bold.ttf" crossorigin />
+        <link rel="stylesheet" href="${path}style.css" type="text/css" />
         <link rel="icon" href="${path}assets/images/favicon.png"/>
     </head>
     <body>

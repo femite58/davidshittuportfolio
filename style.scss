@@ -69,45 +69,54 @@ p {
 @font-face {
     font-family: "Cabinet Grotesk";
     src: url(assets/fonts/CabinetGrotesk-Regular.otf);
+    font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: url(assets/fonts/CabinetGrotesk-Medium.otf);
     font-weight: 500;
+    font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: url(assets/fonts/CabinetGrotesk-Bold.otf);
     font-weight: 700;
+    font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: url(assets/fonts/CabinetGrotesk-Extrabold.otf);
     font-weight: 800;
+    font-display: swap;
 }
 @font-face {
     font-family: "Jost";
     src: url(assets/fonts/Jost-Regular.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: "Jost";
     src: url(assets/fonts/Jost-Medium.ttf);
     font-weight: 500;
+    font-display: swap;
 }
 @font-face {
     font-family: "Jost";
     src: url(assets/fonts/Jost-SemiBold.ttf);
     font-weight: 600;
+    font-display: swap;
 }
 @font-face {
     font-family: "Jost";
     src: url(assets/fonts/Jost-Bold.ttf);
     font-weight: 700;
+    font-display: swap;
 }
 @font-face {
     font-family: "Jost";
     src: url(assets/fonts/Jost-ExtraBold.ttf);
     font-weight: 800;
+    font-display: swap;
 }
 body {
     font-family: "Jost";
