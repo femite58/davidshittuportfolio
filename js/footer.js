@@ -122,8 +122,13 @@ if (page == 'home') {
     goodDesignH2 = goodDesign?.querySelector('h2');
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
 }
+// onpopstate = (e) => {
+//     console.log(e);
+// };
 menuItems.forEach((m) => {
-    m.onclick = () => {
+    m.onclick = (e) => {
+        // e.preventDefault();
+        // history.pushState({ page: 'about' }, 'Title', 'about');
         menu.classList.remove('opened');
         toggle.classList.remove('opened');
     };
@@ -131,8 +136,10 @@ menuItems.forEach((m) => {
 
 // history.scrollRestoration = 'manual';
 
-window.onbeforeunload = () => {
+window.onbeforeunload = (e) => {
+    // e.preventDefault();
     window.scrollTo(0, 0);
+    // return '';
 };
 window.onmousemove = (e) => {
     customCursor.style.cssText = `top: ${e.y}px; left: ${e.x}px;`;

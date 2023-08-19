@@ -998,6 +998,16 @@ section:first-child {
 #horizontalScroll .eachWork .flexCont > *.txtCont > * {
   position: relative;
   z-index: 20;
+  color: #121212;
+}
+#horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn {
+  border-color: #121212;
+}
+#horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn svg *[stroke]:not([stroke=none]) {
+  stroke: #121212;
+}
+#horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn svg *[fill]:not([fill=none]) {
+  fill: #121212;
 }
 #horizontalScroll .eachWork .flexCont > *.txtCont h2 {
   margin-bottom: 7.2px;
@@ -1883,7 +1893,7 @@ footer .copyright {
 #pageCtrl .eachCtrl {
   display: flex;
   text-decoration: none;
-  color: #fff;
+  color: #121212;
   width: 427px;
   font-weight: 600;
   border-radius: 24px;
@@ -1918,7 +1928,7 @@ footer .copyright {
 #pageCtrl .eachCtrl .txtPart {
   padding: 43px 45px;
   text-align: center;
-  color: #fff;
+  color: #121212;
   border-radius: 0 0 14px 14px;
 }
 @media (max-width: 600px) {
@@ -1928,7 +1938,7 @@ footer .copyright {
   }
 }
 #pageCtrl .eachCtrl .txtPart svg *[fill] {
-  fill: #fff;
+  fill: #121212;
 }
 @media (max-width: 600px) {
   #pageCtrl .eachCtrl .txtPart svg {
