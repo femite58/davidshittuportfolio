@@ -48,10 +48,10 @@ a {
   transform: translate(2px, 2px);
 }
 #customCursor.dark svg *[stroke]:not([stroke=none]) {
-  stroke: #121212;
+  stroke: #010114;
 }
 #customCursor.dark svg *[fill]:not([fill=none]) {
-  fill: #121212;
+  fill: #010114;
 }
 @media (max-width: 600px) {
   #customCursor {
@@ -71,7 +71,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 10px;
-  font-family: "Cabinet Grotesk";
+  color: #fafafb;
 }
 
 p {
@@ -79,62 +79,33 @@ p {
 }
 
 @font-face {
-  font-family: "Cabinet Grotesk";
-  src: url(assets/fonts/CabinetGrotesk-Regular.otf);
+  font-family: "Circular Std";
+  src: url(assets/fonts/CircularStd-Book.otf);
   font-display: swap;
 }
 @font-face {
-  font-family: "Cabinet Grotesk";
-  src: url(assets/fonts/CabinetGrotesk-Medium.otf);
+  font-family: "Circular Std";
+  src: url(assets/fonts/CircularStd-Medium.otf);
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cabinet Grotesk";
-  src: url(assets/fonts/CabinetGrotesk-Bold.otf);
+  font-family: "Circular Std";
+  src: url(assets/fonts/CircularStd-Bold.otf);
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cabinet Grotesk";
-  src: url(assets/fonts/CabinetGrotesk-Extrabold.otf);
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url(assets/fonts/Jost-Regular.ttf);
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url(assets/fonts/Jost-Medium.ttf);
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url(assets/fonts/Jost-SemiBold.ttf);
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url(assets/fonts/Jost-Bold.ttf);
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url(assets/fonts/Jost-ExtraBold.ttf);
+  font-family: "Circular Std";
+  src: url(assets/fonts/CircularStd-Black.otf);
   font-weight: 800;
   font-display: swap;
 }
 body {
-  font-family: "Jost";
+  font-family: "Circular Std";
   font-size: 20px;
-  color: #cacaca;
-  background: #121212;
+  color: #959ba4;
+  background: #010114;
   margin: 0;
 }
 @media (max-width: 600px) {
@@ -144,7 +115,6 @@ body {
 }
 
 h1 {
-  font-family: "Cabinet Grotesk";
   font-weight: 800;
 }
 
@@ -170,43 +140,52 @@ h1 {
   display: block;
 }
 
+.primBtn,
 .borderedBtn {
   display: flex;
   gap: 11px;
   padding: 0px 24px;
   align-items: center;
-  border: 1px solid #fff;
   outline: none;
   color: #fff;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.3s ease;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 100px;
+  border-radius: 8px;
   text-decoration: none;
-  height: 56px;
+  height: 49px;
+}
+.primBtn.primBtn,
+.borderedBtn.primBtn {
+  background: #18ff04;
+  color: #010114;
+}
+.primBtn.primBtn:hover,
+.borderedBtn.primBtn:hover {
+  background: #00bb00;
+}
+.primBtn.borderedBtn,
+.borderedBtn.borderedBtn {
+  border: 1px solid #fafafb;
+  background: transparent;
+}
+.primBtn.borderedBtn:hover,
+.borderedBtn.borderedBtn:hover {
+  border-color: #18ff04;
 }
 @media (max-width: 600px) {
+  .primBtn,
   .borderedBtn {
     height: 48px;
     font-size: 16px;
     white-space: nowrap;
   }
 }
+.primBtn span,
 .borderedBtn span {
   line-height: 1.4;
-}
-.borderedBtn:hover {
-  gap: 16px;
-  color: #18ff04;
-  border-color: #18ff04;
-}
-.borderedBtn:hover path[fill] {
-  fill: #18ff04;
-}
-.borderedBtn:hover path[stroke] {
-  stroke: #18ff04;
 }
 
 .txtCenter {
@@ -262,7 +241,7 @@ header #menu .eachMenuItem {
   font-size: 40px;
   font-family: "Cabinet Grotesk";
   font-weight: bold;
-  color: #cacaca;
+  color: #959ba4;
   text-decoration: none;
   transition: 0.3s ease;
   text-transform: uppercase;
@@ -332,20 +311,20 @@ header.dark nav > .logo img:nth-child(2) {
   display: block;
 }
 header.dark nav .rightNav #toggle {
-  border-color: #121212;
+  border-color: #010114;
 }
 header.dark nav .rightNav #toggle .innerToggle span {
-  background: #121212;
+  background: #010114;
 }
 header.dark nav .rightNav .borderedBtn {
-  border-color: #121212;
-  color: #121212;
+  border-color: #010114;
+  color: #010114;
 }
 header.dark nav .rightNav .borderedBtn svg *[stroke]:not([stroke=none]) {
-  stroke: #121212;
+  stroke: #010114;
 }
 header.dark nav .rightNav .borderedBtn svg *[fill]:not([fill=none]) {
-  fill: #121212;
+  fill: #010114;
 }
 
 nav {
@@ -379,10 +358,10 @@ nav .rightNav .borderedBtn {
   }
 }
 nav .rightNav #toggle {
-  width: 64px;
-  height: 64px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid #fafafb;
   transition: 0.3s ease;
   display: flex;
   justify-content: center;
@@ -395,17 +374,17 @@ nav .rightNav #toggle .innerToggle {
   display: flex;
   gap: 5px;
   flex-direction: column;
-  width: 27px;
-  height: 16.82px;
+  width: 19px;
+  height: 12.82px;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 nav .rightNav #toggle .innerToggle span {
-  height: 2.29px;
+  height: 1.79px;
   border-radius: 2px;
   width: 100%;
-  background: #fff;
+  background: #fafafb;
   transition: 0.3s ease;
 }
 nav .rightNav #toggle .innerToggle span:not(:nth-child(2)) {
@@ -759,151 +738,49 @@ section:first-child {
   }
 }
 
-#welcomeBanner {
-  padding-bottom: 62px;
-  font-size: 24px;
+#welcomeSect {
+  padding: 197px 0 162px;
 }
-@media (max-width: 500px) {
-  #welcomeBanner {
-    font-size: 16px;
-  }
+#welcomeSect .centeredCont {
+  max-width: 755px;
+  margin: auto;
 }
-#welcomeBanner .bodyCont {
-  position: relative;
+#welcomeSect .centeredCont h1 {
+  font-size: 48px;
+  margin-bottom: 32px;
 }
-#welcomeBanner img {
-  position: absolute;
-  top: 0;
-  left: 3%;
-  max-width: 976.816px;
-  width: 100%;
+#welcomeSect .centeredCont p {
+  margin-bottom: 32px;
 }
-@media (max-width: 500px) {
-  #welcomeBanner img {
-    display: none;
-  }
-}
-#welcomeBanner #movingEarth {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 48vw;
-  max-width: 663px;
-  transform: translate(-12%, -19%);
-  animation: updown 20s linear infinite;
-}
-#welcomeBanner #movingEarth svg {
-  width: 100%;
-  height: auto;
-}
-@keyframes updown {
-  0%, 60% {
-    z-index: 27;
-  }
-  75% {
-    z-index: -1;
-  }
-}
-@keyframes updown2 {
-  0%, 52% {
-    z-index: 27;
-  }
-  53%, 100% {
-    z-index: -1;
-  }
-}
-@media (max-width: 1000px) {
-  #welcomeBanner #movingEarth {
-    transform: translate(-12%, -11%);
-  }
-}
-@media (max-width: 750px) {
-  #welcomeBanner #movingEarth {
-    transform: translate(-12%, -2%);
-  }
-}
-@media (max-width: 600px) {
-  #welcomeBanner #movingEarth {
-    transform: translate(-12%, -13%);
-    width: 61vw;
-  }
-}
-@media (max-width: 500px) {
-  #welcomeBanner #movingEarth {
-    transform: translate(-5%, -42%);
-    width: 80vw;
-    animation-name: updown2;
-    display: none;
-  }
-}
-#welcomeBanner p {
-  margin: 0 0 24px;
-}
-@media (max-width: 500px) {
-  #welcomeBanner p {
-    margin: 0 0 14px;
-  }
-}
-#welcomeBanner h1 {
-  font-size: 11vw;
-  margin: 0;
-  position: relative;
-  z-index: 25;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: url(assets/images/animbg.svg);
-  color: transparent;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  animation: colorChange forwards 1.5s linear;
-  animation-delay: 3.2s;
-}
-@media (min-width: 1800px) {
-  #welcomeBanner h1 {
-    font-size: 7vw;
-  }
-}
-@media (min-width: 3000px) {
-  #welcomeBanner h1 {
-    font-size: 5vw;
-  }
-}
-@media (max-width: 600px) {
-  #welcomeBanner h1 {
-    font-size: 14vw;
-    margin-bottom: 10px;
-  }
-}
-#welcomeBanner .content {
-  width: 73%;
-  margin-left: auto;
-}
-@media (max-width: 600px) {
-  #welcomeBanner .content {
-    width: 100%;
-  }
-}
-#welcomeBanner .btnCont {
-  margin-top: 32px;
-  gap: 21px;
-}
-@media (max-width: 600px) {
-  #welcomeBanner .btnCont {
-    gap: 8px;
-  }
+#welcomeSect .centeredCont .btnCont {
+  display: flex;
+  gap: 16px;
 }
 
-@keyframes colorChange {
-  0% {
-    background-position-y: 0%;
-  }
-  50% {
-    background-position-y: 50%;
-  }
-  100% {
-    background-position-y: 100%;
-  }
+.bannerCarousel .flexCont {
+  display: flex;
+  position: relative;
+  left: 0;
 }
+.bannerCarousel .flexCont .carouselItem {
+  margin-right: 100px;
+}
+
+#partners {
+  overflow: hidden;
+  padding: 0 40px;
+}
+#partners .bannerCarousel {
+  width: 1489.48px;
+}
+#partners .sponsCont {
+  display: flex;
+  gap: 100px;
+}
+#partners .sponsCont img {
+  max-height: 56px;
+}
+
 #horizontalScroll {
   padding: 92px 0;
   position: relative;
@@ -998,16 +875,16 @@ section:first-child {
 #horizontalScroll .eachWork .flexCont > *.txtCont > * {
   position: relative;
   z-index: 20;
-  color: #121212;
+  color: #010114;
 }
 #horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn {
-  border-color: #121212;
+  border-color: #010114;
 }
 #horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn svg *[stroke]:not([stroke=none]) {
-  stroke: #121212;
+  stroke: #010114;
 }
 #horizontalScroll .eachWork .flexCont > *.txtCont .borderedBtn svg *[fill]:not([fill=none]) {
-  fill: #121212;
+  fill: #010114;
 }
 #horizontalScroll .eachWork .flexCont > *.txtCont h2 {
   margin-bottom: 7.2px;
@@ -1189,7 +1066,7 @@ section:first-child {
   text-align: center;
   position: relative;
   z-index: 300;
-  color: #121212;
+  color: #010114;
 }
 @media (max-width: 600px) {
   #callToAction {
@@ -1229,11 +1106,11 @@ section:first-child {
   margin-top: 62px;
 }
 #callToAction .btnCont .borderedBtn {
-  color: #121212;
-  border-color: #121212;
+  color: #010114;
+  border-color: #010114;
 }
 #callToAction .btnCont .borderedBtn path[fill] {
-  fill: #121212;
+  fill: #010114;
 }
 @media (max-width: 600px) {
   #callToAction .btnCont {
@@ -1377,7 +1254,7 @@ footer .copyright {
   width: 23px;
 }
 #scrollTop.dark {
-  background: #121212;
+  background: #010114;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
 #scrollTop.dark svg *[stroke]:not([stroke=none]) {
@@ -1673,7 +1550,7 @@ footer .copyright {
 }
 .works#nachonachoPage #outcome .dFlex > div {
   background: #18ff04;
-  color: #121212;
+  color: #010114;
   padding: 48px 24px;
   flex: 1 300px;
   width: 300px;
@@ -1893,7 +1770,7 @@ footer .copyright {
 #pageCtrl .eachCtrl {
   display: flex;
   text-decoration: none;
-  color: #121212;
+  color: #010114;
   width: 427px;
   font-weight: 600;
   border-radius: 24px;
@@ -1928,7 +1805,7 @@ footer .copyright {
 #pageCtrl .eachCtrl .txtPart {
   padding: 43px 45px;
   text-align: center;
-  color: #121212;
+  color: #010114;
   border-radius: 0 0 14px 14px;
 }
 @media (max-width: 600px) {
@@ -1938,7 +1815,7 @@ footer .copyright {
   }
 }
 #pageCtrl .eachCtrl .txtPart svg *[fill] {
-  fill: #121212;
+  fill: #010114;
 }
 @media (max-width: 600px) {
   #pageCtrl .eachCtrl .txtPart svg {
@@ -1993,7 +1870,7 @@ footer .copyright {
   margin-bottom: 64px;
   text-align: center;
   position: relative;
-  color: #121212;
+  color: #010114;
 }
 @media (max-width: 600px) {
   #about #intro {

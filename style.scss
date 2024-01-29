@@ -1,7 +1,7 @@
-$txtColor: #cacaca;
-$bodyBg: #121212;
+$txtColor: #959ba4;
+$bodyBg: #010114;
 $primary: #18ff04;
-$darkTxt: #121212;
+$darkTxt: #010114;
 * {
     box-sizing: border-box;
     cursor: none !important;
@@ -61,65 +61,65 @@ h4,
 h5,
 h6 {
     margin: 0 0 10px;
-    font-family: "Cabinet Grotesk";
+    color: #fafafb;
 }
 p {
     margin: 0 0 16px;
 }
 @font-face {
-    font-family: "Cabinet Grotesk";
-    src: url(assets/fonts/CabinetGrotesk-Regular.otf);
+    font-family: "Circular Std";
+    src: url(assets/fonts/CircularStd-Book.otf);
     font-display: swap;
 }
 @font-face {
-    font-family: "Cabinet Grotesk";
-    src: url(assets/fonts/CabinetGrotesk-Medium.otf);
+    font-family: "Circular Std";
+    src: url(assets/fonts/CircularStd-Medium.otf);
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
-    font-family: "Cabinet Grotesk";
-    src: url(assets/fonts/CabinetGrotesk-Bold.otf);
+    font-family: "Circular Std";
+    src: url(assets/fonts/CircularStd-Bold.otf);
     font-weight: 700;
     font-display: swap;
 }
 @font-face {
-    font-family: "Cabinet Grotesk";
-    src: url(assets/fonts/CabinetGrotesk-Extrabold.otf);
+    font-family: "Circular Std";
+    src: url(assets/fonts/CircularStd-Black.otf);
     font-weight: 800;
     font-display: swap;
 }
-@font-face {
-    font-family: "Jost";
-    src: url(assets/fonts/Jost-Regular.ttf);
-    font-display: swap;
-}
-@font-face {
-    font-family: "Jost";
-    src: url(assets/fonts/Jost-Medium.ttf);
-    font-weight: 500;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Jost";
-    src: url(assets/fonts/Jost-SemiBold.ttf);
-    font-weight: 600;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Jost";
-    src: url(assets/fonts/Jost-Bold.ttf);
-    font-weight: 700;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Jost";
-    src: url(assets/fonts/Jost-ExtraBold.ttf);
-    font-weight: 800;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: "Jost";
+//     src: url(assets/fonts/Jost-Regular.ttf);
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: "Jost";
+//     src: url(assets/fonts/Jost-Medium.ttf);
+//     font-weight: 500;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: "Jost";
+//     src: url(assets/fonts/Jost-SemiBold.ttf);
+//     font-weight: 600;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: "Jost";
+//     src: url(assets/fonts/Jost-Bold.ttf);
+//     font-weight: 700;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: "Jost";
+//     src: url(assets/fonts/Jost-ExtraBold.ttf);
+//     font-weight: 800;
+//     font-display: swap;
+// }
 body {
-    font-family: "Jost";
+    font-family: "Circular Std";
     font-size: 20px;
     color: $txtColor;
     background: $bodyBg;
@@ -129,7 +129,6 @@ body {
     }
 }
 h1 {
-    font-family: "Cabinet Grotesk";
     font-weight: 800;
 }
 .bodyCont {
@@ -149,21 +148,35 @@ h1 {
 .dBlock {
     display: block;
 }
+.primBtn,
 .borderedBtn {
     display: flex;
     gap: 11px;
     padding: 0px 24px;
     align-items: center;
-    border: 1px solid #fff;
     outline: none;
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     transition: 0.3s ease;
     width: fit-content;
-    border-radius: 100px;
+    border-radius: 8px;
     text-decoration: none;
-    height: 56px;
+    height: 49px;
+    &.primBtn {
+        background: $primary;
+        color: #010114;
+        &:hover {
+            background: #00bb00;
+        }
+    }
+    &.borderedBtn {
+        border: 1px solid #fafafb;
+        background: transparent;
+        &:hover {
+            border-color: #18ff04;
+        }
+    }
     @media (max-width: 600px) {
         height: 48px;
         font-size: 16px;
@@ -172,17 +185,17 @@ h1 {
     span {
         line-height: 1.4;
     }
-    &:hover {
-        gap: 16px;
-        color: $primary;
-        border-color: $primary;
-        path[fill] {
-            fill: $primary;
-        }
-        path[stroke] {
-            stroke: $primary;
-        }
-    }
+    // &:hover {
+    //     gap: 16px;
+    //     color: $primary;
+    //     border-color: $primary;
+    //     path[fill] {
+    //         fill: $primary;
+    //     }
+    //     path[stroke] {
+    //         stroke: $primary;
+    //     }
+    // }
 }
 .txtCenter {
     text-align: center;
@@ -361,10 +374,10 @@ nav {
             }
         }
         #toggle {
-            width: 64px;
-            height: 64px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
-            border: 1px solid #fff;
+            border: 1px solid #fafafb;
             transition: 0.3s ease;
             display: flex;
             justify-content: center;
@@ -376,16 +389,16 @@ nav {
                 display: flex;
                 gap: 5px;
                 flex-direction: column;
-                width: 27px;
-                height: 16.82px;
+                width: 19px;
+                height: 12.82px;
                 justify-content: center;
                 align-items: center;
                 position: relative;
                 span {
-                    height: 2.29px;
+                    height: 1.79px;
                     border-radius: 2px;
                     width: 100%;
-                    background: #fff;
+                    background: #fafafb;
                     transition: 0.3s ease;
                     &:not(:nth-child(2)) {
                         position: absolute;
@@ -498,132 +511,46 @@ section:first-child {
         }
     }
 }
-#welcomeBanner {
-    padding-bottom: 62px;
-    font-size: 24px;
-    @media (max-width: 500px) {
-        font-size: 16px;
-    }
-    .bodyCont {
-        position: relative;
-    }
-    img {
-        position: absolute;
-        top: 0;
-        left: 3%;
-        max-width: 976.816px;
-        width: 100%;
-        @media (max-width: 500px) {
-            display: none;
+#welcomeSect {
+    padding: 197px 0 162px;
+    .centeredCont {
+        max-width: 755px;
+        margin: auto;
+        h1 {
+            font-size: 48px;
+            margin-bottom: 32px;
         }
-    }
-    #movingEarth {
-        position: absolute;
-        svg {
-            width: 100%;
-            height: auto;
-            // path {
-            //     stroke: red;
-            // }
+        p {
+            margin-bottom: 32px;
         }
-        left: 0;
-        top: 0;
-        width: 48vw;
-        max-width: 663px;
-        transform: translate(-12%, -19%);
-        animation: updown 20s linear infinite;
-        @keyframes updown {
-            0%,
-            60% {
-                z-index: 27;
-            }
-            75% {
-                z-index: -1;
-            }
-        }
-        @keyframes updown2 {
-            0%,
-            52% {
-                z-index: 27;
-            }
-            53%,
-            100% {
-                z-index: -1;
-            }
-        }
-        @media (max-width: 1000px) {
-            transform: translate(-12%, -11%);
-        }
-        @media (max-width: 750px) {
-            transform: translate(-12%, -2%);
-        }
-        @media (max-width: 600px) {
-            transform: translate(-12%, -13%);
-            width: 61vw;
-        }
-        @media (max-width: 500px) {
-            transform: translate(-5%, -42%);
-            width: 80vw;
-            animation-name: updown2;
-            display: none;
-        }
-    }
-    p {
-        margin: 0 0 24px;
-        @media (max-width: 500px) {
-            margin: 0 0 14px;
-        }
-    }
-    h1 {
-        @media (min-width: 1800px) {
-            font-size: 7vw;
-        }
-        @media (min-width: 3000px) {
-            font-size: 5vw;
-        }
-        font-size: 11vw;
-        margin: 0;
-        position: relative;
-        z-index: 25;
-        background-clip: text;
-        background-image: url(assets/images/animbg.svg);
-        color: transparent;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        animation: colorChange forwards 1.5s linear;
-        animation-delay: 3.2s;
-        @media (max-width: 600px) {
-            font-size: 14vw;
-            margin-bottom: 10px;
-        }
-        // &:hover {
-        //     animation-play-state: paused;
-        // }
-    }
-    .content {
-        width: 73%;
-        margin-left: auto;
-        @media (max-width: 600px) {
-            width: 100%;
-        }
-    }
-    .btnCont {
-        margin-top: 32px;
-        gap: 21px;
-        @media (max-width: 600px) {
-            gap: 8px;
+        .btnCont {
+            display: flex;
+            gap: 16px;
         }
     }
 }
-@keyframes colorChange {
-    0% {
-        background-position-y: 0%;
+.bannerCarousel {
+    .flexCont {
+        display: flex;
+        position: relative;
+        left: 0;
+        .carouselItem {
+            margin-right: 100px;
+        }
     }
-    50% {
-        background-position-y: 50%;
+}
+#partners {
+    overflow: hidden;
+    padding: 0 40px;
+    .bannerCarousel {
+        width: 1489.48px;
     }
-    100% {
-        background-position-y: 100%;
+    .sponsCont {
+        display: flex;
+        gap: 100px;
+        img {
+            max-height: 56px;
+        }
     }
 }
 #horizontalScroll {

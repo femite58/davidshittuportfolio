@@ -317,128 +317,125 @@ function fadeTransition() {
 }
 
 function initiateHorzScrlEl() {
-    if (window.innerWidth >= 750) {
-        const works = horizontalScroll.querySelectorAll('.eachWork');
-        const added = horizontalScroll.querySelectorAll('.added');
-        for (let i = 0; i < works.length; i++) {
-            let div = added.length ? added[i] : document.createElement('div');
-            if (!added.length) {
-                div.classList.add('added');
-            }
-            div.style.height =
-                i == works.length - 1
-                    ? `${
-                          +getComputedStyle(works[i]).height.replace('px', '') +
-                          0
-                      }px`
-                    : getComputedStyle(works[i]).width;
-            if (!added.length) {
-                horizontalScroll.appendChild(div);
-            }
-        }
-    }
+    // if (window.innerWidth >= 750) {
+    //     const works = horizontalScroll.querySelectorAll('.eachWork');
+    //     const added = horizontalScroll.querySelectorAll('.added');
+    //     for (let i = 0; i < works.length; i++) {
+    //         let div = added.length ? added[i] : document.createElement('div');
+    //         if (!added.length) {
+    //             div.classList.add('added');
+    //         }
+    //         div.style.height =
+    //             i == works.length - 1
+    //                 ? `${
+    //                       +getComputedStyle(works[i]).height.replace('px', '') +
+    //                       0
+    //                   }px`
+    //                 : getComputedStyle(works[i]).width;
+    //         if (!added.length) {
+    //             horizontalScroll.appendChild(div);
+    //         }
+    //     }
+    // }
 }
 
 function scrollZoomEffect(e) {
-    let gdB = goodDesign.getBoundingClientRect();
-    let gdH2B = goodDesignH2.getBoundingClientRect();
-    startPos = window.innerHeight;
-    endPos =
-        window.innerHeight -
-        gdH2B.height -
-        122 +
-        (window.innerWidth < 750 ? 100 : 100);
-    endScrl =
-        (gdB.height -
-            window.innerHeight -
-            (window.innerWidth < 750 ? 100 : 100)) *
-        -1;
-    let topStart = window.innerWidth < 750 ? 200 : 450;
-    let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
-    let leftTxt = goodDesign.querySelector('.leftTxt');
-    let rightDivs = goodDesign.querySelectorAll('.rightPart > div');
-
-    let finalTop, finalTranslY;
-    let scrlSt = window.innerHeight;
-    let endScrlh2 = 92;
-    if (gdB.top <= scrlSt) {
-        finalTop =
-            ((gdB.top - endScrlh2) * (startPos - startPos2)) /
-                (scrlSt - endScrlh2) +
-            startPos2;
-        finalTranslY =
-            ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
-                (scrlSt - endScrlh2) +
-            startPosT2;
-        goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
-    }
-    if (gdB.top <= topStart) {
-        if (gdB.top >= endScrl) {
-            let finalSc =
-                ((startSc - 1) * (gdB.top - endScrl)) / (topStart - endScrl) +
-                1;
-
-            if (gdB.top <= endScrlh2) {
-                finalTop =
-                    ((gdB.top - endScrl) * (startPos2 - endPos)) /
-                        (endScrlh2 - endScrl) +
-                    endPos;
-                finalTranslY =
-                    ((gdB.top - endScrl) * (startPosT2 - 0)) /
-                        (endScrlh2 - endScrl) +
-                    0;
-            }
-            goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${finalSc});`;
-            curSc = finalSc;
-            curTranslY = finalTranslY;
-            leftTxt.classList.remove('show');
-            rightDivs.forEach((div) => {
-                div.classList.remove('show');
-            });
-        } else {
-            goodDesignH2Adj.style.cssText = `position: absolute; bottom: 122px; width: ${gdH2B.width}px; top: unset; transform: translate(-50%, 0px) scale(1);`;
-            leftTxt.classList.add('show');
-
-            rightDivs.forEach((div) => {
-                div.classList.add('show');
-            });
-            // }, 100);
-        }
-    } else {
-        if (gdB.top <= scrlSt) {
-            finalTop =
-                ((gdB.top - endScrlh2) * (startPos - startPos2)) /
-                    (scrlSt - endScrlh2) +
-                startPos2;
-            finalTranslY =
-                ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
-                    (scrlSt - endScrlh2) +
-                startPosT2;
-            goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
-        } else {
-            goodDesignH2Adj.style.cssText = '';
-        }
-    }
+    // let gdB = goodDesign.getBoundingClientRect();
+    // let gdH2B = goodDesignH2.getBoundingClientRect();
+    // startPos = window.innerHeight;
+    // endPos =
+    //     window.innerHeight -
+    //     gdH2B.height -
+    //     122 +
+    //     (window.innerWidth < 750 ? 100 : 100);
+    // endScrl =
+    //     (gdB.height -
+    //         window.innerHeight -
+    //         (window.innerWidth < 750 ? 100 : 100)) *
+    //     -1;
+    // let topStart = window.innerWidth < 750 ? 200 : 450;
+    // let scrlExt = gdB.height - window.innerHeight; // topStart - endScrl;
+    // let leftTxt = goodDesign.querySelector('.leftTxt');
+    // let rightDivs = goodDesign.querySelectorAll('.rightPart > div');
+    // let finalTop, finalTranslY;
+    // let scrlSt = window.innerHeight;
+    // let endScrlh2 = 92;
+    // if (gdB.top <= scrlSt) {
+    //     finalTop =
+    //         ((gdB.top - endScrlh2) * (startPos - startPos2)) /
+    //             (scrlSt - endScrlh2) +
+    //         startPos2;
+    //     finalTranslY =
+    //         ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
+    //             (scrlSt - endScrlh2) +
+    //         startPosT2;
+    //     goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
+    // }
+    // if (gdB.top <= topStart) {
+    //     if (gdB.top >= endScrl) {
+    //         let finalSc =
+    //             ((startSc - 1) * (gdB.top - endScrl)) / (topStart - endScrl) +
+    //             1;
+    //         if (gdB.top <= endScrlh2) {
+    //             finalTop =
+    //                 ((gdB.top - endScrl) * (startPos2 - endPos)) /
+    //                     (endScrlh2 - endScrl) +
+    //                 endPos;
+    //             finalTranslY =
+    //                 ((gdB.top - endScrl) * (startPosT2 - 0)) /
+    //                     (endScrlh2 - endScrl) +
+    //                 0;
+    //         }
+    //         goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${finalSc});`;
+    //         curSc = finalSc;
+    //         curTranslY = finalTranslY;
+    //         leftTxt.classList.remove('show');
+    //         rightDivs.forEach((div) => {
+    //             div.classList.remove('show');
+    //         });
+    //     } else {
+    //         goodDesignH2Adj.style.cssText = `position: absolute; bottom: 122px; width: ${gdH2B.width}px; top: unset; transform: translate(-50%, 0px) scale(1);`;
+    //         leftTxt.classList.add('show');
+    //         rightDivs.forEach((div) => {
+    //             div.classList.add('show');
+    //         });
+    //         // }, 100);
+    //     }
+    // } else {
+    //     if (gdB.top <= scrlSt) {
+    //         finalTop =
+    //             ((gdB.top - endScrlh2) * (startPos - startPos2)) /
+    //                 (scrlSt - endScrlh2) +
+    //             startPos2;
+    //         finalTranslY =
+    //             ((gdB.top - endScrlh2) * (startPosT - startPosT2)) /
+    //                 (scrlSt - endScrlh2) +
+    //             startPosT2;
+    //         goodDesignH2Adj.style.cssText = `top: ${finalTop}px; width: ${gdH2B.width}px; transform: translate(-50%, ${finalTranslY}%) scale(${curSc});`;
+    //     } else {
+    //         goodDesignH2Adj.style.cssText = '';
+    //     }
+    // }
 }
 
 function scrollCheck(e) {
-    if (window.innerWidth < 750) return;
-    let hs = horizontalScroll.getBoundingClientRect();
-    let top = hs.top;
-    if (top <= horScstickTop) {
-        let ihsB = innerHScroll.getBoundingClientRect();
-        if (hs.bottom <= horScstickTop + ihsB.height) {
-            innerHScroll.classList.remove('stick');
-            innerHScroll.classList.add('scrollTogether');
-            innerHScroll.scrollLeft =
-                innerHScroll.scrollWidth - innerHScroll.clientWidth;
-        } else {
-            innerHScroll.classList.add('stick');
-            innerHScroll.classList.remove('scrollTogether');
-            innerHScroll.scrollLeft = innerHScroll.scrollLeft + scrollDiff;
-        }
-    } else {
-        innerHScroll.classList.remove('stick');
-        innerHScroll.scrollLeft = 0;
-    }
+    // if (window.innerWidth < 750) return;
+    // let hs = horizontalScroll.getBoundingClientRect();
+    // let top = hs.top;
+    // if (top <= horScstickTop) {
+    //     let ihsB = innerHScroll.getBoundingClientRect();
+    //     if (hs.bottom <= horScstickTop + ihsB.height) {
+    //         innerHScroll.classList.remove('stick');
+    //         innerHScroll.classList.add('scrollTogether');
+    //         innerHScroll.scrollLeft =
+    //             innerHScroll.scrollWidth - innerHScroll.clientWidth;
+    //     } else {
+    //         innerHScroll.classList.add('stick');
+    //         innerHScroll.classList.remove('scrollTogether');
+    //         innerHScroll.scrollLeft = innerHScroll.scrollLeft + scrollDiff;
+    //     }
+    // } else {
+    //     innerHScroll.classList.remove('stick');
+    //     innerHScroll.scrollLeft = 0;
+    // }
 }
