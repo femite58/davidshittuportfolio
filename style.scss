@@ -149,6 +149,7 @@ h1 {
     display: block;
 }
 .primBtn,
+.secBtn,
 .borderedBtn {
     display: flex;
     gap: 11px;
@@ -169,6 +170,10 @@ h1 {
         &:hover {
             background: #00bb00;
         }
+    }
+    &.secBtn {
+        background: $bodyBg;
+        color: #fff;
     }
     &.borderedBtn {
         border: 1px solid #fafafb;
@@ -550,6 +555,67 @@ section:first-child {
         gap: 100px;
         img {
             max-height: 56px;
+        }
+    }
+}
+#works {
+    .eachWork {
+        position: relative;
+        padding: 155px 0;
+        .txtCont {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            & > * {
+                margin: 0;
+            }
+            h2 {
+                font-size: 32px;
+                font-weight: 500;
+            }
+        }
+        .flexCont {
+            display: flex;
+            align-items: center;
+        }
+        &#nachonachoSect {
+            padding: 304px 0;
+            .txtCont {
+                max-width: 470px;
+            }
+            .imgCont {
+                right: 0;
+                max-width: 766px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &#boltSect {
+            padding: 170px 0 502px;
+            .txtCont {
+                max-width: 421px;
+            }
+            .flexCont {
+                align-items: flex-start;
+            }
+            .imgCont {
+                position: absolute;
+                bottom: 0;
+                left: 28.8006944444444%;
+                img {
+                    &:last-child {
+                        z-index: -1;
+                        position: absolute;
+                        left: 80%;
+                        top: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
         }
     }
 }

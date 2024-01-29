@@ -141,6 +141,7 @@ h1 {
 }
 
 .primBtn,
+.secBtn,
 .borderedBtn {
   display: flex;
   gap: 11px;
@@ -158,25 +159,36 @@ h1 {
   height: 49px;
 }
 .primBtn.primBtn,
+.secBtn.primBtn,
 .borderedBtn.primBtn {
   background: #18ff04;
   color: #010114;
 }
 .primBtn.primBtn:hover,
+.secBtn.primBtn:hover,
 .borderedBtn.primBtn:hover {
   background: #00bb00;
 }
+.primBtn.secBtn,
+.secBtn.secBtn,
+.borderedBtn.secBtn {
+  background: #010114;
+  color: #fff;
+}
 .primBtn.borderedBtn,
+.secBtn.borderedBtn,
 .borderedBtn.borderedBtn {
   border: 1px solid #fafafb;
   background: transparent;
 }
 .primBtn.borderedBtn:hover,
+.secBtn.borderedBtn:hover,
 .borderedBtn.borderedBtn:hover {
   border-color: #18ff04;
 }
 @media (max-width: 600px) {
   .primBtn,
+  .secBtn,
   .borderedBtn {
     height: 48px;
     font-size: 16px;
@@ -184,6 +196,7 @@ h1 {
   }
 }
 .primBtn span,
+.secBtn span,
 .borderedBtn span {
   line-height: 1.4;
 }
@@ -779,6 +792,64 @@ section:first-child {
 }
 #partners .sponsCont img {
   max-height: 56px;
+}
+
+#works .eachWork {
+  position: relative;
+  padding: 155px 0;
+}
+#works .eachWork .txtCont {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#works .eachWork .txtCont > * {
+  margin: 0;
+}
+#works .eachWork .txtCont h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+#works .eachWork .flexCont {
+  display: flex;
+  align-items: center;
+}
+#works .eachWork#nachonachoSect {
+  padding: 304px 0;
+}
+#works .eachWork#nachonachoSect .txtCont {
+  max-width: 470px;
+}
+#works .eachWork#nachonachoSect .imgCont {
+  right: 0;
+  max-width: 766px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#works .eachWork#nachonachoSect .imgCont img {
+  width: 100%;
+}
+#works .eachWork#boltSect {
+  padding: 170px 0 502px;
+}
+#works .eachWork#boltSect .txtCont {
+  max-width: 421px;
+}
+#works .eachWork#boltSect .flexCont {
+  align-items: flex-start;
+}
+#works .eachWork#boltSect .imgCont {
+  position: absolute;
+  bottom: 0;
+  left: 28.8006944444%;
+}
+#works .eachWork#boltSect .imgCont img:last-child {
+  z-index: -1;
+  position: absolute;
+  left: 80%;
+  top: 0;
+  transform: translateY(-50%);
 }
 
 #horizontalScroll {
