@@ -166,4 +166,4 @@ document.write(`
                 </nav>
             </div>
         </header>
-        <span id="customCursor" class="svgIcon-customCursor"></span>`);
+        `);

@@ -5,96 +5,66 @@ document.write(`
                     <div class="smallPart">
                         <a href="/" class="logo">
                             <img
-                                src="${path}assets/images/logo.svg"
+                                src="${path}assets/images/logo_full.svg"
                                 alt="David Shittu"
                             />
                         </a>
-                        <p>
-                        Let’s create memorable experiences
-                        together
-                        </p>
-                        <div class="expander"></div>
-                        <div class="copyright">Soli Deo gloria</div>
                     </div>
                     <div class="largePart">
-                        <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="eachClickable contact">
-                            <span>Contact me</span>
-                        </a>
-                        <div class="socialLinks">
-                            <div class="gridItem">
-                                <a
-                                    href="https://www.linkedin.com/in/davidshittu/"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-linkedIn"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">LinkedIn</div>
-                                </a>
-                            </div>
-                            <div class="gridItem">
-                                <a
-                                    href="https://dribbble.com/SDavid"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-dribble"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">Dribbble</div>
-                                </a>
-                            </div>
-                            <div class="gridItem">
-                                <a
-                                    href="https://davidshittu.medium.com/"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-medium"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">Medium</div>
-                                </a>
-                            </div>
-                            <div class="gridItem">
-                                <a
-                                    href="https://www.behance.net/sodiqshittu"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-behance"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">Behance</div>
-                                </a>
-                            </div>
-                            <div class="gridItem">
-                                <a
-                                    href="https://twitter.com/shittu_david"
-                                    target="_blank"
-                                    class="eachClickable"
-                                >
-                                    <div class="iconCont">
-                                        <span
-                                            class="svgIcon-twitter"
-                                        ></span>
-                                    </div>
-                                    <div class="txt">Twitter</div>
-                                </a>
-                            </div>
+                        <div class="eachCol">
+                            <a
+                                href="https://www.linkedin.com/in/davidshittu/"
+                                target="_blank"
+                            >
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://twitter.com/shittu_david"
+                                target="_blank"
+                            >
+                                
+                                Twitter
+                            </a>
                         </div>
-                        <div class="copyright">Soli Deo gloria</div>
+                        <div class="eachCol">
+                            <a
+                                href="https://dribbble.com/SDavid"
+                                target="_blank"
+                            >
+                                Dribbble
+                            </a>
+                            <a
+                                href="https://www.behance.net/sodiqshittu"
+                                target="_blank"
+                            >
+                                Behance
+                            </a>
+                        </div>
+                        <div class="eachCol">
+                            <a
+                                href="https://davidshittu.medium.com/"
+                                target="_blank"
+                            >
+                                Blog
+                            </a>
+                            <a
+                                href="https://davidshittu.medium.com/"
+                                target="_blank"
+                            >
+                                Recommendations
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btnCont">
+                        <a
+                        href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David"
+                        target="_blank"
+                        class="primBtn"
+                        >Reach Out</a>
+                        <a href="" target="_blank" class="borderedBtn">Resume</a>
                     </div>
                 </div>
+                <div class="copyright"><span class="svgIcon-copyright"></span> ${new Date().getFullYear()}</div>
             </div>
         </footer>
         <div id="scrollTop">

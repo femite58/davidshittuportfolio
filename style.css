@@ -1,12 +1,10 @@
 * {
   box-sizing: border-box;
-  cursor: none !important;
 }
 
 html,
 body {
   overflow-x: hidden;
-  cursor: none;
 }
 
 .fw500 {
@@ -37,26 +35,6 @@ a {
 
 .primCol {
   color: #18ff04;
-}
-
-#customCursor {
-  position: fixed;
-  top: 150%;
-  left: 150%;
-  transition: 0s;
-  z-index: 500000;
-  transform: translate(2px, 2px);
-}
-#customCursor.dark svg *[stroke]:not([stroke=none]) {
-  stroke: #010114;
-}
-#customCursor.dark svg *[fill]:not([fill=none]) {
-  fill: #010114;
-}
-@media (max-width: 600px) {
-  #customCursor {
-    visibility: hidden;
-  }
 }
 
 :root {
@@ -851,6 +829,80 @@ section:first-child {
   top: 0;
   transform: translateY(-50%);
 }
+#works .eachWork#increstSect {
+  padding: 336px 0;
+}
+#works .eachWork#increstSect .flexCont {
+  flex-direction: row-reverse;
+}
+#works .eachWork#increstSect .flexCont img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  max-width: 902px;
+  width: 62.6388888889%;
+}
+#works .eachWork#increstSect .flexCont .txtCont {
+  max-width: 440px;
+}
+
+#whitePart {
+  background: #fff;
+  color: #010114;
+}
+#whitePart h2 {
+  color: #010114;
+  max-width: 447px;
+  font-size: 40px;
+  font-weight: 500;
+  margin: auto;
+  padding: 103px 0;
+  z-index: 200;
+  position: relative;
+}
+#whitePart .eachParallax {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+#whitePart .eachParallax > img:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 745px;
+  width: 100%;
+  height: 344px;
+}
+#whitePart .eachParallax .imgCont {
+  flex: 1 400px;
+  width: 400px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  z-index: 20;
+}
+#whitePart .eachParallax .imgCont:nth-child(2) {
+  justify-content: flex-start;
+}
+#whitePart .eachParallax .imgCont:last-child {
+  justify-content: flex-end;
+}
+#whitePart #firstParallax {
+  padding-top: 60px;
+}
+#whitePart #firstParallax > img {
+  top: 137px;
+}
+#whitePart #firstParallax .imgCont:last-child img {
+  max-width: 496px;
+}
+#whitePart #secondParallax > img {
+  bottom: 150px;
+}
+#whitePart #secondParallax .imgCont:last-child {
+  padding-bottom: 56px;
+}
 
 #horizontalScroll {
   padding: 92px 0;
@@ -1071,122 +1123,119 @@ section:first-child {
 }
 
 #testimonial {
-  padding: 160px 0;
-  background-color: #000;
+  padding: 150px 0 83px;
+  background: #fff;
 }
-@media (max-width: 600px) {
-  #testimonial {
-    padding: 64px 0;
-  }
-}
-#testimonial p {
-  font-size: 32px;
-  font-weight: bold;
-  max-width: 562px;
+#testimonial h2 {
   text-align: center;
+  color: #010114;
+  font-size: 40px;
+  font-weight: 500;
+  max-width: 644px;
   margin: 0 auto 64px;
-  font-family: "Cabinet Grotesk";
-}
-@media (max-width: 600px) {
-  #testimonial p {
-    font-size: 20px;
-    margin: 0 auto 32px;
-  }
 }
 #testimonial .testiFlex {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 #testimonial .testiFlex .eachTesti {
+  flex: 1 400px;
   border-radius: 24px;
-  display: flex;
   padding: 32px;
-  height: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.0784313725);
 }
-#testimonial .testiFlex .eachTesti img {
-  max-width: 100px;
+#testimonial .testiFlex .eachTesti:first-child {
+  flex: 1 100%;
+  background: #eff0ff;
+  color: #2b1c50;
+}
+#testimonial .testiFlex .eachTesti:first-child .content {
+  color: #665c84;
+}
+#testimonial .testiFlex .eachTesti:nth-child(2) {
+  background: #e3f3ff;
+  color: #1b224b;
+}
+#testimonial .testiFlex .eachTesti:nth-child(2) .content {
+  color: #576181;
+}
+#testimonial .testiFlex .eachTesti:last-child {
+  background: #f8edfb;
+  color: #450f3a;
+}
+#testimonial .testiFlex .eachTesti:last-child .content {
+  color: #7b5274;
+}
+#testimonial .testiFlex .eachTesti .imgCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+#testimonial .testiFlex .eachTesti .imgCont img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 #testimonial .testiFlex .eachTesti .name {
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
-#testimonial .testiFlex .eachTesti .job {
+#testimonial .testiFlex .eachTesti .title {
   font-size: 20px;
-  color: #797878;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 #testimonial .testiFlex .eachTesti .content {
-  font-size: 20px;
-}
-@media (max-width: 600px) {
-  #testimonial .testiFlex .eachTesti .name {
-    font-size: 20px;
-  }
-  #testimonial .testiFlex .eachTesti .job,
-  #testimonial .testiFlex .eachTesti .content {
-    font-size: 16px;
-  }
+  max-width: 782px;
 }
 
 #callToAction {
-  padding: 240px 0;
-  background: #18ff04;
-  text-align: center;
+  background: #fff;
   position: relative;
-  z-index: 300;
-  color: #010114;
 }
-@media (max-width: 600px) {
-  #callToAction {
-    padding: 147px 0;
-  }
-}
-#callToAction::before {
+#callToAction::after {
   content: "";
-  position: absolute;
-  top: 0;
+  background: #010114;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(assets/images/noise_img.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 101px;
+  position: absolute;
 }
-#callToAction > * {
-  position: relative;
-  z-index: 2;
-}
-#callToAction h3 {
-  max-width: 647.46px;
-  margin: auto;
-  font-size: 40px;
-}
-@media (max-width: 600px) {
-  #callToAction h3 {
-    font-size: 24px;
-    max-width: 237px;
-  }
-}
-#callToAction .btnCont {
+#callToAction .darkBgCta {
+  padding: 100px 120px;
+  border-radius: 24px;
   display: flex;
-  gap: 21px;
-  justify-content: center;
-  margin-top: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 62px;
+  flex-wrap: wrap;
+  background: #1f1f30;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  z-index: 20;
 }
-#callToAction .btnCont .borderedBtn {
-  color: #010114;
-  border-color: #010114;
+#callToAction .darkBgCta .txt {
+  font-weight: 500;
+  font-size: 32px;
+  max-width: 393px;
+  color: #fafafb;
 }
-#callToAction .btnCont .borderedBtn path[fill] {
-  fill: #010114;
+#callToAction .darkBgCta > img {
+  position: absolute;
 }
-@media (max-width: 600px) {
-  #callToAction .btnCont {
-    gap: 8px;
-  }
+#callToAction .darkBgCta > img:first-child {
+  left: 0;
+  bottom: 0;
+}
+#callToAction .darkBgCta > img:nth-child(2) {
+  bottom: 0;
+  left: 30px;
 }
 
 .eachClickable {
@@ -1243,7 +1292,7 @@ section:first-child {
 }
 
 footer {
-  padding: 24.64px 0 115.36px;
+  padding: 78px 0 39px;
   position: relative;
   z-index: 300;
 }
@@ -1253,34 +1302,14 @@ footer {
   }
 }
 footer .logo {
-  margin-bottom: 44px;
   display: flex;
 }
 footer .dFlex {
-  border-top: 0.5px solid #cacaca;
-  padding-top: 48px;
   flex-wrap: wrap;
   row-gap: 32px;
-}
-footer .dFlex .smallPart {
-  flex: 1 304px;
-  display: flex;
-  flex-direction: column;
-}
-footer .dFlex .smallPart .expander {
-  flex: 1;
-}
-footer .dFlex .smallPart p {
-  font-family: "Cabinet Grotesk";
-  font-weight: bold;
-  font-size: 40px;
-  max-width: 304px;
-  margin-bottom: 0;
-}
-@media (max-width: 600px) {
-  footer .dFlex .smallPart p {
-    font-size: 24px;
-  }
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 144px;
 }
 @media (max-width: 851px) {
   footer .dFlex .smallPart .copyright {
@@ -1288,19 +1317,34 @@ footer .dFlex .smallPart p {
   }
 }
 footer .dFlex .largePart {
-  flex: 3 495px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
 }
-footer .dFlex .largePart .copyright {
-  display: none;
+footer .dFlex .largePart a {
+  color: #959ba4;
+  font-weight: 500;
 }
-@media (max-width: 851px) {
-  footer .dFlex .largePart .copyright {
-    display: block;
-  }
+footer .dFlex .largePart a:hover {
+  color: #18ff04;
+}
+footer .dFlex .largePart .eachCol {
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+}
+footer .dFlex .btnCont {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 footer .copyright {
-  margin-top: 32px;
   font-weight: bold;
+  justify-content: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #959ba4;
 }
 
 #scrollTop {
