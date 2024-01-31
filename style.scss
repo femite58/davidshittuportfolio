@@ -589,13 +589,13 @@ section:first-child {
                 max-width: 470px;
             }
             .imgCont {
-                right: 0;
-                max-width: 766px;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
                 img {
-                    width: 100%;
+                    right: 0;
+                    max-width: 766px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 55.2777777777778%;
                 }
             }
         }

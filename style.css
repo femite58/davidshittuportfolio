@@ -797,15 +797,13 @@ section:first-child {
 #works .eachWork#nachonachoSect .txtCont {
   max-width: 470px;
 }
-#works .eachWork#nachonachoSect .imgCont {
+#works .eachWork#nachonachoSect .imgCont img {
   right: 0;
   max-width: 766px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-#works .eachWork#nachonachoSect .imgCont img {
-  width: 100%;
+  width: 55.2777777778%;
 }
 #works .eachWork#boltSect {
   padding: 170px 0 502px;
