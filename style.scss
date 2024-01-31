@@ -252,10 +252,10 @@ header {
         .eachMenuItem {
             display: flex;
             width: fit-content;
+            margin-left: auto;
             font-size: 40px;
-            font-family: "Cabinet Grotesk";
-            font-weight: bold;
-            color: $txtColor;
+            font-weight: 500;
+            color: #fafafb;
             text-decoration: none;
             transition: 0.3s ease;
             text-transform: uppercase;
@@ -285,29 +285,10 @@ header {
             }
         }
         .socialLinks {
-            max-width: 880px;
-            gap: 18px;
-            @media (max-width: 600px) {
-                gap: 15px;
-            }
-            .gridItem {
-                overflow: hidden;
-            }
-            .eachClickable {
-                height: 140px;
-                gap: 20px;
-                @media (max-width: 600px) {
-                    height: 130px;
-                }
-            }
-        }
-        .contact {
-            max-width: 700px;
-            height: 110px;
-            margin-bottom: 18px;
-            @media (max-width: 600px) {
-                height: 100px;
-                margin-bottom: 15px;
+            flex-direction: row-reverse;
+            margin-top: 100px;
+            a {
+                text-align: right;
             }
         }
         &.opened {
@@ -546,7 +527,7 @@ section:first-child {
 }
 #partners {
     overflow: hidden;
-    padding: 0 40px;
+    padding: 40px 0px;
     .bannerCarousel {
         width: 1489.48px;
     }
@@ -559,6 +540,11 @@ section:first-child {
     }
 }
 #works {
+    transition: 1s ease;
+    color: $darkTxt;
+    h2 {
+        color: $darkTxt;
+    }
     .eachWork {
         position: relative;
         padding: 155px 0;
@@ -607,8 +593,11 @@ section:first-child {
                 bottom: 0;
                 left: 28.8006944444444%;
                 img {
+                    &:first-child {
+                        z-index: 20;
+                        position: relative;
+                    }
                     &:last-child {
-                        z-index: -1;
                         position: absolute;
                         left: 80%;
                         top: 0;
@@ -1093,23 +1082,7 @@ footer {
                 }
             }
         }
-        .largePart {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 80px;
-            a {
-                color: #959ba4;
-                font-weight: 500;
-                &:hover {
-                    color: $primary;
-                }
-            }
-            .eachCol {
-                display: flex;
-                gap: 48px;
-                flex-direction: column;
-            }
-        }
+
         .btnCont {
             display: flex;
             flex-direction: column;
@@ -1124,6 +1097,23 @@ footer {
         gap: 8px;
         align-items: center;
         color: #959ba4;
+    }
+}
+.socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    a {
+        color: #959ba4;
+        font-weight: 500;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .eachCol {
+        display: flex;
+        gap: 48px;
+        flex-direction: column;
     }
 }
 #scrollTop {
@@ -1219,7 +1209,6 @@ footer {
         }
     }
     .animating {
-        font-family: "Cabinet Grotesk";
         font-size: 40px;
         font-weight: bold;
         color: #f9f9f9;
@@ -1804,7 +1793,6 @@ footer {
             .pageTitle {
                 font-size: 27px;
                 font-weight: 800;
-                font-family: "Cabinet Grotesk";
                 @media (max-width: 600px) {
                     font-size: 9px;
                 }

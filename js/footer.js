@@ -10,7 +10,7 @@ document.write(`
                             />
                         </a>
                     </div>
-                    <div class="largePart">
+                    <div class="largePart socialLinks">
                         <div class="eachCol">
                             <a
                                 href="https://www.linkedin.com/in/davidshittu/"
@@ -86,11 +86,15 @@ let innerHScroll;
 const goodDesign = document.querySelector('#goodDesign');
 let goodDesignH2,
     goodDesignH2Adj,
-    greenBgs = document.querySelectorAll('.greenBg');
+    greenBgs = document.querySelectorAll('.greenBg'),
+    worksSect,
+    works;
 if (page == 'home') {
     innerHScroll = horizontalScroll?.querySelector('#innerHorizontalScroll');
     goodDesignH2 = goodDesign?.querySelector('h2');
     goodDesignH2Adj = goodDesign?.querySelector('h2.adjusted');
+    worksSect = document.querySelector('#works');
+    works = worksSect.querySelectorAll('.eachWork');
 }
 // onpopstate = (e) => {
 //     console.log(e);
@@ -110,10 +114,6 @@ window.onbeforeunload = (e) => {
     // e.preventDefault();
     window.scrollTo(0, 0);
     // return '';
-};
-window.onmousemove = (e) => {
-    customCursor.style.cssText = `top: ${e.y}px; left: ${e.x}px;`;
-    contrastCursor();
 };
 
 function contrastCursor() {
@@ -181,16 +181,16 @@ window.onresize = () => {
     }
 };
 menuItems.forEach((item) => {
-    item.onmouseover = () => {
-        let color = item.getAttribute('data-color');
-        let bg = item.getAttribute('data-bg');
-        item.style.color = color;
-        menu.style.backgroundColor = bg;
-    };
-    item.onmouseout = () => {
-        item.style.color = '';
-        menu.style.backgroundColor = '';
-    };
+    // item.onmouseover = () => {
+    //     let color = item.getAttribute('data-color');
+    //     let bg = item.getAttribute('data-bg');
+    //     item.style.color = color;
+    //     menu.style.backgroundColor = bg;
+    // };
+    // item.onmouseout = () => {
+    //     item.style.color = '';
+    //     menu.style.backgroundColor = '';
+    // };
 });
 scrollTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -233,8 +233,22 @@ scrlEl.addEventListener('scroll', (e) => {
     if (page == 'home') {
         scrollCheck(e);
         scrollZoomEffect(e);
+        workColorTransition();
     }
 });
+
+const workColorTransition = () => {
+    console.log(works);
+    works.forEach((w) => {
+        let wbc = w.getBoundingClientRect();
+        if (
+            wbc.top <= window.innerHeight * 0.4 &&
+            wbc.bottom > window.innerHeight * 0.4
+        ) {
+            worksSect.style.backgroundColor = w.getAttribute('data-bg');
+        }
+    });
+};
 
 function contrastCheck() {
     greenBgs.forEach((g) => {

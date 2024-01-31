@@ -229,10 +229,10 @@ header #menu .eachMenuItem {
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
+  margin-left: auto;
   font-size: 40px;
-  font-family: "Cabinet Grotesk";
-  font-weight: bold;
-  color: #959ba4;
+  font-weight: 500;
+  color: #fafafb;
   text-decoration: none;
   transition: 0.3s ease;
   text-transform: uppercase;
@@ -260,36 +260,11 @@ header #menu .eachMenuItem:hover span::after {
   }
 }
 header #menu .socialLinks {
-  max-width: 880px;
-  gap: 18px;
+  flex-direction: row-reverse;
+  margin-top: 100px;
 }
-@media (max-width: 600px) {
-  header #menu .socialLinks {
-    gap: 15px;
-  }
-}
-header #menu .socialLinks .gridItem {
-  overflow: hidden;
-}
-header #menu .socialLinks .eachClickable {
-  height: 140px;
-  gap: 20px;
-}
-@media (max-width: 600px) {
-  header #menu .socialLinks .eachClickable {
-    height: 130px;
-  }
-}
-header #menu .contact {
-  max-width: 700px;
-  height: 110px;
-  margin-bottom: 18px;
-}
-@media (max-width: 600px) {
-  header #menu .contact {
-    height: 100px;
-    margin-bottom: 15px;
-  }
+header #menu .socialLinks a {
+  text-align: right;
 }
 header #menu.opened {
   transform: translateX(0);
@@ -759,7 +734,7 @@ section:first-child {
 
 #partners {
   overflow: hidden;
-  padding: 0 40px;
+  padding: 40px 0px;
 }
 #partners .bannerCarousel {
   width: 1489.48px;
@@ -772,6 +747,13 @@ section:first-child {
   max-height: 56px;
 }
 
+#works {
+  transition: 1s ease;
+  color: #010114;
+}
+#works h2 {
+  color: #010114;
+}
 #works .eachWork {
   position: relative;
   padding: 155px 0;
@@ -822,8 +804,11 @@ section:first-child {
   bottom: 0;
   left: 28.8006944444%;
 }
+#works .eachWork#boltSect .imgCont img:first-child {
+  z-index: 20;
+  position: relative;
+}
 #works .eachWork#boltSect .imgCont img:last-child {
-  z-index: -1;
   position: absolute;
   left: 80%;
   top: 0;
@@ -1316,23 +1301,6 @@ footer .dFlex {
     display: none;
   }
 }
-footer .dFlex .largePart {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-}
-footer .dFlex .largePart a {
-  color: #959ba4;
-  font-weight: 500;
-}
-footer .dFlex .largePart a:hover {
-  color: #18ff04;
-}
-footer .dFlex .largePart .eachCol {
-  display: flex;
-  gap: 48px;
-  flex-direction: column;
-}
 footer .dFlex .btnCont {
   display: flex;
   flex-direction: column;
@@ -1345,6 +1313,24 @@ footer .copyright {
   gap: 8px;
   align-items: center;
   color: #959ba4;
+}
+
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+.socialLinks a {
+  color: #959ba4;
+  font-weight: 500;
+}
+.socialLinks a:hover {
+  color: #18ff04;
+}
+.socialLinks .eachCol {
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
 }
 
 #scrollTop {
@@ -1442,7 +1428,6 @@ footer .copyright {
   }
 }
 #loader .animating {
-  font-family: "Cabinet Grotesk";
   font-size: 40px;
   font-weight: bold;
   color: #f9f9f9;
@@ -1955,7 +1940,6 @@ footer .copyright {
 #pageCtrl .eachCtrl .txtPart .pageTitle {
   font-size: 27px;
   font-weight: 800;
-  font-family: "Cabinet Grotesk";
 }
 @media (max-width: 600px) {
   #pageCtrl .eachCtrl .txtPart .pageTitle {
