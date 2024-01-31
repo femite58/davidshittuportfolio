@@ -205,17 +205,34 @@ header #menu {
   left: 0;
   width: 100vw;
   height: var(--view-height);
-  background: #121212;
+  background: #010114 url(assets/images/header_line_bg.svg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% 581px;
   padding: 0 0 15px;
   transition: 0.3s ease;
   opacity: 0;
   transform: translateX(100%);
   z-index: 20;
+  background-position: bottom;
+}
+header #menu::after {
+  position: absolute;
+  top: 86px;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 408px;
+  background: linear-gradient(180deg, rgba(1, 1, 20, 0.05) -35.09%, #010114 100%);
 }
 header #menu .topHead {
   height: 86px;
   display: flex;
   align-items: center;
+  background-color: #010114;
+}
+header #menu .bodyCont {
+  z-index: 20;
+  position: relative;
 }
 header #menu .bodyCont > *:not(.eachClickable):not(.socialLinks):not(.contactCont) {
   margin-bottom: 20px;
