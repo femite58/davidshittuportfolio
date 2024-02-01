@@ -773,7 +773,7 @@ section:first-child {
 }
 #works .eachWork {
   position: relative;
-  padding: 155px 0;
+  padding: 165px 0;
 }
 #works .eachWork .txtCont {
   display: flex;
@@ -790,58 +790,42 @@ section:first-child {
 #works .eachWork .flexCont {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 31px;
+  justify-content: space-between;
 }
-#works .eachWork#nachonachoSect {
-  padding: 304px 0;
+#works .eachWork .flexCont .imgCont {
+  max-width: 703px;
+  flex: 1 500px;
+}
+#works .eachWork .flexCont .imgCont img {
+  max-width: 100%;
 }
 #works .eachWork#nachonachoSect .txtCont {
-  max-width: 470px;
+  max-width: 482px;
+  flex: 1 400px;
+}
+#works .eachWork#nachonachoSect .imgCont {
+  max-width: 703px;
+  flex: 1 500px;
 }
 #works .eachWork#nachonachoSect .imgCont img {
-  right: 0;
-  max-width: 766px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 55.2777777778%;
-}
-#works .eachWork#boltSect {
-  padding: 170px 0 502px;
+  max-width: 100%;
 }
 #works .eachWork#boltSect .txtCont {
   max-width: 421px;
+  flex: 1 390px;
 }
 #works .eachWork#boltSect .flexCont {
-  align-items: flex-start;
-}
-#works .eachWork#boltSect .imgCont {
-  position: absolute;
-  bottom: 0;
-  left: 28.8006944444%;
-}
-#works .eachWork#boltSect .imgCont img:first-child {
-  z-index: 20;
-  position: relative;
-}
-#works .eachWork#boltSect .imgCont img:last-child {
-  position: absolute;
-  left: 80%;
-  top: 0;
-  transform: translateY(-50%);
-}
-#works .eachWork#increstSect {
-  padding: 336px 0;
-}
-#works .eachWork#increstSect .flexCont {
   flex-direction: row-reverse;
 }
-#works .eachWork#increstSect .flexCont img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  max-width: 902px;
-  width: 62.6388888889%;
+#works .eachWork#boltSect .imgCont {
+  max-width: 523px;
+  flex: 1 400px;
+}
+#works .eachWork#increstSect .flexCont .imgCont {
+  flex: 1 400px;
+  max-width: 523px;
 }
 #works .eachWork#increstSect .flexCont .txtCont {
   max-width: 440px;

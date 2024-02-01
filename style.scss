@@ -566,7 +566,7 @@ section:first-child {
     }
     .eachWork {
         position: relative;
-        padding: 155px 0;
+        padding: 165px 0;
         .txtCont {
             display: flex;
             flex-direction: column;
@@ -582,60 +582,49 @@ section:first-child {
         .flexCont {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 31px;
+            justify-content: space-between;
+            .imgCont {
+                max-width: 703px;
+                flex: 1 500px;
+                img {
+                    max-width: 100%;
+                }
+            }
         }
         &#nachonachoSect {
-            padding: 304px 0;
+            // padding: 195px 0;
             .txtCont {
-                max-width: 470px;
+                max-width: 482px;
+                flex: 1 400px;
             }
             .imgCont {
+                max-width: 703px;
+                flex: 1 500px;
                 img {
-                    right: 0;
-                    max-width: 766px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 55.2777777777778%;
+                    max-width: 100%;
                 }
             }
         }
         &#boltSect {
-            padding: 170px 0 502px;
             .txtCont {
                 max-width: 421px;
+                flex: 1 390px;
             }
             .flexCont {
-                align-items: flex-start;
+                flex-direction: row-reverse;
             }
             .imgCont {
-                position: absolute;
-                bottom: 0;
-                left: 28.8006944444444%;
-                img {
-                    &:first-child {
-                        z-index: 20;
-                        position: relative;
-                    }
-                    &:last-child {
-                        position: absolute;
-                        left: 80%;
-                        top: 0;
-                        transform: translateY(-50%);
-                    }
-                }
+                max-width: 523px;
+                flex: 1 400px;
             }
         }
         &#increstSect {
-            padding: 336px 0;
             .flexCont {
-                flex-direction: row-reverse;
-                img {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
-                    max-width: 902px;
-                    width: 62.6388888888889%;
+                .imgCont {
+                    flex: 1 400px;
+                    max-width: 523px;
                 }
                 .txtCont {
                     max-width: 440px;
