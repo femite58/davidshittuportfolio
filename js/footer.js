@@ -61,7 +61,8 @@ document.write(`
                         target="_blank"
                         class="primBtn"
                         >Reach Out</a>
-                        <a href="" target="_blank" class="borderedBtn">Resume</a>
+                        <a href="https://drive.google.com/file/d/1t1SvbkPumg9tYamr5i7Mzph5D4bOBYdH/view?usp=sharing"
+                        target="_blank" class="borderedBtn">Resume</a>
                     </div>
                 </div>
                 <div class="copyright"><span class="svgIcon-copyright"></span> ${new Date().getFullYear()}</div>

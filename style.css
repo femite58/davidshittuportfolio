@@ -134,6 +134,7 @@ h1 {
   width: fit-content;
   border-radius: 8px;
   text-decoration: none;
+  justify-content: center;
   height: 49px;
 }
 .primBtn.primBtn,
@@ -168,9 +169,10 @@ h1 {
   .primBtn,
   .secBtn,
   .borderedBtn {
-    height: 48px;
+    height: 44px;
     font-size: 16px;
     white-space: nowrap;
+    padding: 0 16px;
   }
 }
 .primBtn span,
@@ -229,6 +231,12 @@ header #menu .topHead {
   display: flex;
   align-items: center;
   background-color: #010114;
+  margin-bottom: 60px !important;
+}
+@media (max-width: 600px) {
+  header #menu .topHead {
+    margin-bottom: 64px;
+  }
 }
 header #menu .bodyCont {
   z-index: 20;
@@ -279,7 +287,7 @@ header #menu .eachMenuItem:hover span::after {
 }
 @media (max-width: 600px) {
   header #menu .eachMenuItem {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 header #menu .socialLinks {
@@ -288,6 +296,11 @@ header #menu .socialLinks {
 }
 header #menu .socialLinks a {
   text-align: right;
+}
+@media (max-width: 600px) {
+  header #menu .socialLinks {
+    margin-top: 48px;
+  }
 }
 header #menu.opened {
   transform: translateX(0);
@@ -2533,6 +2546,11 @@ section:first-child {
 #welcomeSect {
   padding: 197px 0 162px;
 }
+@media (max-width: 600px) {
+  #welcomeSect {
+    padding: 160px 0 0;
+  }
+}
 #welcomeSect .centeredCont {
   max-width: 755px;
   margin: auto;
@@ -2549,6 +2567,14 @@ section:first-child {
   display: flex;
   gap: 16px;
 }
+@media (max-width: 600px) {
+  #welcomeSect .centeredCont > *:not(.btnCont) {
+    margin-bottom: 24px;
+  }
+  #welcomeSect .centeredCont h1 {
+    font-size: 32px;
+  }
+}
 
 .bannerCarousel .flexCont {
   display: flex;
@@ -2563,15 +2589,35 @@ section:first-child {
   overflow: hidden;
   padding: 40px 0px;
 }
+@media (max-width: 600px) {
+  #partners {
+    padding: 80px 0;
+  }
+}
 #partners .bannerCarousel {
   width: 1489.48px;
+}
+@media (max-width: 600px) {
+  #partners .bannerCarousel {
+    width: 1129.49px;
+  }
+  #partners .bannerCarousel .carouselItem {
+    margin-right: 40px;
+  }
 }
 #partners .sponsCont {
   display: flex;
   gap: 100px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #partners .sponsCont img {
   max-height: 56px;
+}
+@media (max-width: 600px) {
+  #partners .sponsCont {
+    gap: 40px;
+  }
 }
 
 #works {
@@ -2650,6 +2696,14 @@ section:first-child {
 #works .eachWork#increstSect .flexCont .txtCont {
   max-width: 440px;
 }
+@media (max-width: 600px) {
+  #works .eachWork {
+    padding: 76px 0;
+  }
+  #works .eachWork .txtCont h2 {
+    font-size: 24px;
+  }
+}
 
 #whitePart {
   background: #fff;
@@ -2662,13 +2716,21 @@ section:first-child {
   font-weight: 500;
   margin: auto;
   padding: 103px 0;
+  text-align: center;
   z-index: 200;
   position: relative;
+}
+#whitePart h2 a {
+  color: #010114;
+  font-style: italic;
+  text-decoration: underline;
 }
 #whitePart .eachParallax {
   display: flex;
   position: relative;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 48px 0;
 }
 #whitePart .eachParallax > img:first-child {
   position: absolute;
@@ -2701,11 +2763,65 @@ section:first-child {
 #whitePart #firstParallax .imgCont:last-child img {
   max-width: 496px;
 }
+#whitePart #secondParallax {
+  padding-bottom: 56px;
+}
 #whitePart #secondParallax > img {
   bottom: 150px;
 }
-#whitePart #secondParallax .imgCont:last-child {
-  padding-bottom: 56px;
+#whitePart #secondParallax .imgCont img:last-child {
+  display: none;
+}
+@media (max-width: 600px) {
+  #whitePart h2 {
+    font-size: 24px;
+    padding: 80px 0;
+  }
+  #whitePart .eachParallax .imgCont {
+    flex: 1 100%;
+    width: 100%;
+  }
+  #whitePart .eachParallax > img:first-child {
+    width: 521.69px;
+    height: 240.93px;
+  }
+  #whitePart #firstParallax {
+    padding-top: 24px;
+  }
+  #whitePart #firstParallax > img {
+    top: 70px;
+  }
+  #whitePart #firstParallax .imgCont:nth-child(2) img {
+    width: 52.9033816425%;
+  }
+  #whitePart #firstParallax .imgCont:last-child img {
+    width: 69.8043478261%;
+  }
+  #whitePart #secondParallax {
+    flex-wrap: wrap-reverse;
+    padding-bottom: 36px;
+  }
+  #whitePart #secondParallax > img {
+    bottom: 137px;
+  }
+  #whitePart #secondParallax .imgCont img:last-child {
+    display: block;
+  }
+  #whitePart #secondParallax .imgCont img:first-child {
+    display: none;
+  }
+  #whitePart #secondParallax .imgCont:last-child {
+    justify-content: flex-start;
+  }
+  #whitePart #secondParallax .imgCont:last-child img {
+    width: 71.9806763285%;
+  }
+  #whitePart #secondParallax .imgCont:nth-child(2) {
+    justify-content: flex-end;
+  }
+  #whitePart #secondParallax .imgCont:nth-child(2) img {
+    width: 64.0241545894%;
+  }
 }
 
 #horizontalScroll {
@@ -2996,6 +3112,33 @@ section:first-child {
 #testimonial .testiFlex .eachTesti .content {
   max-width: 782px;
 }
+@media (max-width: 600px) {
+  #testimonial {
+    padding: 133px 0 91px;
+  }
+  #testimonial h2 {
+    font-size: 24px;
+    margin-bottom: 64px;
+  }
+  #testimonial .testiFlex {
+    gap: 24px;
+  }
+  #testimonial .testiFlex .eachTesti:first-child .imgCont span {
+    display: none;
+  }
+  #testimonial .testiFlex .eachTesti .imgCont img {
+    width: 80px;
+    height: 80px;
+  }
+  #testimonial .testiFlex .eachTesti .name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #testimonial .testiFlex .eachTesti .title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
 
 #callToAction {
   background: #fff;
@@ -3010,6 +3153,11 @@ section:first-child {
   height: 101px;
   position: absolute;
 }
+@media (max-width: 600px) {
+  #callToAction::after {
+    height: 238px;
+  }
+}
 #callToAction .darkBgCta {
   padding: 100px 120px;
   border-radius: 24px;
@@ -3023,6 +3171,7 @@ section:first-child {
   max-width: 1000px;
   margin: auto;
   z-index: 20;
+  overflow: hidden;
 }
 #callToAction .darkBgCta .txt {
   font-weight: 500;
@@ -3040,6 +3189,28 @@ section:first-child {
 #callToAction .darkBgCta > img:nth-child(2) {
   bottom: 0;
   left: 30px;
+}
+@media (max-width: 600px) {
+  #callToAction .darkBgCta {
+    padding: 57px 44px;
+    flex-direction: column;
+    text-align: center;
+    gap: 62px;
+    align-items: center;
+  }
+  #callToAction .darkBgCta .txt {
+    font-size: 24px;
+  }
+  #callToAction .darkBgCta > img:first-child {
+    right: 88.9625668449%;
+    left: unset;
+  }
+  #callToAction .darkBgCta > img:nth-child(2) {
+    right: 67.9144385027%;
+    left: unset;
+    top: 86.6928571429%;
+    bottom: unset;
+  }
 }
 
 .eachClickable {
@@ -3102,7 +3273,7 @@ footer {
 }
 @media (max-width: 600px) {
   footer {
-    padding: 16px 0 32px;
+    padding: 57.51px 0 139.62px;
   }
 }
 footer .logo {
@@ -3110,20 +3281,26 @@ footer .logo {
 }
 footer .dFlex {
   flex-wrap: wrap;
-  row-gap: 32px;
+  row-gap: 48px;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 144px;
 }
-@media (max-width: 851px) {
-  footer .dFlex .smallPart .copyright {
-    display: none;
+@media (max-width: 600px) {
+  footer .dFlex {
+    margin: 0;
+  }
+  footer .dFlex > *:not(.btnCont) {
+    flex: 1 100%;
   }
 }
 footer .dFlex .btnCont {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+footer .dFlex .btnCont a {
+  width: unset;
 }
 footer .copyright {
   font-weight: bold;
@@ -3132,6 +3309,11 @@ footer .copyright {
   gap: 8px;
   align-items: center;
   color: #959ba4;
+}
+@media (max-width: 600px) {
+  footer .copyright {
+    display: none;
+  }
 }
 
 .socialLinks {
@@ -3150,6 +3332,15 @@ footer .copyright {
   display: flex;
   gap: 48px;
   flex-direction: column;
+}
+@media (max-width: 600px) {
+  .socialLinks {
+    gap: 24px;
+  }
+  .socialLinks .eachCol {
+    flex: 1 100%;
+    gap: 24px;
+  }
 }
 
 #scrollTop {
