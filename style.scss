@@ -293,7 +293,9 @@ header {
                 }
             }
             &:hover {
+                color: $primary;
                 span {
+                    border-color: $primary;
                     &::after {
                         width: 100%;
                     }
@@ -536,6 +538,7 @@ section:first-child {
         h1 {
             font-size: 48px;
             margin-bottom: 32px;
+            font-weight: 500;
         }
         p {
             margin-bottom: 32px;
