@@ -291,7 +291,7 @@ function fadeTransition() {
     for (let el of fadeUp) {
         let eachBc = el.getBoundingClientRect();
         let topAnim =
-            el.getAttribute('data-topAnim') || window.innerHeight * 0.8; //450;
+            el.getAttribute('data-topAnim') || window.innerHeight * 0.5; //450;
         if (eachBc.top <= topAnim) {
             el.classList.add('show');
         } else {

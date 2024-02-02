@@ -471,9 +471,21 @@ section:first-child {
 .fadeAnim {
     & > * {
         position: relative;
-        transition: 0.8s ease;
+        transition: 1s ease;
         top: 400px;
         opacity: 0;
+    }
+    &.noFade {
+        & > * {
+            opacity: 1;
+        }
+    }
+    @for $i from 1 through 600 {
+        &.bottom#{$i} {
+            & > * {
+                top: #{$i}px;
+            }
+        }
     }
     @for $i from 0 through 9 {
         @for $j from 1 through 9 {
@@ -566,7 +578,7 @@ section:first-child {
     }
     .eachWork {
         position: relative;
-        padding: 165px 0;
+        padding: 150px 0;
         .txtCont {
             display: flex;
             flex-direction: column;
@@ -616,15 +628,25 @@ section:first-child {
                 flex-direction: row-reverse;
             }
             .imgCont {
-                max-width: 523px;
+                max-width: 573px;
                 flex: 1 400px;
+                display: flex;
+                justify-content: space-between;
+                .innerCont {
+                    width: 45.8115183246073%;
+                }
             }
         }
         &#increstSect {
             .flexCont {
                 .imgCont {
                     flex: 1 400px;
-                    max-width: 523px;
+                    max-width: 573px;
+                    display: flex;
+                    justify-content: space-between;
+                    .innerCont {
+                        width: 45.8115183246073%;
+                    }
                 }
                 .txtCont {
                     max-width: 440px;
@@ -1181,7 +1203,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #121212;
+    background: $bodyBg;
     z-index: 30000;
     transition: 0.3s ease;
     &.done {
