@@ -213,7 +213,7 @@ window.addEventListener(
         e.preventDefault();
         // console.log(e.deltaY);
         let initY = window.scrollY;
-        window.scrollTo({ top: initY + e.deltaY * 0.3 });
+        window.scrollTo({ top: initY + e.deltaY * 0.7 });
     },
     { passive: false }
 );
