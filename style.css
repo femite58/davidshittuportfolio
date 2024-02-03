@@ -3985,6 +3985,9 @@ footer .copyright {
   position: relative;
   color: #010114;
 }
+#about #intro h1 {
+  color: #010114;
+}
 @media (max-width: 600px) {
   #about #intro {
     padding-top: 95px;

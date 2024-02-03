@@ -36,7 +36,7 @@ document.write(`
                         <img src="${path}assets/images/logo_black.svg" alt="David Shittu" />
                     </a>
                     <div class="rightNav${page == 'home' ? '' : ' loaded'}">
-                        <a href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David" target="_blank" class="primBtn">
+                        <a href="mailto:davidshittu02@gmail.com?body=Hello%20David" target="_blank" class="primBtn">
                             <span>Reach Out</span>
                         </a>
                         <div id="toggle">

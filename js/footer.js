@@ -57,7 +57,7 @@ document.write(`
                     </div>
                     <div class="btnCont">
                         <a
-                        href="mailto:davidshittu02@gmail.com?body=Hello%2C%20David"
+                        href="mailto:davidshittu02@gmail.com?body=Hello%20David"
                         target="_blank"
                         class="primBtn"
                         >Reach Out</a>
