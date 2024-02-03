@@ -772,6 +772,9 @@ section:first-child {
             bottom: 150px;
         }
         .imgCont {
+            img {
+                max-width: 530px;
+            }
             img:last-child {
                 display: none;
             }

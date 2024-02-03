@@ -2772,6 +2772,9 @@ section:first-child {
 #whitePart #secondParallax > img {
   bottom: 150px;
 }
+#whitePart #secondParallax .imgCont img {
+  max-width: 530px;
+}
 #whitePart #secondParallax .imgCont img:last-child {
   display: none;
 }
