@@ -48,7 +48,7 @@ document.write(`
                                 Blog
                             </a>
                             <a
-                                href="https://davidshittu.medium.com/"
+                                href="https://drive.google.com/file/d/1ByB-HiSNoeXRfFdg33ebhjNqVuQToYgu/view"
                                 target="_blank"
                             >
                                 Recommendations
