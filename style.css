@@ -3444,12 +3444,10 @@ footer .copyright {
   }
 }
 #loader .animating {
-  font-size: 40px;
   font-weight: bold;
   color: #f9f9f9;
 }
 #loader .animating span {
-  font-size: 40px;
   opacity: 1;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;

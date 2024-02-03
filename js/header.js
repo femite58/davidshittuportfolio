@@ -21,7 +21,7 @@ document.write(`
     
         <div id="loader" class="${page != 'home' ? 'done' : ''}">
             <div class="animating">
-                LOADING<span>.</span><span>.</span><span>.</span>
+                Loading<span>.</span><span>.</span><span>.</span>
             </div>
             <div class="progress">
                 <div class="indc"></div>
