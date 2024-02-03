@@ -2725,6 +2725,9 @@ section:first-child {
   font-style: italic;
   text-decoration: underline;
 }
+#whitePart h2 a:hover {
+  color: #18ff04;
+}
 #whitePart .eachParallax {
   display: flex;
   position: relative;

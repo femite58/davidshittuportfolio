@@ -720,6 +720,9 @@ section:first-child {
             color: $darkTxt;
             font-style: italic;
             text-decoration: underline;
+            &:hover {
+                color: $primary;
+            }
         }
     }
     .eachParallax {

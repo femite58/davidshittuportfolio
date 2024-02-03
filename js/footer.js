@@ -206,6 +206,18 @@ if (page == 'home') {
 // window.onload = () => {
 // };
 
+window.addEventListener(
+    'wheel',
+    (e) => {
+        // console.log(window.scrollY);
+        e.preventDefault();
+        // console.log(e.deltaY);
+        let initY = window.scrollY;
+        window.scrollTo({ top: initY + e.deltaY * 0.3 });
+    },
+    { passive: false }
+);
+
 let initScrollTop = window.scrollY;
 let scrollDiff = 0;
 toggle.onclick = () => {
@@ -239,7 +251,6 @@ scrlEl.addEventListener('scroll', (e) => {
 });
 
 const workColorTransition = () => {
-    console.log(works);
     works.forEach((w) => {
         let wbc = w.getBoundingClientRect();
         if (
