@@ -2698,7 +2698,7 @@ section:first-child {
 }
 @media (max-width: 600px) {
   #works .eachWork {
-    padding: 76px 0;
+    padding: 38px 0;
   }
   #works .eachWork .txtCont h2 {
     font-size: 24px;
