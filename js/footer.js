@@ -234,12 +234,18 @@ window.addEventListener(
     'wheel',
     (e) => {
         e.preventDefault();
-        // console.log(e.deltaY, 'deltay');
         let initSc = window.scrollY;
-        console.log(initSc);
         finalSc += e.deltaY;
-        finalSc = initSc == 0 && finalSc < 0 ? 0 : finalSc;
-        let slow = e.deltaY < 0 && initSc + (finalSc - initSc) <= 0;
+        let maxExt = document.documentElement.scrollHeight - window.innerHeight;
+        finalSc =
+            initSc == 0 && finalSc < 0
+                ? 0
+                : finalSc >= maxExt && e.deltaY > 0
+                ? maxExt - e.deltaY
+                : finalSc;
+        let slow =
+            (e.deltaY < 0 && initSc + (finalSc - initSc) <= 0) ||
+            (e.deltaY > 0 && initSc + (finalSc - initSc) + e.deltaY >= maxExt);
         easeOut = (t) => {
             return 1 - Math.pow(1 - t, slow ? 8 : 5);
             // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
@@ -248,8 +254,12 @@ window.addEventListener(
             timing: easeOut,
             draw(chng) {
                 let extent = finalSc - initSc;
-                console.log(extent);
-                extent = initSc + extent < 0 ? initSc * -1 : extent;
+                extent =
+                    initSc + extent < 0
+                        ? initSc * -1
+                        : initSc + extent > maxExt
+                        ? maxExt - initSc
+                        : extent;
                 window.scrollTo({
                     top: initSc + extent * chng,
                 });
