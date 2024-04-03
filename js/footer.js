@@ -195,6 +195,7 @@ menuItems.forEach((item) => {
 });
 scrollTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    finalSc = 0;
 };
 if (page == 'home') {
     setTimeout(() => {
