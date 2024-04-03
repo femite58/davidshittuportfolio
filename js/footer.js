@@ -206,14 +206,56 @@ if (page == 'home') {
 // window.onload = () => {
 // };
 
+stopAnim = false;
+animating = false;
+
+function animate({ timing, draw, duration }) {
+    let start = performance.now();
+
+    requestAnimationFrame(function animate2(time) {
+        // timeFraction goes from 0 to 1
+        let timeFraction = (time - start) / duration;
+        if (timeFraction > 1) timeFraction = 1;
+
+        // calculate the current animation state
+        let progress = timing(timeFraction);
+
+        draw(progress); // draw it
+
+        if (timeFraction < 1) {
+            requestAnimationFrame(animate2);
+        }
+    });
+}
+
+finalSc = 0;
+
 window.addEventListener(
     'wheel',
     (e) => {
-        // console.log(window.scrollY);
         e.preventDefault();
-        // console.log(e.deltaY);
-        let initY = window.scrollY;
-        window.scrollTo({ top: initY + e.deltaY * 0.7 });
+        // console.log(e.deltaY, 'deltay');
+        let initSc = window.scrollY;
+        console.log(initSc);
+        finalSc += e.deltaY;
+        finalSc = initSc == 0 && finalSc < 0 ? 0 : finalSc;
+        // let slow = e.deltaY < 0 && initSc + (finalSc - initSc) <= 0;
+        easeOut = (t) => {
+            return 1 - Math.pow(1 - t, 6);
+            // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
+        };
+        animate({
+            timing: easeOut,
+            draw(chng) {
+                let extent = finalSc - initSc;
+                console.log(extent);
+                extent = initSc + extent < 0 ? initSc * -1 : extent;
+                window.scrollTo({
+                    top: initSc + extent * chng,
+                });
+            },
+            duration: 1500,
+        });
     },
     { passive: false }
 );
