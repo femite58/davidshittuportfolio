@@ -239,9 +239,9 @@ window.addEventListener(
         console.log(initSc);
         finalSc += e.deltaY;
         finalSc = initSc == 0 && finalSc < 0 ? 0 : finalSc;
-        // let slow = e.deltaY < 0 && initSc + (finalSc - initSc) <= 0;
+        let slow = e.deltaY < 0 && initSc + (finalSc - initSc) <= 0;
         easeOut = (t) => {
-            return 1 - Math.pow(1 - t, 6);
+            return 1 - Math.pow(1 - t, slow ? 8 : 5);
             // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
         };
         animate({
