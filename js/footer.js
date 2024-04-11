@@ -209,13 +209,15 @@ if (page == 'home') {
 
 stopAnim = false;
 animating = false;
+let firstFrame;
+let sndFrame;
 
 function animate({ timing, draw, duration }) {
     let start = performance.now();
 
     requestAnimationFrame(function animate2(time) {
         // timeFraction goes from 0 to 1
-        let timeFraction = (time - start) / duration;
+        let timeFraction = (performance.now() - start) / duration;
         if (timeFraction > 1) timeFraction = 1;
 
         // calculate the current animation state
@@ -238,29 +240,16 @@ window.addEventListener(
         let initSc = window.scrollY;
         finalSc += e.deltaY;
         let maxExt = document.documentElement.scrollHeight - window.innerHeight;
-        finalSc =
-            initSc == 0 && finalSc < 0
-                ? 0
-                : finalSc >= maxExt && e.deltaY > 0
-                ? maxExt - e.deltaY
-                : finalSc;
-        let slow =
-            (e.deltaY < 0 && initSc + (finalSc - initSc) <= 0) ||
-            (e.deltaY > 0 && initSc + (finalSc - initSc) + e.deltaY >= maxExt);
+
+        finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
         easeOut = (t) => {
-            return 1 - Math.pow(1 - t, slow ? 8 : 5);
+            return 1 - Math.pow(1 - t, 5);
             // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
         };
         animate({
             timing: easeOut,
             draw(chng) {
                 let extent = finalSc - initSc;
-                extent =
-                    initSc + extent < 0
-                        ? initSc * -1
-                        : initSc + extent > maxExt
-                        ? maxExt - initSc
-                        : extent;
                 window.scrollTo({
                     top: initSc + extent * chng,
                 });
