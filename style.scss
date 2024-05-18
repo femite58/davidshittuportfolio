@@ -619,6 +619,12 @@ section:first-child {
     .eachWork {
         position: relative;
         padding: 150px 0;
+        &.txtWhite {
+            color: #fff !important;
+            h2 {
+                color: #fff !important;
+            }
+        }
         .txtCont {
             display: flex;
             flex-direction: column;
@@ -706,6 +712,7 @@ section:first-child {
 #whitePart {
     background: #fff;
     color: $bodyBg;
+    padding: 0 47px;
     h2 {
         color: $bodyBg;
         max-width: 447px;
@@ -725,58 +732,15 @@ section:first-child {
             }
         }
     }
-    .eachParallax {
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 48px 0;
-        & > img:first-child {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 745px;
-            width: 100%;
-            height: 344px;
-        }
-
-        .imgCont {
-            flex: 1 400px;
-            width: 400px;
-            display: flex;
-            align-items: flex-start;
-            position: relative;
-            z-index: 20;
-            &:nth-child(2) {
-                justify-content: flex-start;
-            }
-            &:last-child {
-                justify-content: flex-end;
-            }
-        }
-    }
-    #firstParallax {
-        padding-top: 60px;
-        & > img {
-            top: 137px;
-        }
-        .imgCont:last-child {
-            img {
-                max-width: 496px;
-            }
-        }
-    }
-    #secondParallax {
-        padding-bottom: 56px;
-        & > img {
-            bottom: 150px;
-        }
-        .imgCont {
-            img {
-                max-width: 530px;
-            }
-            img:last-child {
-                display: none;
+    .slideCont {
+        max-width: 79.4444444444444%;
+        .bannerCarousel {
+            overflow: visible;
+            .carouselItem {
+                margin-right: 32px;
+                img {
+                    width: 100%;
+                }
             }
         }
     }

@@ -2631,6 +2631,12 @@ section:first-child {
   position: relative;
   padding: 150px 0;
 }
+#works .eachWork.txtWhite {
+  color: #fff !important;
+}
+#works .eachWork.txtWhite h2 {
+  color: #fff !important;
+}
 #works .eachWork .txtCont {
   display: flex;
   flex-direction: column;
@@ -2708,6 +2714,7 @@ section:first-child {
 #whitePart {
   background: #fff;
   color: #010114;
+  padding: 0 47px;
 }
 #whitePart h2 {
   color: #010114;
@@ -2728,55 +2735,17 @@ section:first-child {
 #whitePart h2 a:hover {
   color: #18ff04;
 }
-#whitePart .eachParallax {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 48px 0;
+#whitePart .slideCont {
+  max-width: 79.4444444444%;
 }
-#whitePart .eachParallax > img:first-child {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 745px;
+#whitePart .slideCont .bannerCarousel {
+  overflow: visible;
+}
+#whitePart .slideCont .bannerCarousel .carouselItem {
+  margin-right: 32px;
+}
+#whitePart .slideCont .bannerCarousel .carouselItem img {
   width: 100%;
-  height: 344px;
-}
-#whitePart .eachParallax .imgCont {
-  flex: 1 400px;
-  width: 400px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  z-index: 20;
-}
-#whitePart .eachParallax .imgCont:nth-child(2) {
-  justify-content: flex-start;
-}
-#whitePart .eachParallax .imgCont:last-child {
-  justify-content: flex-end;
-}
-#whitePart #firstParallax {
-  padding-top: 60px;
-}
-#whitePart #firstParallax > img {
-  top: 137px;
-}
-#whitePart #firstParallax .imgCont:last-child img {
-  max-width: 496px;
-}
-#whitePart #secondParallax {
-  padding-bottom: 56px;
-}
-#whitePart #secondParallax > img {
-  bottom: 150px;
-}
-#whitePart #secondParallax .imgCont img {
-  max-width: 530px;
-}
-#whitePart #secondParallax .imgCont img:last-child {
-  display: none;
 }
 @media (max-width: 600px) {
   #whitePart h2 {

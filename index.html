@@ -127,19 +127,23 @@
                 </div>
             </section>
             <div id="works" style="background: #1445fe">
-                <section id="nachonachoSect" class="eachWork" data-bg="#1445FE">
+                <section
+                    id="nachonachoSect"
+                    class="eachWork txtWhite"
+                    data-bg="#1445FE"
+                >
                     <div class="bodyCont">
                         <div class="flexCont">
                             <div class="txtCont">
                                 <h2>
-                                    NachoNacho: A B2B SaaS + Services
+                                    NachoNacho: A B2B SaaS and Services
                                     Marketplace Powered by Fintech and AI
                                 </h2>
                                 <p>
-                                    Simplify subscription management for
-                                    businesses and provide a single destination
-                                    where businesses manage, discover & buy SaaS
-                                    products
+                                    NachoNacho helps SaaS businesses manage
+                                    their subscriptions using credit cards and
+                                    provides a marketplace to discover and buy
+                                    SaaS products.
                                 </p>
                                 <div class="btnCont">
                                     <a
@@ -235,58 +239,51 @@
                 </section>
             </div>
             <div id="whitePart">
-                <section id="firstParallax" class="eachParallax">
-                    <img
-                        src="assets/images/parallax/parallaxBg.svg"
-                        alt="Parallax Background"
-                    />
-                    <div class="imgCont">
-                        <img
-                            src="assets/images/parallax/parallaxImg.svg"
-                            alt="Parallax Image"
-                        />
+                <h2>Check out more UI designs <a href="">here</a></h2>
+                <div class="slideCont">
+                    <div class="bannerCarousel">
+                        <div class="flexCont">
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs1.svg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs2.jpg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs3.jpg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs4.jpg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs5.jpg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                            <div class="carouselItem">
+                                <img
+                                    src="assets/images/parallax/ui_designs6.jpg"
+                                    alt="My Designs"
+                                />
+                            </div>
+                        </div>
+                        <div class="prev"></div>
+                        <div class="next"></div>
                     </div>
-                    <div class="imgCont">
-                        <img
-                            src="assets/images/parallax/parallaxImg2_edited.png"
-                            alt="Parallax Image"
-                        />
-                    </div>
-                </section>
-                <div class="bodyCont">
-                    <h2>
-                        Check out some of my UI designs
-                        <a href="https://dribbble.com/SDavid" target="_blank"
-                            >here</a
-                        >
-                    </h2>
                 </div>
-                <section id="secondParallax" class="eachParallax">
-                    <img
-                        src="assets/images/parallax/parallaxBg.svg"
-                        alt="Parallax Background"
-                    />
-                    <div class="imgCont">
-                        <img
-                            src="assets/images/parallax/parallaxImg3.svg"
-                            alt="Parallax Image"
-                        />
-                        <img
-                            src="assets/images/parallax/parallaxImg3b.svg"
-                            alt="Parallax Image"
-                        />
-                    </div>
-                    <div class="imgCont">
-                        <img
-                            src="assets/images/parallax/parallaxImg4.png"
-                            alt="Parallax Image"
-                        />
-                        <img
-                            src="assets/images/parallax/parallaxImg4b.png"
-                            alt="Parallax Image"
-                        />
-                    </div>
-                </section>
             </div>
             <section id="testimonial">
                 <div class="bodyCont">
@@ -387,6 +384,19 @@
                 slideResizeConfig: [
                     { minW: 1000, slideNo: 1 },
                     { max: 1000, slideNo: 1 },
+                ],
+            });
+            let uiDesigns = new FlexSliderComponent({
+                autoSlide: true,
+                infiniteSlide: true,
+                selector: "#whitePart .bannerCarousel",
+                transition: "4s linear",
+                interval: 4000,
+                isMarquee: true,
+                slideResizeConfig: [
+                    { minW: 1144, slideNo: 3 },
+                    { minW: 500, maxW: 1144, slideNo: 2 },
+                    { maxW: 500, slideNo: 1 },
                 ],
             });
         </script>
