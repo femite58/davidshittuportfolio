@@ -353,11 +353,11 @@ header nav .rightNav {
 header nav .rightNav.loaded {
   visibility: visible;
 }
-header nav .rightNav .borderedBtn {
-  height: 64px;
+header nav .rightNav .primBtn {
+  height: 49px;
 }
 @media (max-width: 600px) {
-  header nav .rightNav .borderedBtn {
+  header nav .rightNav .primBtn {
     display: none;
   }
 }

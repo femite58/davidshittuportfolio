@@ -364,8 +364,8 @@ header nav {
         &.loaded {
             visibility: visible;
         }
-        .borderedBtn {
-            height: 64px;
+        .primBtn {
+            height: 49px;
             @media (max-width: 600px) {
                 display: none;
             }
