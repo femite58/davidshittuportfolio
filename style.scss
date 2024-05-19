@@ -1538,6 +1538,15 @@ footer {
 .noMarg {
     margin: 0 !important;
 }
+.fadedBg {
+    background: #ffffff12;
+    border-radius: 24px;
+    padding: 32px;
+    @media (max-width: 600px) {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+}
 .works {
     #otherBody {
         display: flex;
@@ -1876,15 +1885,7 @@ footer {
             flex: 1 300px;
         }
     }
-    .fadedBg {
-        background: #ffffff12;
-        border-radius: 24px;
-        padding: 32px;
-        @media (max-width: 600px) {
-            padding: 24px 16px;
-            border-radius: 16px;
-        }
-    }
+
     .eachSect {
         margin-bottom: 64px;
         display: block;
@@ -2344,158 +2345,92 @@ footer {
     }
 }
 #about {
-    .imgCont {
-        padding: 0;
-        // border-radius: 24px;
-        // background: #ffffff08;
-        img {
-            width: 100%;
-        }
-        @media (max-width: 600px) {
-            padding: 11px 15px;
-        }
-    }
     #intro {
-        margin-bottom: 64px;
-        text-align: center;
+        padding-top: 376px;
+        margin-bottom: 54px;
         position: relative;
         color: $darkTxt;
+        padding-bottom: 28px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .bodyCont {
+            position: relative;
+            z-index: 20;
+        }
         h1 {
-            color: $darkTxt;
+            color: #fff;
+            max-width: 646px;
+            font-size: 56px;
+            font-weight: 500;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            @media (max-width: 600px) {
+                font-size: 24px;
+                max-width: 277px;
+                letter-spacing: 9px;
+            }
         }
-        @media (max-width: 600px) {
-            padding-top: 95px;
-        }
+        // @media (max-width: 600px) {
+        //     padding-top: 95px;
+        // }
         &::before {
             content: "";
             width: 100%;
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
-            height: 80%;
-            background-color: $primary;
-            background-image: url(assets/images/noise_img.svg);
-        }
-        & > img {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-            @media (max-width: 600px) {
-                display: none;
-            }
+            height: 43.9128571428571%;
+            z-index: 20;
+            background-image: linear-gradient(
+                to bottom,
+                #66666605 0%,
+                #000 100%
+            );
         }
         @media (max-width: 600px) {
-            margin-bottom: 24px;
-        }
-        .dFlex {
-            gap: 48px 0;
-            flex-wrap: wrap;
-            flex-direction: column-reverse;
-            position: relative;
-            z-index: 20;
-            // & > div:first-child {
-            //     flex: 3 300px;
-            // }
-            // & > div:nth-child(2) {
-            //     flex: 3 400px;
-            // }
-            .imgCont {
-                display: flex;
-                justify-content: center;
-                img {
-                    max-width: 388px;
-                    @media (max-width: 600px) {
-                        max-width: 194px;
-                    }
-                }
-            }
-            .txtCont {
-                position: relative;
-                display: flex;
-                height: 100%;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                & > *:not(img) {
-                    position: relative;
-                    z-index: 20;
-                }
-                .content {
-                    max-width: 564px;
-                    @media (max-width: 600px) {
-                        max-width: 267px;
-                    }
-                }
-                h1 {
-                    font-size: 64px;
-                    font-weight: 800;
-                    // color: $darkTxt;
-                    margin-bottom: 24px;
-                    max-width: 809px;
-                    img {
-                        width: 41px;
-                    }
-                    @media (max-width: 600px) {
-                        font-size: 24px;
-                        max-width: 226px;
-                        img {
-                            width: 21px;
-                        }
-                    }
-                }
-            }
+            margin-bottom: 32px;
+            padding-top: 325px;
         }
     }
     #otherInfo {
         margin-bottom: 58px;
+        overflow: hidden;
+        .txtCont {
+            font-size: 16px;
+            a {
+                color: var(--primary);
+            }
+        }
         @media (max-width: 600px) {
             margin-bottom: 21px;
         }
-        img[alt="Nigeria"] {
-            width: 24px;
-        }
-        img[alt*="Nerd"] {
-            width: 80px;
-            transform: translate(0, 20px) scale(2.3);
-            @media (max-width: 600px) {
-                width: 45px;
-                transform: translate(12px, 14px) scale(2);
-            }
-        }
         .imgFlex {
             display: flex;
-            row-gap: 24px;
-            margin: 24px 0;
+            margin: 32px 0;
+            gap: 16px 3.41880341880342%;
             flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-            // gap: 8.6311454780445%;
+            img {
+                width: 100%;
+                border-radius: 16px;
+            }
             .bigImg {
-                width: 60.0876553512795%;
+                width: 64.1965811965812%;
             }
             .smallImg {
-                width: 33.7806836507301%;
-                .imgCont {
-                    height: 100%;
-                    img {
-                        min-height: 100%;
-                    }
-                    // width: fit-content;
-                    // display: flex;
-                    // flex-direction: column;
-                    // img {
-                    //     height: 100%;
-                    //     width: auto;
-                    // }
-                }
+                width: 32.3846153846154%;
             }
             @media (max-width: 750px) {
                 .bigImg {
                     width: 100%;
                 }
                 .smallImg {
-                    width: 90%;
+                    width: 100%;
                     .imgCont {
                         height: unset;
                         img {
@@ -2504,6 +2439,9 @@ footer {
                     }
                 }
             }
+        }
+        .bodyCont {
+            max-width: 1030px;
         }
     }
 }

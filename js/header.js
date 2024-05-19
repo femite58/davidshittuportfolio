@@ -27,7 +27,7 @@ document.write(`
             </div>
             <div>I am only passionately curious - Albert Einstein</div>
         </div>
-        <header class="${page != 'nachonacho' && page != 'home' ? 'dark' : ''}">
+        <header class="${page.match(/bolt|increst/) ? 'dark' : ''}">
             <div class="bodyCont">
                 <nav>
                     <a href="/" class="logo">
