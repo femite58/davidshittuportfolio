@@ -539,6 +539,12 @@ section:first-child {
         .btnCont {
             display: flex;
             gap: 16px;
+            @media (max-width: 600px) {
+                flex-direction: column;
+                & > * {
+                    width: 100%;
+                }
+            }
         }
         @media (max-width: 600px) {
             & > *:not(.btnCont) {
@@ -716,6 +722,9 @@ section:first-child {
             overflow: visible;
             .carouselItem {
                 margin-right: 32px;
+                @media (max-width: 600px) {
+                    margin-right: 18px;
+                }
                 img {
                     width: 100%;
                     border-radius: 16px;

@@ -2570,6 +2570,14 @@ section:first-child {
   gap: 16px;
 }
 @media (max-width: 600px) {
+  #welcomeSect .centeredCont .btnCont {
+    flex-direction: column;
+  }
+  #welcomeSect .centeredCont .btnCont > * {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
   #welcomeSect .centeredCont > *:not(.btnCont) {
     margin-bottom: 24px;
   }
@@ -2746,6 +2754,11 @@ section:first-child {
 }
 #whitePart .slideCont .bannerCarousel .carouselItem {
   margin-right: 32px;
+}
+@media (max-width: 600px) {
+  #whitePart .slideCont .bannerCarousel .carouselItem {
+    margin-right: 18px;
+  }
 }
 #whitePart .slideCont .bannerCarousel .carouselItem img {
   width: 100%;
