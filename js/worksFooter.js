@@ -6,27 +6,21 @@ document.write(`
 <a href="${prev?.url}" ${
     prev?.url?.match(/https/) ? 'target="_blank"' : ''
 } class="eachCtrl ${prev?.url ? '' : 'hidden'}">
-    <div class="imgCont">
-        <img src="${prev?.img}"/>
+    <div class="iconCont">
+        <span class="svgIcon-smallArrowLeft"></span>
     </div>
-    <div class="txtPart" style="background-color: ${prev?.bg};">
-        <div class="action">
-            <span class="svgIcon-smallArrowLeft"></span>
-            <span>Previous</span>
-        </div>
+    <div class="txtPart">
+        <div class="dir">Previous</div>
         <div class="pageTitle">${prev?.txt}</div>
     </div>
 </a>
 <a href="${next?.url}" class="eachCtrl ${next?.url ? '' : 'hidden'}">
-    <div class="imgCont">
-        <img src="${next?.img}"/>
-    </div>
-    <div class="txtPart" style="background-color: ${next?.bg};">
-        <div class="action">
-            <span>Next</span>
-            <span class="svgIcon-smallArrowRight"></span>
-        </div>
+    <div class="txtPart">
+        <div class="dir">Next</div>
         <div class="pageTitle">${next?.txt}</div>
+    </div>
+    <div class="iconCont">
+        <span class="svgIcon-smallArrowRight"></span>
     </div>
 </a>
 </div>`);
