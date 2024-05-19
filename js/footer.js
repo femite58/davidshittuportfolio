@@ -513,7 +513,7 @@ function scrollCheck(e) {
 let navLinks = document.querySelectorAll('#otherBody nav .eachLink');
 navLinks.forEach((n) => {
     n.onclick = () => {
-        cusScrollTo(n.getAttribute('href'), 86);
+        cusScrollTo(n.getAttribute('href'), window.innerWidth < 600 ? 140 : 86);
         navLinks.forEach((_n) => _n.classList.remove('active'));
         n.classList.add('active');
     };

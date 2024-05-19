@@ -3680,15 +3680,6 @@ footer .copyright {
     max-width: 267px;
   }
 }
-.works#nachonachoPage #bannerSect img {
-  width: unset;
-}
-@media (max-width: 600px) {
-  .works#nachonachoPage #bannerSect img {
-    width: 438px !important;
-    max-width: unset;
-  }
-}
 .works#nachonachoPage #bannerSect .imgCont {
   position: relative;
   max-width: 703.13px;
@@ -3696,6 +3687,11 @@ footer .copyright {
 }
 .works#nachonachoPage #bannerSect .imgCont img {
   border-radius: 9.77px 9.77px 0 0;
+}
+@media (max-width: 600px) {
+  .works#nachonachoPage #bannerSect .imgCont {
+    max-width: 62.9371980676%;
+  }
 }
 .works#nachonachoPage #bannerSect .imgCont img:last-child {
   position: absolute;
