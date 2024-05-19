@@ -186,6 +186,10 @@ const svgIcons = {
      </defs>
      </svg>
      `,
+    blockquote: `<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.375 5.93555H2.625V14.1855C2.625 19.4355 6.375 20.9355 9.375 20.1855C7.125 17.9355 7.125 16.4355 7.125 14.1855H9.375V5.93555ZM19.875 5.93555H13.125V14.1855C13.125 19.4355 16.875 20.9355 19.875 20.1855C17.625 17.9355 17.625 16.4355 17.625 14.1855H19.875V5.93555Z" stroke="#34D186" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>    
+     `,
 };
 const svgIconEls = document.querySelectorAll('[class*="svgIcon-"]');
 for (let svgEl of svgIconEls) {

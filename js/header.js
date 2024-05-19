@@ -27,7 +27,7 @@ document.write(`
             </div>
             <div>I am only passionately curious - Albert Einstein</div>
         </div>
-        <header>
+        <header class="${page != 'nachonacho' && page != 'home' ? 'dark' : ''}">
             <div class="bodyCont">
                 <nav>
                     <a href="/" class="logo">

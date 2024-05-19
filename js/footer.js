@@ -303,12 +303,16 @@ scrlEl.addEventListener('scroll', (e) => {
         scrollSpy();
     }
 
-    // clearTimeout(this.scrolTimeout);
-    // if (!isWheel) {
     onScfinalSc = window.scrollY;
-    // }
-    // scrolTimeout = setTimeout(() => {
-    // }, 100);
+    const otherBody = document.querySelector('#otherBody');
+    if (otherBody) {
+        let bc = otherBody.getBoundingClientRect();
+        if (bc.top < (window.innerWidth <= 600 ? 32 : 80)) {
+            header.classList.remove('dark');
+        } else if (!page.match(/home|nachonacho/)) {
+            header.classList.add('dark');
+        }
+    }
 });
 
 function scrollSpy() {
@@ -316,8 +320,9 @@ function scrollSpy() {
         let par = document.querySelector(n.getAttribute('href'));
         let pbc = par.getBoundingClientRect();
         if (
-            pbc.top < window.innerHeight * 0.4 &&
-            pbc.bottom > window.innerHeight * 0.5
+            pbc.top <= window.innerHeight * 0.3 &&
+            (pbc.bottom > window.innerHeight * 0.5 ||
+                (pbc.height < window.innerHeight && pbc.bottom > pbc.height))
         ) {
             navLinks.forEach((_n) => _n.classList.remove('active'));
             n.classList.add('active');
