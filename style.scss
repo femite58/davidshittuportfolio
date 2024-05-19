@@ -2002,20 +2002,20 @@ footer {
                 color: var(--txtColor);
             }
         }
-        &#problemAndSolution {
-            ol {
-                list-style-type: none;
+    }
+    #problemAndSolution .eachSect {
+        ol {
+            list-style-type: none;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-left: 0;
+            li {
+                flex: 1 300px;
+                width: 300px;
                 display: flex;
-                gap: 16px;
-                flex-wrap: wrap;
-                padding-left: 0;
-                li {
-                    flex: 1 300px;
-                    width: 300px;
-                    display: flex;
-                    gap: 10px;
-                    align-items: flex-start;
-                }
+                gap: 10px;
+                align-items: flex-start;
             }
         }
     }

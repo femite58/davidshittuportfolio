@@ -227,6 +227,8 @@ function animate({ timing, draw, duration }) {
 
         if (timeFraction < 1) {
             requestAnimationFrame(animate2);
+        } else {
+            isWheel = false;
         }
     });
 }
@@ -238,7 +240,12 @@ window.addEventListener(
     (e) => {
         e.preventDefault();
         let initSc = window.scrollY;
+        // console.log(finalSc, onScfinalSc);
+        // if (finalSc != onScfinalSc) {
+        //     finalSc = onScfinalSc;
+        // }
         finalSc += e.deltaY;
+        isWheel = true;
         let maxExt = document.documentElement.scrollHeight - window.innerHeight;
 
         finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
@@ -268,6 +275,9 @@ toggle.onclick = () => {
 };
 
 const scrlEl = window;
+let scrolTimeout;
+let isWheel = false;
+let onScfinalSc = 0;
 contrastCheck();
 scrlEl.addEventListener('scroll', (e) => {
     scrollDiff = scrlEl.scrollY - initScrollTop;
@@ -289,8 +299,31 @@ scrlEl.addEventListener('scroll', (e) => {
         scrollCheck(e);
         scrollZoomEffect(e);
         workColorTransition();
+    } else {
+        scrollSpy();
     }
+
+    // clearTimeout(this.scrolTimeout);
+    // if (!isWheel) {
+    onScfinalSc = window.scrollY;
+    // }
+    // scrolTimeout = setTimeout(() => {
+    // }, 100);
 });
+
+function scrollSpy() {
+    navLinks.forEach((n) => {
+        let par = document.querySelector(n.getAttribute('href'));
+        let pbc = par.getBoundingClientRect();
+        if (
+            pbc.top < window.innerHeight * 0.4 &&
+            pbc.bottom > window.innerHeight * 0.5
+        ) {
+            navLinks.forEach((_n) => _n.classList.remove('active'));
+            n.classList.add('active');
+        }
+    });
+}
 
 const workColorTransition = () => {
     works.forEach((w) => {
@@ -476,4 +509,43 @@ function scrollCheck(e) {
     //     innerHScroll.classList.remove('stick');
     //     innerHScroll.scrollLeft = 0;
     // }
+}
+let navLinks = document.querySelectorAll('#otherBody nav .eachLink');
+navLinks.forEach((n) => {
+    n.onclick = () => {
+        cusScrollTo(n.getAttribute('href'), 86);
+        navLinks.forEach((_n) => _n.classList.remove('active'));
+        n.classList.add('active');
+    };
+});
+const scroll = ({ timingFunc, update, duration }) => {
+    let now = performance.now();
+    requestAnimationFrame(function animate(time) {
+        let prog = (performance.now() - now) / duration;
+        prog = prog > 1 ? 1 : prog;
+        let movement = timingFunc(prog);
+        update(movement);
+        if (prog < 1) {
+            requestAnimationFrame(animate);
+        }
+    });
+};
+
+function cusScrollTo(selector, top = 0) {
+    let to = document.querySelector(`${selector}`);
+    let bc = to.getBoundingClientRect();
+    let diff = bc.top > top ? bc.top - top : top - bc.top;
+    let initScrl = document.scrollingElement.scrollTop;
+    let dir = bc.top > top ? 1 : -1;
+    finalSc = initScrl + dir * diff;
+    scroll({
+        timingFunc: (t) => 1 - Math.pow(1 - t, 5),
+        update: (movement) => {
+            document.scrollingElement.scrollTo({
+                top: initScrl + dir * diff * movement,
+                behavior: 'instant',
+            });
+        },
+        duration: 1000,
+    });
 }

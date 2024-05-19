@@ -3959,14 +3959,14 @@ footer .copyright {
 .works .eachSect.fadeTxt .content {
   color: var(--txtColor);
 }
-.works .eachSect#problemAndSolution ol {
+.works #problemAndSolution .eachSect ol {
   list-style-type: none;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   padding-left: 0;
 }
-.works .eachSect#problemAndSolution ol li {
+.works #problemAndSolution .eachSect ol li {
   flex: 1 300px;
   width: 300px;
   display: flex;
