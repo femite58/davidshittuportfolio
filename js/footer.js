@@ -323,11 +323,11 @@ scrlEl.addEventListener('scroll', (e) => {
     } else {
         header.classList.remove('scrolled');
     }
-    contrastCheck();
+    // contrastCheck();
     fadeTransition();
     if (page == 'home') {
-        scrollCheck(e);
-        scrollZoomEffect(e);
+        // scrollCheck(e);
+        // scrollZoomEffect(e);
         workColorTransition();
     } else {
         scrollSpy();
