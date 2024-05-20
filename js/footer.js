@@ -211,15 +211,37 @@ stopAnim = false;
 animating = false;
 let firstFrame;
 let sndFrame;
+let intv;
 
 function animate({ timing, draw, duration }) {
     let start = performance.now();
+    // clearInterval(intv);
+    intv = setInterval(() => {
+        let timeFraction = (performance.now() - start) / duration;
+        console.log(timeFraction, performance.now(), start);
+        if (timeFraction > 1) timeFraction = 1;
+
+        // calculate the current animation state
+        let progress = timing(timeFraction);
+
+        draw(progress); // draw it
+        // cancelAnimationFrame(sndFrame);
+        if (timeFraction < 1) {
+            // sndFrame = requestAnimationFrame(animate2);
+        } else {
+            clearInterval(intv);
+        }
+    });
+    // setTimeout(() => {
+    //     clearInterval(intv);
+    // }, duration);
+    return;
 
     firstFrame = requestAnimationFrame(function animate2(time) {
         // timeFraction goes from 0 to 1
-        cancelAnimationFrame(firstFrame);
+        // cancelAnimationFrame(firstFrame);
         let timeFraction = (performance.now() - start) / duration;
-        console.log(timeFraction, performance.now(), start, time);
+        // console.log(timeFraction, performance.now(), start, time);
         if (timeFraction > 1) timeFraction = 1;
 
         // calculate the current animation state
@@ -240,10 +262,11 @@ finalSc = 0;
 window.addEventListener(
     'wheel',
     (e) => {
+        clearInterval(intv);
         // console.log(e.deltaY);
         // return;
-        cancelAnimationFrame(sndFrame);
-        cancelAnimationFrame(firstFrame);
+        // cancelAnimationFrame(sndFrame);
+        // cancelAnimationFrame(firstFrame);
         e.preventDefault();
         let initSc = window.scrollY;
         // console.log(finalSc, onScfinalSc);
