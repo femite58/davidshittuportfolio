@@ -328,8 +328,8 @@ function scrollSpy() {
             n.classList.add('active');
             // n.scrollIntoView();
             let nbc = n.getBoundingClientRect();
-            if (nbc.right > n.parentElement.offsetWidth || nbc.left < 15) {
-                n.parentElement.scrollTo({ left: n.offsetLeft });
+            if (nbc.right > n.parentElement.parentElement.offsetWidth || nbc.left < 15) {
+                n.parentElement.parentElement.scrollTo({ left: n.offsetLeft });
             }
         }
     });
