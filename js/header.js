@@ -1,13 +1,13 @@
 let path = pPath || '../';
 document.write(`
 <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBNYGRHMNN"></script> -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBNYGRHMNN"></script> 
 <script>
-  // window.dataLayer = window.dataLayer || [];
-  // function gtag(){dataLayer.push(arguments);}
-  // gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  // gtag('config', 'G-TBNYGRHMNN');
+  gtag('config', 'G-TBNYGRHMNN');
 </script>
         <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Bold.woff2" crossorigin />
         <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Black.woff2" crossorigin />
