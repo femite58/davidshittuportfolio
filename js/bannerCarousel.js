@@ -29,6 +29,7 @@ class FlexSliderComponent {
 
     dragEvHolder;
     stopDragEvHolder;
+    realTimeResponsive = true;
 
     constructor({
         slideResizeConfig,
@@ -38,6 +39,7 @@ class FlexSliderComponent {
         transition,
         interval,
         isMarquee,
+        responsive,
     }) {
         this.slideResizeConfig = slideResizeConfig;
         this.autoSlide = autoSlide;
@@ -45,7 +47,8 @@ class FlexSliderComponent {
         this.transition = transition;
         this.interval = interval;
         this.isMarquee = isMarquee;
-        this.carouselParent = document.querySelector(selector);
+        (this.realTimeResponsive = responsive),
+            (this.carouselParent = document.querySelector(selector));
         this.ngAfterViewInit();
     }
 
@@ -62,7 +65,9 @@ class FlexSliderComponent {
             this.next = this.carouselParent.querySelector('.next');
             this.prev = this.carouselParent.querySelector('.prev');
             this.responsive();
-            this.winResEv(true);
+            if (this.realTimeResponsive) {
+                this.winResEv(true);
+            }
         }, 100);
     }
 
@@ -120,7 +125,7 @@ class FlexSliderComponent {
         if (this.isMarquee) {
             setTimeout(() => {
                 this.slide(1);
-            })
+            });
         }
         this.autoSlideVar = setInterval(() => {
             this.slide(1);
