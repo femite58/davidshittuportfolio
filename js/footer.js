@@ -215,18 +215,20 @@ let sndFrame;
 function animate({ timing, draw, duration }) {
     let start = performance.now();
 
-    requestAnimationFrame(function animate2(time) {
+    firstFrame = requestAnimationFrame(function animate2(time) {
         // timeFraction goes from 0 to 1
+        cancelAnimationFrame(firstFrame);
         let timeFraction = (performance.now() - start) / duration;
+        console.log(timeFraction, performance.now(), start, time);
         if (timeFraction > 1) timeFraction = 1;
 
         // calculate the current animation state
         let progress = timing(timeFraction);
 
         draw(progress); // draw it
-
+        cancelAnimationFrame(sndFrame);
         if (timeFraction < 1) {
-            requestAnimationFrame(animate2);
+            sndFrame = requestAnimationFrame(animate2);
         } else {
             isWheel = false;
         }
@@ -238,8 +240,10 @@ finalSc = 0;
 window.addEventListener(
     'wheel',
     (e) => {
-        console.log(e.deltaY);
-        return;
+        // console.log(e.deltaY);
+        // return;
+        cancelAnimationFrame(sndFrame);
+        cancelAnimationFrame(firstFrame);
         e.preventDefault();
         let initSc = window.scrollY;
         // console.log(finalSc, onScfinalSc);
@@ -330,7 +334,10 @@ function scrollSpy() {
             n.classList.add('active');
             // n.scrollIntoView();
             let nbc = n.getBoundingClientRect();
-            if (nbc.right > n.parentElement.parentElement.offsetWidth || nbc.left < 15) {
+            if (
+                nbc.right > n.parentElement.parentElement.offsetWidth ||
+                nbc.left < 15
+            ) {
                 n.parentElement.parentElement.scrollTo({ left: n.offsetLeft });
             }
         }
