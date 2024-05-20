@@ -72,7 +72,7 @@ document.write(`
                                     <span>About me</span>
                                 </a>
                                 <a
-                                    href="${path}index.html#horizontalScroll"
+                                    href="${path}index.html#works"
                                     class="eachMenuItem"
                                     data-color="#FFE604"
                                     data-bg="#0A0A84"
