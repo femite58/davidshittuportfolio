@@ -238,6 +238,8 @@ finalSc = 0;
 window.addEventListener(
     'wheel',
     (e) => {
+        console.log(e.deltaY);
+        return;
         e.preventDefault();
         let initSc = window.scrollY;
         // console.log(finalSc, onScfinalSc);

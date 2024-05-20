@@ -47,8 +47,8 @@ class FlexSliderComponent {
         this.transition = transition;
         this.interval = interval;
         this.isMarquee = isMarquee;
-        (this.realTimeResponsive = responsive),
-            (this.carouselParent = document.querySelector(selector));
+        this.realTimeResponsive = responsive;
+        this.carouselParent = document.querySelector(selector);
         this.ngAfterViewInit();
     }
 
