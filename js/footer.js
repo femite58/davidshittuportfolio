@@ -214,11 +214,12 @@ let sndFrame;
 let intv;
 
 function animate({ timing, draw, duration }) {
+    clearInterval(intv);
     let start = performance.now();
-    // clearInterval(intv);
+    // console.log('start', start);
     intv = setInterval(() => {
         let timeFraction = (performance.now() - start) / duration;
-        console.log(timeFraction, performance.now(), start);
+        // console.log(timeFraction, performance.now(), start);
         if (timeFraction > 1) timeFraction = 1;
 
         // calculate the current animation state
@@ -262,7 +263,7 @@ finalSc = 0;
 window.addEventListener(
     'wheel',
     (e) => {
-        clearInterval(intv);
+        // clearInterval(intv);
         // console.log(e.deltaY);
         // return;
         // cancelAnimationFrame(sndFrame);
