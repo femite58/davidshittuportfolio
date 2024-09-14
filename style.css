@@ -2748,9 +2748,6 @@ section:first-child {
   font-style: italic;
   text-decoration: underline;
 }
-#whitePart h2 a:hover {
-  color: #fafafb;
-}
 #whitePart .slideCont {
   max-width: 79.4444444444%;
 }
