@@ -1,11 +1,11 @@
 $txtColor: #959ba4;
-$bodyBg: #010114;
-$primary: #18ff04;
+$bodyBg: #000000;
+$primary: #fafafb;
 $darkTxt: #010114;
 :root {
-    --primary: #18ff04;
+    --primary: #fafafb;
     --darkTxt: #010114;
-    --bodyBg: #010114;
+    --bodyBg: #000000;
     --txtColor: #959ba4;
 }
 * {
@@ -73,30 +73,30 @@ p {
     margin: 0 0 16px;
 }
 @font-face {
-    font-family: "Circular Std";
-    src: url(assets/fonts/CircularStd-Book.woff2);
+    font-family: "Space Grotesk";
+    src: url(assets/fonts/SpaceGrotesk-Regular.woff2);
     font-display: swap;
 }
 @font-face {
-    font-family: "Circular Std";
-    src: url(assets/fonts/CircularStd-Medium.woff2);
+    font-family: "Space Grotesk";
+    src: url(assets/fonts/SpaceGrotesk-Medium.woff2);
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
-    font-family: "Circular Std";
-    src: url(assets/fonts/CircularStd-Bold.woff2);
-    font-weight: 700;
+    font-family: "Space Grotesk";
+    src: url(assets/fonts/SpaceGrotesk-SemiBold.woff2);
+    font-weight: 600;
     font-display: swap;
 }
 @font-face {
-    font-family: "Circular Std";
-    src: url(assets/fonts/CircularStd-Black.woff2);
-    font-weight: 800;
+    font-family: "Space Grotesk";
+    src: url(assets/fonts/SpaceGrotesk-Bold.woff2);
+    font-weight: 700;
     font-display: swap;
 }
 body {
-    font-family: "Circular Std";
+    font-family: "Space Grotesk";
     font-size: 20px;
     color: $txtColor;
     background: $bodyBg;
@@ -125,28 +125,32 @@ h1 {
 .dBlock {
     display: block;
 }
+a {
+    color: var(--primary);
+    text-decoration: underline;
+}
 .primBtn,
 .secBtn,
 .borderedBtn {
     display: flex;
     gap: 11px;
-    padding: 0px 24px;
+    padding: 0px 20px;
     align-items: center;
     outline: none;
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     transition: 0.3s ease;
     width: fit-content;
     border-radius: 8px;
     text-decoration: none;
     justify-content: center;
-    height: 49px;
+    height: 46px;
     &.primBtn {
         background: $primary;
         color: #010114;
         &:hover {
-            background: #00bb00;
+            background: #fff;
         }
     }
     &.secBtn {
@@ -157,7 +161,7 @@ h1 {
         border: 1px solid #fafafb;
         background: transparent;
         &:hover {
-            border-color: #18ff04;
+            border-color: #fff;
         }
     }
     @media (max-width: 600px) {
@@ -376,7 +380,7 @@ header nav {
         #toggle {
             width: 46px;
             height: 46px;
-            border-radius: 50%;
+            border-radius: 8px;
             border: 1px solid #fafafb;
             transition: 0.3s ease;
             display: flex;
@@ -394,6 +398,7 @@ header nav {
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                transition: .3s ease;
                 span {
                     height: 1.79px;
                     border-radius: 2px;
@@ -423,9 +428,9 @@ header nav {
             //   }
             @media (min-width: 601px) {
                 &:hover {
-                    transform: rotate(90deg);
                     border-color: $primary;
                     .innerToggle {
+                        transform: rotate(90deg);
                         span {
                             background: $primary;
                         }
@@ -533,28 +538,28 @@ section:first-child {
         margin: auto;
         h1 {
             font-size: 48px;
-            margin-bottom: 32px;
+            margin-bottom: 16px;
             font-weight: 500;
         }
         p {
-            margin-bottom: 32px;
+            margin-bottom: 48px;
         }
         .btnCont {
             display: flex;
             gap: 16px;
-            @media (max-width: 600px) {
-                flex-direction: column;
-                & > * {
-                    width: 100%;
-                }
-            }
+            // @media (max-width: 600px) {
+            //     flex-direction: column;
+            //     & > * {
+            //         width: 100%;
+            //     }
+            // }
         }
         @media (max-width: 600px) {
             & > *:not(.btnCont) {
                 margin-bottom: 24px;
             }
             h1 {
-                font-size: 27px;
+                font-size: 24px;
             }
         }
     }
@@ -576,9 +581,9 @@ section:first-child {
         padding: 80px 0;
     }
     .bannerCarousel {
-        width: 1489.48px;
+        width: 1669.48px;
         @media (max-width: 600px) {
-            width: 1129.49px;
+            width: 1249.49px;
             .carouselItem {
                 margin-right: 40px;
             }
@@ -1013,15 +1018,15 @@ section:first-child {
     }
 }
 #testimonial {
-    padding: 150px 0 83px;
+    padding: 150px 0 48px;
     background: #fff;
     h2 {
         text-align: center;
         color: $darkTxt;
         font-size: 40px;
         font-weight: 500;
-        max-width: 644px;
-        margin: 0 auto 64px;
+        max-width: 654px;
+        margin: 0 auto 128px;
     }
     .testiFlex {
         display: flex;
@@ -1117,20 +1122,21 @@ section:first-child {
 #callToAction {
     background: #fff;
     position: relative;
-    &::after {
-        content: "";
-        background: $bodyBg;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 101px;
-        position: absolute;
-        @media (max-width: 600px) {
-            height: 238px;
-        }
-    }
+    padding-bottom: 48px;
+    // &::after {
+    //     content: "";
+    //     background: $bodyBg;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     height: 101px;
+    //     position: absolute;
+    //     @media (max-width: 600px) {
+    //         height: 238px;
+    //     }
+    // }
     .darkBgCta {
-        padding: 100px 120px;
+        padding: 99px 120px;
         border-radius: 24px;
         display: flex;
         align-items: center;
@@ -1146,7 +1152,7 @@ section:first-child {
         .txt {
             font-weight: 500;
             font-size: 32px;
-            max-width: 393px;
+            max-width: 418px;
             color: #fafafb;
         }
         & > img {
@@ -1232,7 +1238,7 @@ section:first-child {
     }
 }
 footer {
-    padding: 78px 0 39px;
+    padding: 178px 0 39px;
     position: relative;
     z-index: 300;
     @media (max-width: 600px) {
@@ -1280,8 +1286,9 @@ footer {
     flex-wrap: wrap;
     gap: 80px;
     a {
-        color: #959ba4;
+        color: var(--txtColor);
         font-weight: 500;
+        text-decoration: none;
         &:hover {
             color: $primary;
         }
@@ -1558,7 +1565,7 @@ footer {
         flex-direction: row-reverse;
         font-size: 16px;
         #navCont {
-            width: 158px;
+            width: 168px;
             position: sticky;
             z-index: 2000;
             align-self: flex-start;
@@ -1596,6 +1603,7 @@ footer {
                     display: flex;
                     align-items: center;
                     height: 36px;
+                    text-decoration: none;
                     white-space: nowrap;
                     color: #959ba4;
                     font-size: 16px;
@@ -1774,7 +1782,7 @@ footer {
             }
             .txtContent {
                 h1 {
-                    max-width: 864px;
+                    max-width: 874px;
                     color: var(--darkTxt);
                     @media (max-width: 600px) {
                         max-width: 325px;
@@ -1782,7 +1790,7 @@ footer {
                 }
                 .content {
                     color: var(--darkTxt);
-                    max-width: 483px;
+                    max-width: 532px;
                     @media (max-width: 600px) {
                         max-width: 267px;
                     }
@@ -1829,7 +1837,7 @@ footer {
             }
             .txtContent {
                 h1 {
-                    max-width: 736.3px;
+                    max-width: 841px;
                     span:last-child {
                         display: none;
                     }
@@ -1846,7 +1854,7 @@ footer {
                     }
                 }
                 .content {
-                    max-width: 736.3px;
+                    max-width: 841px;
                     @media (max-width: 600px) {
                         max-width: 322px;
                     }

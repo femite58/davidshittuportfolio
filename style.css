@@ -1,7 +1,7 @@
 :root {
-  --primary: #18ff04;
+  --primary: #fafafb;
   --darkTxt: #010114;
-  --bodyBg: #010114;
+  --bodyBg: #000000;
   --txtColor: #959ba4;
 }
 
@@ -36,7 +36,7 @@ a {
 }
 
 .primCol {
-  color: #18ff04;
+  color: #fafafb;
 }
 
 :root {
@@ -59,33 +59,33 @@ p {
 }
 
 @font-face {
-  font-family: "Circular Std";
-  src: url(assets/fonts/CircularStd-Book.woff2);
+  font-family: "Space Grotesk";
+  src: url(assets/fonts/SpaceGrotesk-Regular.woff2);
   font-display: swap;
 }
 @font-face {
-  font-family: "Circular Std";
-  src: url(assets/fonts/CircularStd-Medium.woff2);
+  font-family: "Space Grotesk";
+  src: url(assets/fonts/SpaceGrotesk-Medium.woff2);
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "Circular Std";
-  src: url(assets/fonts/CircularStd-Bold.woff2);
-  font-weight: 700;
+  font-family: "Space Grotesk";
+  src: url(assets/fonts/SpaceGrotesk-SemiBold.woff2);
+  font-weight: 600;
   font-display: swap;
 }
 @font-face {
-  font-family: "Circular Std";
-  src: url(assets/fonts/CircularStd-Black.woff2);
-  font-weight: 800;
+  font-family: "Space Grotesk";
+  src: url(assets/fonts/SpaceGrotesk-Bold.woff2);
+  font-weight: 700;
   font-display: swap;
 }
 body {
-  font-family: "Circular Std";
+  font-family: "Space Grotesk";
   font-size: 20px;
   color: #959ba4;
-  background: #010114;
+  background: #000000;
   margin: 0;
 }
 @media (max-width: 600px) {
@@ -120,40 +120,45 @@ h1 {
   display: block;
 }
 
+a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .primBtn,
 .secBtn,
 .borderedBtn {
   display: flex;
   gap: 11px;
-  padding: 0px 24px;
+  padding: 0px 20px;
   align-items: center;
   outline: none;
   color: #fff;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   transition: 0.3s ease;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 8px;
   text-decoration: none;
   justify-content: center;
-  height: 49px;
+  height: 46px;
 }
 .primBtn.primBtn,
 .secBtn.primBtn,
 .borderedBtn.primBtn {
-  background: #18ff04;
+  background: #fafafb;
   color: #010114;
 }
 .primBtn.primBtn:hover,
 .secBtn.primBtn:hover,
 .borderedBtn.primBtn:hover {
-  background: #00bb00;
+  background: #fff;
 }
 .primBtn.secBtn,
 .secBtn.secBtn,
 .borderedBtn.secBtn {
-  background: #010114;
+  background: #000000;
   color: #fff;
 }
 .primBtn.borderedBtn,
@@ -165,7 +170,7 @@ h1 {
 .primBtn.borderedBtn:hover,
 .secBtn.borderedBtn:hover,
 .borderedBtn.borderedBtn:hover {
-  border-color: #18ff04;
+  border-color: #fff;
 }
 @media (max-width: 600px) {
   .primBtn,
@@ -209,7 +214,7 @@ header #menu {
   left: 0;
   width: calc(100vw - var(--scrollBarW));
   height: var(--view-height);
-  background: #010114 url(assets/images/header_line_bg.svg) no-repeat;
+  background: #000000 url(assets/images/header_line_bg.svg) no-repeat;
   background-repeat: no-repeat;
   background-size: 100% 581px;
   padding: 0 0 15px;
@@ -237,7 +242,7 @@ header #menu .topHead {
   height: 86px;
   display: flex;
   align-items: center;
-  background-color: #010114;
+  background-color: #000000;
   margin-bottom: 60px !important;
 }
 @media (max-width: 600px) {
@@ -284,10 +289,10 @@ header #menu .eachMenuItem span::after {
   transition: 0.3s ease;
 }
 header #menu .eachMenuItem:hover {
-  color: #18ff04;
+  color: #fafafb;
 }
 header #menu .eachMenuItem:hover span {
-  border-color: #18ff04;
+  border-color: #fafafb;
 }
 header #menu .eachMenuItem:hover span::after {
   width: 100%;
@@ -369,7 +374,7 @@ header nav .rightNav .primBtn {
 header nav .rightNav #toggle {
   width: 46px;
   height: 46px;
-  border-radius: 50%;
+  border-radius: 8px;
   border: 1px solid #fafafb;
   transition: 0.3s ease;
   display: flex;
@@ -388,6 +393,7 @@ header nav .rightNav #toggle .innerToggle {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: 0.3s ease;
 }
 header nav .rightNav #toggle .innerToggle span {
   height: 1.79px;
@@ -416,11 +422,13 @@ header nav .rightNav #toggle .innerToggle span:not(:nth-child(2)):last-child {
 }
 @media (min-width: 601px) {
   header nav .rightNav #toggle:hover {
+    border-color: #fafafb;
+  }
+  header nav .rightNav #toggle:hover .innerToggle {
     transform: rotate(90deg);
-    border-color: #18ff04;
   }
   header nav .rightNav #toggle:hover .innerToggle span {
-    background: #18ff04;
+    background: #fafafb;
   }
 }
 header nav .rightNav #toggle.opened {
@@ -2564,30 +2572,22 @@ section:first-child {
 }
 #welcomeSect .centeredCont h1 {
   font-size: 48px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   font-weight: 500;
 }
 #welcomeSect .centeredCont p {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 #welcomeSect .centeredCont .btnCont {
   display: flex;
   gap: 16px;
 }
 @media (max-width: 600px) {
-  #welcomeSect .centeredCont .btnCont {
-    flex-direction: column;
-  }
-  #welcomeSect .centeredCont .btnCont > * {
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
   #welcomeSect .centeredCont > *:not(.btnCont) {
     margin-bottom: 24px;
   }
   #welcomeSect .centeredCont h1 {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 
@@ -2610,11 +2610,11 @@ section:first-child {
   }
 }
 #partners .bannerCarousel {
-  width: 1489.48px;
+  width: 1669.48px;
 }
 @media (max-width: 600px) {
   #partners .bannerCarousel {
-    width: 1129.49px;
+    width: 1249.49px;
   }
   #partners .bannerCarousel .carouselItem {
     margin-right: 40px;
@@ -2728,12 +2728,12 @@ section:first-child {
 
 #whitePart {
   background: #fff;
-  color: #010114;
+  color: #000000;
   overflow: hidden;
   padding: 0 47px;
 }
 #whitePart h2 {
-  color: #010114;
+  color: #000000;
   max-width: 447px;
   font-size: 40px;
   font-weight: 500;
@@ -2749,7 +2749,7 @@ section:first-child {
   text-decoration: underline;
 }
 #whitePart h2 a:hover {
-  color: #18ff04;
+  color: #fafafb;
 }
 #whitePart .slideCont {
   max-width: 79.4444444444%;
@@ -3024,7 +3024,7 @@ section:first-child {
   margin: 0;
   transition: 0s;
   opacity: 0;
-  color: #18ff04;
+  color: #fafafb;
 }
 @media (max-width: 600px) {
   #goodDesign h2 {
@@ -3040,7 +3040,7 @@ section:first-child {
 }
 
 #testimonial {
-  padding: 150px 0 83px;
+  padding: 150px 0 48px;
   background: #fff;
 }
 #testimonial h2 {
@@ -3048,8 +3048,8 @@ section:first-child {
   color: #010114;
   font-size: 40px;
   font-weight: 500;
-  max-width: 644px;
-  margin: 0 auto 64px;
+  max-width: 654px;
+  margin: 0 auto 128px;
 }
 #testimonial .testiFlex {
   display: flex;
@@ -3140,23 +3140,10 @@ section:first-child {
 #callToAction {
   background: #fff;
   position: relative;
-}
-#callToAction::after {
-  content: "";
-  background: #010114;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 101px;
-  position: absolute;
-}
-@media (max-width: 600px) {
-  #callToAction::after {
-    height: 238px;
-  }
+  padding-bottom: 48px;
 }
 #callToAction .darkBgCta {
-  padding: 100px 120px;
+  padding: 99px 120px;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -3173,7 +3160,7 @@ section:first-child {
 #callToAction .darkBgCta .txt {
   font-weight: 500;
   font-size: 32px;
-  max-width: 393px;
+  max-width: 418px;
   color: #fafafb;
 }
 #callToAction .darkBgCta > img {
@@ -3242,13 +3229,13 @@ section:first-child {
 }
 .eachClickable:hover {
   background: rgba(249, 249, 249, 0.1019607843);
-  color: #18ff04;
+  color: #fafafb;
 }
 .eachClickable:hover path[fill] {
-  fill: #18ff04;
+  fill: #fafafb;
 }
 .eachClickable:hover path[stroke] {
-  stroke: #18ff04;
+  stroke: #fafafb;
 }
 
 .socialLinks {
@@ -3264,7 +3251,7 @@ section:first-child {
 }
 
 footer {
-  padding: 78px 0 39px;
+  padding: 178px 0 39px;
   position: relative;
   z-index: 300;
 }
@@ -3319,11 +3306,12 @@ footer .copyright {
   gap: 80px;
 }
 .socialLinks a {
-  color: #959ba4;
+  color: var(--txtColor);
   font-weight: 500;
+  text-decoration: none;
 }
 .socialLinks a:hover {
-  color: #18ff04;
+  color: #fafafb;
 }
 .socialLinks .eachCol {
   display: flex;
@@ -3347,7 +3335,7 @@ footer .copyright {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #18ff04;
+  background: #fafafb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3366,10 +3354,10 @@ footer .copyright {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
 #scrollTop.dark svg *[stroke]:not([stroke=none]) {
-  stroke: #18ff04;
+  stroke: #fafafb;
 }
 #scrollTop.dark svg *[fill]:not([fill=none]) {
-  fill: #18ff04;
+  fill: #fafafb;
 }
 #scrollTop.show {
   opacity: 1;
@@ -3398,7 +3386,7 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #010114;
+  background: #000000;
   z-index: 30000;
   transition: 0.3s ease;
 }
@@ -3418,7 +3406,7 @@ footer .copyright {
 }
 #loader .progress .indc {
   width: 0;
-  background: #18ff04;
+  background: #fafafb;
   border-radius: 24px;
   animation: prog 4s ease forwards;
 }
@@ -3511,7 +3499,7 @@ footer .copyright {
   font-size: 16px;
 }
 .works #otherBody #navCont {
-  width: 158px;
+  width: 168px;
   position: sticky;
   z-index: 2000;
   align-self: flex-start;
@@ -3559,6 +3547,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   height: 36px;
+  text-decoration: none;
   white-space: nowrap;
   color: #959ba4;
   font-size: 16px;
@@ -3736,7 +3725,7 @@ footer .copyright {
   }
 }
 .works#increst #bannerSect .txtContent h1 {
-  max-width: 864px;
+  max-width: 874px;
   color: var(--darkTxt);
 }
 @media (max-width: 600px) {
@@ -3746,7 +3735,7 @@ footer .copyright {
 }
 .works#increst #bannerSect .txtContent .content {
   color: var(--darkTxt);
-  max-width: 483px;
+  max-width: 532px;
 }
 @media (max-width: 600px) {
   .works#increst #bannerSect .txtContent .content {
@@ -3790,7 +3779,7 @@ footer .copyright {
   transform: translateX(46.5226130653%);
 }
 .works#nachonachoPage #bannerSect .txtContent h1 {
-  max-width: 736.3px;
+  max-width: 841px;
 }
 .works#nachonachoPage #bannerSect .txtContent h1 span:last-child {
   display: none;
@@ -3807,7 +3796,7 @@ footer .copyright {
   }
 }
 .works#nachonachoPage #bannerSect .txtContent .content {
-  max-width: 736.3px;
+  max-width: 841px;
 }
 @media (max-width: 600px) {
   .works#nachonachoPage #bannerSect .txtContent .content {
@@ -3827,7 +3816,7 @@ footer .copyright {
   }
 }
 .works#nachonachoPage #outcome .dFlex > div {
-  background: #18ff04;
+  background: #fafafb;
   color: #010114;
   padding: 48px 24px;
   flex: 1 300px;
@@ -4321,7 +4310,7 @@ footer .copyright {
 }
 #pageCtrl .eachCtrl:hover {
   background: rgba(249, 249, 249, 0.1);
-  color: #18ff04;
+  color: #fafafb;
 }
 
 #about {

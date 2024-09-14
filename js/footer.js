@@ -165,7 +165,15 @@ document.documentElement.style.setProperty(
     '--scrollBarW',
     `${window.innerWidth - document.body.clientWidth}px`
 );
+const removeWorksFadeAnim = () => {
+    if (window.innerWidth <= 600) {
+        document
+            .querySelectorAll('#works .fadeAnim')
+            .forEach((el) => el.classList.remove('fadeAnim'));
+    }
+};
 if (page == 'home') {
+    removeWorksFadeAnim();
     initiateHorzScrlEl();
 }
 window.onresize = () => {
@@ -178,6 +186,7 @@ window.onresize = () => {
         `${window.innerWidth - document.body.clientWidth}px`
     );
     if (page == 'home') {
+        removeWorksFadeAnim();
         initiateHorzScrlEl();
     }
 };
