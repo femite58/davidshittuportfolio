@@ -9,10 +9,10 @@ document.write(`
 
   gtag('config', 'G-TBNYGRHMNN');
 </script>
-        <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Bold.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Black.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Book.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/CircularStd-Medium.woff2" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Bold.woff2" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-SemiBold.woff2" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Regular.woff2" crossorigin />
+        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Medium.woff2" crossorigin />
         <link rel="stylesheet" href="${path}style.css" type="text/css" />
         <link rel="icon" href="${path}assets/images/favicon.png"/>
     </head>
