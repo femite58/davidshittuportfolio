@@ -5,7 +5,7 @@ document.write(`
                     <div class="smallPart">
                         <a href="/" class="logo">
                             <img
-                                src="${path}assets/images/logo_full.svg"
+                                src="/assets/images/logo_full.svg"
                                 alt="David Shittu"
                             />
                         </a>
@@ -71,7 +71,7 @@ document.write(`
         <div id="scrollTop">
             <span class="svgIcon-arrowUp"></span>
         </div>
-        <script src="${path}js/svgIcons.js"></script>
+        <script src="/js/svgIcons.js"></script>
     </body>
 </html>
 `);

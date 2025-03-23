@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--#include virtual="/components/head-metadata.html" -->
         <title>David Shittu, Product Designer</title>
         <meta
             name="description"
@@ -13,11 +11,9 @@
             property="og:image"
             content="https://davidshittu.com/assets/images/david_shittu.jpg"
         />
-        <script>
-            let page = "home";
-            let pPath = "./";
-        </script>
-        <script src="js/header.js"></script>
+    </head>
+    <body>
+        <!--#include virtual="/components/header.html" -->
         <main>
             <section id="welcomeSect">
                 <div class="bodyCont">
@@ -40,7 +36,7 @@
                             <a href="http://www.garcy.studio/" target="_blank"
                                 >Garcy Studio</a
                             >. I believe that design is more about people than
-                            the user interface. 
+                            the user interface.
                         </p>
                         <div class="btnCont">
                             <a
@@ -56,325 +52,6 @@
                                 >Resume</a
                             >
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section id="partners">
-                <div class="bodyCont">
-                    <div class="bannerCarousel">
-                        <div class="flexCont">
-                            <div class="carouselItem">
-                                <div class="sponsCont">
-                                    <img
-                                        src="assets/images/partners/cnc_logo.svg"
-                                        alt="CNC Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/NachoNacho_logo.svg"
-                                        alt="NachoNacho Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Shypfort.svg"
-                                        alt="Shypfort Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Multipolls.svg"
-                                        alt="Multipolls Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/MyFeed.svg"
-                                        alt="MyFeed Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Lurvity.svg"
-                                        alt="Lurvity Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Scoutlage.svg"
-                                        alt="Scoutlage Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/koule.png"
-                                        alt="Koule Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div class="carouselItem">
-                                <div class="sponsCont">
-                                    <img
-                                        src="assets/images/partners/cnc_logo.svg"
-                                        alt="CNC Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/NachoNacho_logo.svg"
-                                        alt="NachoNacho Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Shypfort.svg"
-                                        alt="Shypfort Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Multipolls.svg"
-                                        alt="Multipolls Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/MyFeed.svg"
-                                        alt="MyFeed Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Lurvity.svg"
-                                        alt="Lurvity Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/Scoutlage.svg"
-                                        alt="Scoutlage Logo"
-                                    />
-                                    <img
-                                        src="assets/images/partners/koule.png"
-                                        alt="Koule Logo"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prev"></div>
-                        <div class="next"></div>
-                    </div>
-                </div>
-            </section>
-            <div id="works" style="background: #2475ff">
-                <section
-                    id="nachonachoSect"
-                    class="eachWork txtWhite"
-                    data-bg="#2475FF"
-                >
-                    <div class="bodyCont">
-                        <div class="flexCont">
-                            <div class="txtCont">
-                                <h2>
-                                    NachoNacho: A B2B SaaS and Services
-                                    Marketplace Powered by Fintech and AI
-                                </h2>
-                                <div class="btnCont">
-                                    <a
-                                        href="/works/nachonacho.html"
-                                        class="secBtn"
-                                        >View Case Study</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="imgCont fadeAnim noFade">
-                                <img
-                                    src="assets/images/nachonacho_mockup_home.svg"
-                                    alt="NachoNacho Mockup"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="boltSect" class="eachWork" data-bg="#34D186">
-                    <div class="bodyCont">
-                        <div class="flexCont">
-                            <div class="txtCont">
-                                <h2>Improving Bolt’s pricing strategy</h2>
-                                <div class="btnCont">
-                                    <a href="/works/bolt.html" class="secBtn"
-                                        >View Case Study</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="imgCont">
-                                <div
-                                    class="innerCont fadeAnim bottom600 noFade"
-                                >
-                                    <img
-                                        src="assets/images/bolt_app_home1.png"
-                                        alt="Bolt Mockup"
-                                    />
-                                </div>
-                                <div
-                                    class="innerCont fadeAnim bottom300 noFade"
-                                >
-                                    <img
-                                        src="assets/images/bolt_app_home2.png"
-                                        alt="Bolt Mockup"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="increstSect" class="eachWork" data-bg="#47C1F0">
-                    <div class="bodyCont">
-                        <div class="flexCont">
-                            <div class="txtCont">
-                                <h2>
-                                    Increst: Stock Market Investing for
-                                    Beginners
-                                </h2>
-                                <div class="btnCont">
-                                    <a href="/works/increst.html" class="secBtn"
-                                        >View Case Study</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="imgCont">
-                                <div
-                                    class="innerCont fadeAnim bottom300 noFade"
-                                >
-                                    <img
-                                        src="assets/images/increst_app_home1.svg"
-                                        alt="Increst Mockup"
-                                    />
-                                </div>
-                                <div
-                                    class="innerCont fadeAnim bottom600 noFade"
-                                >
-                                    <img
-                                        src="assets/images/increst_app_home2.svg"
-                                        alt="Increst Mockup"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div id="whitePart">
-                <h2>
-                    Check out more <br />
-                    UI designs
-                    <a href="https://dribbble.com/SDavid" target="_blank"
-                        >here</a
-                    >
-                </h2>
-                <div class="slideCont">
-                    <div class="bannerCarousel">
-                        <div class="flexCont">
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs1.svg"
-                                    alt="My Designs"
-                                />
-                            </div>
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs2.png"
-                                    alt="My Designs"
-                                />
-                            </div>
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs3.jpg"
-                                    alt="My Designs"
-                                />
-                            </div>
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs4.png"
-                                    alt="My Designs"
-                                />
-                            </div>
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs5.jpg"
-                                    alt="My Designs"
-                                />
-                            </div>
-                            <div class="carouselItem">
-                                <img
-                                    src="assets/images/parallax/ui_designs6.png"
-                                    alt="My Designs"
-                                />
-                            </div>
-                        </div>
-                        <div class="prev"></div>
-                        <div class="next"></div>
-                    </div>
-                </div>
-            </div>
-            <section id="testimonial">
-                <div class="bodyCont">
-                    <h2>
-                        Don't have to take my word for it, hear what people say
-                    </h2>
-                    <div class="testiFlex">
-                        <div class="eachTesti">
-                            <div class="imgCont">
-                                <img
-                                    src="assets/images/testimonial/testi_user1.png"
-                                    alt="Tom Garcy"
-                                />
-                                <span class="svgIcon-quote"></span>
-                            </div>
-                            <div class="name">Tom Garcy</div>
-                            <div class="title">
-                                Founder & CEO, This is Garcy & Kyugo
-                            </div>
-                            <div class="content">
-                                David simply stands out in the world of UX
-                                designers. His attention to detail is excellent.
-                                He's very independent and one of the few being
-                                able to transform your brief completely into
-                                something even better and outstanding.
-                            </div>
-                        </div>
-                        <div class="eachTesti">
-                            <div class="imgCont">
-                                <img
-                                    src="assets/images/testimonial/testi_user2.png"
-                                    alt="Andy Karuza"
-                                />
-                            </div>
-                            <div class="name">Andy Karuza</div>
-                            <div class="title">Marketing lead, NachoNacho</div>
-                            <div class="content">
-                                David is an excellent designer to work with. He
-                                is very intuitive, one of those designers you
-                                give an idea to, and he comes back with
-                                something better than you could have imagined.
-                            </div>
-                        </div>
-                        <div class="eachTesti">
-                            <div class="imgCont">
-                                <img
-                                    src="assets/images/testimonial/testi_user3.png"
-                                    alt="Godswill Ikpe"
-                                />
-                            </div>
-                            <div class="name">Godswill Ikpe</div>
-                            <div class="title">CEO, Shypfort</div>
-                            <div class="content">
-                                David is a fantastic team player and has
-                                excellent communication skills. His exceptional
-                                design skills were not limited to his work; he
-                                also brought infectious positive energy to the
-                                team.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="callToAction">
-                <div class="bodyCont">
-                    <div class="darkBgCta">
-                        <img
-                            src="assets/images/rect_design.svg"
-                            alt="Rectangle Design"
-                        />
-                        <img
-                            src="assets/images/rect_design2.svg"
-                            alt="Rectangle Design"
-                        />
-                        <div class="txt">
-                            You’ve made it this far, don’t be shy to say hello
-                            :)
-                        </div>
-                        <a
-                            href="mailto:davidshittu02@gmail.com?body=Hello%20David"
-                            target="_blank"
-                            class="primBtn"
-                            >Reach Out</a
-                        >
                     </div>
                 </div>
             </section>
@@ -410,5 +87,5 @@
             });
         </script>
         <script src="js/footer.js"></script>
-    </head>
+    </body>
 </html>

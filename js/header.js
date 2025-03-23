@@ -1,20 +1,6 @@
 let path = pPath || '../';
 document.write(`
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBNYGRHMNN"></script> 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-TBNYGRHMNN');
-</script>
-        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Bold.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-SemiBold.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Regular.woff2" crossorigin />
-        <link rel="preload" as="font" href="${path}assets/fonts/SpaceGrotesk-Medium.woff2" crossorigin />
-        <link rel="stylesheet" href="${path}style.css" type="text/css" />
-        <link rel="icon" href="${path}assets/images/favicon.png"/>
     </head>
     <body>
     

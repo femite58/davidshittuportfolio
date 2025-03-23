@@ -1,1 +1,102 @@
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: local("Cabinet Grotesk Regular")
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Regular.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: local("Cabinet Grotesk Medium")
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Medium.woff2);
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: local("Cabinet Grotesk Bold")
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: local("Cabinet Grotesk Extrabold")
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Extrabold.woff2);
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: local("Cabinet Grotesk Black")
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Black.woff2);
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-Book")
+        url(/assets/fonts/CircularStd/CircularStd-Book.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-BookItalic")
+        url(/assets/fonts/CircularStd/CircularStd-BookItalic.woff2);
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-Medium")
+        url(/assets/fonts/CircularStd/CircularStd-Medium.woff2);
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-MediumItalic")
+        url(/assets/fonts/CircularStd/CircularStd-MediumItalic.woff2);
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-Bold")
+        url(/assets/fonts/CircularStd/CircularStd-Bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-BoldItalic")
+        url(/assets/fonts/CircularStd/CircularStd-BoldItalic.woff2);
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-Black")
+        url(/assets/fonts/CircularStd/CircularStd-Black.woff2);
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: local("CircularStd-BlackItalic")
+        url(/assets/fonts/CircularStd/CircularStd-BlackItalic.woff2);
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@use 'styles/components/colors' as *;
+
 @use "styles/components" as *;
+
+body {
+    font-family: 'Circular Std';
+    font-size: 20px;
+    color: var(--white-secondary);
+}
