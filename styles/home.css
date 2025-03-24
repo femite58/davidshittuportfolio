@@ -1,3 +1,25 @@
 #welcomeSect {
-  background: #AE7FFF;
+  background: #ae7fff;
+  color: var(--black);
+}
+#welcomeSect h1 {
+  font-family: "Cabinet Grotesk";
+  font-size: 64px;
+  font-weight: bold;
+}
+#welcomeSect .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#welcomeSect .actions .btn:not(.darkBtn) {
+  padding: 0;
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: underline;
+}
+#welcomeSect .actions .leftActions {
+  display: flex;
+  gap: 32px;
+  align-items: center;
 }/*# sourceMappingURL=home.css.map */

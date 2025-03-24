@@ -1,3 +1,29 @@
 #welcomeSect {
-    background: #AE7FFF;
+    background: #ae7fff;
+    color: var(--black);
+
+    h1 {
+        font-family: "Cabinet Grotesk";
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn:not(.darkBtn) {
+            padding: 0;
+            color: var(--black);
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        .leftActions {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+    }
 }
