@@ -1,3 +1,7 @@
+@use "styles/components/colors" as *;
+
+@use "styles/components" as *;
+
 @font-face {
     font-family: "Cabinet Grotesk";
     src: local("Cabinet Grotesk Regular")
@@ -91,12 +95,22 @@
     font-display: swap;
 }
 
-@use 'styles/components/colors' as *;
-
-@use "styles/components" as *;
-
 body {
-    font-family: 'Circular Std';
+    font-family: "Circular Std";
     font-size: 20px;
     color: var(--white-secondary);
+    background: var(--black);
+    margin: 0;
+
+    main {
+        section:first-child {
+            padding-top: 97px;
+        }
+    }
+}
+
+.bodyCont {
+    max-width: 1210px;
+    margin: auto;
+    padding: 0 15px;
 }
