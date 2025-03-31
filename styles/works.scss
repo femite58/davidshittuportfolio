@@ -1,4 +1,4 @@
-section#introSection {
+#introSection {
     padding-top: calc(97px + 129px);
 
     h1 {
@@ -9,6 +9,64 @@ section#introSection {
         em {
             font-style: normal;
             color: var(--white);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+#mainContent {
+    padding: 120px 0;
+}
+
+.eachSection {
+    max-width: 1030px;
+    margin: 0 auto 120px;
+    padding: 0 15px;
+
+    .content {
+        color: var(--white-secondary);
+        line-height: 1.5;
+    }
+
+    strong {
+        color: var(--white);
+    }
+}
+
+#overviewGrid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 !important;
+
+    h2 {
+        color: var(--white-tertiary);
+        font-size: 20px;
+        font-weight: 450;
+        margin-bottom: 16px;
+    }
+
+    .content {
+        color: var(--white);
+    }
+}
+
+#overview {
+    .threeGridAnalysis {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap;
+
+        .each {
+            flex: 1 300px;
+            width: 300px;
+            padding: 32px;
+            border-radius: 16px;
+            background: var(--white3);
         }
     }
 }
