@@ -35,6 +35,9 @@ section h2 {
   margin: 0 auto 120px;
   padding: 0 15px;
 }
+.eachSection img {
+  max-width: 100%;
+}
 .eachSection .content {
   color: var(--white-secondary);
   line-height: 1.5;

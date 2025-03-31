@@ -39,6 +39,10 @@ section {
     margin: 0 auto 120px;
     padding: 0 15px;
 
+    img {
+        max-width: 100%;
+    }
+
     .content {
         color: var(--white-secondary);
         line-height: 1.5;
