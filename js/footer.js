@@ -172,27 +172,27 @@ finalSc = 0;
 window.addEventListener(
     'wheel',
     (e) => {
-        e.preventDefault();
-        let initSc = window.scrollY;
-        finalSc += e.deltaY;
-        isWheel = true;
-        let maxExt = document.documentElement.scrollHeight - window.innerHeight;
+        // e.preventDefault();
+        // let initSc = window.scrollY;
+        // finalSc += e.deltaY;
+        // isWheel = true;
+        // let maxExt = document.documentElement.scrollHeight - window.innerHeight;
 
-        finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
-        easeOut = (t) => {
-            return 1 - Math.pow(1 - t, 5);
-            // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
-        };
-        animate({
-            timing: easeOut,
-            draw(chng) {
-                let extent = finalSc - initSc;
-                window.scrollTo({
-                    top: initSc + extent * chng,
-                });
-            },
-            duration: 1500,
-        });
+        // finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
+        // easeOut = (t) => {
+        //     return 1 - Math.pow(1 - t, 5);
+        //     // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
+        // };
+        // animate({
+        //     timing: easeOut,
+        //     draw(chng) {
+        //         let extent = finalSc - initSc;
+        //         window.scrollTo({
+        //             top: initSc + extent * chng,
+        //         });
+        //     },
+        //     duration: 1500,
+        // });
     },
     { passive: false }
 );

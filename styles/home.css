@@ -7,6 +7,7 @@
   font-family: "Cabinet Grotesk";
   font-size: 64px;
   font-weight: bold;
+  margin-bottom: 80px;
 }
 #welcomeSect .actions {
   display: flex;
@@ -23,4 +24,116 @@
   display: flex;
   gap: 32px;
   align-items: center;
+}
+
+#works {
+  padding: 240px 0 0;
+}
+#works .eachWork {
+  text-decoration: none;
+  display: block;
+}
+#works .eachWork:not(:last-child) {
+  margin-bottom: 280px;
+}
+#works .eachWork .imgCont {
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  height: 480px;
+  margin-bottom: 24px;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+#works .eachWork .imgCont img {
+  transition: transform 0.3s ease;
+}
+#works .eachWork .label {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--white);
+  font-family: "Cabinet Grotesk";
+}
+#works .eachWork:hover .imgCont img {
+  transform: scale(1.2);
+}
+#works .eachWork:hover .label {
+  text-decoration: underline;
+}
+#works .eachWork.nachonacho .imgCont {
+  background-color: #2475ff;
+  align-items: flex-end;
+}
+#works .eachWork.nachonacho .imgCont img {
+  max-width: 703px;
+}
+#works .eachWork.bohemian .imgCont {
+  background-color: #6b9794;
+}
+#works .eachWork.bohemian .imgCont img {
+  max-width: 520px;
+}
+#works .eachWork.bolt .imgCont {
+  background-color: #34d186;
+}
+#works .eachWork.bolt .imgCont img {
+  max-width: 594.23px;
+}
+#works .eachWork.increst .imgCont {
+  background-color: #47c1f0;
+}
+#works .eachWork.increst .imgCont img {
+  max-width: 594px;
+}
+@media (max-width: 500px) {
+  #works .eachWork .imgCont {
+    height: 240px;
+  }
+  #works .eachWork .label {
+    font-size: 24px;
+  }
+}
+
+#testimonial {
+  padding: 280px 0 280px;
+}
+#testimonial h2 {
+  font-family: "Cabinet Grotesk";
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 80px;
+}
+#testimonial .testimonies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+}
+#testimonial .eachTesti {
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(52, 52, 52, 0.3490196078);
+}
+#testimonial .eachTesti .picture {
+  margin-bottom: 24px;
+}
+#testimonial .eachTesti .picture img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#testimonial .eachTesti .name {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-family: "Cabinet Grotesk";
+  font-weight: 800;
+}
+#testimonial .eachTesti .designation {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+#testimonial .eachTesti .name,
+#testimonial .eachTesti .designation {
+  color: var(--white);
 }/*# sourceMappingURL=home.css.map */

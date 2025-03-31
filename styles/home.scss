@@ -7,6 +7,7 @@
         font-family: "Cabinet Grotesk";
         font-size: 64px;
         font-weight: bold;
+        margin-bottom: 80px;
     }
 
     .actions {
@@ -25,6 +26,153 @@
             display: flex;
             gap: 32px;
             align-items: center;
+        }
+    }
+}
+#works {
+    padding: 240px 0 0;
+
+    .eachWork {
+        text-decoration: none;
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 280px;
+        }
+
+        .imgCont {
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            height: 480px;
+            margin-bottom: 24px;
+            align-items: center;
+            padding: 0 20px;
+            overflow: hidden;
+
+            img {
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .label {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--white);
+            font-family: "Cabinet Grotesk";
+        }
+
+        &:hover {
+            .imgCont {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+            .label {
+                text-decoration: underline;
+            }
+        }
+
+        &.nachonacho {
+            .imgCont {
+                background-color: #2475ff;
+                align-items: flex-end;
+
+                img {
+                    max-width: 703px;
+                }
+            }
+        }
+
+        &.bohemian {
+            .imgCont {
+                background-color: #6b9794;
+
+                img {
+                    max-width: 520px;
+                }
+            }
+        }
+
+        &.bolt {
+            .imgCont {
+                background-color: #34d186;
+
+                img {
+                    max-width: 594.23px;
+                }
+            }
+        }
+
+        &.increst {
+            .imgCont {
+                background-color: #47c1f0;
+
+                img {
+                    max-width: 594px;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            .imgCont {
+                height: 240px;
+            }
+
+            .label {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+#testimonial {
+    padding: 280px 0 280px;
+
+    h2 {
+        font-family: "Cabinet Grotesk";
+        font-size: 64px;
+        color: #fff;
+        margin-bottom: 80px;
+    }
+
+    .testimonies {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 32px;
+    }
+
+    .eachTesti {
+        padding: 32px;
+        border-radius: 24px;
+        background: #34343459;
+
+        .picture {
+            margin-bottom: 24px;
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+
+        .name {
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-family: "Cabinet Grotesk";
+            font-weight: 800;
+        }
+
+        .designation {
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .name,
+        .designation {
+            color: var(--white);
         }
     }
 }
