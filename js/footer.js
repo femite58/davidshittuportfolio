@@ -1,5 +1,6 @@
 const toggle = document.querySelector('#toggle');
 const header = document.querySelector('header');
+const menu = document.getElementById('menu');
 const scrollTop = document.querySelector('#scrollTop');
 
 const fadeTransition = () => {
@@ -97,10 +98,6 @@ window.onresize = () => {
         '--scrollBarW',
         `${window.innerWidth - document.body.clientWidth}px`
     );
-    if (page == 'home') {
-        removeWorksFadeAnim();
-        initiateHorzScrlEl();
-    }
 };
 scrollTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -177,7 +174,6 @@ window.addEventListener(
         // finalSc += e.deltaY;
         // isWheel = true;
         // let maxExt = document.documentElement.scrollHeight - window.innerHeight;
-
         // finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
         // easeOut = (t) => {
         //     return 1 - Math.pow(1 - t, 5);
@@ -222,6 +218,16 @@ scrlEl.addEventListener('scroll', (e) => {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
+    }
+    if (page === 'home') {
+        const works = document.querySelector('#works');
+        worksBc = works.getBoundingClientRect();
+        const headerBc = header.getBoundingClientRect();
+        if (worksBc.top <= headerBc.height / 2) {
+            header.classList.remove('transparent');
+        } else {
+            header.classList.add('transparent');
+        }
     }
     fadeTransition();
 });

@@ -3,13 +3,20 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    transition: 0.3s ease;
 
     nav {
-        height: 97px;
+        --header-height: 97px;
+
+        height: var(--header-height);
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         .logo {
+            position: relative;
+            z-index: 20;
+
             &.white {
                 display: flex;
             }
@@ -25,13 +32,89 @@ header {
             font-weight: 450;
         }
 
-        .menu {
+        #menu {
             display: flex;
             gap: 48px;
             align-items: center;
             flex: 1 10px;
             width: 10px;
             justify-content: center;
+
+            .btn {
+                display: none !important;
+            }
+        }
+
+        .rightActions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            position: relative;
+            z-index: 20;
+        }
+
+        #toggle {
+            width: 32px;
+            height: 32px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 20;
+
+            #toggleInner {
+                width: 24px;
+                height: 16px;
+                position: relative;
+
+                div {
+                    height: 2px;
+                    border-radius: 10px;
+                    background: var(--white);
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    transition: 0.3s ease;
+
+                    &:first-child {
+                        top: 0;
+                    }
+
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:last-child {
+                        top: 100%;
+                        transform: translateY(-100%);
+                    }
+                }
+            }
+
+            &.opened {
+                #toggleInner {
+                    div {
+                        background: var(--white) !important;
+
+                        &:not(:nth-child(2)) {
+                            top: 50%;
+
+                            &:first-child {
+                                transform: translateY(-50%) rotate(45deg);
+                            }
+
+                            &:last-child {
+                                transform: translateY(-50%) rotate(-45deg);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            transform: scaleX(0);
+                        }
+                    }
+                }
+            }
         }
 
         .whiteBtn {
@@ -40,6 +123,42 @@ header {
 
         .darkBtn {
             display: none;
+        }
+
+        @media (max-width: 650px) {
+            #menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: var(--black);
+                transition: 0.3s ease;
+                transform: translateX(100%);
+                flex-direction: column;
+                gap: 14px;
+                height: var(--view-height);
+                padding: var(--header-height) 15px 15px;
+                z-index: 2;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .btn {
+                    width: 100%;
+                    display: flex !important;
+                }
+
+                &.opened {
+                    transform: translateX(0);
+                }
+            }
+
+            #toggle {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 500px) {
+            --header-height: 68px;
         }
     }
 
@@ -65,11 +184,51 @@ header {
             .darkBtn {
                 display: flex;
             }
+
+            #toggle {
+                #toggleInner {
+                    div {
+                        background: var(--black);
+                    }
+                }
+            }
         }
     }
 
     &.scrolled {
         background: var(--white2);
         backdrop-filter: blur(5px);
+    }
+
+    &:has(.opened) {
+        .logo {
+            &.white {
+                display: flex;
+            }
+
+            &.dark {
+                display: none;
+            }
+        }
+
+        a {
+            color: var(--white-secondary);
+        }
+
+        nav {
+            .whiteBtn {
+                display: flex;
+            }
+
+            .darkBtn {
+                display: none;
+            }
+
+            & > .rightActions {
+                .btn {
+                    display: none !important;
+                }
+            }
+        }
     }
 }

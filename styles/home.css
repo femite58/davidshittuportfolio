@@ -3,11 +3,22 @@
   color: var(--black);
   padding-bottom: 213px;
 }
+@media (max-width: 500px) {
+  #welcomeSect {
+    padding-bottom: 168px;
+  }
+}
 #welcomeSect h1 {
   font-family: "Cabinet Grotesk";
   font-size: 64px;
   font-weight: bold;
   margin-bottom: 80px;
+}
+@media (max-width: 500px) {
+  #welcomeSect h1 {
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
 }
 #welcomeSect .actions {
   display: flex;
@@ -25,9 +36,34 @@
   gap: 32px;
   align-items: center;
 }
+@media (max-width: 500px) {
+  #welcomeSect .actions {
+    flex-direction: column;
+    gap: 32px;
+  }
+  #welcomeSect .actions .leftActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  #welcomeSect .actions .leftActions .darkBtn {
+    height: 52px;
+    width: 100%;
+  }
+  #welcomeSect .actions .btn:not(.darkBtn) {
+    height: auto;
+  }
+  #welcomeSect .actions .btn:not(.darkBtn) img {
+    width: 16px;
+  }
+}
 
 #works {
   padding: 240px 0 0;
+}
+@media (max-width: 500px) {
+  #works {
+    padding: 64px 0 0;
+  }
 }
 #works .eachWork {
   text-decoration: none;
@@ -36,6 +72,11 @@
 #works .eachWork:not(:last-child) {
   margin-bottom: 280px;
 }
+@media (max-width: 500px) {
+  #works .eachWork:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
 #works .eachWork .imgCont {
   border-radius: 24px;
   display: flex;
@@ -43,11 +84,12 @@
   height: 480px;
   margin-bottom: 24px;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px;
   overflow: hidden;
 }
 #works .eachWork .imgCont img {
   transition: transform 0.3s ease;
+  max-width: 100%;
 }
 #works .eachWork .label {
   font-size: 64px;
@@ -66,25 +108,45 @@
   align-items: flex-end;
 }
 #works .eachWork.nachonacho .imgCont img {
-  max-width: 703px;
+  width: 703px;
+}
+@media (max-width: 500px) {
+  #works .eachWork.nachonacho .imgCont img {
+    width: 302px;
+  }
 }
 #works .eachWork.bohemian .imgCont {
   background-color: #6b9794;
 }
 #works .eachWork.bohemian .imgCont img {
-  max-width: 520px;
+  width: 520px;
+}
+@media (max-width: 500px) {
+  #works .eachWork.bohemian .imgCont img {
+    width: 250px;
+  }
 }
 #works .eachWork.bolt .imgCont {
   background-color: #34d186;
 }
 #works .eachWork.bolt .imgCont img {
-  max-width: 594.23px;
+  width: 594.23px;
+}
+@media (max-width: 500px) {
+  #works .eachWork.bolt .imgCont img {
+    width: 288.16px;
+  }
 }
 #works .eachWork.increst .imgCont {
   background-color: #47c1f0;
 }
 #works .eachWork.increst .imgCont img {
-  max-width: 594px;
+  width: 594px;
+}
+@media (max-width: 500px) {
+  #works .eachWork.increst .imgCont img {
+    width: 288.16px;
+  }
 }
 @media (max-width: 500px) {
   #works .eachWork .imgCont {
@@ -122,6 +184,7 @@
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 #testimonial .eachTesti .name {
   margin-bottom: 8px;
@@ -136,4 +199,29 @@
 #testimonial .eachTesti .name,
 #testimonial .eachTesti .designation {
   color: var(--white);
+}
+@media (max-width: 500px) {
+  #testimonial {
+    padding: 80px 0 80px;
+  }
+  #testimonial h2 {
+    font-size: 24px;
+    margin-bottom: 64px;
+  }
+  #testimonial .testimonies {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+  #testimonial .eachTesti {
+    padding: 24px;
+    border-radius: 16px;
+  }
+  #testimonial .eachTesti .picture img {
+    width: 64px;
+    height: 64px;
+  }
+  #testimonial .eachTesti .name {
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=home.css.map */

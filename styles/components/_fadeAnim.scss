@@ -1,0 +1,60 @@
+.fadeAnim {
+    & > * {
+        position: relative;
+        transition: 1s ease;
+        top: 400px;
+        opacity: 0;
+    }
+    &.noFade {
+        & > * {
+            opacity: 1;
+        }
+    }
+    @for $i from 1 through 600 {
+        &.bottom#{$i} {
+            & > * {
+                top: #{$i}px;
+            }
+        }
+    }
+    @for $i from 0 through 9 {
+        @for $j from 1 through 9 {
+            &.delay#{$i}-#{$j} {
+                & > * {
+                    transition-delay: #{(($i * 10) + $j) / 10}s;
+                }
+            }
+        }
+    }
+    &.left {
+        & > * {
+            left: -400px;
+            top: 0;
+        }
+    }
+    &.right {
+        & > * {
+            left: 400px;
+            top: 0;
+        }
+    }
+    &.show {
+        & > * {
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+    }
+    @media (max-width: 600px) {
+        &.mobileDelay0 {
+            & > * {
+                opacity: 1;
+                top: 0;
+                left: 0;
+            }
+            & > * {
+                transition-delay: 0s;
+            }
+        }
+    }
+}
