@@ -12,28 +12,32 @@
 @font-face {
     font-family: "Cabinet Grotesk";
     src: local("Cabinet Grotesk Medium"),
-        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Medium.woff2) format("woff2");
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Medium.woff2)
+            format("woff2");
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: local("Cabinet Grotesk Bold"),
-        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.woff2) format("woff2");
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Bold.woff2)
+            format("woff2");
     font-weight: 700;
     font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: local("Cabinet Grotesk Extrabold"),
-        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Extrabold.woff2) format("woff2");
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Extrabold.woff2)
+            format("woff2");
     font-weight: 800;
     font-display: swap;
 }
 @font-face {
     font-family: "Cabinet Grotesk";
     src: local("Cabinet Grotesk Black"),
-        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Black.woff2) format("woff2");
+        url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Black.woff2)
+            format("woff2");
     font-weight: 900;
     font-display: swap;
 }
@@ -46,7 +50,8 @@
 @font-face {
     font-family: "Circular Std";
     src: local("CircularStd-BookItalic"),
-        url(/assets/fonts/CircularStd/CircularStd-BookItalic.woff2) format("woff2");
+        url(/assets/fonts/CircularStd/CircularStd-BookItalic.woff2)
+            format("woff2");
     font-style: italic;
     font-display: swap;
 }
@@ -60,7 +65,8 @@
 @font-face {
     font-family: "Circular Std";
     src: local("CircularStd-MediumItalic"),
-        url(/assets/fonts/CircularStd/CircularStd-MediumItalic.woff2) format("woff2");
+        url(/assets/fonts/CircularStd/CircularStd-MediumItalic.woff2)
+            format("woff2");
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -75,7 +81,8 @@
 @font-face {
     font-family: "Circular Std";
     src: local("CircularStd-BoldItalic"),
-        url(/assets/fonts/CircularStd/CircularStd-BoldItalic.woff2) format("woff2");
+        url(/assets/fonts/CircularStd/CircularStd-BoldItalic.woff2)
+            format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -89,8 +96,9 @@
 }
 @font-face {
     font-family: "Circular Std";
-    src: local("CircularStd-BlackItalic"), 
-        url(/assets/fonts/CircularStd/CircularStd-BlackItalic.woff2) format("woff2");
+    src: local("CircularStd-BlackItalic"),
+        url(/assets/fonts/CircularStd/CircularStd-BlackItalic.woff2)
+            format("woff2");
     font-weight: 800;
     font-style: italic;
     font-display: swap;
@@ -107,6 +115,32 @@ body {
         section:first-child {
             padding-top: calc(97px + 145px);
         }
+    }
+
+    @media (max-width: 500px) {
+        font-size: 16px;
+    }
+}
+
+.logo {
+    font-size: 20px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-decoration: none;
+
+    &.dark {
+        color: var(--black);
+    }
+
+    &.white {
+        color: var(--white);
+    }
+
+    @media (max-width: 500px) {
+        font-size: 16px;
+        height: 36px;
     }
 }
 

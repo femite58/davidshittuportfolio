@@ -1,0 +1,39 @@
+footer {
+    padding: 32px 0;
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        a {
+            color: var(--white-tertiary);
+            text-decoration: none;
+        }
+
+        .btn {
+            align-self: flex-start;
+        }
+
+        .logoAndLinks {
+            display: flex;
+            flex: 1 10px;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .socialLinks {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex: 1 430px;
+            justify-content: center;
+
+            @media (max-width: 840px) {
+                gap: 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}

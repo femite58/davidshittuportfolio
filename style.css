@@ -1,6 +1,7 @@
 :root {
   --white: #f7f7f7;
   --white-secondary: #acacac;
+  --white-tertiary: #959ba4;
   --black: #000000;
   --white1: #ffffff12;
   --white2: #ffffff01;
@@ -17,10 +18,11 @@ header nav {
   display: flex;
   align-items: center;
 }
-header nav .logo {
-  color: var(--white);
-  text-decoration: none !important;
-  font-weight: 500;
+header nav .logo.white {
+  display: flex;
+}
+header nav .logo.dark {
+  display: none;
 }
 header nav a {
   color: var(--white-secondary);
@@ -41,6 +43,12 @@ header nav .whiteBtn {
 header nav .darkBtn {
   display: none;
 }
+header.transparent .logo.white {
+  display: none;
+}
+header.transparent .logo.dark {
+  display: flex;
+}
 header.transparent a {
   color: var(--black);
 }
@@ -56,6 +64,42 @@ header.scrolled {
           backdrop-filter: blur(5px);
 }
 
+footer {
+  padding: 32px 0;
+}
+footer nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+footer nav a {
+  color: var(--white-tertiary);
+  text-decoration: none;
+}
+footer nav .btn {
+  align-self: flex-start;
+}
+footer nav .logoAndLinks {
+  display: flex;
+  flex: 1 10px;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+footer nav .socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1 430px;
+  justify-content: center;
+}
+@media (max-width: 840px) {
+  footer nav .socialLinks {
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -67,6 +111,7 @@ header.scrolled {
   border-radius: 100px;
   text-decoration: none;
   gap: 8px;
+  white-space: nowrap;
 }
 .btn.whiteBtn {
   background: var(--white);
@@ -75,6 +120,13 @@ header.scrolled {
 .btn.darkBtn {
   background: var(--black);
   color: var(--white);
+}
+@media (max-width: 500px) {
+  .btn {
+    font-size: 14px;
+    height: 36px;
+    padding: 0 16px;
+  }
 }
 
 @font-face {
@@ -165,6 +217,32 @@ body {
 }
 body main section:first-child {
   padding-top: 242px;
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.logo {
+  font-size: 20px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+.logo.dark {
+  color: var(--black);
+}
+.logo.white {
+  color: var(--white);
+}
+@media (max-width: 500px) {
+  .logo {
+    font-size: 16px;
+    height: 36px;
+  }
 }
 
 .bodyCont {

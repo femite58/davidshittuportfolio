@@ -10,9 +10,13 @@ header {
         align-items: center;
 
         .logo {
-            color: var(--white);
-            text-decoration: none !important;
-            font-weight: 500;
+            &.white {
+                display: flex;
+            }
+
+            &.dark {
+                display: none;
+            }
         }
 
         a {
@@ -40,6 +44,15 @@ header {
     }
 
     &.transparent {
+        .logo {
+            &.white {
+                display: none;
+            }
+
+            &.dark {
+                display: flex;
+            }
+        }
         a {
             color: var(--black);
         }

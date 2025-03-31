@@ -1,6 +1,7 @@
 #welcomeSect {
   background: #ae7fff;
   color: var(--black);
+  padding-bottom: 213px;
 }
 #welcomeSect h1 {
   font-family: "Cabinet Grotesk";
