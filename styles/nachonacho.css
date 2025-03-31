@@ -1,1 +1,38 @@
-/*# sourceMappingURL=nachonacho.css.map */
+#designStrategy .strategies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+#designStrategy .strategies .each {
+  padding: 44px;
+  border-radius: 16px;
+  background: var(--white3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  flex: 1 300px;
+}
+#designStrategy .strategies .each .icon img {
+  width: 48px;
+}
+@media (max-width: 500px) {
+  #designStrategy .strategies .each .icon img {
+    width: 32px;
+  }
+}
+@media (max-width: 500px) {
+  #designStrategy .strategies {
+    gap: 24px;
+  }
+  #designStrategy .strategies .each .label {
+    font-size: 24px;
+  }
+}
+#designStrategy .txtCard {
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--white3);
+}/*# sourceMappingURL=nachonacho.css.map */

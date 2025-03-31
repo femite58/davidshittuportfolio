@@ -21,7 +21,7 @@
     </head>
     <body>
         <script>
-            const headerClass = "";
+            const headerClass = "default";
             const page = "nachonacho";
         </script>
         <!--#include virtual="/components/header.html" -->
@@ -34,7 +34,7 @@
                         <em>NachoNacho simplifies everything in one place.</em>
                     </h1>
                     <img
-                        class="showModal"
+                        class="openModal"
                         src="/assets/images/nachonacho/nachonacho-intro.png"
                         alt="NachoNacho simplifies everything in one place."
                     />
@@ -141,8 +141,356 @@
                         <strong>expanding our reach.</strong>
                     </div>
                 </section>
+                <section id="myApproach">
+                    <div class="eachSection">
+                        <h2>My Approach</h2>
+                        <div class="content">
+                            While we had some assumptions about our problems, I
+                            wanted to identify the user's core pain points and
+                            gain insights into potential solutions using various
+                            research methodologies. <br /><br />
+
+                            As a fast paced startup with limited time and
+                            budget, we couldn’t conduct one-on-one interviews
+                            with users. However, I relied on: <br />
+                            <ul>
+                                <li>
+                                    A secondary report based on
+                                    <strong>user feedback</strong> collected by
+                                    the Customer Success team.
+                                </li>
+                                <li>
+                                    A <strong>UX audit</strong> analyzing user
+                                    experience, user flows, and journeys, along
+                                    with
+                                    <strong
+                                        >behavioral insights from
+                                        Hotjar.</strong
+                                    >
+                                </li>
+                                <li>
+                                    <strong>Stakeholder feedback</strong> to
+                                    ensure our alignment with business
+                                    strategies.
+                                </li>
+                                <li>
+                                    Additional
+                                    <strong>secondary research</strong> on
+                                    competitors to gather further context and
+                                    insights.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="carousel">
+                            <div class="carouselParent">
+                                <div class="flexCont">
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/nachonacho/my-approach1.svg"
+                                                alt="user feedback"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/nachonacho/my-approach2.svg"
+                                                alt="UX audit"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/nachonacho/my-approach3.png"
+                                                alt="Stakeholder feedback"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/nachonacho/my-approach4.png"
+                                                alt="secondary research"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <input
+                                    id="approachPrev"
+                                    type="text"
+                                    hidden
+                                    class="prev"
+                                />
+                                <input
+                                    id="approachNext"
+                                    type="text"
+                                    hidden
+                                    class="next"
+                                />
+                                <div class="indicators">
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="approachInd1"
+                                        class="indicatorItem activeInd"
+                                    />
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="approachInd2"
+                                        class="indicatorItem"
+                                    />
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="approachInd3"
+                                        class="indicatorItem"
+                                    />
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="approachInd4"
+                                        class="indicatorItem"
+                                    />
+                                </div>
+                            </div>
+                            <div class="cusIndicatorsAndCtrls">
+                                <div class="indicators">
+                                    <label
+                                        for="approachInd1"
+                                        class="indicator active"
+                                    ></label>
+                                    <label
+                                        for="approachInd2"
+                                        class="indicator"
+                                    ></label>
+                                    <label
+                                        for="approachInd3"
+                                        class="indicator"
+                                    ></label>
+                                    <label
+                                        for="approachInd4"
+                                        class="indicator"
+                                    ></label>
+                                </div>
+                                <div class="ctrls">
+                                    <label for="approachPrev" class="prevCtrl">
+                                        <img
+                                            src="/assets/icons/arrow-left.svg"
+                                            alt="arrow left"
+                                        />
+                                    </label>
+                                    <label for="approachNext" class="nextCtrl">
+                                        <img
+                                            src="/assets/icons/arrow-right.svg"
+                                            alt="arrow right"
+                                    /></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="notWorking">
+                    <div class="eachSection">
+                        <h2>
+                            Problem Statement: So, what exactly wasn’t working?
+                        </h2>
+                    </div>
+                    <div class="eachSection">
+                        <h3>Insight from research</h3>
+                        <div class="content">
+                            A deep dive into NachoNacho’s experience revealed
+                            several problems. <br /><br />
+
+                            <ul>
+                                <li>
+                                    <strong
+                                        >The onboarding process was too
+                                        long:</strong
+                                    >
+                                    A long KYC form was required before gaining
+                                    access to the product. Users had to complete
+                                    KYC for both personal and business accounts
+                                    before accessing the platform. Many screens
+                                    contained only a single question, making the
+                                    process feel unnecessarily tedious and
+                                    frustrating.
+                                </li>
+                                <li>
+                                    <strong
+                                        >NachoCard creation was
+                                        complicated</strong
+                                    >
+                                    – The standout feature of the product was
+                                    the creation of NachoCards, a virtual credit
+                                    card designed to help you manage all your
+                                    subscriptions. The process spanned multiple
+                                    pages, involving 10 to 12 steps depending on
+                                    who the card was assigned to.
+                                </li>
+                                <li>
+                                    <strong>Component inconsistencies </strong>
+                                    – Many components were not scalable, often
+                                    designed for one-time use without
+                                    reusability in mind. There was no unified
+                                    component library to serve as a single
+                                    source of truth for design and development.
+                                </li>
+                                <li>
+                                    <strong>Poor Accessibility (A11Y):</strong>
+                                     Color contrast and text sizes did not
+                                    follow accessibility best practices, making
+                                    the product less inclusive.
+                                </li>
+                                <li>
+                                    <strong>Outdated User Interface – </strong>
+                                    The UI was outdated and needed a modern,
+                                    more refined look and feel.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="designStrategy" class="eachSection">
+                    <h2>Design Strategy: Our Guiding Principles</h2>
+                    <div class="strategies">
+                        <div class="each">
+                            <div class="icon mb24">
+                                <img
+                                    src="/assets/icons/arrow-growth.svg"
+                                    alt="Growth icon"
+                                />
+                            </div>
+                            <div class="label txt32">Growth</div>
+                        </div>
+                        <div class="each">
+                            <div class="icon mb24">
+                                <img
+                                    src="/assets/icons/frame-simple.svg"
+                                    alt="Simple frame icon"
+                                />
+                            </div>
+                            <div class="label txt32">Simplicity</div>
+                        </div>
+                        <div class="each">
+                            <div class="icon mb24">
+                                <img
+                                    src="/assets/icons/eject.svg"
+                                    alt="Scalability"
+                                />
+                            </div>
+                            <div class="label txt32">Scalability</div>
+                        </div>
+                    </div>
+                    <div class="txtCard">
+                        Our main focus for the product was reducing friction in
+                        the user journeys. How do we maximize for growth while
+                        ensuring the design remains simple and scalable?
+                    </div>
+                </section>
+                <section id="designingFor">
+                    <h2 class="eachSection">Who are we designing for?</h2>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/nachonacho/designing-for.svg"
+                            alt="A typical user of NachoNacho (User Persona)"
+                        />
+                        <div class="imgTitle">
+                            A typical user of NachoNacho (User Persona)
+                        </div>
+                    </div>
+                </section>
+                <section id="designSystem">
+                    <h2>Design System</h2>
+                    <div class="eachSection">
+                        <div class="content">
+                            In our effort to prioritize simplicity and
+                            scalability, I led the development of our first
+                            design system to ensure consistency across all
+                            products. This enabled us to ship redesigns faster
+                            while maintaining a unified UI, which was especially
+                            valuable for new offerings like Service Marketplace
+                            and the SaaS & AI Marketplace.
+                            <br /><br />
+                            <strong
+                                >Ultimately, it reduced design and development
+                                time by at least 50%.</strong
+                            >
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/nachonacho/design-system.png"
+                            alt="Design System"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Design System</div>
+                    </div>
+                </section>
+                <section id="solveProblem">
+                    <h2 class="eachSection">How did we solve the problems?</h2>
+                    <div class="eachSection">
+                        <h3>Onboarding Flow Redesign</h3>
+                        <div class="content">
+                            The onboarding process was long and repetitive,
+                            requiring extensive personal and business KYC forms
+                            upfront.
+                            <strong
+                                >We brought the KYC into the app, allowing users
+                                to explore first through a guided
+                                walkthrough.</strong
+                            >
+                            This way, they would see what we can offer them.
+                            They also get opportunities to create mock
+                            NachoCards. This reduced our drop off rate and
+                            boosted engagement.
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/nachonacho/onboarding-journey.svg"
+                            alt="Onboarding Journey"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Onboarding Journey</div>
+                    </div>
+                </section>
             </div>
         </main>
         <!--#include virtual="/components/footer.html" -->
+        <script src="/js/bannerCarousel.js"></script>
+        <script>
+            const carousels = document.querySelectorAll(".carouselParent");
+            carousels.forEach((carousel) => {
+                console.log({ carousel });
+                new FlexSliderComponent({
+                    parent: carousel,
+                    slideResizeConfig: [
+                        { minW: 400, slideNo: 1 },
+                        { maxW: 400, slideNo: 1 },
+                    ],
+                    canDrag: true,
+                    onIndChng: (ind) => {
+                        const indicators =
+                            carousel.parentElement.querySelectorAll(
+                                ".indicators .indicator"
+                            );
+                        indicators.forEach((indicator, i) => {
+                            indicator.classList[i === ind ? "add" : "remove"](
+                                "active"
+                            );
+                        });
+                    },
+                });
+            });
+        </script>
     </body>
 </html>

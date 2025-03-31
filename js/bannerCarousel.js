@@ -4,22 +4,31 @@ class FlexSliderComponent {
     slideItems;
     prev;
     next;
-    transition = '0.6s ease';
-    interval = 5000;
-    isMarquee = false;
 
+    indicatorListener;
     slideResizeConfig;
     autoSlide = false;
     infiniteSlide = false;
+    slideSpeed = 0.6;
+    interval = 5000;
+    timingFunction = 'ease';
+    startImmediately = false;
+    canDrag = true;
+
+    indicators;
+    onIndChng;
+    onClick;
 
     autoSlideVar;
+    immediateStart;
+    ind = 0;
 
     draggable = false;
 
     initialSlidePos = 0;
     draggingPos = 0;
     initialXPos;
-    minPos;
+    minPos = 0;
     showSlideNo;
 
     spaceBtwItem;
@@ -29,70 +38,152 @@ class FlexSliderComponent {
 
     dragEvHolder;
     stopDragEvHolder;
-    realTimeResponsive = true;
+
+    mobs;
+    indSub;
+    count = 0;
 
     constructor({
+        parent,
         slideResizeConfig,
-        autoSlide,
-        infiniteSlide,
-        selector,
-        transition,
-        interval,
-        isMarquee,
-        responsive,
+        autoSlide = false,
+        infiniteSlide = false,
+        slideSpeed = 0.6,
+        interval = 5000,
+        timingFunction = 'ease',
+        startImmediately = false,
+        canDrag = true,
+        onClick = (event) => {},
+        onIndChng = (ind) => {},
     }) {
+        this.carouselParent = parent;
         this.slideResizeConfig = slideResizeConfig;
         this.autoSlide = autoSlide;
         this.infiniteSlide = infiniteSlide;
-        this.transition = transition;
+        this.slideSpeed = slideSpeed;
         this.interval = interval;
-        this.isMarquee = isMarquee;
-        this.realTimeResponsive = responsive;
-        this.carouselParent = document.querySelector(selector);
+        this.timingFunction = timingFunction;
+        this.startImmediately = startImmediately;
+        this.canDrag = canDrag;
+        this.onClick = onClick;
+        this.onIndChng = onIndChng;
         this.ngAfterViewInit();
     }
 
-    ngOnInit() {}
-
     ngOnDestroy() {
+        this.stopAutoSlide();
         this.winResEv(false);
+        if (this.indSub) {
+            this.indSub.unsubscribe();
+        }
+    }
+
+    initiateEvent() {
+        //     (mouseenter)="canDrag ? stopAutoSlide() : null"
+        // (mouseleave)="
+        //     canDrag && draggable && autoSlide && infiniteSlide
+        //         ? startAutoSlide()
+        //         : null
+        // "
+        // (mousedown)="canDrag && draggable ? dragStart($event) : null"
+        // (touchstart)="canDrag && draggable ? dragStart($event) : null"
+        this.carouselParent.addEventListener('mouseenter', (e) => {
+            if (this.canDrag) this.stopAutoSlide();
+        });
+        this.carouselParent.addEventListener('mouseleave', (e) => {
+            if (this.canDrag && this.draggable && this.autoSlide) {
+                this.startAutoSlide();
+            }
+        });
+        this.carouselParent.addEventListener('mousedown', (e) => {
+            if (this.canDrag && this.draggable) this.dragStart(e);
+        });
+        this.carouselParent.addEventListener('touchstart', (e) => {
+            if (this.canDrag && this.draggable) this.dragStart(e);
+        });
     }
 
     ngAfterViewInit() {
-        setTimeout(() => {
-            this.flexCont = this.carouselParent.querySelector('.flexCont');
-            this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
-            this.next = this.carouselParent.querySelector('.next');
-            this.prev = this.carouselParent.querySelector('.prev');
-            this.responsive();
-            if (this.realTimeResponsive) {
-                this.winResEv(true);
+        this.initiateEvent();
+        this.flexCont = this.carouselParent.querySelector('.flexCont');
+        this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
+        this.count = this.slideItems.length;
+        this.next = this.carouselParent.querySelector('.next');
+        this.prev = this.carouselParent.querySelector('.prev');
+        this.indicators =
+            this.carouselParent.querySelectorAll('.indicatorItem');
+        if (this.indicators.length) {
+            this.indicators.forEach((el, i) => {
+                el.onclick = () => {
+                    this.indicatorSlide(i);
+                };
+            });
+        }
+        this.mobs = new MutationObserver(async () => {
+            const curitems = this.flexCont.querySelectorAll('.carouselItem');
+            this.count = [].slice
+                .call(curitems)
+                .filter((e) => !e.classList.contains('clone')).length;
+            const nonChecked = this.flexCont.querySelector(
+                '.carouselItem:not(.checked)'
+            );
+            const preserve = curitems.length - this.slideItems.length;
+            this.indicators =
+                this.carouselParent.querySelectorAll('.indicatorItem');
+            if (this.indicators.length) {
+                this.indicators.forEach((el, i) => {
+                    el.onclick = () => {
+                        this.indicatorSlide(i);
+                    };
+                });
             }
-        }, 100);
+            if (!preserve && !nonChecked) return;
+            this.mobs.disconnect();
+            this.cloneCtrl(false);
+            setTimeout(() => {
+                this.genSlideNo(this.showSlideNo, preserve);
+            });
+        });
+        this.responsive();
+        this.winResEv(true);
+        if (this.indicatorListener) {
+            this.indSub = this.indicatorListener.subscribe((ind) => {
+                this.indicatorSlide(ind, false);
+            });
+        }
+    }
+
+    indicatorSlide(n, transit = true) {
+        this.ind = n;
+        this.initialSlidePos = this.infiniteSlide
+            ? (this.count + n) * this.slideExt * -1
+            : n * this.slideExt * -1;
+        this.flexCont.style.transition = `${transit ? this.slideSpeed : 0}s ${
+            this.timingFunction
+        }`;
+        this.flexCont.style.left = `${this.initialSlidePos}px`;
+        this.draggingPos = this.initialSlidePos;
+        this.setIndicator();
     }
 
     winResEv(add) {
-        const me = this;
-        function resize() {
-            me.responsive();
-        }
         if (add) {
-            window.addEventListener('resize', resize);
+            window.addEventListener('resize', this.responsive);
         } else {
-            window.removeEventListener('resize', resize);
+            window.removeEventListener('resize', this.responsive);
         }
     }
 
-    responsive() {
+    responsive = () => {
         this.parW = +getComputedStyle(this.carouselParent).width.replace(
             'px',
             ''
         );
-        let pL = +getComputedStyle(this.carouselParent).paddingLeft.replace(
+        const pL = +getComputedStyle(this.carouselParent).paddingLeft.replace(
             'px',
             ''
         );
-        let pR = +getComputedStyle(this.carouselParent).paddingRight.replace(
+        const pR = +getComputedStyle(this.carouselParent).paddingRight.replace(
             'px',
             ''
         );
@@ -101,31 +192,29 @@ class FlexSliderComponent {
         this.spaceBtwItem = +getComputedStyle(
             this.slideItems[0]
         ).marginRight.replace('px', '');
-        let condition = '';
-        for (let eachConf of this.slideResizeConfig) {
+        for (const eachConf of this.slideResizeConfig) {
             if (!eachConf.maxW) {
-                condition += `if (this.parW >= ${eachConf.minW}) {
-          this.genSlideNo(${eachConf.slideNo});
-        }`;
+                if (this.parW >= eachConf.minW) {
+                    this.genSlideNo(eachConf.slideNo);
+                }
             } else if (!eachConf.minW) {
-                condition += `if (this.parW < ${eachConf.maxW}) {
-          this.genSlideNo(${eachConf.slideNo});
-        }`;
+                if (this.parW < eachConf.maxW) {
+                    this.genSlideNo(eachConf.slideNo);
+                }
             } else {
-                condition += `if (this.parW >= ${eachConf.minW} && this.parW < ${eachConf.maxW}) {
-          this.genSlideNo(${eachConf.slideNo});
-        }`;
+                if (this.parW >= eachConf.minW && this.parW < eachConf.maxW) {
+                    this.genSlideNo(eachConf.slideNo);
+                }
             }
         }
-        eval(condition);
-    }
+    };
 
     startAutoSlide() {
         this.stopAutoSlide();
-        if (this.isMarquee) {
-            setTimeout(() => {
+        if (this.startImmediately) {
+            this.immediateStart = setTimeout(() => {
                 this.slide(1);
-            });
+            }, 100);
         }
         this.autoSlideVar = setInterval(() => {
             this.slide(1);
@@ -134,103 +223,132 @@ class FlexSliderComponent {
 
     stopAutoSlide() {
         clearInterval(this.autoSlideVar);
+        clearTimeout(this.immediateStart);
     }
 
-    cloneCtrl(add) {
+    canClone = false;
+
+    async cloneCtrl(add) {
         if (add) {
-            this.slideItems.forEach((each) => {
-                let clone = each.cloneNode(true);
-                clone['classList'].add('clone');
-                this.flexCont.appendChild(clone);
+            this.canClone = true;
+            await new Promise((rsv) => {
+                setTimeout(() => {
+                    let clones = this.carouselParent.querySelectorAll(
+                        '.cloneParent.after .carouselItem'
+                    );
+                    clones.forEach((e) => {
+                        e.classList.add('clone');
+                        e.classList.add('after');
+                        this.flexCont.appendChild(e);
+                    });
+                    clones = this.carouselParent.querySelectorAll(
+                        '.cloneParent.before .carouselItem'
+                    );
+                    for (let i = clones.length - 1; i > -1; i--) {
+                        const first =
+                            this.flexCont.querySelector('.carouselItem');
+                        clones[i].classList.add('clone');
+                        clones[i].classList.add('before');
+                        this.flexCont.insertBefore(clones[i], first);
+                    }
+                    rsv('done');
+                });
             });
-            this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
         } else {
-            this.slideItems.forEach((each) => {
-                if (each.classList.contains('clone')) {
-                    each.remove();
+            const removeClones = (clss) => {
+                const cloneParent = this.carouselParent.querySelector(
+                    `.cloneParent.${clss}`
+                );
+                const clones = this.flexCont.querySelectorAll(`.clone.${clss}`);
+                for (let i = 0; i < clones.length; i++) {
+                    clones[i].classList.remove('clone');
+                    clones[i].classList.remove(clss);
+                    cloneParent.appendChild(clones[i]);
                 }
-            });
-            this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
+            };
+            removeClones('before');
+            removeClones('after');
+            this.canClone = false;
         }
+        this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
+        this.slideItems.forEach((el) => el.classList.add('checked'));
     }
 
-    genSlideNo(no) {
-        let slideItmNo = [].slice
-            .call(this.slideItems)
-            .filter((each) => !each.classList.contains('clone')).length;
-        let clonesNo = [].slice
-            .call(this.slideItems)
-            .filter((each) => each.classList.contains('clone')).length;
-        if (slideItmNo > no) {
+    async genSlideNo(no, preservePos = 0) {
+        this.mobs.disconnect();
+        if (this.count > no) {
             this.eventBinding(true);
-            if (!clonesNo && this.infiniteSlide) {
-                this.cloneCtrl(true);
+            if (this.infiniteSlide) {
+                await this.cloneCtrl(true);
             }
         } else {
             this.eventBinding(false);
             if (this.infiniteSlide) {
-                this.cloneCtrl(false);
+                await this.cloneCtrl(false);
             }
         }
-        let eachW = (this.parW - (no - 1) * this.spaceBtwItem) / no;
-        this.slideItems.forEach((each) => {
-            let img = each.querySelector('img');
-            if (img) {
-                let prevUrl = img.src;
-                img.onerror = () => {
-                    if (img.src.match(/(\.webp$)|\/f_webp\//)) {
-                        // img.src = 'assets/freelancers/profile-default.png';
-                        img.onerror = null;
-                        return;
-                    }
-                    if (prevUrl.match(/\.[a-z]+$/i)) {
-                        img.src = prevUrl.replace(/\.[a-z]+$/i, '.webp');
-                    } else if (prevUrl.match(/\/f_avif\//)) {
-                        img.src = prevUrl.replace(/\/f_avif\//, '/f_webp/');
-                    }
-                    img.onerror = null;
-                };
-            }
+        const eachW = (this.parW - (no - 1) * this.spaceBtwItem) / no;
+        this.slideItems.forEach((each, i) => {
             each.style.width = `${eachW}px`;
+            each.onclick = (e) => {
+                this.onClick({
+                    event: e,
+                    index: i % (this.slideItems.length / 2),
+                });
+            };
         });
         this.showSlideNo = no;
         this.slideExt = eachW + this.spaceBtwItem;
         this.flexW = this.slideExt * this.slideItems.length;
         this.flexCont.style.width = `${this.flexW}px`;
-        this.flexCont.style.left = '0px';
-        this.initialSlidePos = 0;
-        this.draggingPos = 0;
+        this.flexCont.style.transition = '0s';
+        this.initialSlidePos =
+            preservePos > 0 && this.count > no && this.infiniteSlide
+                ? this.initialSlidePos <=
+                  (this.count - preservePos) * this.slideExt * -1
+                    ? this.initialSlidePos - preservePos * this.slideExt
+                    : this.initialSlidePos
+                : this.count > no && this.infiniteSlide
+                ? this.slideExt * this.count * -1
+                : 0;
+        this.setIndicator();
+        this.flexCont.style.left = `${this.initialSlidePos}px`;
+        this.draggingPos = this.initialSlidePos;
         this.minPos = (this.flexW - this.spaceBtwItem - this.parW) * -1;
+        this.mobs.observe(this.flexCont, { subtree: true, childList: true });
     }
 
     eventBinding(bind) {
         if (bind) {
             this.draggable = true;
-            this.prev.onclick = () => {
-                this.slide(-1);
-            };
-            if (!this.infiniteSlide) {
-                this.prev.classList.add('d-none');
-                this.next.classList.remove('d-none');
+            if (this.next && this.prev) {
+                this.next.onclick = () => {
+                    this.slide(1);
+                };
+                this.prev.onclick = () => {
+                    this.slide(-1);
+                };
+                if (!this.infiniteSlide) {
+                    this.prev.classList.add('d-none');
+                    this.next.classList.remove('d-none');
+                }
             }
-            this.next.onclick = () => {
-                this.slide(1);
-            };
             if (this.autoSlide && this.infiniteSlide) {
                 this.startAutoSlide();
             }
         } else {
             this.draggable = false;
-            this.prev.onclick = null;
-            this.next.onclick = null;
-            this.prev.classList.add('d-none');
-            this.next.classList.add('d-none');
+            if (this.prev && this.next) {
+                this.prev.onclick = null;
+                this.next.onclick = null;
+                this.prev.classList.add('d-none');
+                this.next.classList.add('d-none');
+            }
         }
     }
 
     dragStart(e) {
-        const me = this;
-        let target = e.target;
+        const target = e.target;
         if (
             target.classList.contains('prev') ||
             target.classList.contains('next') ||
@@ -241,33 +359,27 @@ class FlexSliderComponent {
         if (e.type != 'touchstart') {
             e.preventDefault();
         }
+
         this.carouselParent.style.cursor = 'grab';
         this.initialXPos = e.type == 'mousedown' ? e.x : e.touches[0].clientX;
         this.flexCont.style.transition = '0s';
-        this.dragEvHolder = drag;
-        this.stopDragEvHolder = stopDrag;
+
         if (e.type == 'touchstart') {
             this.stopAutoSlide();
         }
 
-        function drag(e) {
-            me.drag(e);
-        }
-        function stopDrag(e) {
-            me.dragEnd(e);
-        }
         if (e.type == 'mousedown') {
-            document.addEventListener('mousemove', drag);
-            document.addEventListener('mouseup', stopDrag);
+            document.addEventListener('mousemove', this.drag);
+            document.addEventListener('mouseup', this.dragEnd);
         } else {
-            document.addEventListener('touchmove', drag);
-            document.addEventListener('touchend', stopDrag);
+            document.addEventListener('touchmove', this.drag);
+            document.addEventListener('touchend', this.dragEnd);
         }
     }
 
-    drag(e) {
-        let currPos = e.type == 'mousemove' ? e.x : e.touches[0].clientX;
-        let diff = currPos - this.initialXPos;
+    drag = (e) => {
+        const currPos = e.type == 'mousemove' ? e.x : e.touches[0].clientX;
+        const diff = currPos - this.initialXPos;
         this.initialXPos = currPos;
         let finalPos = this.draggingPos + diff;
         if (!this.infiniteSlide) {
@@ -279,37 +391,35 @@ class FlexSliderComponent {
             }
         } else {
             if (
-                (finalPos > 0 && diff > 0) ||
-                (this.draggingPos < this.minPos && diff < 0)
+                +(this.draggingPos - this.slideExt).toFixed(3) <
+                    +this.minPos.toFixed(3) &&
+                diff < 0
             ) {
-                if (diff > 0) {
-                    finalPos =
-                        this.slideExt * (this.slideItems.length / 2) * -1;
-                } else {
-                    finalPos =
-                        -1 *
-                        (this.slideExt *
-                            (this.slideItems.length / 2 - this.showSlideNo));
-                }
+                finalPos =
+                    this.slideExt *
+                    (this.count * 2 - this.showSlideNo - 1) *
+                    -1;
+                this.initialSlidePos = finalPos;
+            } else if (+(finalPos + this.slideExt).toFixed(3) > 0 && diff > 0) {
+                finalPos = this.slideExt * (this.count + 1) * -1;
                 this.initialSlidePos = finalPos;
             }
         }
         this.draggingPos = finalPos;
         this.flexCont.style.left = `${finalPos}px`;
-    }
+    };
 
-    dragEnd(e) {
-        const me = this;
+    dragEnd = (e) => {
         if (e.type == 'mouseup') {
-            document.removeEventListener('mousemove', me.dragEvHolder);
-            document.removeEventListener('mouseup', me.stopDragEvHolder);
+            document.removeEventListener('mousemove', this.drag);
+            document.removeEventListener('mouseup', this.dragEnd);
         } else {
-            document.removeEventListener('touchmove', me.dragEvHolder);
-            document.removeEventListener('touchend', me.stopDragEvHolder);
+            document.removeEventListener('touchmove', this.drag);
+            document.removeEventListener('touchend', this.dragEnd);
         }
         this.carouselParent.style.cursor = 'default';
         let isA = false;
-        let path = e.path || e.composedPath();
+        const path = e.path || e.composedPath();
         for (let i = 0; i < path.length - 2; i++) {
             if (
                 path[i].tagName == 'A' &&
@@ -319,7 +429,7 @@ class FlexSliderComponent {
             }
         }
         if (!this.infiniteSlide) {
-            if (this.draggingPos > 0) {
+            if (+this.draggingPos.toFixed(3) > 0) {
                 if (isA) {
                     e.target.onclick = (s) => {
                         s.preventDefault();
@@ -332,8 +442,9 @@ class FlexSliderComponent {
                 this.initialSlidePos = 0;
                 this.prev.classList.add('d-none');
                 this.next.classList.remove('d-none');
+                this.setIndicator();
                 return;
-            } else if (this.draggingPos < this.minPos) {
+            } else if (+this.draggingPos.toFixed(3) < +this.minPos.toFixed(3)) {
                 if (isA) {
                     e.target.onclick = (s) => {
                         s.preventDefault();
@@ -346,6 +457,7 @@ class FlexSliderComponent {
                 this.initialSlidePos = this.minPos;
                 this.next.classList.add('d-none');
                 this.prev.classList.remove('d-none');
+                this.setIndicator();
                 return;
             }
         }
@@ -369,7 +481,9 @@ class FlexSliderComponent {
                     this.prev.classList.remove('d-none');
                 }
             }
-        } else if (this.draggingPos > this.initialSlidePos) {
+        } else if (
+            +this.draggingPos.toFixed(3) > +this.initialSlidePos.toFixed(3)
+        ) {
             slideDiff =
                 (this.draggingPos - this.initialSlidePos) % this.slideExt;
             if (slideDiff > 0.1 * this.slideExt) {
@@ -402,11 +516,12 @@ class FlexSliderComponent {
             this.flexCont.style.left = `${finalPos}px`;
             this.draggingPos = finalPos;
             this.initialSlidePos = finalPos;
+            this.setIndicator();
         }
         if (e.type == 'touchend' && this.autoSlide && this.infiniteSlide) {
             this.startAutoSlide();
         }
-    }
+    };
 
     slide(n) {
         if (!this.infiniteSlide) {
@@ -428,15 +543,21 @@ class FlexSliderComponent {
         if (this.infiniteSlide) {
             let resetPos;
             if (
-                (finalPos < this.minPos && n == 1) ||
-                (finalPos > 0 && n == -1)
+                (+(finalPos - this.slideExt).toFixed(3) <
+                    +this.minPos.toFixed(3) &&
+                    n == 1) ||
+                (+(finalPos + this.slideExt).toFixed(3) > 0 && n == -1)
             ) {
-                if (finalPos < this.minPos && n == 1) {
+                if (
+                    +(finalPos - this.slideExt).toFixed(3) <
+                        +this.minPos.toFixed(3) &&
+                    n == 1
+                ) {
                     resetPos =
-                        this.slideExt *
-                        (this.slideItems.length / 2 - this.showSlideNo);
+                        this.slideExt * (this.count * 2 - this.showSlideNo - 1);
                 } else {
-                    resetPos = this.slideExt * (this.slideItems.length / 2);
+                    resetPos =
+                        this.slideExt * (this.count * 2 - this.showSlideNo);
                 }
                 this.flexCont.style.transition = '0s';
                 this.flexCont.style.left = `-${resetPos}px`;
@@ -444,9 +565,10 @@ class FlexSliderComponent {
             }
         }
         setTimeout(() => {
-            this.flexCont.style.transition = this.transition;
+            this.flexCont.style.transition = `${this.slideSpeed}s ${this.timingFunction}`;
             this.flexCont.style.left = `${finalPos}px`;
             this.initialSlidePos = finalPos;
+            this.setIndicator();
             this.draggingPos = finalPos;
             if (!this.infiniteSlide) {
                 if (
@@ -460,5 +582,22 @@ class FlexSliderComponent {
                 }
             }
         }, 10);
+    }
+
+    setIndicator() {
+        this.ind = +(
+            ((this.initialSlidePos * -1) / this.slideExt) %
+            this.count
+        ).toFixed(0);
+        this.ind = this.ind >= this.count ? 0 : this.ind;
+        this.onIndChng(this.ind);
+        if (!this.indicators.length) return;
+        this.indicators.forEach((el, i) => {
+            if (i == this.ind) {
+                el.classList.add('activeInd');
+            } else {
+                el.classList.remove('activeInd');
+            }
+        });
     }
 }

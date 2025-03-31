@@ -6,6 +6,7 @@
   --white1: #ffffff12;
   --white2: #ffffff01;
   --white3: #ffffff1a;
+  --white4: #34343459;
 }
 
 header {
@@ -14,6 +15,7 @@ header {
   left: 0;
   width: 100%;
   transition: 0.3s ease;
+  z-index: 2000;
 }
 header nav {
   --header-height: 97px;
@@ -219,6 +221,58 @@ footer nav .socialLinks {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.carouselParent {
+  position: relative;
+  overflow: hidden;
+}
+.carouselParent .flexCont {
+  display: flex;
+  width: 100%;
+  position: relative;
+  transition: 0s;
+}
+.carouselParent .carouselItem {
+  margin-right: 10px;
+}
+.carouselParent .prev,
+.carouselParent .next {
+  position: absolute;
+  top: 50%;
+  font-size: 26px;
+  color: #fff;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #292929;
+}
+.carouselParent .prev:hover,
+.carouselParent .next:hover {
+  color: var(--primary);
+}
+.carouselParent .prev {
+  left: 0px;
+}
+.carouselParent .next {
+  right: 0px;
+}
+.carouselParent .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 16px;
+}
+.carouselParent .indicators .indicatorItem {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(33, 73, 80, 0.2);
+  cursor: pointer;
+}
+.carouselParent .indicators .indicatorItem.activeInd {
+  background: var(--primary);
 }
 
 .btn {
@@ -2490,4 +2544,23 @@ body main section:first-child {
   max-width: 1270px;
   margin: auto;
   padding: 0 15px;
+}
+
+.txt32 {
+  font-size: 32px;
+  font-weight: 500;
+}
+@media (max-width: 500px) {
+  .txt32 {
+    font-size: 24px;
+  }
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+@media (max-width: 500px) {
+  .mb24 {
+    margin-bottom: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
