@@ -1,1 +1,12 @@
-/*# sourceMappingURL=works.css.map */
+section#introSection {
+  padding-top: 226px;
+}
+section#introSection h1 {
+  font-size: 56px;
+  margin-bottom: 64px;
+  color: var(--white-tertiary);
+}
+section#introSection h1 em {
+  font-style: normal;
+  color: var(--white);
+}/*# sourceMappingURL=works.css.map */
