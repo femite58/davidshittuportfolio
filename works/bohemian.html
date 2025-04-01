@@ -584,6 +584,17 @@
                 </div>
             </div>
         </main>
+        <script>
+            const swapAnimation = document.getElementById("swapAnimation");
+            const setSwapAnimContWidth = () => {
+                swapAnimation.style.setProperty(
+                    "--container-width",
+                    `${swapAnimation.getBoundingClientRect().width}px`
+                );
+            };
+            const resizeObsv = new ResizeObserver(setSwapAnimContWidth);
+            resizeObsv.observe(swapAnimation, { box: "border-box" });
+        </script>
         <!--#include virtual="/components/works-footer.html" -->
     </body>
 </html>
