@@ -189,6 +189,7 @@ header:has(.opened) nav > .rightActions .btn {
 
 footer {
   padding: 32px 0;
+  border-top: 1px solid var(--white-tertiary);
 }
 footer nav {
   display: flex;
@@ -2499,6 +2500,7 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 1.25;
+  font-family: "Cabinet Grotesk";
 }
 
 body {
@@ -2578,6 +2580,7 @@ body main section:first-child {
 
 .txt32 {
   font-size: 32px !important;
+  line-height: 1.25 !important;
 }
 @media (max-width: 500px) {
   .txt32 {
@@ -2587,6 +2590,7 @@ body main section:first-child {
 
 .txt48 {
   font-size: 48px !important;
+  line-height: 1.25 !important;
 }
 @media (max-width: 500px) {
   .txt48 {
