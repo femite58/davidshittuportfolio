@@ -1,1 +1,28 @@
-/*# sourceMappingURL=bohemian.css.map */
+#swapAnimation {
+  --container-width: 1000px;
+  position: relative;
+}
+#swapAnimation .eachLayer:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: changingWidth 3s ease infinite;
+}
+#swapAnimation .eachLayer:not(:first-child) .layerInner {
+  width: var(--container-width);
+}
+
+@keyframes changingWidth {
+  0% {
+    width: 100%;
+  }
+  30% {
+    width: 0;
+  }
+  75%, 100% {
+    width: 100%;
+  }
+}/*# sourceMappingURL=bohemian.css.map */
