@@ -13,11 +13,6 @@
         />
         <link rel="stylesheet" href="/styles/works.css" />
         <link rel="stylesheet" href="/styles/nachonacho.css" />
-        <style>
-            :root {
-                --works-primary: var(--primary);
-            }
-        </style>
     </head>
     <body>
         <script>
@@ -31,7 +26,10 @@
                     <h1>
                         Managing multiple SaaS subscriptions is complicated and
                         challenging for businesses.
-                        <em>NachoNacho simplifies everything in one place.</em>
+                        <strong
+                            >NachoNacho simplifies everything in one
+                            place.</strong
+                        >
                     </h1>
                     <img
                         class="openModal"
@@ -706,32 +704,6 @@
                 </div>
             </div>
         </main>
-        <!--#include virtual="/components/footer.html" -->
-        <script src="/js/bannerCarousel.js"></script>
-        <script>
-            const carousels = document.querySelectorAll(".carouselParent");
-            carousels.forEach((carousel) => {
-                console.log({ carousel });
-                new FlexSliderComponent({
-                    parent: carousel,
-                    slideResizeConfig: [
-                        { minW: 400, slideNo: 1 },
-                        { maxW: 400, slideNo: 1 },
-                    ],
-                    canDrag: true,
-                    onIndChng: (ind) => {
-                        const indicators =
-                            carousel.parentElement.querySelectorAll(
-                                ".indicators .indicator"
-                            );
-                        indicators.forEach((indicator, i) => {
-                            indicator.classList[i === ind ? "add" : "remove"](
-                                "active"
-                            );
-                        });
-                    },
-                });
-            });
-        </script>
+        <!--#include virtual="/components/works-footer.html" -->
     </body>
 </html>

@@ -6,8 +6,7 @@
   margin-bottom: 64px;
   color: var(--white-tertiary);
 }
-#introSection h1 em {
-  font-style: normal;
+#introSection h1 strong {
   color: var(--white);
 }
 #introSection img {
@@ -28,15 +27,18 @@
 }
 
 section h2,
-section h3 {
+section h3,
+section .h2 {
   margin-bottom: 24px;
   color: var(--white);
   font-size: 32px;
   font-family: "Cabinet Grotesk";
+  font-weight: 700;
 }
 @media (max-width: 500px) {
   section h2,
-  section h3 {
+  section h3,
+  section .h2 {
     font-size: 24px;
     margin-bottom: 16px;
   }
@@ -77,6 +79,11 @@ section h3 {
 }
 #overviewGrid .content {
   color: var(--white);
+}
+@media (max-width: 500px) {
+  #overviewGrid .column {
+    width: 100%;
+  }
 }
 
 .carousel {
@@ -192,6 +199,9 @@ section h3 {
   font-weight: 700;
   margin-bottom: 24px;
   line-height: 1.25;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 @media (max-width: 500px) {
   .cards {

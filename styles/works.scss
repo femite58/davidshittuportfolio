@@ -6,8 +6,7 @@
         margin-bottom: 64px;
         color: var(--white-tertiary);
 
-        em {
-            font-style: normal;
+        strong {
             color: var(--white);
         }
     }
@@ -32,11 +31,13 @@
 
 section {
     h2,
-    h3 {
+    h3,
+    .h2 {
         margin-bottom: 24px;
         color: var(--white);
         font-size: 32px;
         font-family: "Cabinet Grotesk";
+        font-weight: 700;
 
         @media (max-width: 500px) {
             font-size: 24px;
@@ -83,6 +84,12 @@ section {
 
     .content {
         color: var(--white);
+    }
+
+    @media (max-width: 500px) {
+        .column {
+            width: 100%;
+        }
     }
 }
 
@@ -206,6 +213,9 @@ section {
             font-weight: 700;
             margin-bottom: 24px;
             line-height: 1.25;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
     }
 
