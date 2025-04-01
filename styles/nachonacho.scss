@@ -1,20 +1,7 @@
 #designStrategy {
     .strategies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 48px;
-        margin-bottom: 48px;
-
         .each {
             padding: 44px;
-            border-radius: 16px;
-            background: var(--white3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-            flex: 1 300px;
 
             .icon {
                 img {
@@ -25,22 +12,15 @@
                     }
                 }
             }
+
+            .label {
+                font-weight: 700;
+                line-height: 1.25;
+            }
         }
 
         @media (max-width: 500px) {
             gap: 24px;
-
-            .each {
-                .label {
-                    font-size: 24px;
-                }
-            }
         }
-    }
-
-    .txtCard {
-        padding: 32px;
-        border-radius: 16px;
-        background: var(--white3);
     }
 }

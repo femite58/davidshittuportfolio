@@ -116,6 +116,7 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
+    line-height: 1.25;
 }
 
 body {
@@ -124,6 +125,7 @@ body {
     color: var(--white-secondary);
     background: var(--black);
     margin: 0;
+    line-height: 1.6;
 
     main {
         section:first-child {
@@ -170,13 +172,30 @@ body {
     padding: 0 15px;
 }
 
+@for $i from 1 through 7 {
+    .fw#{$i} {
+        font-weight: calc(100 * #{$i});
+    }
+}
+
 .txt32 {
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 32px !important;
 
     @media (max-width: 500px) {
-        font-size: 24px;
+        font-size: 24px !important;
     }
+}
+
+.txt48 {
+    font-size: 48px !important;
+
+    @media (max-width: 500px) {
+        font-size: 24px !important;
+    }
+}
+
+.txtWhite {
+    color: var(--white);
 }
 
 .mb24 {
