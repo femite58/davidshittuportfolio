@@ -1,0 +1,29 @@
+.carousel .carouselItem .imgCont {
+  padding-top: 76.6525%;
+}
+
+#alternatingSection .eachSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+#alternatingSection .eachSection .imgCont {
+  width: 320px;
+}
+#alternatingSection .eachSection .txtPart {
+  flex: 1 400px;
+  width: 400px;
+}
+#alternatingSection .eachSection:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  #alternatingSection .eachSection {
+    gap: 48px;
+  }
+  #alternatingSection .eachSection .imgCont {
+    width: 180.49px;
+  }
+}/*# sourceMappingURL=bolt.css.map */

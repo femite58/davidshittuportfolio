@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--#include virtual="/components/head-metadata.html" -->
         <title>Increst: Stock market investing for beginners</title>
         <meta
             name="description"
@@ -13,371 +11,193 @@
             property="og:image"
             content="https://davidshittu.com/assets/images/increst.jpg"
         />
+        <link rel="stylesheet" href="/styles/works.css" />
+        <link rel="stylesheet" href="/styles/increst.css" />
+    </head>
+    <body>
         <script>
-            let page = "increst";
-            let pPath;
-            let prev = {
-                url: "./bolt.html",
-                txt: "Bolt",
-                bg: "#34D186",
-            };
-            let next = {};
+            const headerClass = "default";
+            const page = "increst";
         </script>
-        <script src="../js/header.js"></script>
-        <style>
-            :root {
-                --works-primary: var(--primary);
-            }
-        </style>
-        <main id="increst" class="works">
-            <section id="bannerSect" style="background-color: #47c1f0">
+        <!--#include virtual="/components/header.html" -->
+        <main id="increstPage" class="works">
+            <section id="introSection">
                 <div class="bodyCont">
-                    <div class="bannerFlex">
-                        <div class="txtContent">
-                            <h1>
-                                Increst: Stock market investing for beginners
-                            </h1>
-                            <div class="content">
-                                Invest help beginners high performing stocks
-                                through a gamified learning experience
-                            </div>
-                        </div>
-                        <a
-                            href="../assets/images/increst/increst_mockup_banner.png"
-                            target="_blank"
-                            class="imgCont"
+                    <h1>
+                        Investing in the stock market can be complicated for the
+                        average person. <br />
+                        <strong
+                            >Increst simplifies investing in high-performing
+                            stocks for beginners.</strong
                         >
-                            <img
-                                src="../assets/images/increst/increst_mockup_banner.png"
-                                alt="Increst"
-                                style="width: 505px"
-                            />
-                        </a>
-                    </div>
+                    </h1>
+                    <img
+                        class="openModal"
+                        src="/assets/images/increst/increst-intro.png"
+                        alt="Increst simplifies investing in high-performing
+                        stocks for beginners."
+                    />
                 </div>
             </section>
-            <div id="otherBody" class="bodyCont">
-                <div id="navCont">
-                    <nav>
-                        <a href="#overview" class="eachLink active">Overview</a>
-                        <a href="#research" class="eachLink">Research</a>
-                        <a href="#solution" class="eachLink">Solution</a>
-                        <a href="#lowFidelity" class="eachLink">Low Fidelity</a>
-                        <a href="#highFidelity" class="eachLink"
-                            >High Fidelity</a
-                        >
-                    </nav>
-                </div>
-                <div id="mainBody">
-                    <div id="overview">
-                        <div class="eachSect">
-                            <h2>Overview</h2>
-                            <div class="content">
-                                Increst is an online investment platform that
-                                enables users to invest in the stock market from
-                                anywhere. It is specifically designed to cater
-                                to beginners and newbies, providing interactive
-                                learning options to guide them in investing in
-                                high-performing stocks.
-                            </div>
-                        </div>
-                        <div class="eachSect dFlex flexGrow1">
-                            <div id="roleDuration">
-                                <div class="eachCol">
-                                    <h2>Role</h2>
-                                    <div class="content">
-                                        Lead Designer (4 Members)
-                                    </div>
-                                </div>
-                                <div class="eachCol">
-                                    <h2>Year</h2>
-                                    <div class="content">2022</div>
-                                </div>
-                                <div class="eachCol">
-                                    <h2>Duration</h2>
-                                    <div class="content">3 months</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="eachSect" id="prototype">
-                            <div class="content">
-                                <div class="vidCont">
-                                    <iframe
-                                        width="560"
-                                        height="315"
-                                        src="https://www.youtube.com/embed/14quVq5aJn0"
-                                        title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen
-                                    ></iframe>
-                                </div>
-                            </div>
+            <div id="mainContent">
+                <section class="eachSection" id="overviewGrid">
+                    <div class="column">
+                        <h2>My Role</h2>
+                        <div class="content">
+                            Product Design (UX/UI), <br />
+                            UX Research.
                         </div>
                     </div>
-                    <div id="research">
-                        <a
-                            class="eachSect imgCont"
-                            target="_blank"
-                            href="../assets/images/increst/design_process.png"
-                        >
-                            <img
-                                src="../assets/images/increst/design_process.png"
-                                alt="Design Process"
-                            />
-                        </a>
+                    <div class="column">
+                        <h2>Platforms</h2>
+                        <div class="content">
+                            Mobile App, <br />
+                            Watch App.
+                        </div>
                     </div>
-                    <div id="process">
-                        <div id="survey">
-                            <div class="eachSect fadeTxt">
-                                <h2>Survey</h2>
-                                <div class="content">
-                                    We conducted a comprehensive survey with 30
-                                    participants: 20 male, 9 female, and 1
-                                    participant who preferred not to disclose
-                                    their gender. <br />
-                                    This diverse sample provided a wide range of
-                                    perspectives and insights.
-                                </div>
-                            </div>
-                            <div class="eachSect">
-                                <div class="content">
-                                    <div class="flexGrid">
-                                        <div class="eachItem fadedBg">
-                                            <div class="txt">
-                                                Nine in ten (90%) people have
-                                                heard about stocks.
-                                            </div>
-                                            <div class="imgCont">
-                                                <img
-                                                    src="../assets/images/increst/survey_90_perc.svg"
-                                                    alt="90% Survey"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="eachItem fadedBg">
-                                            <div class="txt">
-                                                Only One in ten (10%) people
-                                                understand how the stock market
-                                                works and how to invest
-                                            </div>
-                                            <div class="imgCont">
-                                                <img
-                                                    src="../assets/images/increst/survey_10_perc.svg"
-                                                    alt="10% Survey"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="eachItem fadedBg">
-                                            <div class="txt">
-                                                Seven in ten (70%) people said
-                                                they would invest using online
-                                                brokers to invest
-                                            </div>
-                                            <div class="imgCont">
-                                                <img
-                                                    src="../assets/images/increst/survey_70_perc.svg"
-                                                    alt="70% Survey"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eachSect">
-                                <div class="content">
-                                    The survey revealed a significant knowledge
-                                    gap among individuals regarding stock
-                                    investing. Despite high awareness, the
-                                    majority lack the necessary understanding to
-                                    navigate the stock market confidently and
-                                    make informed decisions. <br /><br />
-
-                                    This gap indicates a mismatch between
-                                    interest in investing and the required
-                                    knowledge. Complexity and uncertainty may
-                                    deter individuals from exploring stock
-                                    investing for wealth creation or financial
-                                    growth.
-                                </div>
-                            </div>
-                            <div class="eachSect" id="userPersona">
-                                <h2>User Persona</h2>
-                                <div class="content">
-                                    <div class="gridCont">
-                                        <a
-                                            class=""
-                                            href="../assets/images/increst/user_persona1.png"
-                                            target="_blank"
-                                        >
+                    <div class="column">
+                        <h2>Tool</h2>
+                        <div class="content">Figma, FigJam</div>
+                    </div>
+                    <div class="column">
+                        <h2>Time</h2>
+                        <div class="content">2022</div>
+                    </div>
+                </section>
+                <section id="overview">
+                    <div class="eachSection">
+                        <h2>Overview</h2>
+                        <div class="content">
+                            Increst is an online investment platform that allows
+                            users to invest in the stock market from anywhere.
+                            Designed with beginners in mind, it offers
+                            interactive learning tools to guide users in
+                            investing in high-performing stocks.
+                        </div>
+                    </div>
+                    <div class="eachSection" id="youtubeEmbed"></div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/increst/design-process.svg"
+                            alt="Design Process"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Design Process</div>
+                    </div>
+                </section>
+                <section id="problemDiscovery">
+                    <h2 class="eachSection txt48">Problem Discovery</h2>
+                    <div class="eachSection">
+                        <h3>User Survey</h3>
+                        <div class="content">
+                            We conducted a comprehensive survey with 30
+                            participants: 20 male, 9 female, and 1 who preferred
+                            not to disclose their gender. This diverse sample
+                            provided a broad range of perspectives and insights.
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/increst/relevant-survey-responses.svg"
+                            alt="Relevant Survey Responses"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Relevant Survey Responses</div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="content">
+                            The survey revealed a significant knowledge gap
+                            regarding stock investing. Despite high awareness,
+                            the majority of individuals lack the understanding
+                            needed to navigate the stock market confidently and
+                            make informed decisions. <br />
+                            This gap highlights a mismatch between interest in
+                            investing and the knowledge required. The complexity
+                            and uncertainty surrounding stock investing may
+                            deter individuals from pursuing it as a means of
+                            wealth creation or financial growth.
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="carousel">
+                            <div class="carouselParent">
+                                <div class="flexCont">
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
                                             <img
-                                                src="../assets/images/increst/user_persona1.png"
-                                                alt="User Persona"
+                                                class="openModal"
+                                                src="/assets/images/increst/emmanuel.png"
+                                                alt="User survey - Emmnauel"
                                             />
-                                        </a>
-                                        <a
-                                            class=""
-                                            href="../assets/images/increst/user_persona2.png"
-                                        >
+                                        </div>
+                                    </div>
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
                                             <img
-                                                src="../assets/images/increst/user_persona2.png"
-                                                alt="User Persona"
+                                                class="openModal"
+                                                src="/assets/images/increst/emily.png"
+                                                alt="User survey - Emily"
                                             />
-                                        </a>
+                                        </div>
                                     </div>
+                                </div>
+                                <input
+                                    id="surveyPrev"
+                                    type="text"
+                                    hidden
+                                    class="prev"
+                                />
+                                <input
+                                    id="surveyNext"
+                                    type="text"
+                                    hidden
+                                    class="next"
+                                />
+                                <div class="indicators">
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="surveyInd1"
+                                        class="indicatorItem activeInd"
+                                    />
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="surveyInd2"
+                                        class="indicatorItem"
+                                    />
+                                </div>
+                            </div>
+                            <div class="cusIndicatorsAndCtrls">
+                                <div class="indicators">
+                                    <label
+                                        for="surveyInd1"
+                                        class="indicator active"
+                                    ></label>
+                                    <label
+                                        for="surveyInd2"
+                                        class="indicator"
+                                    ></label>
+                                </div>
+                                <div class="ctrls">
+                                    <label for="surveyPrev" class="prevCtrl">
+                                        <img
+                                            src="/assets/icons/arrow-left.svg"
+                                            alt="arrow left"
+                                        />
+                                    </label>
+                                    <label for="surveyNext" class="nextCtrl">
+                                        <img
+                                            src="/assets/icons/arrow-right.svg"
+                                            alt="arrow right"
+                                    /></label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="solution">
-                        <div class="eachSect fadeTxt">
-                            <h2>Solution</h2>
-                            <div class="content">
-                                We created a mobile app to address the knowledge
-                                gap in stock market investing. It offers
-                                interactive games and short courses for a
-                                comprehensive learning experience, ensuring user
-                                engagement and ease of use.
-                            </div>
-                        </div>
-                        <div class="eachSect" id="solutionGrid">
-                            <div class="content">
-                                <div class="gridCont">
-                                    <div class="eachItem fadedBg">
-                                        <h3>1. Academy</h3>
-                                        <div class="txt">
-                                            During the 2019 Covid-19 pandemic,
-                                            online learning surged, with 60% of
-                                            students citing improved soft
-                                            skills, especially problem-solving
-                                            (Bay Atlantic University -
-                                            Washington, 2019). <br /><br />
-
-                                            Building on this, we've created
-                                            concise courses to help users
-                                            navigate the stock market
-                                            confidently, regardless of their
-                                            background. Leveraging online
-                                            learning, we aim to empower
-                                            individuals to make informed
-                                            investment decisions.
-                                        </div>
-                                    </div>
-                                    <div class="eachItem fadedBg">
-                                        <h3>2. Games</h3>
-                                        <div class="txt">
-                                            To improve course completion, we've
-                                            added educational games inspired by
-                                            platforms like Duolingo. These games
-                                            teach stock market concepts
-                                            interactively, making learning fun
-                                            and engaging. Our goal is to empower
-                                            users to navigate the stock market
-                                            confidently.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            href="../assets/images/increst/information_architecture.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/information_architecture.png"
-                                alt="Information Architecture"
-                            />
-                        </a>
-                    </div>
-                    <div id="lowFidelity">
-                        <a
-                            href="../assets/images/increst/low_fidelity.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/low_fidelity.png"
-                                alt="Low Fidelity"
-                            />
-                        </a>
-                    </div>
-                    <div id="highFidelity">
-                        <a
-                            href="../assets/images/increst/onboarding.svg"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/onboarding.svg"
-                                alt="Onboarding"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/onboarding2.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/onboarding2.png"
-                                alt="Onboarding"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/home.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/home.png"
-                                alt="Home"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/stock_details.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/stock_details.png"
-                                alt="Stock Details"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/guide_and_news.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/guide_and_news.png"
-                                alt="Guide and News"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/guide_and_news2.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/guide_and_news2.png"
-                                alt="Guide and News"
-                            />
-                        </a>
-                        <a
-                            href="../assets/images/increst/style.png"
-                            target="_blank"
-                            class="eachSect"
-                        >
-                            <img
-                                src="../assets/images/increst/style.png"
-                                alt="Guide and News"
-                            />
-                        </a>
-                    </div>
-                    <script src="../js/worksFooter.js"></script>
-                </div>
+                </section>
             </div>
         </main>
-        <script src="../js/footer.js"></script>
-    </head>
+        <!--#include virtual="/components/works-footer.html" -->
+    </body>
 </html>

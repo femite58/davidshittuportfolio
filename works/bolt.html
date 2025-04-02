@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--#include virtual="/components/head-metadata.html" -->
         <title>A UI/UX case study on Improving Bolt pricing strategy</title>
         <meta
             name="description"
@@ -13,656 +11,555 @@
             property="og:image"
             content="https://davidshittu.com/assets/images/bolt.jpg"
         />
+        <link rel="stylesheet" href="/styles/works.css" />
+        <link rel="stylesheet" href="/styles/bolt.css" />
+    </head>
+    <body>
         <script>
-            let page = "bolt";
-            let pPath;
-            let prev = {
-                url: "./nachonacho.html",
-                txt: "NachoNacho",
-                bg: "#2475FF",
-            };
-            let next = {
-                url: "./increst.html",
-                txt: "Increst",
-                bg: "#47C1F0",
-            };
+            const headerClass = "default";
+            const page = "bolt";
         </script>
-        <script src="../js/header.js"></script>
-        <style>
-            :root {
-                --works-primary: var(--primary);
-            }
-        </style>
+        <!--#include virtual="/components/header.html" -->
         <main id="boltPage" class="works">
-            <section id="bannerSect" style="background-color: #34d186">
+            <section id="introSection">
                 <div class="bodyCont">
-                    <div class="bannerFlex">
-                        <div class="txtContent">
-                            <h1>Improving Bolt’s Pricing Strategy</h1>
-                            <div class="content">
-                                Get accurate pricing information and enjoy a
-                                seamless and satisfying driving experience.
-                            </div>
-                        </div>
-                        <a
-                            href="../assets/images/bolt/bolt_app_banner.png"
-                            target="_blank"
-                            class="imgCont"
+                    <h1>
+                        Bolt's current dynamic pricing can be unpredictable for
+                        users. <br />
+                        <strong
+                            >This is redesign of the pricing model to ensure
+                            fairness and transparency.</strong
                         >
-                            <img
-                                src="../assets/images/bolt/bolt_app_banner.png"
-                                alt="Bolt"
-                                style="width: 505px"
-                            />
-                        </a>
-                    </div>
+                    </h1>
+                    <img
+                        class="openModal"
+                        src="/assets/images/bolt/bolt-intro.png"
+                        alt="This is redesign of the pricing model to ensure
+                        fairness and transparency."
+                    />
                 </div>
             </section>
-            <div id="otherBody" class="bodyCont">
-                <div id="navCont">
-                    <nav>
-                        <a href="#overview" class="eachLink active">Overview</a>
-                        <a href="#problem" class="eachLink">Problem</a>
-                        <a href="#research" class="eachLink">Research</a>
-                        <a href="#solution" class="eachLink">Solution</a>
-                        <a href="#usabilityTest" class="eachLink"
-                            >Usability Test</a
-                        >
-                    </nav>
-                </div>
-                <div id="mainBody">
-                    <div id="overview">
-                        <div class="eachSect">
-                            <h2>Overview</h2>
-                            <div class="content">
-                                Bolt is an Estonian mobility company that offers
-                                ride-hailing, micro-mobility rental, food and
-                                grocery delivery (via the Bolt Food app), and
-                                car-sharing services. The company is
-                                headquartered in Tallinn and operates in over
-                                500 cities in more than 45 countries in Europe,
-                                Africa, Western Asia, and Latin America.
-                            </div>
-                        </div>
-                        <div class="eachSect" id="roleDuration">
-                            <div class="eachCol">
-                                <h2>Role</h2>
-                                <div class="content">
-                                    UX Designer <br />
-                                    UX Researcher
-                                </div>
-                            </div>
-                            <div class="eachCol">
-                                <h2>Year</h2>
-                                <div class="content">2022</div>
-                            </div>
-                            <div class="eachCol">
-                                <h2>Duration</h2>
-                                <div class="content">5 Weeks</div>
-                            </div>
+            <div id="mainContent">
+                <section class="eachSection" id="overviewGrid">
+                    <div class="column">
+                        <h2>My Role</h2>
+                        <div class="content">
+                            Product Design (UX/UI), <br />
+                            UX Research.
                         </div>
                     </div>
-                    <div id="problem">
-                        <div class="eachSect">
-                            <h2>What is the Problem?</h2>
-                            <div class="content gridCont">
-                                <div class="eachCol fadedBg">
-                                    <div class="num">1.</div>
-                                    <div class="txt">
-                                        Users often experience ride prices
-                                        changing after they reach the bus stop,
-                                        resulting in them having to pay more
-                                        than initially anticipated.
-                                    </div>
-                                </div>
-                                <div class="eachCol fadedBg">
-                                    <div class="num">2.</div>
-                                    <div class="txt">
-                                        Users may have a negative driving
-                                        experience with a particular driver, yet
-                                        they might still be suggested the same
-                                        driver for another ride.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            class="eachSect imgCont"
-                            href="../assets/images/bolt/design_process.png"
-                            target="_blank"
-                        >
-                            <img
-                                src="../assets/images/bolt/design_process.png"
-                                alt="Design Process"
-                            />
-                        </a>
+                    <div class="column">
+                        <h2>Platforms</h2>
+                        <div class="content">Mobile App</div>
                     </div>
-                    <div class="eachSect" id="researchObj">
-                        <div class="h2 fadeWhiteTxt">Research Objectives</div>
+                    <div class="column">
+                        <h2>Tool</h2>
+                        <div class="content">Figma, Maze.</div>
+                    </div>
+                    <div class="column">
+                        <h2>Time</h2>
+                        <div class="content">2022</div>
+                    </div>
+                </section>
+                <section id="overview" class="eachSection">
+                    <h2>Overview</h2>
+                    <div class="content">
+                        Bolt, an Estonian mobility company headquartered in
+                        Tallinn, provides ride-hailing, micro-mobility rentals,
+                        food and grocery delivery, and car-sharing services
+                        across over 500 cities in more than 45 countries
+                        worldwide.
+                        <strong
+                            >However, users often face unpredictable pricing,
+                            with ride costs changing after reaching the bus
+                            stop, leading to frustration and unexpected
+                            charges.</strong
+                        >
+                        <br /><br />
+
+                        In this case study, I’ll walk you through how I
+                        addressed this issue and proposed a solution
+                    </div>
+                </section>
+                <section id="theProblem">
+                    <div class="eachSection">
+                        <h2>What is the problem?</h2>
+                        <div class="content">
+                            Bolt, an Estonian mobility company headquartered in
+                            Tallinn, provides ride-hailing, micro-mobility
+                            rentals, food and grocery delivery, and car-sharing
+                            services across over 500 cities in more than 45
+                            countries worldwide.
+                            <strong
+                                >However, users often face unpredictable
+                                pricing, with ride costs changing after reaching
+                                the bus stop, leading to frustration and
+                                unexpected charges.</strong
+                            >
+                            <br /><br />
+
+                            In this case study, I’ll walk you through how I
+                            addressed this issue and proposed a solution
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/design-process.png"
+                            alt="Design Process"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Design Process</div>
+                    </div>
+                </section>
+                <section id="empathizeUsers">
+                    <h2 class="eachSection txt48">
+                        How Did I Empathize with Users?
+                    </h2>
+                    <div class="eachSection">
+                        <h3>Research Objectives</h3>
                         <div class="content">
                             <ol>
                                 <li>
-                                    Understand users' overall experience with
-                                    the app and service.
+                                    Evaluate users' overall experience with the
+                                    Bolt app and its services.
                                 </li>
                                 <li>
-                                    Understand and evaluate users view on the
-                                    pricing of rides
+                                    Assess users' perceptions and concerns
+                                    regarding ride pricing.
                                 </li>
                                 <li>
-                                    Identify specific pain points of users and
-                                    provide appropriate solutions.
+                                    Identify key pain points in the user journey
+                                    and propose targeted solutions to address
+                                    them.
                                 </li>
                             </ol>
                         </div>
                     </div>
-                    <div id="research">
-                        <div class="eachSect" id="researchProcess">
-                            <div class="h2 fadeWhiteTxt">Research Process</div>
-                            <div class="content">
-                                <ol>
-                                    <li>Secondary Research</li>
-                                    <li>Competitive analysis</li>
-                                    <li>User Survey</li>
-                                </ol>
-                            </div>
+                    <div class="eachSection">
+                        <h3>Google Play Store Reviews</h3>
+                        <div class="content">
+                            Based on user reviews from the Google Play Store,
+                            few users reported positive experiences with the
+                            app. Many highlighted issues, particularly with
+                            price fluctuations upon reaching their destination
+                            during surge pricing or peak times, which led to
+                            frustration and numerous complaints. Users also
+                            expressed dissatisfaction with driver services,
+                            indicating a need for better driver orientation
+                            before accepting rides. Despite the presence of a
+                            star rating system, it does not effectively
+                            influence the drivers suggested to users.
                         </div>
-                        <div class="eachSect fadeTxt" id="secondaryResearch">
-                            <h3>Secondary Research</h3>
-                            <div class="content">
-                                Based on my research of user reviews on the
-                                Google Play Store, few users reported positive
-                                experiences with the app. Many encountered
-                                issues, notably price fluctuations upon reaching
-                                their destination during surges or peak times,
-                                leading to a lot of frustration and complaints.
-                                <br /><br />
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/google-play-store-reviews.png"
+                            alt="Google Play Store Reviews"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Google Play Store Reviews</div>
+                    </div>
+                    <div class="eachSection">
+                        <h3>Competitive Analysis</h3>
+                        <div class="content">
+                            I downloaded both the Bolt and Uber apps to assess
+                            their user experience and overall functionality.
+                            However, I was unable to download the Lyft app, as
+                            it is unavailable in Nigeria. As a result, my
+                            research on Lyft was based on secondary sources,
+                            including websites and user reviews.
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/strengths.png"
+                            alt="Strengths"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Strengths</div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="content">
+                            Competitors in the ride-hailing industry have
+                            distinct goals reflected in their features.
+                            <strong
+                                >Bolt focuses on affordability, catering to a
+                                wide range of income levels, while aiming to
+                                increase its market share in Europe.</strong
+                            >
+                            <br /><br />
 
-                                Users also expressed dissatisfaction with driver
-                                services, suggesting the need for driver
-                                orientation before picking up customers. Despite
-                                the presence of a star rating system, it does
-                                not effectively determine which drivers are
-                                suggested to users.
-                            </div>
-                        </div>
-                        <a
-                            class="eachSect imgCont"
-                            href="../assets/images/bolt/google_playstore_review.svg"
-                            target="_blank"
-                        >
-                            <img
-                                src="../assets/images/bolt/google_playstore_review.svg"
-                                alt="Google Playstore Review"
-                            />
-                        </a>
-                        <div class="eachSect fadeTxt" id="competitiveAnalysis">
-                            <h3>Competitive Analysis</h3>
-                            <div class="content">
-                                I downloaded both the Bolt and Uber apps to
-                                assess their user experience and overall feel.
-                                <br /><br />
+                            Uber focuses on affordability through ride-sharing,
+                            cutting costs and reducing carbon footprints by
+                            optimizing vehicle use. It promotes sustainability
+                            by offering multiple drop-off options. <br /><br />
 
-                                However, I was unable to download the Lyft app
-                                as it is not available in my country (Nigeria).
-                                Therefore, my research on Lyft was based on
-                                secondary sources such as websites and user
-                                reviews.
-                            </div>
+                            Lyft pioneered ride-sharing to save money and reduce
+                            emissions. Its thorough driver background checks
+                            prioritize passenger safety, going beyond just star
+                            ratings.
                         </div>
-                        <a
-                            href="../assets/images/bolt/strengths.png"
-                            target="_blank"
-                            class="eachSect imgCont"
-                        >
-                            <img
-                                src="../assets/images/bolt/strengths.png"
-                                alt="Strengths"
-                            />
-                        </a>
-                        <div class="eachSect">
-                            <div class="content">
-                                <div class="txt mb16">
-                                    Competitors in the ride-hailing industry
-                                    have distinct goals reflected in their
-                                    features. Bolt aims for affordability,
-                                    catering to diverse income levels, boosting
-                                    market share in Europe.
-                                </div>
-                                <div class="gridCont">
-                                    <div class="eachCol fadedBg">
-                                        Uber focuses on affordability through
-                                        ride-sharing, cutting costs and carbon
-                                        footprints by optimizing vehicle use. It
-                                        offers sustainability through multiple
-                                        drop-offs.
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/weaknesses.svg"
+                            alt="Weaknesses"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Weaknesses</div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="content">
+                            All of them employ similar business models that
+                            incorporate dynamic pricing, adjusting based on
+                            factors such as weather, traffic, and time to
+                            maximize profits. However, the timing of price
+                            disclosure varies: Uber and Lyft reveal prices
+                            before the ride, while Bolt discloses prices after
+                            reaching the destination.
+                        </div>
+                    </div>
+                </section>
+                <section id="userSurvey">
+                    <div class="eachSection">
+                        <h2>User Survey</h2>
+                        <div class="content">
+                            To gain insights into users' frustrations and pain
+                            points regarding price changes and the driving
+                            experience, a survey was conducted.
+                            <strong
+                                >The survey gathered responses from 23
+                                participants and included relevant questions to
+                                validate the issues identified in the secondary
+                                research.</strong
+                            >
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/relevant-survey-responses.svg"
+                            alt="Relevant Survey Response"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Relevant Survey Response</div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="h2 txt48">
+                            “I was charged a particular fee prior to the ride
+                            but at the end of the ride, I was charged higher” -
+                            Participant
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="carousel">
+                            <div class="carouselParent">
+                                <div class="flexCont">
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/bolt/shola-adetunji.png"
+                                                alt="User survey"
+                                            />
+                                        </div>
                                     </div>
-                                    <div class="eachCol fadedBg">
-                                        Lyft pioneered ride-sharing, saving
-                                        money and reducing emissions. Its
-                                        thorough driver background checks
-                                        prioritize passenger safety, going
-                                        beyond star ratings.
+                                    <div class="carouselItem">
+                                        <div class="imgCont">
+                                            <img
+                                                class="openModal"
+                                                src="/assets/images/bolt/eunice-johnson.png"
+                                                alt="User survey"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <a
-                            href="../assets/images/bolt/weaknesses.png"
-                            target="_blank"
-                            class="eachSect imgCont"
-                        >
-                            <img
-                                src="../assets/images/bolt/weaknesses.png"
-                                alt="Strengths"
-                            />
-                        </a>
-                        <div class="eachSect fadeTxt">
-                            <div class="content">
-                                All of them employed similar business models
-                                incorporating dynamic pricing, which adjusts
-                                based on factors like weather, traffic, and time
-                                to maximize profits. However, the timing of
-                                price disclosure varies: Uber and Lyft reveal
-                                prices before the ride, whereas Bolt discloses
-                                prices after reaching the destination.
-                            </div>
-                        </div>
-                        <div class="eachSect fadeTxt" id="userSurvey">
-                            <h3>User Survey</h3>
-                            <div class="content">
-                                To gain insights into users' frustrations and
-                                pain points regarding price changes and the
-                                driving experience, a survey was conducted. The
-                                survey collected responses from 23 participants
-                                and included relevant questions to validate the
-                                issues identified in the secondary research.
-                            </div>
-                        </div>
-                        <a
-                            href="../assets/images/bolt/relevant_survey_response.svg"
-                            target="_blank"
-                            class="eachSect imgCont"
-                        >
-                            <img
-                                src="../assets/images/bolt/relevant_survey_response.svg"
-                                alt="Relevant survey responses"
-                            />
-                        </a>
-                        <div class="eachSect fadeTxt">
-                            <div class="h2">
-                                The user survey further validated the problems
-                                identified in the secondary research.
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        71% of the participants said that the
-                                        price became higher after getting to the
-                                        destination
-                                    </li>
-                                    <li>
-                                        14% of the participants said that the
-                                        drivers were not friendly.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="eachSect" id="blockquote">
-                            <div class="content fadedBg">
-                                <div class="iconCont">
-                                    <span class="svgIcon-blockquote"></span>
+                                <input
+                                    id="surveyPrev"
+                                    type="text"
+                                    hidden
+                                    class="prev"
+                                />
+                                <input
+                                    id="surveyNext"
+                                    type="text"
+                                    hidden
+                                    class="next"
+                                />
+                                <div class="indicators">
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="surveyInd1"
+                                        class="indicatorItem activeInd"
+                                    />
+                                    <input
+                                        type="button"
+                                        hidden
+                                        id="surveyInd2"
+                                        class="indicatorItem"
+                                    />
                                 </div>
-                                <blockquote>
-                                    I was charged a particular fee prior to the
-                                    ride but at the end of the ride, I was
-                                    charged higher - Participant
-                                </blockquote>
                             </div>
-                        </div>
-                        <div class="eachSect fadeTxt" id="userPersona">
-                            <h3>User Persona</h3>
-                            <div class="content">
-                                I created two fictitious personas to represent
-                                the needs and frustrations of a larger group of
-                                Bolt users.
-                            </div>
-                        </div>
-                        <div class="eachSect">
-                            <div class="content">
-                                <div class="gridCont">
-                                    <a
-                                        class="dBlock"
-                                        href="../assets/images/bolt/user_persona1.png"
-                                        target="_blank"
-                                    >
+                            <div class="cusIndicatorsAndCtrls">
+                                <div class="indicators">
+                                    <label
+                                        for="surveyInd1"
+                                        class="indicator active"
+                                    ></label>
+                                    <label
+                                        for="surveyInd2"
+                                        class="indicator"
+                                    ></label>
+                                </div>
+                                <div class="ctrls">
+                                    <label for="surveyPrev" class="prevCtrl">
                                         <img
-                                            src="../assets/images/bolt/user_persona1.png"
-                                            alt="User Persona"
+                                            src="/assets/icons/arrow-left.svg"
+                                            alt="arrow left"
                                         />
-                                    </a>
-                                    <a
-                                        class="dBlock"
-                                        href="../assets/images/bolt/user_persona2.png"
-                                        target="_blank"
-                                    >
+                                    </label>
+                                    <label for="surveyNext" class="nextCtrl">
                                         <img
-                                            src="../assets/images/bolt/user_persona2.png"
-                                            alt="User Persona"
-                                        />
-                                    </a>
+                                            src="/assets/icons/arrow-right.svg"
+                                            alt="arrow right"
+                                    /></label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="solution">
-                        <div class="eachSect">
-                            <h2 class="noMarg">Solution</h2>
+                </section>
+                <section id="alternatingSection">
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/pricing.png"
+                                alt="Pricing"
+                                class="openModal"
+                            />
                         </div>
-                        <div id="pricing">
-                            <div class="eachSect fadeTxt flex left">
-                                <div class="fadeAnim right">
-                                    <a
-                                        class="imgCont"
-                                        href="../assets/images/bolt/pricing.png"
-                                        target="_blank"
-                                    >
-                                        <img
-                                            src="../assets/images/bolt/pricing.png"
-                                            alt="Pricing"
-                                        />
-                                    </a>
-                                </div>
-                                <div class="fadeAnim left">
-                                    <div class="txtCont">
-                                        <h3>1. Pricing</h3>
-                                        <div class="content">
-                                            Bolt and other mobility services
-                                            employ
-                                            <a
-                                                href="https://www.business.com/articles/what-is-dynamic-pricing-and-how-does-it-affect-ecommerce/"
-                                                target="_blank"
-                                                >Dynamic or Surge pricing</a
-                                            >, adjusting prices based on factors
-                                            like traffic, weather, time, and
-                                            demand. This strategy optimizes
-                                            pricing for maximum profit and is
-                                            used across various industries,
-                                            including transportation, event
-                                            ticketing, and hospitality.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eachSect fadeTxt flex">
-                                <div class="fadeAnim left">
-                                    <a
-                                        class="imgCont"
-                                        target="_blank"
-                                        href="../assets/images/bolt/dynamic_pricing_remove.png"
-                                    >
-                                        <img
-                                            src="../assets/images/bolt/dynamic_pricing_remove.png"
-                                            alt="Should Dynamic pricing be removed from bolt"
-                                        />
-                                    </a>
-                                </div>
-                                <div class="fadeAnim right">
-                                    <div class="txtCont">
-                                        <h4>
-                                            Should Dynamic pricing be removed
-                                            from bolt?
-                                        </h4>
-                                        <div class="content">
-                                            Dynamic or surge pricing ensures
-                                            fair pricing by adjusting rates
-                                            based on unpredictable factors like
-                                            traffic and demand. Removing it
-                                            without accurate prediction systems
-                                            would disadvantage both the company
-                                            and drivers. <br /><br />
-
-                                            These variables are unpredictable,
-                                            and dynamic pricing prevents losses
-                                            and overpricing. Continuing to use
-                                            dynamic pricing is crucial as AI
-                                            prediction systems may not always be
-                                            entirely accurate.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eachSect fadeTxt flex left">
-                                <div class="fadeAnim right">
-                                    <a
-                                        class="imgCont"
-                                        target="_blank"
-                                        href="../assets/images/bolt/if_dynamic_pricing_stay.png"
-                                    >
-                                        <img
-                                            src="../assets/images/bolt/if_dynamic_pricing_stay.png"
-                                            alt="If dynamic pricing should stay, what then is the problem?"
-                                        />
-                                    </a>
-                                </div>
-                                <div class="fadeAnim left">
-                                    <div class="txtCont">
-                                        <h4>
-                                            If dynamic pricing should stay, what
-                                            then is the problem?
-                                        </h4>
-                                        <div class="content">
-                                            The research shows that Bolt's
-                                            practice of informing customers
-                                            about price changes after the ride
-                                            can lead to feelings of deception.
-                                            Customers value consistency, and
-                                            discovering price changes post-ride
-                                            worsens their experience.
-                                            <br /><br />
-
-                                            Uber addresses this with upfront
-                                            pricing, enhancing transparency.
-                                            However, it can lead to losses if
-                                            variables change during the ride,
-                                            affecting costs.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eachSect fadeTxt flex">
-                                <div class="fadeAnim left">
-                                    <a
-                                        class="imgCont"
-                                        target="_blank"
-                                        href="../assets/images/bolt/information.png"
-                                    >
-                                        <img
-                                            src="../assets/images/bolt/information.png"
-                                            alt="Information"
-                                        />
-                                        <!-- <div class="arrowCont">
-                                    <img
-                                        src="../assets/images/bolt/information-arrow.svg"
-                                        alt="Connecting Arrow"
-                                    />
-                                </div> -->
-                                    </a>
-                                </div>
-                                <div class="fadeAnim right">
-                                    <div class="txtCont">
-                                        <h4>Information</h4>
-                                        <div class="content">
-                                            During the ride, riders are notified
-                                            of surge pricing, promoting
-                                            transparency and understanding of
-                                            price changes. This eliminates
-                                            surprises, allowing riders to add
-                                            funds if necessary to cover the
-                                            adjusted fare.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="eachSect fadeTxt flex left">
-                                <div class="fadeAnim right">
-                                    <a
-                                        class="imgCont"
-                                        target="_blank"
-                                        href="../assets/images/bolt/information2.png"
-                                    >
-                                        <img
-                                            src="../assets/images/bolt/information2.png"
-                                            alt="Information2"
-                                        />
-                                    </a>
-                                </div>
-                                <div class="fadeAnim left">
-                                    <div class="txtCont">
-                                        <div class="content">
-                                            Customers are informed of price
-                                            increases and given the choice to
-                                            continue with the ride or cancel if
-                                            they find the new price unfavorable.
-                                            This promotes preparedness and
-                                            autonomy, ensuring customers are
-                                            aware of the increased price and can
-                                            make informed decisions without
-                                            feeling deceived. <br /><br />
-
-                                            They won't feel deceived or cheated
-                                            because they have willingly accepted
-                                            the increased price before
-                                            proceeding with the ride.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="eachSect fadeTxt flex"
-                            id="drivingExperience"
-                        >
-                            <div class="fadeAnim left">
-                                <a
-                                    class="imgCont"
-                                    target="_blank"
-                                    href="../assets/images/bolt/driving_experience.png"
-                                >
-                                    <img
-                                        src="../assets/images/bolt/driving_experience.png"
-                                        alt="Driving Experience"
-                                    />
-                                </a>
-                            </div>
-                            <div class="fadeAnim right">
-                                <div class="txtCont">
-                                    <h3>2. Driving Experience</h3>
-                                    <div class="content">
-                                        Bolt automatically assigns the nearest
-                                        available driver without giving users
-                                        the option to choose based on ratings
-                                        and location. While users can rate
-                                        drivers, these ratings only influence
-                                        whether the driver remains on the
-                                        platform. <br /><br />
-
-                                        Allowing users to choose their driver
-                                        based on ratings and location would give
-                                        them control and prevent pairing with
-                                        drivers they've had negative experiences
-                                        with.
-                                    </div>
-                                </div>
+                        <div class="txtPart">
+                            <h2>Pricing</h2>
+                            <div class="content">
+                                Bolt and other mobility services employ Dynamic
+                                or Surge pricing, adjusting prices based on
+                                factors like traffic, weather, time, and demand.
+                                This strategy optimizes pricing for maximum
+                                profit and is used across various industries,
+                                including transportation, event ticketing, and
+                                hospitality.
                             </div>
                         </div>
                     </div>
-                    <div class="eachSect fadeTxt" id="usabilityTest">
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/dynamic-pricing-be-removed.png"
+                                alt="Should Dynamic pricing be removed from bolt?"
+                                class="openModal"
+                            />
+                        </div>
+                        <div class="txtPart">
+                            <h2>
+                                Should Dynamic pricing be removed from bolt?
+                            </h2>
+                            <div class="content">
+                                Dynamic or surge pricing ensures fair pricing by
+                                adjusting rates based on unpredictable factors
+                                like traffic and demand. Removing it without
+                                accurate prediction systems would disadvantage
+                                both the company and drivers. <br /><br />
+
+                                These variables are unpredictable, and dynamic
+                                pricing prevents losses and overpricing.
+                                Continuing to use dynamic pricing is crucial as
+                                AI prediction systems may not always be entirely
+                                accurate.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/dynamic-pricing-be-stay.png"
+                                alt="If dynamic pricing should stay, what then is the problem?"
+                                class="openModal"
+                            />
+                        </div>
+                        <div class="txtPart">
+                            <h2>
+                                If dynamic pricing should stay, what then is the
+                                problem?
+                            </h2>
+                            <div class="content">
+                                The research shows that Bolt's practice of
+                                informing customers about price changes after
+                                the ride can lead to feelings of deception.
+                                Customers value consistency, and discovering
+                                price changes post-ride worsens their
+                                experience. <br /><br />
+
+                                Uber addresses this with upfront pricing,
+                                enhancing transparency. However, it can lead to
+                                losses if variables change during the ride,
+                                affecting costs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/information.png"
+                                alt="Information"
+                                class="openModal"
+                            />
+                        </div>
+                        <div class="txtPart">
+                            <h2>Information</h2>
+                            <div class="content">
+                                During the ride, riders are notified of surge
+                                pricing, promoting transparency and
+                                understanding of price changes. This eliminates
+                                surprises, allowing riders to add funds if
+                                necessary to cover the adjusted fare.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/information2.png"
+                                alt="Information"
+                                class="openModal"
+                            />
+                        </div>
+                        <div class="txtPart">
+                            <div class="content">
+                                Customers are informed of price increases and
+                                given the choice to continue with the ride or
+                                cancel if they find the new price unfavorable.
+                                This promotes preparedness and autonomy,
+                                ensuring customers are aware of the increased
+                                price and can make informed decisions without
+                                feeling deceived. <br /><br />
+
+                                They won't feel deceived or cheated because they
+                                have willingly accepted the increased price
+                                before proceeding with the ride.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="imgCont">
+                            <img
+                                src="/assets/images/bolt/driving-experience.png"
+                                alt="Driving Experience"
+                                class="openModal"
+                            />
+                        </div>
+                        <div class="txtPart">
+                            <h2>2. Driving Experience</h2>
+                            <div class="content">
+                                Bolt automatically assigns the nearest available
+                                driver without giving users the option to choose
+                                based on ratings and location. While users can
+                                rate drivers, these ratings only influence
+                                whether the driver remains on the platform.
+                                <br /><br />
+
+                                Allowing users to choose their driver based on
+                                ratings and location would give them control and
+                                prevent pairing with drivers they've had
+                                negative experiences with.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="usabilityTest">
+                    <div class="eachSection">
                         <h2>Usability Test</h2>
                         <div class="content">
                             Maze.co was used for conducting usability testing,
                             where users were asked to provide feedback on the
                             overall impression of the screens and suggest
-                            improvements. <br /><br />
-
-                            Additionally, they were instructed to perform basic
-                            operations associated with requesting a ride.
+                            improvements. Additionally, they were instructed to
+                            perform basic operations associated with requesting
+                            a ride.
                         </div>
                     </div>
-                    <a
-                        class="eachSect imgCont"
-                        target="_blank"
-                        href="../assets/images/bolt/heat_maps.svg"
-                    >
+                    <div class="eachSection">
                         <img
-                            src="../assets/images/bolt/heat_maps.svg"
-                            alt="Usability Test"
+                            src="/assets/images/bolt/heat-maps.png"
+                            alt="Heat Maps"
+                            class="openModal"
                         />
-                    </a>
-                    <div id="usabilityChanges">
-                        <div class="eachImg">
-                            <a
-                                class="eachSect imgCont"
-                                target="_blank"
-                                href="../assets/images/bolt/usability_changes1.png"
-                            >
-                                <img
-                                    src="../assets/images/bolt/usability_changes1.png"
-                                    alt="Changes made after usability test"
-                                />
-                            </a>
-                            <a
-                                class="eachSect imgCont"
-                                target="_blank"
-                                href="../assets/images/bolt/usability_changes_mobile1.png"
-                            >
-                                <img
-                                    src="../assets/images/bolt/usability_changes_mobile1.png"
-                                    alt="Changes made after usability test"
-                                />
-                            </a>
-                        </div>
-                        <div class="eachImg">
-                            <a
-                                class="eachSect imgCont"
-                                target="_blank"
-                                href="../assets/images/bolt/usability_changes2.png"
-                            >
-                                <img
-                                    src="../assets/images/bolt/usability_changes2.png"
-                                    alt="Changes made after usability test"
-                                />
-                            </a>
-                            <a
-                                class="eachSect imgCont"
-                                target="_blank"
-                                href="../assets/images/bolt/usability_changes_mobile2.png"
-                            >
-                                <img
-                                    src="../assets/images/bolt/usability_changes_mobile2.png"
-                                    alt="Changes made after usability test"
-                                />
-                            </a>
-                        </div>
+                        <div class="imgTitle">Heat Maps</div>
                     </div>
-                    <div class="eachSect fadedBg" id="keyTakeaway">
-                        <div class="h2">Key Takeaway</div>
+                </section>
+                <section id="changesMade">
+                    <div class="eachSection">
+                        <h2>Changes Made After Usability Testing</h2>
                         <div class="content">
-                            I began this project with the assumption that people
-                            primarily use Bolt for its affordability and easy
-                            access to remote areas. However, through my
-                            research, particularly in my locality (Nigeria), I
-                            discovered that many users prioritize comfort when
-                            choosing mobility services like Bolt. <br /><br />
-
-                            They are willing to pay the extra price per ride for
-                            the experience of being in control.
+                            Users expressed concerns regarding the excessive use
+                            of red in the screens, which was found to be
+                            visually overwhelming. To address this, I aligned
+                            the color scheme with the brand’s color palette,
+                            ensuring a more cohesive and less jarring user
+                            experience.
                         </div>
                     </div>
-                    <script src="../js/worksFooter.js"></script>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/heat-maps2.png"
+                            alt="Heat Maps"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Heat Maps</div>
+                    </div>
+                    <div class="eachSection">
+                        <div class="content">
+                            Users suggested adding driver names alongside their
+                            photos for easier identification, particularly for
+                            those who wish to avoid drivers they’ve had negative
+                            experiences with. This adjustment improves the
+                            ability to recognize and select preferred drivers.
+                        </div>
+                    </div>
+                    <div class="eachSection">
+                        <img
+                            src="/assets/images/bolt/heat-maps3.png"
+                            alt="Heat Maps"
+                            class="openModal"
+                        />
+                        <div class="imgTitle">Heat Maps</div>
+                    </div>
+                </section>
+                <section id="summary" class="eachSection">
+                    <h2>Summary</h2>
+                    <div class="content">
+                        I initially assumed that users primarily choose Bolt for
+                        its affordability and access to remote areas. However,
+                        my research, especially within Nigeria, revealed that
+                        many users prioritize comfort when selecting mobility
+                        services. They are willing to pay more for the
+                        experience of having greater control over their ride
+                    </div>
+                </section>
+            </div>
+            <div class="projectNav">
+                <div class="eachSection">
+                    <div class="label">Next Project</div>
+                    <div class="name txt48 fw700">
+                        <a href="/works/increst.html"
+                            >Increst Stock Investing app</a
+                        >
+                        <img
+                            src="/assets/icons/arrow-right.svg"
+                            alt="Arrow right"
+                        />
+                    </div>
                 </div>
             </div>
         </main>
-        <script src="../js/footer.js"></script>
-    </head>
+        <!--#include virtual="/components/works-footer.html" -->
+    </body>
 </html>
