@@ -2,6 +2,28 @@ const toggle = document.querySelector('#toggle');
 const header = document.querySelector('header');
 const menu = document.getElementById('menu');
 const scrollTop = document.querySelector('#scrollTop');
+const modal = document.getElementById('modal');
+const modalClose = modal.getElementsByClassName('modalClose');
+const modalOpeners = document.getElementsByClassName('openModal');
+const modalImg = modal.getElementsByTagName('img')[1];
+
+Array.from(modalClose).forEach((el) => {
+    el.onclick = () => {
+        modal.classList.remove('showModal');
+        document.documentElement.style.overflow = '';
+    };
+});
+Array.from(modalOpeners).forEach((el) => {
+    el.onclick = () => {
+        modalImg.src = el.src;
+        modalImg.classList[el.src.match(/\.svg$/i) ? 'add' : 'remove'](
+            'fullWidth'
+        );
+        modalImg.setAttribute('alt', el.getAttribute('alt'));
+        modal.classList.add('showModal');
+        document.documentElement.style.overflow = 'hidden';
+    };
+});
 
 const fadeTransition = () => {
     for (let el of fadeUp) {

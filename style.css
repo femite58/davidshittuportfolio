@@ -276,6 +276,84 @@ footer nav .socialLinks {
   background: var(--primary);
 }
 
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+  background: rgba(0, 0, 0, 0.1019607843);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 52px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+#modal .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#modal .modalContent {
+  transition: 0.3s ease;
+  transform: scale(0.5);
+  border-radius: 24px;
+  background: #020b1b;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+#modal .modalContent .modalHead {
+  padding: 24px 48px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#modal .modalContent .modalHead .closeBtn {
+  cursor: pointer;
+}
+#modal .modalContent .modalBody {
+  padding: 0 48px 48px;
+}
+#modal .modalContent .modalBody img {
+  max-width: 100%;
+  margin: auto;
+  width: auto;
+  display: block;
+  border-radius: 16px;
+}
+#modal .modalContent .modalBody img.fullWidth {
+  width: 100%;
+}
+#modal.showModal {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 5000;
+}
+#modal.showModal .modalContent {
+  transform: scale(1);
+}
+@media (max-width: 500px) {
+  #modal {
+    padding: 15px;
+  }
+  #modal .modalContent .modalHead {
+    padding: 16px 16px 8px;
+  }
+  #modal .modalContent .modalBody {
+    padding: 0 16px 16px;
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -2615,4 +2693,8 @@ body main section:first-child {
   .mb24 {
     margin-bottom: 16px;
   }
+}
+
+.openModal {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,29 @@
     background: #ae7fff;
     color: var(--black);
     padding-bottom: 213px;
+    animation: changeColor 20s infinite ease;
+
+    @keyframes changeColor {
+        0%,
+        7.5% {
+            background: #ae7fff;
+        }
+        25%,
+        32.5% {
+            background: #ff1b1b;
+        }
+        50%,
+        57.5% {
+            background: #ffff00;
+        }
+        75%,
+        82.5% {
+            background: #7aff1b;
+        }
+        100% {
+            background: #ae7fff;
+        }
+    }
 
     @media (max-width: 500px) {
         padding-bottom: 168px;

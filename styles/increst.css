@@ -1,1 +1,11 @@
-/*# sourceMappingURL=increst.css.map */
+.vidCont {
+  padding-top: 59.0467425%;
+  position: relative;
+}
+.vidCont iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}/*# sourceMappingURL=increst.css.map */
