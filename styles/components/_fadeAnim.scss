@@ -2,7 +2,7 @@
     & > * {
         position: relative;
         transition: 1s ease;
-        top: 400px;
+        transform: translateY(400px);
         opacity: 0;
     }
     &.noFade {
@@ -38,13 +38,13 @@
             top: 0;
         }
     }
-    &.show {
-        & > * {
-            top: 0;
-            left: 0;
-            opacity: 1;
-        }
-    }
+    // &.show {
+    //     & > * {
+    //         transform: translate(0, 0);
+    //         left: 0;
+    //         opacity: 1;
+    //     }
+    // }
     @media (max-width: 600px) {
         &.mobileDelay0 {
             & > * {
@@ -56,5 +56,22 @@
                 transition-delay: 0s;
             }
         }
+    }
+
+    &.showNow {
+        & > * {
+            animation: showNow 0.8s ease forwards;
+        }
+    }
+}
+
+@keyframes showNow {
+    0% {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

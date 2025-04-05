@@ -497,7 +497,7 @@ footer nav .socialLinks {
 .fadeAnim > * {
   position: relative;
   transition: 1s ease;
-  top: 400px;
+  transform: translateY(400px);
   opacity: 0;
 }
 .fadeAnim.noFade > * {
@@ -2581,11 +2581,6 @@ footer nav .socialLinks {
   left: 400px;
   top: 0;
 }
-.fadeAnim.show > * {
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
 @media (max-width: 600px) {
   .fadeAnim.mobileDelay0 > * {
     opacity: 1;
@@ -2596,7 +2591,20 @@ footer nav .socialLinks {
     transition-delay: 0s;
   }
 }
+.fadeAnim.showNow > * {
+  animation: showNow 0.8s ease forwards;
+}
 
+@keyframes showNow {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @font-face {
   font-family: "Cabinet Grotesk";
   src: local("Cabinet Grotesk Regular"), url(/assets/fonts/CabinetGrotesk/CabinetGrotesk-Regular.woff2) format("woff2");
