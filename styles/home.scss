@@ -189,8 +189,20 @@
                 img {
                     width: 594px;
 
+                    .mobile {
+                        display: none;
+                    }
+
                     @media (max-width: 500px) {
                         width: 288.16px;
+
+                        .mobile {
+                            display: block;
+                        }
+
+                        &:not(.mobile) {
+                            display: none;
+                        }
                     }
                 }
             }

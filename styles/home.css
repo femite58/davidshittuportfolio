@@ -162,9 +162,18 @@
 #works .eachWork.increst .imgCont img {
   width: 594px;
 }
+#works .eachWork.increst .imgCont img .mobile {
+  display: none;
+}
 @media (max-width: 500px) {
   #works .eachWork.increst .imgCont img {
     width: 288.16px;
+  }
+  #works .eachWork.increst .imgCont img .mobile {
+    display: block;
+  }
+  #works .eachWork.increst .imgCont img:not(.mobile) {
+    display: none;
   }
 }
 @media (max-width: 500px) {
