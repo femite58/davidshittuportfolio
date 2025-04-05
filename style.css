@@ -34,10 +34,31 @@ header nav .logo.white {
 header nav .logo.dark {
   display: none;
 }
-header nav a {
-  color: var(--white-secondary);
+header nav a:not(.logo):not(.btn) {
+  color: var(--white-tertiary);
   text-decoration: none;
-  font-weight: 450;
+  font-weight: 500;
+  position: relative;
+}
+header nav a:not(.logo):not(.btn)::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 1.8px;
+  background: var(--white-tertiary);
+  transition: 0.3s ease;
+}
+header nav a:not(.logo):not(.btn):hover::after {
+  width: 100%;
+}
+header nav a:not(.logo):not(.btn).active {
+  color: var(--white);
+}
+header nav a:not(.logo):not(.btn).active::after {
+  width: 100%;
+  background-color: var(--white);
 }
 header nav #menu {
   display: flex;
@@ -65,6 +86,7 @@ header nav #toggle {
   align-items: center;
   position: relative;
   z-index: 20;
+  cursor: pointer;
 }
 header nav #toggle #toggleInner {
   width: 24px;
@@ -151,8 +173,17 @@ header.transparent .logo.white {
 header.transparent .logo.dark {
   display: flex;
 }
-header.transparent a {
+header.transparent a:not(.logo):not(.btn) {
+  color: #252525;
+}
+header.transparent a:not(.logo):not(.btn)::after {
+  background: #252525;
+}
+header.transparent a:not(.logo):not(.btn).active {
   color: var(--black);
+}
+header.transparent a:not(.logo):not(.btn).active::after {
+  background-color: var(--black);
 }
 header.transparent nav .whiteBtn {
   display: none;
@@ -196,9 +227,23 @@ footer nav {
   align-items: center;
   gap: 48px;
 }
-footer nav a {
+footer nav a:not(.logo):not(.btn) {
   color: var(--white-tertiary);
   text-decoration: none;
+  position: relative;
+}
+footer nav a:not(.logo):not(.btn)::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 1.8px;
+  background: var(--white-tertiary);
+  transition: 0.3s ease;
+}
+footer nav a:not(.logo):not(.btn):hover::after {
+  width: 100%;
 }
 footer nav .btn {
   align-self: flex-start;
@@ -208,6 +253,27 @@ footer nav .logoAndLinks {
   flex: 1 10px;
   gap: 48px;
   flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  footer nav .logoAndLinks {
+    gap: 24px;
+  }
+}
+footer nav .logoAndLinks .btn {
+  display: none !important;
+}
+@media (max-width: 840px) {
+  footer nav .logoAndLinks .btn {
+    display: flex !important;
+    width: 100%;
+    height: 52px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 840px) {
+  footer nav .logoAndLinks + .btn {
+    display: none !important;
+  }
 }
 footer nav .socialLinks {
   display: flex;
@@ -221,6 +287,34 @@ footer nav .socialLinks {
     gap: 24px;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+#scrollTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+#scrollTop.show {
+  opacity: 1;
+  pointer-events: all;
+}
+@media (max-width: 500px) {
+  #scrollTop {
+    right: 15px;
+    bottom: 15px;
   }
 }
 
@@ -363,17 +457,24 @@ footer nav .socialLinks {
   font-weight: bold;
   font-size: 20px;
   border-radius: 100px;
-  text-decoration: none;
+  text-decoration: none !important;
   gap: 8px;
   white-space: nowrap;
+  transition: 0.3s ease;
 }
 .btn.whiteBtn {
   background: var(--white);
-  color: var(--black);
+  color: var(--black) !important;
+}
+.btn.whiteBtn:hover {
+  background: var(--white-tertiary);
 }
 .btn.darkBtn {
   background: var(--black);
-  color: var(--white);
+  color: var(--white) !important;
+}
+.btn.darkBtn:hover {
+  background: #252525;
 }
 @media (max-width: 500px) {
   .btn {
@@ -2583,8 +2684,9 @@ h6,
 .h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.25;
+  line-height: 1.2322;
   font-family: "Cabinet Grotesk";
+  font-weight: 700;
 }
 
 body {
@@ -2697,4 +2799,30 @@ body main section:first-child {
 
 .openModal {
   cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 31px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0.8em;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--white-secondary);
+  border-radius: 50%;
+}
+
+ol {
+  margin: 0;
+  padding-left: 33px;
 }/*# sourceMappingURL=style.css.map */

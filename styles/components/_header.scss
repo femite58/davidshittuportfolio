@@ -27,10 +27,37 @@ header {
             }
         }
 
-        a {
-            color: var(--white-secondary);
+        a:not(.logo):not(.btn) {
+            color: var(--white-tertiary);
             text-decoration: none;
-            font-weight: 450;
+            font-weight: 500;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 0;
+                width: 0;
+                height: 1.8px;
+                background: var(--white-tertiary);
+                transition: 0.3s ease;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &.active {
+                color: var(--white);
+
+                &::after {
+                    width: 100%;
+                    background-color: var(--white);
+                }
+            }
         }
 
         #menu {
@@ -62,6 +89,7 @@ header {
             align-items: center;
             position: relative;
             z-index: 20;
+            cursor: pointer;
 
             #toggleInner {
                 width: 24px;
@@ -173,8 +201,20 @@ header {
                 display: flex;
             }
         }
-        a {
-            color: var(--black);
+        a:not(.logo):not(.btn) {
+            color: #252525;
+
+            &::after {
+                background: #252525;
+            }
+
+            &.active {
+                color: var(--black);
+
+                &::after {
+                    background-color: var(--black);
+                }
+            }
         }
 
         nav {

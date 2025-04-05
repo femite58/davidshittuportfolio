@@ -5,7 +5,7 @@
         <div id="menu">
             <a href="/">Home</a>
             <a href="/about.html">About</a>
-            <a href="/">Blog</a>
+            <a href="https://davidshittu.medium.com/" target="_blank">Blog</a>
             <a
                 href="mailto:davidshittu02@gmail.com?body=Hello%20David"
                 target="_blank"
@@ -38,4 +38,10 @@
 </header>
 <script>
     document.getElementsByTagName("header")[0].classList.add(headerClass);
+    const as = document.querySelectorAll("header #menu a");
+    as.forEach((a) => {
+        a.classList[
+            a.textContent.match(new RegExp(page, "i")) ? "add" : "remove"
+        ]("active");
+    });
 </script>

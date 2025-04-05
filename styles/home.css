@@ -28,7 +28,7 @@
 }
 #welcomeSect h1 {
   font-family: "Cabinet Grotesk";
-  font-size: 64px;
+  font-size: 56px;
   font-weight: bold;
   margin-bottom: 80px;
 }
@@ -110,9 +110,10 @@
   max-width: 100%;
 }
 #works .eachWork .label {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 700;
   color: var(--white);
+  line-height: 1.2322;
   font-family: "Cabinet Grotesk";
 }
 #works .eachWork:hover .imgCont img {
@@ -180,8 +181,8 @@
 }
 #testimonial h2 {
   font-family: "Cabinet Grotesk";
-  font-size: 64px;
-  color: #fff;
+  font-size: 56px;
+  color: var(--white);
   margin-bottom: 80px;
 }
 #testimonial .testimonies {

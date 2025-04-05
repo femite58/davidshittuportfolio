@@ -7,18 +7,27 @@
     font-weight: bold;
     font-size: 20px;
     border-radius: 100px;
-    text-decoration: none;
+    text-decoration: none !important;
     gap: 8px;
     white-space: nowrap;
+    transition: 0.3s ease;
 
     &.whiteBtn {
         background: var(--white);
-        color: var(--black);
+        color: var(--black) !important;
+
+        &:hover {
+            background: var(--white-tertiary);
+        }
     }
 
     &.darkBtn {
         background: var(--black);
-        color: var(--white);
+        color: var(--white) !important;
+
+        &:hover {
+            background: #252525;
+        }
     }
 
     @media (max-width: 500px) {

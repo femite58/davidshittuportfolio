@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--#include virtual="/components/head-metadata.html" -->
         <title>A brief description about David Shittu</title>
         <meta
             name="description"
@@ -13,24 +11,39 @@
             property="og:image"
             content="https://davidshittu.com/assets/images/david_shittu.jpg"
         />
+        <link rel="stylesheet" href="/styles/about.css" />
+    </head>
+    <body>
         <script>
-            let page = "about";
-            let pPath = "./";
+            const headerClass = "default";
+            const page = "about";
         </script>
-        <script src="js/header.js"></script>
+        <!--#include virtual="/components/header.html" -->
         <main id="about">
             <section id="intro">
-                <img
-                    src="assets/images/about/portfolio_profile.jpg"
-                    alt="David Shittu"
-                />
                 <div class="bodyCont">
                     <div class="txtCont">
                         <div class="fadeAnim top" data-topAnim="1000">
                             <h1>
-                                Curiosity killed the cat, but not David, it
-                                seems.
+                                I love to create meaningful experiences through
+                                design,
+                                <a
+                                    href="https://www.youtube.com/@David_Shittu"
+                                    target="_blank"
+                                    >videos storytelling</a
+                                >
+                                and
+                                <a
+                                    href="https://www.pexels.com/@david-shittu-2096298906/"
+                                    target="_blank"
+                                    >photography.</a
+                                >
                             </h1>
+                            <img
+                                src="/assets/images/about/davidshittu.jpg"
+                                alt="Davidshittu"
+                                class="openModal"
+                            />
                         </div>
                     </div>
                 </div>
@@ -38,72 +51,175 @@
             <section id="otherInfo">
                 <div class="bodyCont">
                     <div class="txtCont">
-                        Hi, I’m David and I am passionately curious.
+                        I’m David Shittu, and I’ve spent the last 4 years
+                        creating meaningful user experiences across Africa,
+                        Europe, and the United States. <br /><br />
+
+                        My journey in tech started with Python, where I built a
+                        range of projects that helped me develop a strong
+                        technical foundation. But as I grew, I discovered my
+                        passion for designing products that solve real-world
+                        problems and make a lasting impact on users.
                         <br /><br />
 
-                        When I was 12, I discovered
+                        It’s about creating intuitive, functional experiences
+                        that genuinely improve people's lives. I am a strong
+                        advocate for systems thinking, which reflects my
+                        approach to solving complex problems and designing
+                        efficient, scalable solutions. <br /><br />
+
+                        When I’m not designing, I’m creating content around STEM
+                        on my
                         <a
-                            href="https://en.wikipedia.org/wiki/Zebra_Puzzle"
+                            href="https://www.youtube.com/@David_Shittu"
                             target="_blank"
-                            >Einstein's Puzzle</a
-                        >
-                        while sneaking my mom's phone and solved it in one
-                        night, intrigued by the claim that only 20% of the world
-                        could solve it. Although I later found out the claim was
-                        incorrect, the joy of solving it ignited a lifelong path
-                        of curiosity within me. <br /><br />
+                            >YouTube channel</a
+                        >. I script, shoot, and edit my own videos. Whether I’m
+                        explaining the latest in tech or diving deep into
+                        complex concepts, you’ll often find me buried in DaVinci
+                        Resolve, bringing my stories to life. <br /><br />
 
-                        I have destroyed and repaired a number of electronics as
-                        a child. This drive to understand how things work has
-                        guided me on my journey in design, where I continually
-                        strive to discover the mechanisms behind how things
-                        work. <br /><br />
-
-                        <b
-                            >I am a strong advocate for accessibility in
-                            design.</b
-                        >
+                        Photography also fascinates me, as it allows me to
+                        explore the intersection of art, design, and technology
+                        in a visual way. I love taking portrait pictures of art.
                         <br /><br />
 
-                        During my free time, you will find me watching YouTube
-                        videos, movies, listening to podcasts or playing the
-                        keyboard. The Big Bang Theory is my favorite TV show and
-                        I have seen the entire 12 seasons at least 5 times.
-                        <br /><br />
-
-                        I am currently learning python for fun. Check out
-                        <a
-                            href="https://drive.google.com/file/d/1ByB-HiSNoeXRfFdg33ebhjNqVuQToYgu/view"
-                            target="_blank"
-                            >some things</a
-                        >
-                        I find interesting.
+                        I would say that I am just a curious individual. At its
+                        core, my greatest skill isn’t my technical abilities.
+                        It’s curiosity. I’m obsessed with learning,
+                        understanding, and figuring things out.
                     </div>
-                    <div class="imgFlex fadedBg">
-                        <div class="bigImg fadeAnim left">
+                    <div class="gallery">
+                        <div class="twoGrid">
                             <div class="imgCont">
                                 <img
-                                    src="assets/images/about/teaching_image1.jpg"
-                                    alt="David Teaching"
+                                    src="/assets/images/about/gallery-photo1.jpg"
+                                    alt="Gallery Photo"
+                                />
+                            </div>
+                            <div class="imgCont">
+                                <img
+                                    src="/assets/images/about/gallery-photo2.jpg"
+                                    alt="Gallery Photo"
                                 />
                             </div>
                         </div>
-                        <div class="smallImg fadeAnim right">
+                        <div class="twoGrid">
+                            <div class="combinedImgs">
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo3.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo4.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                            </div>
+                            <div class="combinedImgs">
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo5.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo6.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="twoGrid">
                             <div class="imgCont">
                                 <img
-                                    src="assets/images/about/teaching_image2.jpg"
-                                    alt="David Teaching"
+                                    src="/assets/images/about/gallery-photo7.jpg"
+                                    alt="Gallery Photo"
+                                />
+                            </div>
+                            <div class="imgCont">
+                                <img
+                                    src="/assets/images/about/gallery-photo8.jpg"
+                                    alt="Gallery Photo"
+                                />
+                            </div>
+                        </div>
+                        <div class="twoGrid">
+                            <div class="combinedImgs">
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo9.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo10.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                            </div>
+                            <div class="combinedImgs">
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo11.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                                <div class="imgCont">
+                                    <img
+                                        src="/assets/images/about/gallery-photo12.jpg"
+                                        alt="Gallery Photo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="twoGrid">
+                            <div class="imgCont">
+                                <img
+                                    src="/assets/images/about/gallery-photo13.jpg"
+                                    alt="Gallery Photo"
+                                />
+                            </div>
+                            <div class="imgCont">
+                                <img
+                                    src="/assets/images/about/gallery-photo14.jpg"
+                                    alt="Gallery Photo"
                                 />
                             </div>
                         </div>
                     </div>
-                    <div class="txtCont">
-                        I also spend my time teaching design to high school
-                        students in my local community.
+                    <div class="links">
+                        <a
+                            href="https://www.youtube.com/@David_Shittu"
+                            target="_blank"
+                            class="h2 txt48"
+                        >
+                            <span>Youtube Channel</span>
+                            <img
+                                src="/assets/icons/arrow-right.svg"
+                                alt="arrow-right"
+                            />
+                        </a>
+                        <a
+                            href="https://www.pexels.com/@david-shittu-2096298906/"
+                            target="_blank"
+                            class="h2 txt48"
+                        >
+                            <span>Photography Works</span>
+                            <img
+                                src="/assets/icons/arrow-right.svg"
+                                alt="arrow-right"
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
-        <script src="js/footer.js"></script>
-    </head>
+        <!--#include virtual="/components/footer.html" -->
+    </body>
 </html>
