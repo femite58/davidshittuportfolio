@@ -70,6 +70,7 @@ header {
 
             .btn {
                 display: none !important;
+                height: 52px !important;
             }
         }
 
@@ -164,7 +165,7 @@ header {
                 transition: 0.3s ease;
                 transform: translateX(100%);
                 flex-direction: column;
-                gap: 14px;
+                gap: 32px;
                 height: var(--view-height);
                 padding: var(--header-height) 15px 15px;
                 z-index: 2;
@@ -252,8 +253,20 @@ header {
             }
         }
 
-        a {
-            color: var(--white-secondary);
+        a:not(.logo):not(.btn) {
+            color: var(--white-tertiary);
+
+            &::after {
+                background: var(--white-tertiary);
+            }
+
+            &.active {
+                color: var(--white);
+
+                &::after {
+                    background-color: var(--white);
+                }
+            }
         }
 
         nav {

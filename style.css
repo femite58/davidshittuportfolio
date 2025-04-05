@@ -70,6 +70,7 @@ header nav #menu {
 }
 header nav #menu .btn {
   display: none !important;
+  height: 52px !important;
 }
 header nav .rightActions {
   display: flex;
@@ -144,7 +145,7 @@ header nav .darkBtn {
     transition: 0.3s ease;
     transform: translateX(100%);
     flex-direction: column;
-    gap: 14px;
+    gap: 32px;
     height: var(--view-height);
     padding: var(--header-height) 15px 15px;
     z-index: 2;
@@ -205,8 +206,17 @@ header:has(.opened) .logo.white {
 header:has(.opened) .logo.dark {
   display: none;
 }
-header:has(.opened) a {
-  color: var(--white-secondary);
+header:has(.opened) a:not(.logo):not(.btn) {
+  color: var(--white-tertiary);
+}
+header:has(.opened) a:not(.logo):not(.btn)::after {
+  background: var(--white-tertiary);
+}
+header:has(.opened) a:not(.logo):not(.btn).active {
+  color: var(--white);
+}
+header:has(.opened) a:not(.logo):not(.btn).active::after {
+  background-color: var(--white);
 }
 header:has(.opened) nav .whiteBtn {
   display: flex;
