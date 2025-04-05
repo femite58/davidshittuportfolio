@@ -176,6 +176,11 @@ section .h2 {
   color: var(--white-secondary);
   background: var(--black);
 }
+@media (max-width: 500px) {
+  .imgTitle {
+    margin-top: 8px;
+  }
+}
 
 .cards {
   display: flex;

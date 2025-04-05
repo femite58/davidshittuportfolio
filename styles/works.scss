@@ -189,6 +189,10 @@ section {
     margin-top: 16px;
     color: var(--white-secondary);
     background: var(--black);
+
+    @media (max-width: 500px) {
+        margin-top: 8px;
+    }
 }
 
 .cards {
