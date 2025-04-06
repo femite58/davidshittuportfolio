@@ -2596,6 +2596,10 @@ footer nav .socialLinks {
 }
 .fadeAnim.showNow > * {
   animation: showNow 1.4s ease forwards;
+  background-image: linear-gradient(to bottom, var(--current-color) 5%, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .fadeAnim.showNow > * * {
   line-height: inherit !important;
@@ -2605,11 +2609,13 @@ footer nav .socialLinks {
   0% {
     opacity: 0;
     transform: translateY(69px);
+    background-image: linear-gradient(to bottom, var(--current-color) 5%, transparent 100%);
     line-height: 1.5;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    background-image: linear-gradient(to bottom, var(--current-color) 100%, transparent 100%);
     line-height: 1.2322;
   }
 }

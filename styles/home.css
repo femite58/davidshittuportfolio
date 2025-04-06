@@ -33,6 +33,7 @@
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 80px;
+  --current-color: var(--black);
 }
 #welcomeSect h1 span {
   display: block;

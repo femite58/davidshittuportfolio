@@ -8,6 +8,8 @@ h1 {
     margin-bottom: 64px;
     color: var(--white);
 
+    --current-color: var(--white);
+
     span {
         display: block;
     }
@@ -15,6 +17,7 @@ h1 {
     a {
         color: inherit;
         text-decoration: underline;
+        text-decoration-color: var(--white);
     }
 
     @media (max-width: 500px) {
