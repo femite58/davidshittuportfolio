@@ -2591,18 +2591,26 @@ footer nav .socialLinks {
     transition-delay: 0s;
   }
 }
+.fadeAnim.showNow {
+  overflow: hidden;
+}
 .fadeAnim.showNow > * {
-  animation: showNow 0.8s ease forwards;
+  animation: showNow 1.4s ease forwards;
+}
+.fadeAnim.showNow > * * {
+  line-height: inherit !important;
 }
 
 @keyframes showNow {
   0% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(69px);
+    line-height: 1.5;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    line-height: 1.2322;
   }
 }
 @font-face {

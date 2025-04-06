@@ -8,6 +8,9 @@ h1 {
   margin-bottom: 64px;
   color: var(--white);
 }
+h1 span {
+  display: block;
+}
 h1 a {
   color: inherit;
   text-decoration: underline;
