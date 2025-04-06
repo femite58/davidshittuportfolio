@@ -60,6 +60,10 @@
             display: flex;
             gap: 32px;
             align-items: center;
+
+            a:not(.darkBtn) {
+                text-decoration: underline !important;
+            }
         }
 
         @media (max-width: 500px) {
