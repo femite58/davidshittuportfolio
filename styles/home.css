@@ -3,6 +3,8 @@
   color: var(--black);
   padding-bottom: 213px;
   animation: changeColor 20s infinite ease;
+  min-height: var(--view-height);
+  display: flex;
 }
 @keyframes changeColor {
   0%, 7.5% {
@@ -117,7 +119,7 @@
   font-family: "Cabinet Grotesk";
 }
 #works .eachWork:hover .imgCont img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 #works .eachWork:hover .label {
   text-decoration: underline;
@@ -232,10 +234,14 @@
 #testimonial .eachTesti .designation {
   margin-bottom: 16px;
   font-weight: 500;
+  line-height: 1.25;
 }
 #testimonial .eachTesti .name,
 #testimonial .eachTesti .designation {
   color: var(--white);
+}
+#testimonial .eachTesti .content {
+  line-height: 1.25;
 }
 @media (max-width: 500px) {
   #testimonial {

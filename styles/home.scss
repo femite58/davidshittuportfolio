@@ -3,6 +3,8 @@
     color: var(--black);
     padding-bottom: 213px;
     animation: changeColor 20s infinite ease;
+    min-height: var(--view-height);
+    display: flex;
 
     @keyframes changeColor {
         0%,
@@ -130,7 +132,7 @@
         &:hover {
             .imgCont {
                 img {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }
 
@@ -274,11 +276,16 @@
         .designation {
             margin-bottom: 16px;
             font-weight: 500;
+            line-height: 1.25;
         }
 
         .name,
         .designation {
             color: var(--white);
+        }
+
+        .content {
+            line-height: 1.25;
         }
     }
 

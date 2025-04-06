@@ -11,7 +11,7 @@ Array.from(modalClose).forEach((el) => {
     el.onclick = () => {
         modal.classList.remove('showModal');
         document.documentElement.style.overflow = '';
-        window.addEventListener('wheel', customScroll, { passive: false });
+        // window.addEventListener('wheel', customScroll, { passive: false });
     };
 });
 Array.from(modalOpeners).forEach((el) => {
@@ -23,7 +23,7 @@ Array.from(modalOpeners).forEach((el) => {
         modalImg.setAttribute('alt', el.getAttribute('alt'));
         modal.classList.add('showModal');
         document.documentElement.style.overflow = 'hidden';
-        window.removeEventListener('wheel', customScroll);
+        // window.removeEventListener('wheel', customScroll);
     };
 });
 
@@ -212,7 +212,7 @@ const customScroll = (e) => {
     });
 };
 
-window.addEventListener('wheel', customScroll, { passive: false });
+// window.addEventListener('wheel', customScroll, { passive: false });
 
 let initScrollTop = window.scrollY;
 let scrollDiff = 0;

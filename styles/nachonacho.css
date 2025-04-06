@@ -17,4 +17,28 @@
   #designStrategy .strategies {
     gap: 24px;
   }
+}
+
+#gifCont .imgCont {
+  position: relative;
+}
+#gifCont .imgCont .gifCont {
+  position: absolute;
+  width: 56%;
+  left: 22%;
+  top: 0;
+  padding-top: 10.2383%;
+}
+#gifCont .imgCont .gifCont .sizer {
+  padding-top: 70.4301785714%;
+  position: relative;
+}
+#gifCont .imgCont .gifCont .sizer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=nachonacho.css.map */

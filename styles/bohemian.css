@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  animation: changingWidth 3s ease infinite;
+  animation: changingWidth 5s ease infinite;
 }
 #swapAnimation .eachLayer:not(:first-child) .layerInner {
   width: var(--container-width);

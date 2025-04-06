@@ -2752,6 +2752,7 @@ body main section:first-child {
   max-width: 1270px;
   margin: auto;
   padding: 0 15px;
+  width: 100%;
 }
 
 .fw1 {

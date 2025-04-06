@@ -24,3 +24,31 @@
         }
     }
 }
+
+#gifCont {
+    .imgCont {
+        position: relative;
+
+        .gifCont {
+            position: absolute;
+            width: 56%;
+            left: 22%;
+            top: 0;
+            padding-top: 10.2383%;
+
+            .sizer {
+                padding-top: 70.4301785714286%;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
