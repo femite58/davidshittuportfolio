@@ -11,6 +11,7 @@ Array.from(modalClose).forEach((el) => {
     el.onclick = () => {
         modal.classList.remove('showModal');
         document.documentElement.style.overflow = '';
+        window.addEventListener('wheel', customScroll, { passive: false });
     };
 });
 Array.from(modalOpeners).forEach((el) => {
@@ -22,6 +23,7 @@ Array.from(modalOpeners).forEach((el) => {
         modalImg.setAttribute('alt', el.getAttribute('alt'));
         modal.classList.add('showModal');
         document.documentElement.style.overflow = 'hidden';
+        window.removeEventListener('wheel', customScroll);
     };
 });
 
@@ -69,7 +71,6 @@ const cusScrollTo = (selector, top = 0) => {
         duration: 1000,
     });
 };
-
 
 window.onload = (e) => {
     // e.preventDefault();
@@ -188,32 +189,30 @@ function animate({ timing, draw, duration }) {
 
 finalSc = 0;
 
-window.addEventListener(
-    'wheel',
-    (e) => {
-        e.preventDefault();
-        let initSc = window.scrollY;
-        finalSc += e.deltaY;
-        isWheel = true;
-        let maxExt = document.documentElement.scrollHeight - window.innerHeight;
-        finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
-        easeOut = (t) => {
-            return 1 - Math.pow(1 - t, 5);
-            // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
-        };
-        animate({
-            timing: easeOut,
-            draw(chng) {
-                let extent = finalSc - initSc;
-                window.scrollTo({
-                    top: initSc + extent * chng,
-                });
-            },
-            duration: 1500,
-        });
-    },
-    { passive: false }
-);
+const customScroll = (e) => {
+    e.preventDefault();
+    let initSc = window.scrollY;
+    finalSc += e.deltaY;
+    isWheel = true;
+    let maxExt = document.documentElement.scrollHeight - window.innerHeight;
+    finalSc = finalSc < 0 ? 0 : finalSc >= maxExt ? maxExt : finalSc;
+    easeOut = (t) => {
+        return 1 - Math.pow(1 - t, 5);
+        // return (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
+    };
+    animate({
+        timing: easeOut,
+        draw(chng) {
+            let extent = finalSc - initSc;
+            window.scrollTo({
+                top: initSc + extent * chng,
+            });
+        },
+        duration: 1500,
+    });
+};
+
+window.addEventListener('wheel', customScroll, { passive: false });
 
 let initScrollTop = window.scrollY;
 let scrollDiff = 0;
