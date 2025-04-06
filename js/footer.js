@@ -70,7 +70,7 @@ const cusScrollTo = (selector, top = 0) => {
     });
 };
 
-window.scrollTo(0, 0);
+
 window.onload = (e) => {
     // e.preventDefault();
     // return '';
