@@ -126,7 +126,7 @@
   font-family: "Cabinet Grotesk";
 }
 #works .eachWork:hover .imgCont img {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 #works .eachWork:hover .label {
   text-decoration: underline;
