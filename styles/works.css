@@ -8,6 +8,7 @@
 }
 #introSection h1 strong {
   color: var(--white);
+  font-weight: 700;
 }
 #introSection img {
   width: 100%;
