@@ -103,8 +103,28 @@ class FlexSliderComponent {
         });
     }
 
+    initiateDom() {
+        const cloneParentBefore = document.createElement('div');
+        const carouselItems = Array.from(
+            this.carouselParent.querySelectorAll('.carouselItem')
+        );
+        carouselItems.forEach((el) => {
+            const clone = el.cloneNode(true);
+            cloneParentBefore.appendChild(clone);
+        });
+        cloneParentBefore.classList.add('cloneParent');
+        const cloneParentAfter = cloneParentBefore.cloneNode(true);
+        cloneParentBefore.classList.add('before');
+        cloneParentAfter.classList.add('after');
+        this.carouselParent.appendChild(cloneParentBefore);
+        this.carouselParent.appendChild(cloneParentAfter);
+    }
+
     ngAfterViewInit() {
         this.initiateEvent();
+        if (this.infiniteSlide) {
+            this.initiateDom();
+        }
         this.flexCont = this.carouselParent.querySelector('.flexCont');
         this.slideItems = this.flexCont.querySelectorAll('.carouselItem');
         this.count = this.slideItems.length;

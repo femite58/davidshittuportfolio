@@ -10,6 +10,8 @@
                 { maxW: 400, slideNo: 1 },
             ],
             canDrag: true,
+            infiniteSlide: carousel.classList.contains("infinite"),
+            autoSlide: carousel.classList.contains("infinite"),
             onIndChng: (ind) => {
                 const indicators = carousel.parentElement.querySelectorAll(
                     ".indicators .indicator"

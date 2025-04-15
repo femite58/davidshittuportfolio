@@ -8,19 +8,19 @@
 }
 @keyframes changeColor {
   0%, 7.5% {
-    background: #ae7fff;
+    background: #fce7c8;
   }
   25%, 32.5% {
-    background: #ff1b1b;
+    background: #b1c29e;
   }
   50%, 57.5% {
-    background: #ffff00;
+    background: #fada7a;
   }
   75%, 82.5% {
-    background: #7aff1b;
+    background: #f0a04b;
   }
   100% {
-    background: #ae7fff;
+    background: #fce7c8;
   }
 }
 @media (max-width: 500px) {
