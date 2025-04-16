@@ -313,7 +313,9 @@ class FlexSliderComponent {
             each.onclick = (e) => {
                 this.onClick({
                     event: e,
-                    index: i % (this.slideItems.length / 2),
+                    index: this.infiniteSlide
+                        ? i % (this.slideItems.length / 3)
+                        : i,
                 });
             };
         });

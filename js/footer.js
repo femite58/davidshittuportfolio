@@ -16,16 +16,18 @@ Array.from(modalClose).forEach((el) => {
 });
 Array.from(modalOpeners).forEach((el) => {
     el.onclick = () => {
-        modalImg.src = el.src;
-        modalImg.classList[el.src.match(/\.svg$/i) ? 'add' : 'remove'](
-            'fullWidth'
-        );
-        modalImg.setAttribute('alt', el.getAttribute('alt'));
-        modal.classList.add('showModal');
-        document.documentElement.style.overflow = 'hidden';
+        modalOpen(el);
         // window.removeEventListener('wheel', customScroll);
     };
 });
+
+const modalOpen = (el) => {
+    modalImg.src = el.src;
+    modalImg.classList[el.src.match(/\.svg$/i) ? 'add' : 'remove']('fullWidth');
+    modalImg.setAttribute('alt', el.getAttribute('alt'));
+    modal.classList.add('showModal');
+    document.documentElement.style.overflow = 'hidden';
+};
 
 const fadeTransition = () => {
     for (let el of fadeUp) {
