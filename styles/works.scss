@@ -129,6 +129,14 @@ section {
                 left: 0;
             }
         }
+
+        &.infinite {
+            .carouselItem {
+                .imgCont {
+                    padding-top: 71.1111111111111%;
+                }
+            }
+        }
     }
 
     .cusIndicatorsAndCtrls {

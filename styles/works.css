@@ -121,6 +121,9 @@ section .h2 {
   top: 0;
   left: 0;
 }
+.carousel .carouselParent.infinite .carouselItem .imgCont {
+  padding-top: 71.1111111111%;
+}
 .carousel .cusIndicatorsAndCtrls {
   display: flex;
   gap: 0;
