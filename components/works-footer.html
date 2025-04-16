@@ -13,7 +13,6 @@
             infiniteSlide: carousel.classList.contains("infinite"),
             autoSlide: carousel.classList.contains("infinite"),
             onClick: (e) => {
-                console.log(e);
                 modalOpen(
                     carousel.querySelectorAll(".carouselItem img").item(e.index)
                 );
